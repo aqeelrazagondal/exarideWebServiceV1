@@ -18,7 +18,12 @@ router.post('/', async (req, res) => {
 
     // let location = await Location.findOne({ _id: _beginLocationId });
 
-    route = new Route(_.pick(req.body, ['routeTitle', '_beginLocationId', '_endLocationId']));
+    route = new Route({
+        routeTitle: routeTitle,
+        _beginLocationId: _beginLocationId,
+        _endLocationId: _endLocationId
+    });
+    
     await route.save();
 
     res.send(route);
