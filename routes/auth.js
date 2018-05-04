@@ -31,8 +31,8 @@ router.post('/', async (req, res) => {
     const token = user.generateAuthToken();
     res.setHeader('x-auth-token', token);
     res.jsonp({
-      status : "Success",
-      message : "Successfully Logged In",
+      status : "success",
+      message : "successfully Logged In",
       object : userResponseObject
     });
   }  

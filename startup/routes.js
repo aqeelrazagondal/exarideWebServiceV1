@@ -8,6 +8,8 @@ const users = require('../routes/users');
 const auth = require('../routes/auth');
 const error = require('../middleware/error');
 const location = require('../routes/locations');
+const routes = require('../routes/routes');
+const shift = require('../routes/shifts');
 
 module.exports = function(app) {
     
@@ -20,6 +22,8 @@ module.exports = function(app) {
     app.use('/api/users', users);
     app.use('/api/auth', auth);
     app.use('/api/location', location);
+    app.use('/api/routes', routes);
+    app.use('/api/shifts', shift);
     app.use(error);
 
 }

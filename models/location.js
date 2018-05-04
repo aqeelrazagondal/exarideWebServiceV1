@@ -14,7 +14,6 @@ const LocationSchema = new mongoose.Schema({
 function validateLocation(user) {
     const schema = {
       title: Joi.string().min(5).max(50).required()
-    //   loc: Joi.number().min(2).max(20).required()
     };
   
     return Joi.validate(user, schema);

@@ -1,32 +1,43 @@
 const Joi = require('joi');
 const _ = require('lodash');
-const Location = require('../models/location');
 const Route = require('../models/route');
+const Location = require('../models/location');
 const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 const asyncMiddleware = require('../middleware/async');
 
 router.post('/', async (req, res) => {
-    let routeResponseObject;
-    let routeTitle = req.body.routeTitle;
-    let _beginLocationId = req.body._beginLocationId;
-    let _endLocationId = req.body._endLocationId;
+    let startLoc;
+    let endLoc;
+    let title = req.body.title;
+    let routeTitle= req.body.routeTitle;
+
+    let location = await Location.find({})
+    console.log("Location", location);
+    startLoc = location.loc; // lat and lng []
+
 
     let route = await Route.findOne({ routeTitle });
     if (route) return res.status(400).send('Route already Added!.');
 
-    // let location = await Location.findOne({ _id: _beginLocationId });
+    // route = new Route({
+    //     title: title,
+    //     startLoc: startLoc
+    // });
+    // await route.save();
+    // res.send(route);
+});
 
-    route = new Route({
-        routeTitle: routeTitle,
-        _beginLocationId: _beginLocationId,
-        _endLocationId: _endLocationId
+router.get('/', async (req, res) => {
+    const route = await Route.find();
+    if (!route) return res.status(404).send('Routes Not found.');
+
+    res.jsonp({
+        status: 'Successful',
+        message: 'List of Routes',
+        object: route
     });
-    
-    await route.save();
-
-    res.send(route);
 });
 
 module.exports = router; 

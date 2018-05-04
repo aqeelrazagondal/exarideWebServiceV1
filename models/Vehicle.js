@@ -1,7 +1,7 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 // Define our schema
-var VehicleSchema   = new mongoose.Schema({
+const VehicleSchema   = new mongoose.Schema({
     
     regNumber: String,
     type: String,

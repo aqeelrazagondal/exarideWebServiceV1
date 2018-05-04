@@ -3,9 +3,19 @@ var Location = require('./location');
 
 var RouteSchema = new mongoose.Schema({
 
-    routeTitle: String,
-    _beginLocationId: { type: mongoose.Schema.Types.ObjectId, ref: 'Location', default: null },
-    _endLocationId: { type: mongoose.Schema.Types.ObjectId, ref: 'Location', default: null }
+    routeTitle: {
+        type: String,
+        unique: true
+    },
+    startLoc: {
+        type: [Number],  // [<longitude>, <latitude>]
+        index: '2d'      // create the geospatial index
+    },
+    endLoc: {
+        type: [Number],  // [<longitude>, <latitude>]
+        index: '2d'      // create the geospatial index
+    }
+
 
 }, { timestamps: true });
 

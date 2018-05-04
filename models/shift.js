@@ -1,18 +1,21 @@
-var mongoose = require('mongoose');
-var User = require('./user');
-var Location = require('./location');
-var Driver = require('./driver');
-var Vehicle = require('./vehicle');
+const mongoose = require('mongoose');
+const User = require('./user');
+const Location = require('./location');
+const Driver = require('./driver');
+// const Vehicle = require('./vehicle');
+const Route = require('./route');
 
 // Define our schema
-var ShiftSchema   = new mongoose.Schema({
+const ShiftSchema   = new mongoose.Schema({
 
     // _riderId: { type: mongoose.Schema.Types.ObjectId, ref: 'Rider' },
-    _routeId: { type: mongoose.Schema.Types.ObjectId, ref: 'Routes' },
-    _beginLocationId: { type: mongoose.Schema.Types.ObjectId, ref: 'Location'},
-    _endLocationId: { type: mongoose.Schema.Types.ObjectId, ref: 'Location'},
-    _driverId: { type: mongoose.Schema.Types.ObjectId, ref: 'Driver'  },
-    _vehicleId: { type: mongoose.Schema.Types.ObjectId, ref: 'Vehicle'}, 
+    title: String,
+    _routeId: { type: mongoose.Schema.Types.ObjectId, ref: 'Route' },
+    startLocName: String,
+    endLocName: String,
+    _driverId: { type: mongoose.Schema.Types.ObjectId, ref: 'Driver' },
+    driverName: String,
+    vehicle: String,
     shiftStartTime: Date,
     shiftEndTime: Date,
     shiftStatus: String
