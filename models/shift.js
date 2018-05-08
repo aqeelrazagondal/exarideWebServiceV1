@@ -8,13 +8,24 @@ const Route = require('./route');
 // Define our schema
 const ShiftSchema   = new mongoose.Schema({
 
-    // _riderId: { type: mongoose.Schema.Types.ObjectId, ref: 'Rider' },
-    title: String,
-    _routeId: { type: mongoose.Schema.Types.ObjectId, ref: 'Route' },
-    startLocName: String,
+    _driverId: { type: mongoose.Schema.Types.ObjectId, ref: 'Driver'},
+    title: {
+        type: String,
+        lowercase: true,
+        trim: true,
+        required: true
+    },
+    startLocName: {
+        type: String,
+        lowercase: true,
+        trim: true
+    },
     endLocName: String,
-    _driverId: { type: mongoose.Schema.Types.ObjectId, ref: 'Driver' },
-    driverName: String,
+    driverName: {
+        type: String,
+        lowercase: true,
+        trim: true
+    },
     vehicle: String,
     shiftStartTime: Date,
     shiftEndTime: Date,

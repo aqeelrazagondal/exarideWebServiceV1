@@ -1,20 +1,14 @@
-var mongoose = require('mongoose');
-var Location = require('./location');
+const mongoose = require('mongoose');
+const Location = require('./location');
 
-var RouteSchema = new mongoose.Schema({
+const RouteSchema = new mongoose.Schema({
 
     routeTitle: {
         type: String,
         unique: true
     },
-    startLoc: {
-        type: [Number],  // [<longitude>, <latitude>]
-        index: '2d'      // create the geospatial index
-    },
-    endLoc: {
-        type: [Number],  // [<longitude>, <latitude>]
-        index: '2d'      // create the geospatial index
-    }
+    _beginLocationId: { type: mongoose.Schema.Types.ObjectId, ref: 'Location'},
+    _endLocationId: { type: mongoose.Schema.Types.ObjectId, ref: 'Location'}
 
 
 }, { timestamps: true });

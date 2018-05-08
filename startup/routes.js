@@ -10,6 +10,7 @@ const error = require('../middleware/error');
 const location = require('../routes/locations');
 const routes = require('../routes/routes');
 const shift = require('../routes/shifts');
+const shiftRiders = require('../routes/shiftRiders');
 
 module.exports = function(app) {
     
@@ -24,6 +25,7 @@ module.exports = function(app) {
     app.use('/api/location', location);
     app.use('/api/routes', routes);
     app.use('/api/shifts', shift);
+    app.use('/api/riders', shiftRiders);
     app.use(error);
 
 }

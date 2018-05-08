@@ -11,5 +11,9 @@ module.exports = function(err, req, res, next){
     // silly
 
     // Log the exception
-    res.status(500).send('Something failed');
-  }
+    res.status(500).jsonp({
+      status:"Failure",
+      message:"Something Failed",
+      object:[]
+    });
+}
