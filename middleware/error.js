@@ -9,7 +9,12 @@ module.exports = function(err, req, res, next){
     // verbose
     // debug
     // silly
-
+    const logger = new (winston.Logger)({
+      transports: [
+        // colorize the output to the console
+        new (winston.transports.Console)({ colorize: true })
+      ]
+    });
     // Log the exception
     res.status(500).jsonp({
       status:"Failure",

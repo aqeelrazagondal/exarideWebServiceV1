@@ -66,10 +66,9 @@ router.get('/:Id', auth, async (req, res) => {
     let temp= [];
     let shiftResObj;
     let listOfShiftRes = [];
-    let myDate;
-    let myDate1;
+    let myDate, myDate1, myDate2, myDate3;
 
-    const shifts = await Shift.find({ _driverId: req.params.Id });
+    const shifts = await Shift.find({ _driverId: req.params.Id }).sort('-date');
     if ( !shifts ) return res.status(404).jsonp({ status : "failure", message : "Shift cannot fint by the given ID.", object : []});
 
     for (var i = 0; i < shifts.length; i++) {
@@ -84,10 +83,10 @@ router.get('/:Id', auth, async (req, res) => {
                 userTempObj = await User.findOne({ _id: riderTempObj._userId });
 
                 myDate = new Date(shiftRiders[j].pickUpTime);
-                pickUpT = myDate.getTime();
+                let pickUpT = myDate.getTime();
 
                 myDate1 = new Date(shiftRiders[j].dropOfTime);
-                dropOfT = myDate.getTime();
+                let dropOfT = myDate1.getTime();
                 
                 riderResObj = {
                     profile_photo_url: userTempObj.profile_photo_url,
@@ -100,14 +99,19 @@ router.get('/:Id', auth, async (req, res) => {
                 listOfRiders.push( riderResObj );
             }
         }
+        myDate2 = new Date(shifts[i].shiftEndTime);
+        let shiftStartT = myDate2.getTime();
+
+        myDate3 = new Date(shifts[i].shiftStartTime);
+        let shiftEndT = myDate2.getTime();
 
         shiftResObj = {
             title: shifts[i].title,
             startLocName: shifts[i].startLocName,
             endLocName: shifts[i].endLocName,
             vehicle: shifts[i].vehicle,
-            shiftStartTime: shifts[i].shiftStartTime,
-            shiftEndTime: shifts[i].shiftEndTime,
+            shiftStartTime: shiftStartT,
+            shiftEndTime: shiftEndT,
             listofRiders: listOfRiders
         }
         listOfShiftRes.push( shiftResObj );
@@ -120,6 +124,5 @@ router.get('/:Id', auth, async (req, res) => {
         object : listOfShiftRes
     });
 });
-
 
 module.exports = router; 

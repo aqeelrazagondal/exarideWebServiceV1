@@ -1,25 +1,74 @@
+var appRoot = require('app-root-path');
 const winston = require('winston');
-// require('winston-mongodb');
+const morgan = require('morgan');
+require('winston-mongodb');
 require('express-async-errors');
+const fs = require('fs');
 
-module.exports = function() {
-    process.on('uncaughtException', (ex) => {
-        console.log('WE GOT AND UNCAUGHT EXCEPTION');
-        winston.error(ex.message, ex);
-        process.exit(1);
-    });
+process.on('uncaughtException', (ex) => {
+  console.log('WE GOT AND UNCAUGHT EXCEPTION');
+  winston.error(ex.message, ex);
+  process.exit(1);
+});
 
-    winston.handleExceptions(
-    new winston.transports.Console({ colorize: true, prettyPrint: true }),
-    new winston.transports.File({ filename: 'uncaughtExceptions.log' }));
-  
-    process.on('unhandledRejection', (ex) => {
-      throw ex;
-    });
-  
-    winston.add(winston.transports.File, { filename: 'logfile.log' });
-    winston.add(winston.transports.MongoDB, { 
-      db: 'mongodb://localhost/vidly',
-      level: 'info'
-    });  
+process.on('unhandledRejection', (ex) => {
+  throw ex;
+});
+
+const logDir = 'log';
+// Create the log directory if it does not exist
+if (!fs.existsSync(logDir)) {
+  fs.mkdirSync(logDir);
+    console.log ("Directory for log created");
 }
+const tsFormat = () => (new Date()).toLocaleTimeString();
+
+// define the custom settings for each transport (file, console)
+var options = {
+  file: {
+    level: 'info',
+    filename: `${logDir}/-results.log`,
+    datePattern: 'yyyy-MM-dd',
+    prepend: true,
+    timestamp: tsFormat,
+    handleExceptions: true,
+    json: true,
+    maxsize: 5242880, // 5MB
+    maxFiles: 5,
+    colorize: false,
+  },
+  console: {
+    level: 'debug',
+    handleExceptions: true,
+    json: false,
+    colorize: true,
+  },
+  mongoLog: {
+    db: 'mongodb://admin:12345@ds139067.mlab.com:39067/vidly',
+    level: 'info'
+  }
+};
+
+// instantiate a new Winston Logger with the settings defined above
+var logger = new winston.Logger({
+  transports: [
+    new (require('winston-daily-rotate-file'))(options.file),
+    new winston.transports.Console(options.console),
+    new winston.transports.MongoDB(options.mongoLog),
+  ],
+  exitOnError: false, // do not exit on handled exceptions
+});
+
+
+// create a stream object with a 'write' function that will be used by `morgan`
+logger.stream = {
+  write: function(message, encoding) {
+    // use the 'info' log level so the output will be picked up by both transports (file and console)
+    logger.info(message);
+  },
+};
+
+module.exports = logger;
+  
+
+
