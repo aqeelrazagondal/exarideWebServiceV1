@@ -38,8 +38,8 @@ router.post('/', async (req, res) => {
         pickUploc: pickUpLocName.loc,
         dropOfLocName: dropOfLocName.title,
         dropOfLoc: dropOfLocName.loc,
-        shiftStartTime: shiftStartTime,
-        shiftEndTime: shiftEndTime,
+        pickUpTime: pickUpTime,
+        dropOfTime: dropOfTime,
     });
 
     await riderResObj.save();
