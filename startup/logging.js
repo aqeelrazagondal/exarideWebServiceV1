@@ -5,6 +5,7 @@ require('winston-mongodb');
 require('express-async-errors');
 const fs = require('fs');
 
+const env = process.env.NODE_ENV || 'development';
 process.on('uncaughtException', (ex) => {
   console.log('WE GOT AND UNCAUGHT EXCEPTION');
   winston.error(ex.message, ex);
@@ -26,15 +27,14 @@ const tsFormat = () => (new Date()).toLocaleTimeString();
 // define the custom settings for each transport (file, console)
 var options = {
   file: {
-    level: 'info',
-    filename: `${logDir}/-results.log`,
+    level: env === 'development' ? 'verbose' : 'info',
     datePattern: 'yyyy-MM-dd',
+    filename: `${logDir}/-results.log`,
     prepend: true,
     timestamp: tsFormat,
     handleExceptions: true,
     json: true,
     maxsize: 5242880, // 5MB
-    maxFiles: 5,
     colorize: false,
   },
   console: {

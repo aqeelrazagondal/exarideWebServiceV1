@@ -1,0 +1,2 @@
+{"level":"info","message":"::1 - - [08/May/2018:12:08:30 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36\"\n","timestamp":"17:08:30"}
+{"level":"info","message":"::1 - - [08/May/2018:12:08:41 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36\"\n","timestamp":"17:08:41"}

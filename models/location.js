@@ -9,7 +9,8 @@ const LocationSchema = new mongoose.Schema({
     loc: {
         type: [Number],  // [<longitude>, <latitude>]
         index: '2d'      // create the geospatial index
-    }
+    },
+    radius:Number
     
 }, { timestamps: true });
 

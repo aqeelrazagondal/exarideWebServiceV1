@@ -1,0 +1,1 @@
+{"level":"info","message":"::1 - - [08/May/2018:12:11:12 +0000] \"GET /api/users/me HTTP/1.1\" 200 344 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:11:12"}
