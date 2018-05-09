@@ -3,3 +3,93 @@
 {"level":"info","message":"::1 - - [09/May/2018:05:06:55 +0000] \"GET /api/shifts/5aeae9fbf33f6300140e593f HTTP/1.1\" 200 1046 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:06:55"}
 {"level":"info","message":"::1 - - [09/May/2018:05:08:43 +0000] \"GET /api/shifts/5aeae9fbf33f6300140e593f HTTP/1.1\" 500 286 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:08:43"}
 {"level":"info","message":"::1 - - [09/May/2018:05:09:32 +0000] \"GET /api/shifts/5aeae9fbf33f6300140e593f HTTP/1.1\" 200 1036 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:09:32"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469988","timestamp":"11:38:54"}
+{"level":"info","message":"::1 - - [09/May/2018:06:38:54 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 500 1806 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:38:54"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469988","timestamp":"11:40:49"}
+{"level":"info","message":"::1 - - [09/May/2018:06:40:49 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 500 1803 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:40:49"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469988","timestamp":"11:41:44"}
+{"level":"info","message":"User Exists Response : null","timestamp":"11:41:46"}
+{"level":"info","message":"::1 - - [09/May/2018:06:41:46 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 500 892 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:41:46"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469988","timestamp":"11:44:09"}
+{"level":"info","message":"User Exists Response : null","timestamp":"11:44:10"}
+{"level":"info","message":"::1 - - [09/May/2018:06:44:10 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 500 892 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:44:10"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469988","timestamp":"11:44:53"}
+{"level":"info","message":"User Exists Response : null","timestamp":"11:44:54"}
+{"level":"info","message":"::1 - - [09/May/2018:06:44:54 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 500 299 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:44:54"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469988","timestamp":"11:50:02"}
+{"level":"info","message":"::1 - - [09/May/2018:06:50:05 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 400 67 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:50:05"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469999","timestamp":"11:50:31"}
+{"level":"info","message":"User Exists Response : null","timestamp":"11:50:31"}
+{"level":"info","message":"::1 - - [09/May/2018:06:50:31 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 500 778 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:50:31"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469999","timestamp":"12:00:29"}
+{"level":"info","message":"User Exists Response : null","timestamp":"12:00:30"}
+{"level":"info","message":"User Created With Phone Num 03431469999","timestamp":"12:00:30"}
+{"level":"info","message":"::1 - - [09/May/2018:07:00:30 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 68 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:00:30"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469999","timestamp":"12:04:05"}
+{"level":"info","message":"User Exists Response : null","timestamp":"12:04:06"}
+{"level":"info","message":"User Created With Phone Num 03431469999","timestamp":"12:04:06"}
+{"level":"info","message":"::1 - - [09/May/2018:07:04:06 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 68 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:04:06"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469999","timestamp":"12:09:38"}
+{"level":"info","message":"User Exists Response : null","timestamp":"12:09:39"}
+{"level":"info","message":"User Created With Phone Num 03431469999Code 2392","timestamp":"12:09:39"}
+{"level":"info","message":"::1 - - [09/May/2018:07:09:39 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 68 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:09:39"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469999","timestamp":"12:11:25"}
+{"level":"info","message":"User Exists Response : null","timestamp":"12:11:25"}
+{"level":"info","message":"User Created With Phone Num 03431469999Code 9889","timestamp":"12:11:25"}
+{"level":"info","message":"::1 - - [09/May/2018:07:11:25 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 68 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:11:25"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469999","timestamp":"12:31:41"}
+{"level":"info","message":"User Exists Response : null","timestamp":"12:31:42"}
+{"level":"info","message":"User Created With Phone Num 03431469999Code 9059","timestamp":"12:31:42"}
+{"level":"info","message":"::1 - - [09/May/2018:07:31:42 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 68 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:31:42"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469999","timestamp":"12:31:54"}
+{"level":"info","message":"::1 - - [09/May/2018:07:31:54 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 400 67 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:31:54"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469999","timestamp":"12:35:23"}
+{"level":"info","message":"::1 - - [09/May/2018:07:35:24 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 400 67 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:35:24"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469999","timestamp":"12:47:54"}
+{"level":"info","message":"::1 - - [09/May/2018:07:47:55 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 500 287 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:47:55"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469999","timestamp":"12:48:46"}
+{"level":"info","message":"::1 - - [09/May/2018:07:48:48 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 500 304 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:48:48"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469999","timestamp":"12:49:32"}
+{"level":"info","message":"::1 - - [09/May/2018:07:49:33 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 400 67 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:49:33"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469999","timestamp":"12:49:44"}
+{"level":"info","message":"User Created With Phone Num 03431469999Code 3661","timestamp":"12:49:45"}
+{"level":"info","message":"::1 - - [09/May/2018:07:49:45 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 68 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:49:45"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469999","timestamp":"12:55:01"}
+{"level":"info","message":"::1 - - [09/May/2018:07:55:01 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 400 67 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:55:01"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469999","timestamp":"12:55:08"}
+{"level":"info","message":"::1 - - [09/May/2018:07:55:08 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 400 67 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:55:08"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469999","timestamp":"12:55:47"}
+{"level":"info","message":"::1 - - [09/May/2018:07:55:50 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 400 67 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:55:50"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469999","timestamp":"12:55:58"}
+{"level":"info","message":"::1 - - [09/May/2018:07:55:58 +0000] \"POST /api/users/resendVerificationcode HTTP/1.1\" 200 74 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:55:58"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469999","timestamp":"12:57:01"}
+{"level":"info","message":"::1 - - [09/May/2018:07:57:02 +0000] \"POST /api/users/resendVerificationcode HTTP/1.1\" 200 74 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:57:02"}
+{"level":"info","message":"In Route /VerificationCode called  :03431469999","timestamp":"12:57:14"}
+{"level":"info","message":"::1 - - [09/May/2018:07:57:15 +0000] \"POST /api/users/resendVerificationcode HTTP/1.1\" 200 74 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:57:15"}
+{"level":"info","message":"In user routes verifyCode route called.  :03431469999 - undefined","timestamp":"13:14:41"}
+{"level":"info","message":"Wrong Code Sent For Verifcation :undefined","timestamp":"13:14:41"}
+{"level":"info","message":"::1 - - [09/May/2018:08:14:41 +0000] \"POST /api/users/verifyCode HTTP/1.1\" 200 57 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:14:41"}
+{"level":"info","message":"In user routes verifyCode route called.  :03431469999 - 6192","timestamp":"13:15:25"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [09/May/2018:08:15:28 +0000] \"POST /api/users/verifyCode HTTP/1.1\" 200 59 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:15:28"}
+{"level":"info","message":"In Route /VerificationCode called  :03431466666","timestamp":"14:46:08"}
+{"level":"info","message":"::1 - - [09/May/2018:09:46:09 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 500 778 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:46:09"}
+{"level":"info","message":"In Route /VerificationCode called  :03431466666","timestamp":"14:50:43"}
+{"level":"info","message":"::1 - - [09/May/2018:09:50:43 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 500 778 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:50:43"}
+{"level":"info","message":"In Route /VerificationCode called  :03431466666","timestamp":"14:52:09"}
+{"level":"info","message":"::1 - - [09/May/2018:09:52:12 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 500 778 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:52:12"}
+{"level":"info","message":"In Route /VerificationCode called  :03431466666","timestamp":"14:58:26"}
+{"level":"info","message":"User Created With Phone Num 03431466666Code 4537","timestamp":"14:58:26"}
+{"level":"info","message":"::1 - - [09/May/2018:09:58:26 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 68 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:58:26"}
+{"level":"info","message":"::1 - - [09/May/2018:10:35:09 +0000] \"POST /api/users/profile HTTP/1.1\" 500 283 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:35:09"}
+{"level":"info","message":"::1 - - [09/May/2018:10:36:47 +0000] \"POST /api/users/profile HTTP/1.1\" 500 283 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:36:47"}
+{"level":"info","message":"::1 - - [09/May/2018:10:43:01 +0000] \"POST /api/users/profile HTTP/1.1\" 200 65 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:43:01"}
+{"level":"info","message":"::1 - - [09/May/2018:10:56:36 +0000] \"POST /api/users/profile HTTP/1.1\" 200 65 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:56:36"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [09/May/2018:10:57:20 +0000] \"POST /api/users/profile HTTP/1.1\" 200 65 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:57:20"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [09/May/2018:10:58:15 +0000] \"POST /api/users/profile HTTP/1.1\" 200 65 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:58:15"}
+{"level":"info","message":"::1 - - [09/May/2018:11:03:02 +0000] \"POST /api/users/profile HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:03:02"}
+{"level":"info","message":"::1 - - [09/May/2018:11:03:17 +0000] \"POST /api/users/profile HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:03:17"}
+{"level":"info","message":"::1 - - [09/May/2018:11:16:59 +0000] \"POST /api/users/profile HTTP/1.1\" 500 1792 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:16:59"}
+{"level":"info","message":"::1 - - [09/May/2018:11:22:14 +0000] \"POST /api/users/profile HTTP/1.1\" 200 65 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:22:14"}
+{"level":"info","message":"::1 - - [09/May/2018:11:22:22 +0000] \"POST /api/users/profile HTTP/1.1\" 200 65 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:22:22"}
+{"level":"info","message":"::1 - - [09/May/2018:11:24:28 +0000] \"POST /api/users/profile HTTP/1.1\" 200 65 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:24:28"}
+{"level":"info","message":"::1 - - [09/May/2018:11:43:39 +0000] \"GET /api/shifts/5aeae9fbf33f6300140e593f HTTP/1.1\" 200 1020 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:43:39"}

@@ -8,20 +8,16 @@ const _ = require('lodash');
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true,
     minlength: 5,
     maxlength: 50
   },
   email: {
     type: String,
-    required: true,
     minlength: 5,
-    maxlength: 255,
-    unique: true
+    maxlength: 255
   },
   password: {
     type: String,
-    required: true,
     minlength: 5,
     maxlength: 1024
   },
@@ -35,6 +31,8 @@ const userSchema = new mongoose.Schema({
     type: [Number],  // [<longitude>, <latitude>]
     index: '2d'      // create the geospatial index
   },
+  phone: { type: String, default: null },
+  regNo: String,
   profile_photo_url: { type: String, default: null },
   active: Boolean,
   OS: String,
@@ -54,17 +52,17 @@ userSchema.methods.generateAuthToken = function() {
   return token;
 }
 
-function validateUser(user) {
-  const schema = {
-    name: Joi.string().min(5).max(50).required(),
-    email: Joi.string().min(5).max(255).required().email(),
-    password: Joi.string().min(5).max(255).required(),
-    user_type: Joi.string().min(5).max(15)
-  };
+// function validateUser(user) {
+//   const schema = {
+//     name: Joi.string().min(5).max(50).required(),
+//     email: Joi.string().min(5).max(255).required().email(),
+//     password: Joi.string().min(5).max(255).required(),
+//     user_type: Joi.string().min(5).max(15)
+//   };
 
-  return Joi.validate(user, schema);
-}
+//   return Joi.validate(user, schema);
+// }
 
 const User = mongoose.model('User', userSchema);
 module.exports.User = User; 
-module.exports.validate = validateUser;
+// module.exports.validate = validateUser;
