@@ -1,1 +1,5 @@
 {"level":"info","message":"::1 - - [09/May/2018:04:29:07 +0000] \"POST /api/auth HTTP/1.1\" 200 427 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"09:29:07"}
+{"level":"info","message":"::1 - - [09/May/2018:05:05:51 +0000] \"GET /api/shifts/5aeae9fbf33f6300140e593f HTTP/1.1\" 200 1046 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:05:51"}
+{"level":"info","message":"::1 - - [09/May/2018:05:06:55 +0000] \"GET /api/shifts/5aeae9fbf33f6300140e593f HTTP/1.1\" 200 1046 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:06:55"}
+{"level":"info","message":"::1 - - [09/May/2018:05:08:43 +0000] \"GET /api/shifts/5aeae9fbf33f6300140e593f HTTP/1.1\" 500 286 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:08:43"}
+{"level":"info","message":"::1 - - [09/May/2018:05:09:32 +0000] \"GET /api/shifts/5aeae9fbf33f6300140e593f HTTP/1.1\" 200 1036 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:09:32"}

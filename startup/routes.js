@@ -13,11 +13,13 @@ const location = require('../routes/locations');
 const routes = require('../routes/routes');
 const shift = require('../routes/shifts');
 const shiftRiders = require('../routes/shiftRiders');
+const cors = require('cors');
 
 module.exports = function(app) {
     
     app.use(express.json());
     app.use(morgan('combined', { stream: winston.stream }));
+    app.use(cors());
     
     app.use(function(err, req, res, next) {
         // set locals, only providing error in development

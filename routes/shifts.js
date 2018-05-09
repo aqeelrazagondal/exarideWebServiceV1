@@ -105,10 +105,13 @@ router.get('/:Id', auth, async (req, res) => {
         myDate3 = new Date(shifts[i].shiftStartTime);
         let shiftEndT = myDate2.getTime();
 
+        const startLocation = await Location.findOne({ title: shifts[i].startLocName });
+        const endLocation = await Location.findOne({ title: shifts[i].endLocName });
+
         shiftResObj = {
             title: shifts[i].title,
-            startLocName: shifts[i].startLocName,
-            endLocName: shifts[i].endLocName,
+            startLoc: startLocation.loc,
+            endLoc: endLocation.loc,
             vehicle: shifts[i].vehicle,
             shiftStartTime: shiftStartT,
             shiftEndTime: shiftEndT,

@@ -7,6 +7,7 @@ var RiderSchema   = new mongoose.Schema({
     _userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
     active: { type: Boolean, default: false },
     name: String
+    // phone: { type: String, default: null, unique: true, required: true },
    
 } , {timestamps: true});
 // Export the Mongoose model
