@@ -93,3 +93,14 @@
 {"level":"info","message":"::1 - - [09/May/2018:11:22:22 +0000] \"POST /api/users/profile HTTP/1.1\" 200 65 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:22:22"}
 {"level":"info","message":"::1 - - [09/May/2018:11:24:28 +0000] \"POST /api/users/profile HTTP/1.1\" 200 65 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:24:28"}
 {"level":"info","message":"::1 - - [09/May/2018:11:43:39 +0000] \"GET /api/shifts/5aeae9fbf33f6300140e593f HTTP/1.1\" 200 1020 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:43:39"}
+{"level":"info","message":"UserExists Method Called","timestamp":"16:54:38"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"16:54:38"}
+{"level":"info","message":"User Not Found with Phone Num. :aqeel146@gmail.com","timestamp":"16:54:38"}
+{"level":"info","message":"::1 - - [09/May/2018:11:54:38 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 71 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:54:38"}
+{"level":"info","message":"UserExists Method Called","timestamp":"16:56:50"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"16:56:50"}
+{"level":"info","message":"User Found with Phone Num. :aqeel146@gmail.com","timestamp":"16:56:50"}
+{"level":"info","message":"location : -73.97,55.55","timestamp":"16:56:50"}
+{"level":"info","message":"User Location With Phone Num aqeel146@gmail.com","timestamp":"16:56:51"}
+{"level":"info","message":"::1 - - [09/May/2018:11:56:51 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 456 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:56:51"}
+{"level":"info","message":"::1 - - [09/May/2018:12:26:35 +0000] \"POST /api/users/profile HTTP/1.1\" 500 1420 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:26:35"}

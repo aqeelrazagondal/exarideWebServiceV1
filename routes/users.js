@@ -33,7 +33,7 @@ router.post('/register', async (req, res) => {
   let user = await User.findOne({ email: req.body.email });
   if (user) return res.status(400).send('User already registered.');
 
-  user = new User(_.pick(req.body, ['name', 'email', 'password', 'user_type']));
+  user = new User(_.pick(req.body, ['name', 'email', 'password', 'user_type', 'phone', 'os']));
 
   const salt = await bcrypt.genSalt(10);
   user.password = await bcrypt.hash(user.password, salt);
@@ -178,40 +178,24 @@ router.post('/updateLocation', function (req, res) {
   LocController.updateUserLocation(reqData, res);
 });
 
+var storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'public/images/uploads')
+  },
+  filename: (req, file, cb) => {
+    cb(null, file.fieldname + '-' + Date.now())
+  }
+});
+var upload = multer({storage: storage});
 
-router.post('/profile', function(req,res){
+router.post('/profile',upload.single('image'), function(req,res){
 		
   if(req.body === undefined||req.body === null) {
      res.end("Empty Body"); 
   }
 
-  var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, '/public/images')
-    },
-    filename: function (req, file, cb) {
-      cb(null, file.fieldname + '-' + Date.now())
-    }
-  });
 
-  console.log("in routes - profile : " + req.body.phone);
-  var upload = multer({
-    storage: storage
- }).single('profilePhoto');
- upload(req, res, function(err) {
-  if (err){
-  res.jsonp({status:"Failure",
-           message:"Error Uploading File",
-           object:[]});
-  }
-  else{
-    logger.info ("File Is uploaded");
-    var profilePhotoUrl="https://aldaalah.herokuapp.com/images/profileImages/"+tempFileName;
-    logger.info("profilePhotoUrl" + profilePhotoUrl);
-    regCtrl.completeProfile(req.body, profilePhotoUrl, res);
-    tempFileName="";
-  } 
- }); 
+
 });
 
 module.exports = router; 

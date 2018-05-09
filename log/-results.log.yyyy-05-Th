@@ -1,0 +1,14 @@
+{"level":"info","message":"::1 - - [09/May/2018:19:20:44 +0000] \"POST /api/users/register HTTP/1.1\" 200 124 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:20:44"}
+{"level":"info","message":"::1 - - [09/May/2018:19:21:01 +0000] \"POST /api/users/register HTTP/1.1\" 500 798 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:21:01"}
+{"level":"info","message":"::1 - - [09/May/2018:19:21:33 +0000] \"POST /api/users/register HTTP/1.1\" 200 126 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:21:33"}
+{"level":"info","message":"::1 - - [09/May/2018:19:22:05 +0000] \"POST /api/users/register HTTP/1.1\" 200 130 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:22:05"}
+{"level":"info","message":"::1 - - [09/May/2018:19:25:17 +0000] \"POST /api/users/register HTTP/1.1\" 200 121 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:25:17"}
+{"level":"info","message":"::1 - - [09/May/2018:19:28:27 +0000] \"POST /api/auth HTTP/1.1\" 200 148 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:28:27"}
+{"level":"info","message":"::1 - - [09/May/2018:19:33:47 +0000] \"POST /api/shifts/5af34a398d1b1803e48f982e HTTP/1.1\" 404 175 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:33:47"}
+{"level":"info","message":"::1 - - [09/May/2018:19:33:50 +0000] \"POST /api/shifts/5af34a398d1b1803e48f982e HTTP/1.1\" 404 175 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:33:50"}
+{"level":"info","message":"::1 - - [09/May/2018:19:36:09 +0000] \"POST /api/shifts/5af34a398d1b1803e48f982e HTTP/1.1\" 404 175 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:36:09"}
+{"level":"info","message":"::1 - - [09/May/2018:19:36:44 +0000] \"POST /api/shifts HTTP/1.1\" 400 15 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:36:44"}
+{"level":"info","message":"::1 - - [09/May/2018:19:37:44 +0000] \"POST /api/shifts HTTP/1.1\" 200 472 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:37:44"}
+{"level":"info","message":"::1 - - [09/May/2018:19:40:16 +0000] \"POST /api/riders HTTP/1.1\" 200 478 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:40:16"}
+{"level":"info","message":"::1 - - [09/May/2018:19:41:53 +0000] \"POST /api/riders HTTP/1.1\" 200 448 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:41:53"}
+{"level":"info","message":"::1 - - [09/May/2018:19:44:30 +0000] \"GET /api/shifts/5af34a398d1b1803e48f982e HTTP/1.1\" 200 573 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:44:30"}

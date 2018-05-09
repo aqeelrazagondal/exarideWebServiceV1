@@ -33,7 +33,7 @@ router.post('/', async (req, res) => {
     res.jsonp({
       status : "success",
       message : "successfully Logged In",
-      object : user
+      object : userResponseObject
     });
   }  
 });

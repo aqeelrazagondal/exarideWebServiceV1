@@ -17,9 +17,9 @@ const express = require('express');
 const logger = require('../startup/logging');
 
 
-module.exports.userExists = function(phoneNo,callback){
+module.exports.userExists = function(email,callback){
     logger.info('UserExists Method Called');
-    var query = { phone : phoneNo };
+    var query = { email: email };
     User.findOne(query).exec(function(err, user){
         if (err){
             logger.error('Some Error while finding user' + err );
@@ -30,13 +30,13 @@ module.exports.userExists = function(phoneNo,callback){
         }
         else{
             if (user){
-                logger.info('User Found with Phone Num. :'+phoneNo);                
-                console.log("user found with phone no "+phoneNo);
+                logger.info('User Found with Phone Num. :'+email);                
+                console.log("user found with phone no "+email);
                 callback (user);
             }
             else{
-                logger.info('User Not Found with Phone Num. :'+phoneNo);
-                console.log("user not found with phone no "+phoneNo);
+                logger.info('User Not Found with Phone Num. :'+email);
+                console.log("user not found with phone no "+email);
                 callback( user);
             }
        }

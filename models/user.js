@@ -31,7 +31,7 @@ const userSchema = new mongoose.Schema({
     type: [Number],  // [<longitude>, <latitude>]
     index: '2d'      // create the geospatial index
   },
-  phone: { type: String, default: null },
+  phone: { type: String, default: null, unique: true },
   regNo: String,
   profile_photo_url: { type: String, default: null },
   active: Boolean,
