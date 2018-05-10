@@ -14,10 +14,33 @@ const { Driver } = require('../models/driver');
 const Rider  = require('../models/rider');
 const mongoose = require('mongoose');
 const express = require('express');
+var path = require('path');
+var FormData = require('form-data');
+var http = require('http');
+var fs = require('fs');
 const logger = require('../startup/logging');
 const regCtrl = require('../controller/registrationController');
 const LocController = require('../controller/locationController');
 const router = express.Router();
+
+var tempFileName;
+var imageFileTempName;
+var storage = multer.diskStorage({
+	destination: function(req, file, callback) {
+		callback(null, './public/images')
+	},
+	filename: function(req, file, callback) {
+		tempFileName="";
+		tempFileName=file.fieldname + '-' + Date.now() + path.extname(file.originalname);
+		if (file.fieldname==="image"){
+			imageFileTempName=tempFileName;
+			logger.info ("Image File Received Temp Name :"+ imageFileTempName);
+		} 
+		//console.log("File NEW Name  :" +tempFileName );
+		callback(null,tempFileName );
+	}
+});
+
 
 router.get('/me', auth, async (req, res) => {
   const user = await User.findById(req.user._id).select('-password');
@@ -61,85 +84,33 @@ router.post('/register', async (req, res) => {
   }
 });
 
-router.post('/verificationcode', async (req, res) => {
-  if(req.body === undefined || req.body === null) {
-    res.send("Empty Body");  
+router.post('/verificationcode',function(req,res){                         
+		
+	if(req.body === undefined||req.body === null) {
+    res.end("Empty Body");  
   }
-  
-  const phoneNo = req.body.phoneNo;
-  const resend = req.body.resend;
-  let code;
-  let verificationMsg;
-  let requestUrl;
-  let nUser;
+  logger.verbose('verificationcode-POST called ');
+  var reqData=req.body;
+  console.log("reqData : "+ reqData.phoneNo);
+  // let phoneNo = req.query.phoneNo;;
+	console.log("in routes /verificationcode ");
+  console.log(reqData);
+  regCtrl.sendVerificationCode(reqData,res);	
 
-  logger.info('In Route /VerificationCode called  :' + phoneNo );
-  code = randomize('0', 4);
-  verificationMsg = "Verification code for Rider Application : " + code;
-
-  const user = await User.findOne({ phone: phoneNo });
-  if ( user ) return res.status(400).jsonp({ status:"failure", message:"Rider Already register", object:[] });
-  
-  if (resend==="true"||resend==1){
-    res.jsonp({status:"failure", message:"Please Create User First", object:[]});    
-  }
-  else{
-    let newUser = new User({  
-      phone: phoneNo,
-      verified_user:false,                            
-      verification_code:code
-    });
-    await newUser.save();
-    //Http Request to send message
-    requestUrl="http://sendpk.com/api/sms.php?username=923370768876&password=5823&mobile="+newUser.phone+"&sender=umer%22&message="+verificationMsg;
-    request.get(requestUrl,
-      function(error,response,body){
-        if(error){
-          console.log(error);
-        }else{
-          console.log(response);
-        }
-    });
-    logger.info('User Created With Phone Num ' + phoneNo + 'Code ' + code );
-    res.jsonp({ status:"success", message:"Verification code Sent!", object:[]});
-  }
 });
 
+
 router.post('/resendVerificationcode', async (req, res) => {
-  if(req.body === undefined || req.body === null) {
-    res.send("Empty Body");  
+  if(req.body === undefined||req.body === null) {
+    res.end("Empty Body");  
   }
-  
-  const phoneNo = req.body.phoneNo;
-  const resend = req.body.resend;
-  let code;
-  let verificationMsg;
-  let requestUrl;
-
-  logger.info('In Route /VerificationCode called  :' + phoneNo );
-  code = randomize('0', 4);
-  verificationMsg = "Verification code for Rider Application : " + code;
-
-  const user = await User.findOne({ phone: phoneNo });
-  if ( user ){
-    console.log (" User Exists  sending verification code again");
-    // send verification code logic
-    //generate a code and set to user.verification_code
-    user.verification_code=code;
-    await user.save();   
-  
-    //"http://sendpk.com/api/sms.php?username=923124999213&password=4857&mobile=
-    requestUrl="http://sendpk.com/api/sms.php?username=923370768876&password=5823&mobile="+user.phone+"&sender=umer%22&message="+verificationMsg;
-    request.get(requestUrl,
-    function(error,response,body){
-      if(error){
-        console.log(error);
-      }else{
-        console.log(response);
-      }
-    });
-    res.jsonp({status:"success", message:"Verification code Sent Again!", object:[]});
-  }  
+  logger.verbose('verificationcode-POST called ');
+  var reqData=req.body;
+  console.log("reqData : "+ reqData.phoneNo);
+  // let phoneNo = req.query.phoneNo;;
+	console.log("in routes /verificationcode ");
+  console.log(reqData);
+  regCtrl.sendVerificationCode(reqData,res);	
 }); 
 
 router.post('/verifyCode', async (req, res) => {
@@ -178,24 +149,57 @@ router.post('/updateLocation', function (req, res) {
   LocController.updateUserLocation(reqData, res);
 });
 
-var storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'public/images/uploads')
-  },
-  filename: (req, file, cb) => {
-    cb(null, file.fieldname + '-' + Date.now())
-  }
-});
-var upload = multer({storage: storage});
+// https://brandedsms.net/postvideo/postimage.php
+var upload = multer({ storage : storage });
 
-router.post('/profile',upload.single('image'), function(req,res){
+router.post('/profile', upload.fields([{ name: 'image', maxCount: 1}]),
+	function(req, resp, next){
+
+  logger.info ("Image is Uploaded");
+  var form = new FormData();
+    
+  console.log("imageFileTempName: "+imageFileTempName);
+  form.append('image', fs.createReadStream( './/public//images//'+imageFileTempName));
+  form.submit('https://brandedsms.net/postvideo/postimage.php', function(err, res) {
+  
+  console.log("In submit");
+  if (err){
+    logger.info("Error : "+ err);
+    resp.jsonp({status:"Failure", message:"Error Uploading Image", object:[]});
+      }else{
+        console.log("In else");
+        var body = '';
+        res.on('data', function(chunk) {
+          body += chunk;
+        });
+        res.on('end', function() {
+          console.log("body : "+body);
+          var urls = JSON.parse(body);
+          console.log("video : "+urls.imageurl);
+         
+          var imageUrl=urls.imageurl;
+      
+        regCtrl.completeProfile(req, imageUrl, resp);  
+        logger.info ("Setting tempFileNames to Null");
+        tempFileName="";
+        videoFileTempName="";
+        imageFileTempName="";
+        });
+      }	
+    });
 		
-  if(req.body === undefined||req.body === null) {
-     res.end("Empty Body"); 
+});
+
+
+router.post('/updateRiderLocation', function (req, res) {
+
+  if (req.body === undefined || req.body === null) {
+    res.end("Empty Body");
   }
-
-
-
+  console.log("in routes /location");
+  var reqData = req.body;
+  // console.log(reqData);
+  LocController.updateUserLocation(reqData, res);
 });
 
 module.exports = router; 

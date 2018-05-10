@@ -16,14 +16,39 @@ const express = require('express');
 const logger = require('../startup/logging');
 const regController = require('../controller/registrationController');
 
+var userExists = function(phoneNo,callback){
+    logger.info('UserExists Method Called');
+    var query = { phone: phoneNo };
+    User.findOne(query).exec(function(err, phone){
+        if (err){
+            logger.error('Some Error while finding user' + err );
+            res.status(400).send({status:"failure", message:err, object:[] });
+        }
+        else{
+            if (phone){
+                console.log('Fpund a user ', phone);
+                logger.info('User Found with Phone Num. :'+phone);                
+                console.log("user found with phone no "+phone);
+                callback (phone);
+            }
+            else{
+                logger.info('User Not Found with Phone Num. :'+phone);
+                console.log("user not found with phone no "+phone);
+                callback( phone);
+            }
+       }
+     });
+    logger.info(' Exit UserExists Method');
+}
+
 exports.updateUserLocation = function (reqData, res) {
     try {
-        var email = reqData.email;
+        var phone = reqData.phoneNo;
         var longitude = reqData.longitude;
         var latitude = reqData.latitude;
         var userLoc = new Object({ latitude: latitude, longitude: longitude });
 
-        regController.userExists(email, function (user) {
+        regController.userExists(phone, function (user) {
             if (user) {
                 user.loc = [longitude, latitude];
                 user.last_shared_loc_time = new Date();
@@ -32,7 +57,49 @@ exports.updateUserLocation = function (reqData, res) {
                         logger.error('Some Error while updating user' + err);
                     }
                     else {
-                        logger.info('User Location With Phone Num ' + email);
+                        logger.info('User Location With Phone Num ' + phone);
+                        console.log('Save user ###############', user)
+                        res.jsonp({
+                            status: "success",
+                            message: "Location Updated!",
+                            object: user
+                        });
+                    }
+                });
+
+                logger.info('location : ' + user.loc);
+            }
+            else {
+                res.jsonp({
+                    status: "failure",
+                    message: "Failed To update Location!",
+                    object: []
+                });
+            }
+        });
+    } catch (err) {
+        logger.info('An Exception Has occured in updateUserLocation method' + err);
+    }
+}
+
+exports.updateRiderLocation = function (reqData, res) {
+    try {
+        var phone = reqData.phoneNo;
+        var longitude = reqData.longitude;
+        var latitude = reqData.latitude;
+        var userLoc = new Object({ latitude: latitude, longitude: longitude });
+
+        regController.userExists(phone, function (user) {
+            if (user) {
+                user.loc = [longitude, latitude];
+                user.last_shared_loc_time = new Date();
+                user.save(function (err, user) {
+                    if (err) {
+                        logger.error('Some Error while updating user' + err);
+                    }
+                    else {
+                        logger.info('User Location With Phone Num ' + phone);
+                        console.log('Save user ###############', user)
                         res.jsonp({
                             status: "success",
                             message: "Location Updated!",

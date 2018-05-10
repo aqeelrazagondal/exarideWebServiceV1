@@ -57,7 +57,7 @@ router.post('/', async (req, res) => {
       
 });
 
-router.get('/:Id', auth, async (req, res) => {
+router.get('/:Id', async (req, res) => {
     let shiftRiders;
     let riderTempObj;
     let userTempObj;
