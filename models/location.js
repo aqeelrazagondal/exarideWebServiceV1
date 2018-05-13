@@ -6,6 +6,7 @@ const LocationSchema = new mongoose.Schema({
     title: {
         type: String
     },
+    description:{type:String,default:null },
     loc: {
         type: [Number],  // [<longitude>, <latitude>]
         index: '2d'      // create the geospatial index

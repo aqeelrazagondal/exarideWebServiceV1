@@ -10,11 +10,36 @@ var request=require("request");
 var randomize = require('randomatic');
 const {User, validate} = require('../models/user');
 const { Driver } = require('../models/driver');
+const Location = require('../models/location');
 const Rider  = require('../models/rider');
 const mongoose = require('mongoose');
 const express = require('express');
 const logger = require('../startup/logging');
 const regController = require('../controller/registrationController');
+
+var locationExists = function(id,callback){
+
+    logger.info('markerExists Method Called');
+    var query = { _id : id };
+    Location.findOne(query).exec(function(err, location){
+        if (err){
+            logger.error('Some Error while finding Location' + err );
+            res.status(400).send({status:"failure", message:err, object:[] });
+        }
+        else{
+            if (location){                
+                logger.info('Marker Found with id :'+id);
+                callback (location);
+            }
+            else{                
+                 logger.info('Marker Not Found with id :'+id);
+                callback( location);                
+            }
+       }
+    });
+    
+    logger.info(' Exit MarkerExists Method');
+}
 
 var userExists = function(phoneNo,callback){
     logger.info('UserExists Method Called');

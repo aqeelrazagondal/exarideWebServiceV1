@@ -2,6 +2,7 @@ const Joi = require('joi');
 const bcrypt = require('bcrypt');
 const _ = require('lodash');
 const {User} = require('../models/user');
+const { Driver } = require('../models/driver');
 const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
@@ -16,13 +17,16 @@ router.post('/', async (req, res) => {
   if (error) return res.status(400).send(error.details[0].message);
 
   let user = await User.findOne({ email });
-  if (!user) return res.status(400).send('Invalid email or password.');
+  if (!user) return res.status(400).send('Invalid email.');
 
   const validPassword = await bcrypt.compare(password, user.password);
-  if (!validPassword) return res.status(400).send('Invalid email or password.');
+  if (!validPassword) return res.status(400).send('Invalid password.');
+
+  let driver = await Driver.findOne({ _userId: user._id });
+  console.log('Driver ', driver)
 
   userResponseObject = {
-    "_id" : user._id,
+    "_id" : driver._id,
     "email" : user.email,
     "userType" : user.user_type
   };

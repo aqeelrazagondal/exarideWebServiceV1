@@ -3,7 +3,7 @@ const config = require('config');
 const _ = require('lodash');
 const Joi = require('joi');
 const { User } = require('../models/user');
-const Driver = require('../models/driver');
+const {Driver} = require('../models/driver');
 const Location = require('../models/location');
 const Shift = require('../models/shift');
 const ShiftRiders = require('../models/shiftRider');
@@ -23,9 +23,9 @@ router.post('/', async (req, res) => {
     if (shift) return res.status(400).send('Shift already registered.');
     console.log(shift);
   
-    let user = await User.findOne({ _id: req.body._driverId });
-    if (!user) return res.status(400).send('User Not found.');
-    console.log(user._id);
+    let driver = await Driver.findOne({ _id: req.body._driverId });
+    if (!driver) return res.status(400).send('Driver Not found.');
+    console.log(driver._id);
 
     let startLoc = await Location.findOne({ title: req.body.startLocName });
     if (!startLoc) return res.status(400).send('Start Location not found.');
@@ -37,8 +37,7 @@ router.post('/', async (req, res) => {
     
     let shiftResObj = new Shift({
         title: title,
-        _driverId: user._id,
-        driverName: user.name,
+        _driverId: driver._id,
         startLocName: startLoc.title,
         endLocName: endLoc.title,
         vehicle: vehicle,
@@ -66,38 +65,50 @@ router.get('/:Id', async (req, res) => {
     let temp= [];
     let shiftResObj;
     let listOfShiftRes = [];
+    let userObj;
     let myDate, myDate1, myDate2, myDate3;
 
+    let driver = await Driver.findOne({ _id: req.params.Id });
+    if(!driver) return res.status(404).jsonp({ status : "failure", message : "Something wrong! Driver cannot found.", object : []});
+
+    // finding shift for against given driver ID 
     const shifts = await Shift.find({ _driverId: req.params.Id }).sort('-date');
     if ( !shifts ) return res.status(404).jsonp({ status : "failure", message : "Shift cannot fint by the given ID.", object : []});
+    console.log('List of shifts', shifts);
 
     for (var i = 0; i < shifts.length; i++) {
         
+        // finding list of riders in shiftriders table
         shiftRiders = await ShiftRiders.find({ _shiftId: shifts[i]._id });
         if ( !shiftRiders ) return res.status(404).jsonp({ status : "failure", message : "The Rider with the given ID was not found.", object : []});
         
         for(var j = 0; j < shiftRiders.length; j++){
+            // finding rider with given rider ID 
             riderTempObj = await Rider.findOne({ _id: shiftRiders[j]._riderId });
-            
+            console.log('Rider response object ', riderResObj);
+
             if( riderTempObj ){
                 userTempObj = await User.findOne({ _id: riderTempObj._userId });
 
-                myDate = new Date(shiftRiders[j].pickUpTime);
-                let pickUpT = myDate.getTime();
-
-                myDate1 = new Date(shiftRiders[j].dropOfTime);
-                let dropOfT = myDate1.getTime();
-                
-                riderResObj = {
-                    profile_photo_url: userTempObj.profile_photo_url,
-                    name: riderTempObj.name,
-                    pickUploc: shiftRiders[j].pickUploc,
-                    dropOfLoc: shiftRiders[j].dropOfLoc,
-                    pickUpTime: pickUpT,
-                    dropOfTime: dropOfT
+                if(userTempObj){
+                    myDate = new Date(shiftRiders[j].pickUpTime);
+                    let pickUpT = myDate.getTime();
+    
+                    myDate1 = new Date(shiftRiders[j].dropOfTime);
+                    let dropOfT = myDate1.getTime();
+                    
+                    riderResObj = {
+                        profile_photo_url: userTempObj.profile_photo_url,
+                        name: riderTempObj.name,
+                        pickUploc: shiftRiders[j].pickUploc,
+                        dropOfLoc: shiftRiders[j].dropOfLoc,
+                        pickUpTime: pickUpT,
+                        dropOfTime: dropOfT
+                    }
+                    listOfRiders.push( riderResObj );
                 }
-                listOfRiders.push( riderResObj );
             }
+
         }
         myDate2 = new Date(shifts[i].shiftEndTime);
         let shiftStartT = myDate2.getTime();

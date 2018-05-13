@@ -7,7 +7,7 @@ const User = require('./user');
 const shiftRidersSchema   = new mongoose.Schema({
 
     _shiftId: { type: mongoose.Schema.Types.ObjectId, ref: 'Shift' },
-    _riderId: {type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+    _riderId: {type: mongoose.Schema.Types.ObjectId, ref: 'Rider' },
     riderName: String,
     pickUpTime: Date,
     dropOfTime: Date,

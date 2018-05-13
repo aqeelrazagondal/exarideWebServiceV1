@@ -71,7 +71,8 @@ router.post('/register', async (req, res) => {
 
     let newDriver = new Driver({ 
         _userId: user._id,
-        name: user.name
+        name: user.name,
+        email: user.email
     });
     await newDriver.save();
   }
