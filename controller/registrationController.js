@@ -91,10 +91,7 @@ exports.sendVerificationCode=function(reqData,res){
         if (!user){
              logger.info (" User does not exist,  Creating user");
             if (resend==="true"||resend==1){
-            res.jsonp({status:"failure",
-            message:"Please Create User First",
-            object:[]}); 
-            
+                res.jsonp({status:"failure", message:"Please Create User First", object:[] }); 
             }
             else{
                 var newuser = new User({  
@@ -106,12 +103,9 @@ exports.sendVerificationCode=function(reqData,res){
                 newuser.save(function (err, user) {
                     if(err){
                         logger.error('Some Error while saving user' + err );
-                        res.jsonp({status:"failure",
-                            message:"Some Error while saving user",
-                            object:[]}); 
+                        res.jsonp({status:"failure", message:"Some Error while saving user", object:[]}); 
                     }
 					else{                           
-
                     var headers = {
 
                         'Authorization':       'Basic ZmFsY29uLmV5ZTowMzM1NDc3OTU0NA==',
@@ -124,7 +118,7 @@ exports.sendVerificationCode=function(reqData,res){
                     url: 'http://107.20.199.106/sms/1/text/single',
                     method: 'POST',
                     headers: headers,
-                    //form: {'from': 'ALDAALAH', 'to': user.phone,'text':verificationMsg}
+             
                     json: {
                         'from': 'ALDAALAH',
                          'to': user.phone,

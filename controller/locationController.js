@@ -66,12 +66,15 @@ var userExists = function(phoneNo,callback){
     logger.info(' Exit UserExists Method');
 }
 
-exports.updateUserLocation = function (reqData, res) {
+exports.updateRiderLocation = async function (reqData, res) {
     try {
         var phone = reqData.phoneNo;
         var longitude = reqData.longitude;
         var latitude = reqData.latitude;
         var userLoc = new Object({ latitude: latitude, longitude: longitude });
+
+        let driver = await Driver.find({});
+        console.log(driver);
 
         regController.userExists(phone, function (user) {
             if (user) {
@@ -83,7 +86,6 @@ exports.updateUserLocation = function (reqData, res) {
                     }
                     else {
                         logger.info('User Location With Phone Num ' + phone);
-                        console.log('Save user ###############', user)
                         res.jsonp({
                             status: "success",
                             message: "Location Updated!",
@@ -107,42 +109,60 @@ exports.updateUserLocation = function (reqData, res) {
     }
 }
 
-exports.updateRiderLocation = function (reqData, res) {
+exports.updateRiderLocation = async function (reqData, res) {
     try {
+        var riderRsponseObject;
         var phone = reqData.phoneNo;
         var longitude = reqData.longitude;
         var latitude = reqData.latitude;
-        var userLoc = new Object({ latitude: latitude, longitude: longitude });
+        var userLoc = new Object({ latitude: latitude, longitude: longitude }); 
 
-        regController.userExists(phone, function (user) {
-            if (user) {
-                user.loc = [longitude, latitude];
-                user.last_shared_loc_time = new Date();
-                user.save(function (err, user) {
-                    if (err) {
-                        logger.error('Some Error while updating user' + err);
-                    }
-                    else {
-                        logger.info('User Location With Phone Num ' + phone);
-                        console.log('Save user ###############', user)
-                        res.jsonp({
-                            status: "success",
-                            message: "Location Updated!",
-                            object: user
-                        });
-                    }
-                });
+        // finding list of drivers
+        let driver = await Driver.find({});
+        if(!driver) return res.jsonp({ status: "failure", message: "Failed To update Location!", object: [] });
+        console.log('DRIVER AWAIT RESPONSE ', driver );
 
-                logger.info('location : ' + user.loc);
-            }
-            else {
-                res.jsonp({
-                    status: "failure",
-                    message: "Failed To update Location!",
-                    object: []
-                });
-            }
-        });
+        for(var i = 0; i < driver.length; i++){
+            let user = await User.find({ _id: driver[i]._userId });
+            console.log('user information ################ ', user);
+        }
+
+        // finding list of stops
+
+        riderRsponseObject = {
+            listOfDrivers: driver
+        };
+
+        // regController.userExists(phone, function (user) {
+        //     if (user) {
+        //         user.loc = [longitude, latitude];
+        //         user.last_shared_loc_time = new Date();
+        //         user.save(function (err, user) {
+        //             if (err) {
+        //                 logger.error('Some Error while updating user' + err);
+        //             }
+        //             else {
+        //                 logger.info('User Location With Phone Num ' + phone);
+        //                 console.log('Save user ###############', user)
+                        
+        //                 res.jsonp({
+        //                     status: "success",
+        //                     message: "Location Updated!",
+        //                     object: riderRsponseObject
+        //                 });
+        //             }
+        //         });
+
+        //         logger.info('location : ' + user.loc);
+        //     }
+        //     else {
+        //         res.jsonp({
+        //             status: "failure",
+        //             message: "Failed To update Location!",
+        //             object: []
+        //         });
+        //     }
+        // });
     } catch (err) {
         logger.info('An Exception Has occured in updateUserLocation method' + err);
     }

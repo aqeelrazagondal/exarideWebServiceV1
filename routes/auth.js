@@ -24,6 +24,7 @@ router.post('/', async (req, res) => {
 
   let driver = await Driver.findOne({ _userId: user._id });
   console.log('Driver ', driver)
+  driver.active = true;
 
   userResponseObject = {
     "_id" : driver._id,

@@ -139,17 +139,6 @@ router.post('/verifyCode', async (req, res) => {
   }  
 });
 
-router.post('/updateLocation', function (req, res) {
-
-  if (req.body === undefined || req.body === null) {
-    res.end("Empty Body");
-  }
-  console.log("in routes /location");
-  var reqData = req.body;
-  // console.log(reqData);
-  LocController.updateUserLocation(reqData, res);
-});
-
 // https://brandedsms.net/postvideo/postimage.php
 var upload = multer({ storage : storage });
 
@@ -191,8 +180,7 @@ router.post('/profile', upload.fields([{ name: 'image', maxCount: 1}]),
 		
 });
 
-
-router.post('/updateRiderLocation', function (req, res) {
+router.post('/updateLocation', function (req, res) {
 
   if (req.body === undefined || req.body === null) {
     res.end("Empty Body");
@@ -200,7 +188,7 @@ router.post('/updateRiderLocation', function (req, res) {
   console.log("in routes /location");
   var reqData = req.body;
   // console.log(reqData);
-  LocController.updateUserLocation(reqData, res);
+  LocController.updateRiderLocation(reqData, res);
 });
 
 module.exports = router; 
