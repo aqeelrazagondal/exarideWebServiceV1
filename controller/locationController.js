@@ -172,7 +172,7 @@ exports.updateRiderLocation = async function (reqData, res) {
                         res.jsonp({
                             status: "success",
                             message: "Location Updated!",
-                            object: riderRsponseObject
+                            object: [riderRsponseObject]
                         });
                     }
                 });
