@@ -82,3 +82,10 @@
 {"level":"info","message":"location : 33.673923450007095,72.99943132380758","timestamp":"19:51:20"}
 {"level":"info","message":"User Location With Phone Num 03431469988","timestamp":"19:51:20"}
 {"level":"info","message":"::1 - - [15/May/2018:14:51:20 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1130 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"19:51:20"}
+{"phoneNo":"03431469988","longitude":"33.673923450007095","latitude":"72.99943132380758","level":"info","message":"updateRiderLocation method called","timestamp":"20:01:57"}
+{"level":"info","message":"UserExists Method Called","timestamp":"20:02:11"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"20:02:11"}
+{"level":"info","message":"User Found with Phone Num. :03431469988","timestamp":"20:02:11"}
+{"level":"info","message":"location : 33.673923450007095,72.99943132380758","timestamp":"20:02:11"}
+{"level":"info","message":"User Location With Phone Num 03431469988","timestamp":"20:02:11"}
+{"level":"info","message":"::1 - - [15/May/2018:15:02:11 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1113 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"20:02:11"}
