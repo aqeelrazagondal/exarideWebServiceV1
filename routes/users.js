@@ -51,7 +51,7 @@ router.get('/me', auth, async (req, res) => {
   });
 });
 
-router.post('/register', async (req, res) => {
+router.post('/register', auth, async (req, res) => {
 
   let user = await User.findOne({ email: req.body.email });
   if (user) return res.status(400).send('User already registered.');
@@ -178,6 +178,17 @@ router.post('/profile', upload.fields([{ name: 'image', maxCount: 1}]),
       }	
     });
 		
+});
+
+router.post('/updateDriverLoc', function (req, res) {
+
+  if (req.body === undefined || req.body === null) {
+    res.end("Empty Body");
+  }
+  console.log("in routes /location");
+  var reqData = req.body;
+  // console.log(reqData);
+  LocController.updateDriverLocation(reqData, res);
 });
 
 router.post('/updateLocation', function (req, res) {

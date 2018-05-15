@@ -12,10 +12,10 @@ var randomize = require('randomatic');
 const {User, validate} = require('../models/user');
 const { Driver } = require('../models/driver');
 const Rider  = require('../models/rider');
+const Admin = require('../models/admin');
 const mongoose = require('mongoose');
 const express = require('express');
 const logger = require('../startup/logging');
-
 
 module.exports.userExists = function(phoneNo,callback){
     logger.info('UserExists Method Called');
@@ -70,7 +70,33 @@ var userExists = function(phoneNo,callback){
     logger.info(' Exit UserExists Method');
 }
 
-exports.sendVerificationCode=function(reqData,res){
+var adminExists= function(email,callback){
+    
+    logger.info('adminExists Method Called');
+     var query = { email : email };
+     Admin.findOne(query).exec(function(err, admin){
+        if (err){
+            logger.error('Some Error while finding Admin' + err );
+            res.status(400).send({status:"failure",
+                                  message:err,
+                                  object:[]
+            });
+        }
+        else{
+            if (admin){                
+                logger.info('Admin Found with Email :'+email); 
+                callback (admin);
+            }
+            else{        
+                logger.info('Admin Not Found with Email :'+email);
+                callback( admin);
+            }
+       }
+     });
+    logger.info(' Exit AdminExists Method');	
+} 
+
+exports.sendVerificationCode = async function(reqData,res){
     
     try{        
     logger.info('RegistrationController.sendVerificationCode called  :'  + reqData.phoneNo );
@@ -79,11 +105,13 @@ exports.sendVerificationCode=function(reqData,res){
     var resend =reqData.resend
 	var code;
 	var verificationMsg;
-	var requestUrl;
+    var requestUrl;
+    var user_type = 'rider';
+    var newRider;
 	//var host;
 	//generate a code and set to user.verification_code
 	code=randomize('0', 4);
-	verificationMsg="Verification code for Aldaalah Application : " + code;
+	verificationMsg="Verification code for BMS Application : " + code;
 	
     //find user by phone no.
     userExists(phoneNo,function(user){
@@ -91,13 +119,14 @@ exports.sendVerificationCode=function(reqData,res){
         if (!user){
              logger.info (" User does not exist,  Creating user");
             if (resend==="true"||resend==1){
-                res.jsonp({status:"failure", message:"Please Create User First", object:[] }); 
+                res.jsonp({ status:"failure", message:"Please Create User First", object:[] }); 
             }
             else{
                 var newuser = new User({  
                     phone: phoneNo,
                     verified_user: false,                            
-                    verification_code: code
+                    verification_code: code,
+                    user_type: user_type
                 });
                 
                 newuser.save(function (err, user) {
@@ -105,7 +134,7 @@ exports.sendVerificationCode=function(reqData,res){
                         logger.error('Some Error while saving user' + err );
                         res.jsonp({status:"failure", message:"Some Error while saving user", object:[]}); 
                     }
-					else{                           
+					else{
                     var headers = {
 
                         'Authorization':       'Basic ZmFsY29uLmV5ZTowMzM1NDc3OTU0NA==',
@@ -136,14 +165,13 @@ exports.sendVerificationCode=function(reqData,res){
                     else{
                         logger.info('Response/Error of SMS API : ' + error );
                     }
-                })
-							logger.info('User Created With Phone Num ' + phoneNo );
-							res.jsonp({status:"success",
-							message:"Verification code Sent!",
-							object:[]});	 
-					 }      
-                     });
-            }   
+                });
+				logger.info('User Created With Phone Num ' + phoneNo );
+				res.jsonp({status:"success", message:"Verification code Sent!", object:[]});	 
+                }    
+                }); 
+            } 
+              
         }
         else{
                 console.log (" User Exists  sending verification code again");
@@ -278,5 +306,3 @@ module.exports.completeProfile = function(req, imageUrl, res) {
 		logger.info('An Exception Has occured in completeProfile method' + err);
     }
 }
-
-

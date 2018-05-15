@@ -13,6 +13,8 @@ const location = require('../routes/locations');
 const routes = require('../routes/routes');
 const shift = require('../routes/shifts');
 const shiftRiders = require('../routes/shiftRiders');
+const riders = require('../routes/riders');
+const admin = require('../routes/admins');
 const cors = require('cors');
 
 module.exports = function(app) {
@@ -45,6 +47,8 @@ module.exports = function(app) {
     app.use('/api/routes', routes);
     app.use('/api/shifts', shift);
     app.use('/api/riders', shiftRiders);
-    // app.use(error);    
+    app.use('/api/riders', riders);
+    app.use('/api/admin', admin);
+    app.use(error);    
 
 }
