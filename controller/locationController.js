@@ -249,7 +249,7 @@ exports.riderPickUPLocation = async function(reqData, res){
         res.jsonp({
             status: "success",
             message: "riderPickUPLocation Updated!",
-            object: listOfDrivers
+            object: []
         });
         
     } catch (err) {

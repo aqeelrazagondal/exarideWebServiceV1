@@ -15,6 +15,7 @@ const shift = require('../routes/shifts');
 const shiftRiders = require('../routes/shiftRiders');
 const riders = require('../routes/riders');
 const admin = require('../routes/admins');
+const drivers = require('../routes/driver');
 const cors = require('cors');
 
 module.exports = function(app) {
@@ -49,6 +50,7 @@ module.exports = function(app) {
     app.use('/api/riders', shiftRiders);
     app.use('/api/riders', riders);
     app.use('/api/admin', admin);
+    app.use('/api/driver', drivers);
     app.use(error);    
 
 }

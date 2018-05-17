@@ -89,3 +89,15 @@
 {"level":"info","message":"location : 33.673923450007095,72.99943132380758","timestamp":"20:02:11"}
 {"level":"info","message":"User Location With Phone Num 03431469988","timestamp":"20:02:11"}
 {"level":"info","message":"::1 - - [15/May/2018:15:02:11 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1113 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"20:02:11"}
+{"level":"info","message":"::1 - - [15/May/2018:15:09:13 +0000] \"POST /api/users/register HTTP/1.1\" 401 33 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"20:09:13"}
+{"level":"info","message":"::1 - - [15/May/2018:15:09:51 +0000] \"POST /api/users/register HTTP/1.1\" 200 126 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"20:09:51"}
+{"level":"info","message":"::1 - - [15/May/2018:15:40:49 +0000] \"POST /api/auth HTTP/1.1\" 200 148 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"20:40:49"}
+{"level":"verbose","message":"verificationcode-POST called ","timestamp":"20:54:20"}
+{"level":"info","message":"RegistrationController.sendVerificationCode called  :03456987565","timestamp":"20:54:20"}
+{"level":"info","message":"UserExists Method Called","timestamp":"20:54:20"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"20:54:20"}
+{"level":"info","message":" Exit RegistrationController.sendVerificationCode Method","timestamp":"20:54:20"}
+{"level":"info","message":"User Found with Phone Num. :{ phone: '03456987565',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-15T15:53:52.095Z,\n  _id: 5afb0290d3884d00142ebdeb,\n  verified_user: false,\n  verification_code: '9317',\n  user_type: 'rider',\n  createdAt: 2018-05-15T15:53:52.107Z,\n  updatedAt: 2018-05-15T15:53:52.107Z,\n  __v: 0 }","timestamp":"20:54:21"}
+{"level":"info","message":"User Exists Response : { phone: '03456987565',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-15T15:53:52.095Z,\n  _id: 5afb0290d3884d00142ebdeb,\n  verified_user: false,\n  verification_code: '9317',\n  user_type: 'rider',\n  createdAt: 2018-05-15T15:53:52.107Z,\n  updatedAt: 2018-05-15T15:53:52.107Z,\n  __v: 0 }","timestamp":"20:54:21"}
+{"level":"info","message":"::1 - - [15/May/2018:15:54:22 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 74 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"20:54:22"}
+{"level":"info","message":"Sucessful Response of SMS API : 03456987565","timestamp":"20:54:23"}

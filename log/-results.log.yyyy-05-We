@@ -104,3 +104,7 @@
 {"level":"info","message":"User Location With Phone Num aqeel146@gmail.com","timestamp":"16:56:51"}
 {"level":"info","message":"::1 - - [09/May/2018:11:56:51 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 456 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:56:51"}
 {"level":"info","message":"::1 - - [09/May/2018:12:26:35 +0000] \"POST /api/users/profile HTTP/1.1\" 500 1420 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:26:35"}
+{"level":"info","message":"::1 - - [16/May/2018:07:38:56 +0000] \"POST /api/admin/login HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:38:56"}
+{"level":"info","message":"::1 - - [16/May/2018:07:39:11 +0000] \"POST /api/admin/login HTTP/1.1\" 400 14 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:39:11"}
+{"level":"info","message":"::1 - - [16/May/2018:07:39:31 +0000] \"POST /api/admin/login HTTP/1.1\" 400 17 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:39:31"}
+{"level":"info","message":"::1 - - [16/May/2018:07:39:48 +0000] \"POST /api/admin/login HTTP/1.1\" 200 128 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:39:48"}
