@@ -5,18 +5,53 @@ const config = require('config');
 const bcrypt = require('bcrypt');
 const joi = require('joi');
 //package for making HTTP Request
-var request=require("request");
+const request=require("request");
 const mongoose = require('mongoose');
 const { User } = require('../models/user');
 const { Admin } = require('../models/admin');
 const { Driver } = require('../models/driver');
+const Shift = require('../models/shift');
 const express = require('express');
-var http = require('http');
-var fs = require('fs');
+const http = require('http');
+const fs = require('fs');
 const logger = require('../startup/logging');
 const regCtrl = require('../controller/registrationController');
 const LocController = require('../controller/locationController');
 const router = express.Router();
+
+// search by BUS name, and route/shift name 
+router.get('/search/:key', async (req, res) => {
+  logger.info('IN Search Route!..');
+  
+  const name = req.params.key;
+  const title = req.params.key;
+  logger.info('Search name is!..', name);
+  logger.info('Search Title is!..', title);
+  const user = await User.findOne({name: new RegExp('.*'+name+'.*', "i")});
+  console.log('Found a user ', user);
+
+  const shift = await Shift.findOne({ title: new RegExp('.*'+title+'.*', "i") });  
+  console.log('found a shift', shift);
+
+  if(user){
+    res.jsonp({
+      status: 'success',
+      messgae: 'Found a Driver',
+      object: user
+    });
+  }
+  else if(shift){
+    res.jsonp({
+      status: 'success',
+      messgae: 'Found a Shift',
+      object: shift
+    });
+  }else {
+    res.jsonp({ status: 'Failure', messgae: 'Not FOund.!', object: [] });
+  }
+
+ 
+});
 
 router.patch('/:id', adminAuth, async (req, res) => {
 
@@ -65,7 +100,7 @@ router.get('/:id', async (req, res) => {
   res.jsonp({ status: 'Success', message: 'Uerr Found!.', object: user });
 });
   
-router.get('/', adminAuth, async (req, res) => {
+router.get('/', async (req, res) => {
   let listofDrivers = [];
   let driverResponseObject;
 
@@ -93,20 +128,6 @@ router.get('/', adminAuth, async (req, res) => {
     object: listofDrivers
   });
   
-});
-
-// search by BUS name, and route/shift name name
-router.get('/search/:key', (req, res) => {
-  
-  var regex = new RegExp(req.params.key,'i');
-  // var regex = new RegExp('noodles', 'i');  // 'i' makes it case insensitive
-  console.log('regEXP ', regex);
-
-  User.find({ name: regex }, function(req, user){
-    res.send(user);
-  });
- 
-
 });
 
 module.exports = router; 

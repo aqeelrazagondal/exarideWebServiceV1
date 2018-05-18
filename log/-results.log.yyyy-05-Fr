@@ -12,3 +12,172 @@
 {"level":"info","message":"::1 - - [18/May/2018:05:37:55 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:37:55"}
 {"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"10:38:15"}
 {"level":"info","message":"::1 - - [18/May/2018:05:38:18 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 409 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:38:18"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"10:42:41"}
+{"level":"info","message":"g11 markaz islamabad","timestamp":"10:42:41"}
+{"0":33.6961,"1":73.0491,"level":"info","message":"Start location","timestamp":"10:42:42"}
+{"0":33.7109,"1":73.0626,"level":"info","message":"End Location ","timestamp":"10:42:42"}
+{"level":"info","message":"exagic","timestamp":"10:42:42"}
+{"0":21.9723,"1":33.6564,"level":"info","message":"Start location","timestamp":"10:42:42"}
+{"0":21.9723,"1":33.6564,"level":"info","message":"End Location ","timestamp":"10:42:42"}
+{"level":"info","message":"::1 - - [18/May/2018:05:42:42 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 409 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:42:42"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"10:43:39"}
+{"level":"info","message":"g11 markaz islamabad","timestamp":"10:43:39"}
+{"0":33.6961,"1":73.0491,"level":"info","message":"Start location","timestamp":"10:43:40"}
+{"0":33.7109,"1":73.0626,"level":"info","message":"End Location ","timestamp":"10:43:40"}
+{"level":"info","message":"exagic","timestamp":"10:43:40"}
+{"0":21.9723,"1":33.6564,"level":"info","message":"Start location","timestamp":"10:43:40"}
+{"0":21.9723,"1":33.6564,"level":"info","message":"End Location ","timestamp":"10:43:40"}
+{"level":"info","message":"::1 - - [18/May/2018:05:43:40 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 409 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:43:40"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"10:44:28"}
+{"0":{"$__":{"strictMode":true,"selected":{},"getters":{},"_id":{"_bsontype":"ObjectID","id":{"0":90,"1":248,"2":105,"3":39,"4":134,"5":10,"6":24,"7":53,"8":116,"9":122,"10":236,"11":13}},"wasPopulated":false,"activePaths":{"paths":{"title":"init","_id":"init","_driverId":"init","startLocName":"init","endLocName":"init","vehicle":"init","shiftStartTime":"init","shiftEndTime":"init","shiftStatus":"init","createdAt":"init","updatedAt":"init","__v":"init"},"states":{"ignore":{},"default":{},"init":{"_id":true,"title":true,"_driverId":true,"startLocName":true,"endLocName":true,"vehicle":true,"shiftStartTime":true,"shiftEndTime":true,"shiftStatus":true,"createdAt":true,"updatedAt":true,"__v":true},"modify":{},"require":{}},"stateNames":["require","modify","init","default","ignore"]},"pathsToScopes":{},"emitter":{"domain":null,"_events":{},"_eventsCount":0,"_maxListeners":0},"$options":true},"isNew":false,"_doc":{"_id":{"$ref":"$[0][\"$__\"][\"_id\"]"},"title":"bahria to saddar","_driverId":{"_bsontype":"ObjectID","id":{"0":90,"1":248,"2":104,"3":82,"4":30,"5":104,"6":167,"7":34,"8":16,"9":218,"10":77,"11":39}},"startLocName":"g11 markaz islamabad","endLocName":"G-15, Islamabad","vehicle":"abc1234","shiftStartTime":"2018-10-15T21:26:17.000Z","shiftEndTime":"2018-10-15T23:26:17.000Z","shiftStatus":"active","createdAt":"2018-05-13T16:34:47.097Z","updatedAt":"2018-05-13T16:34:47.097Z","__v":0},"$init":true},"1":{"$__":{"strictMode":true,"selected":{"$ref":"$[0][\"$__\"][\"selected\"]"},"getters":{},"_id":{"_bsontype":"ObjectID","id":{"0":90,"1":248,"2":105,"3":210,"4":134,"5":10,"6":24,"7":53,"8":116,"9":122,"10":236,"11":17}},"wasPopulated":false,"activePaths":{"paths":{"title":"init","_id":"init","_driverId":"init","startLocName":"init","endLocName":"init","vehicle":"init","shiftStartTime":"init","shiftEndTime":"init","shiftStatus":"init","createdAt":"init","updatedAt":"init","__v":"init"},"states":{"ignore":{},"default":{},"init":{"_id":true,"title":true,"_driverId":true,"startLocName":true,"endLocName":true,"vehicle":true,"shiftStartTime":true,"shiftEndTime":true,"shiftStatus":true,"createdAt":true,"updatedAt":true,"__v":true},"modify":{},"require":{}},"stateNames":{"$ref":"$[0][\"$__\"][\"activePaths\"][\"stateNames\"]"}},"pathsToScopes":{},"emitter":{"domain":null,"_events":{},"_eventsCount":0,"_maxListeners":0},"$options":true},"isNew":false,"_doc":{"_id":{"$ref":"$[1][\"$__\"][\"_id\"]"},"title":"dha to cust","_driverId":{"_bsontype":"ObjectID","id":{"0":90,"1":248,"2":104,"3":82,"4":30,"5":104,"6":167,"7":34,"8":16,"9":218,"10":77,"11":39}},"startLocName":"exagic","endLocName":"subway","vehicle":"abc1234","shiftStartTime":"2018-10-15T21:26:17.000Z","shiftEndTime":"2018-10-15T23:26:17.000Z","shiftStatus":"active","createdAt":"2018-05-13T16:37:38.658Z","updatedAt":"2018-05-13T16:37:38.658Z","__v":0},"$init":true},"level":"info","message":"Shifts Found","timestamp":"10:44:29"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"10:51:30"}
+{"level":"info","message":"g11 markaz islamabad","timestamp":"10:51:31"}
+{"0":33.6961,"1":73.0491,"level":"info","message":"Start location","timestamp":"10:51:31"}
+{"0":33.7109,"1":73.0626,"level":"info","message":"End Location ","timestamp":"10:51:32"}
+{"level":"info","message":"exagic","timestamp":"10:51:32"}
+{"0":21.9723,"1":33.6564,"level":"info","message":"Start location","timestamp":"10:51:32"}
+{"0":21.9723,"1":33.6564,"level":"info","message":"End Location ","timestamp":"10:51:32"}
+{"level":"info","message":"::1 - - [18/May/2018:05:51:32 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 409 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:51:32"}
+{"level":"info","message":"::1 - - [18/May/2018:06:01:35 +0000] \"GET /api/driver HTTP/1.1\" 401 33 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:01:35"}
+{"level":"info","message":"::1 - - [18/May/2018:06:21:40 +0000] \"GET /api/driver/aqeelraza HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:21:40"}
+{"level":"info","message":"::1 - - [18/May/2018:06:22:53 +0000] \"GET /api/driver/aqeelraza HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:22:53"}
+{"level":"info","message":"::1 - - [18/May/2018:06:23:23 +0000] \"GET /api/driver HTTP/1.1\" 200 793 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:23:23"}
+{"level":"info","message":"::1 - - [18/May/2018:06:24:08 +0000] \"GET /api/driver/search HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:24:08"}
+{"level":"info","message":"::1 - - [18/May/2018:06:25:02 +0000] \"GET /api/driver/search HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:25:02"}
+{"level":"info","message":"::1 - - [18/May/2018:06:25:42 +0000] \"GET /api/driver/search HTTP/1.1\" 200 428 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:25:42"}
+{"level":"info","message":"::1 - - [18/May/2018:06:26:26 +0000] \"GET /api/driver/search/naveed HTTP/1.1\" 200 428 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:26:26"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"11:52:19"}
+{"level":"info","message":"g11 markaz islamabad","timestamp":"11:52:19"}
+{"0":33.6961,"1":73.0491,"level":"info","message":"Start location","timestamp":"11:52:19"}
+{"0":33.7109,"1":73.0626,"level":"info","message":"End Location ","timestamp":"11:52:20"}
+{"level":"info","message":"exagic","timestamp":"11:52:20"}
+{"0":21.9723,"1":33.6564,"level":"info","message":"Start location","timestamp":"11:52:20"}
+{"0":21.9723,"1":33.6564,"level":"info","message":"End Location ","timestamp":"11:52:20"}
+{"level":"info","message":"::1 - - [18/May/2018:06:52:20 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 409 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:52:20"}
+{"level":"info","message":"IN Search Route!..","timestamp":"11:55:38"}
+{"level":"info","message":"::1 - - [18/May/2018:06:55:38 +0000] \"GET /api/driver/search/bahria HTTP/1.1\" 400 59 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:55:38"}
+{"level":"info","message":"IN Search Route!..","timestamp":"11:55:59"}
+{"level":"info","message":"::1 - - [18/May/2018:06:56:01 +0000] \"GET /api/driver/search/bahria HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:56:01"}
+{"level":"info","message":"IN Search Route!..","timestamp":"11:57:29"}
+{"level":"info","message":"::1 - - [18/May/2018:06:57:38 +0000] \"GET /api/driver/search/bahria HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:57:38"}
+{"level":"info","message":"IN Search Route!..","timestamp":"11:57:49"}
+{"level":"info","message":"::1 - - [18/May/2018:06:57:50 +0000] \"GET /api/driver/search/naveed HTTP/1.1\" 200 485 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:57:50"}
+{"level":"info","message":"IN Search Route!..","timestamp":"12:07:56"}
+{"level":"info","message":"IN Search Route!..","timestamp":"12:12:32"}
+{"level":"info","message":"::1 - - [18/May/2018:07:12:59 +0000] \"GET /api/driver/search/naveed HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:12:59"}
+{"level":"info","message":"IN Search Route!..","timestamp":"12:13:16"}
+{"level":"info","message":"::1 - - [18/May/2018:07:13:22 +0000] \"GET /api/driver/search/naveed HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:13:22"}
+{"level":"info","message":"::1 - - [18/May/2018:07:13:32 +0000] \"GET /api/driver/search HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:13:32"}
+{"level":"info","message":"IN Search Route!..","timestamp":"12:13:47"}
+{"level":"info","message":"::1 - - [18/May/2018:07:15:47 +0000] \"GET /api/driver/search/naveed HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:15:47"}
+{"level":"info","message":"IN Search Route!..","timestamp":"12:26:47"}
+{"level":"info","message":"::1 - - [18/May/2018:07:26:48 +0000] \"GET /api/driver/search/naveed HTTP/1.1\" 200 485 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:26:48"}
+{"level":"info","message":"IN Search Route!..","timestamp":"12:26:57"}
+{"level":"info","message":"::1 - - [18/May/2018:07:26:57 +0000] \"GET /api/driver/search/DHA HTTP/1.1\" 400 59 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:26:57"}
+{"level":"info","message":"IN Search Route!..","timestamp":"12:31:03"}
+{"level":"info","message":"::1 - - [18/May/2018:07:31:05 +0000] \"GET /api/driver/search/navee HTTP/1.1\" 400 59 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:31:05"}
+{"level":"info","message":"IN Search Route!..","timestamp":"12:31:29"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [18/May/2018:07:31:34 +0000] \"GET /api/driver/search/navee HTTP/1.1\" 200 485 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:31:34"}
+{"level":"info","message":"IN Search Route!..","timestamp":"12:32:06"}
+{"level":"info","message":"::1 - - [18/May/2018:07:32:10 +0000] \"GET /api/driver/search/navee HTTP/1.1\" 400 59 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:32:10"}
+{"level":"info","message":"IN Search Route!..","timestamp":"12:32:15"}
+{"level":"info","message":"::1 - - [18/May/2018:07:32:15 +0000] \"GET /api/driver/search/naveed HTTP/1.1\" 400 59 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:32:15"}
+{"level":"info","message":"IN Search Route!..","timestamp":"12:32:21"}
+{"level":"info","message":"::1 - - [18/May/2018:07:32:21 +0000] \"GET /api/driver/search/naveed HTTP/1.1\" 400 59 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:32:21"}
+{"level":"info","message":"IN Search Route!..","timestamp":"12:33:07"}
+{"level":"info","message":"::1 - - [18/May/2018:07:33:12 +0000] \"GET /api/driver/search/naveed HTTP/1.1\" 200 485 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:33:12"}
+{"level":"info","message":"IN Search Route!..","timestamp":"12:37:57"}
+{"level":"info","message":"::1 - - [18/May/2018:07:37:58 +0000] \"GET /api/driver/search/navee HTTP/1.1\" 200 485 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:37:58"}
+{"level":"info","message":"IN Search Route!..","timestamp":"12:38:03"}
+{"level":"info","message":"::1 - - [18/May/2018:07:38:04 +0000] \"GET /api/driver/search/navee HTTP/1.1\" 200 485 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:38:04"}
+{"level":"info","message":"IN Search Route!..","timestamp":"12:39:33"}
+{"level":"info","message":"Search name is!.. DHA","timestamp":"12:39:33"}
+{"level":"info","message":"Search Title is!.. DHA","timestamp":"12:39:33"}
+{"level":"info","message":"IN Search Route!..","timestamp":"12:40:46"}
+{"level":"info","message":"Search name is!.. DHA","timestamp":"12:40:46"}
+{"level":"info","message":"Search Title is!.. DHA","timestamp":"12:40:46"}
+{"level":"info","message":"::1 - - [18/May/2018:07:40:51 +0000] \"GET /api/driver/search/DHA HTTP/1.1\" 200 412 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:40:51"}
+{"level":"info","message":"::1 - - [18/May/2018:09:38:47 +0000] \"GET /api/driver/aqeel HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:38:47"}
+{"level":"info","message":"IN Search Route!..","timestamp":"14:42:57"}
+{"level":"info","message":"Search name is!.. aqeelraza","timestamp":"14:42:58"}
+{"level":"info","message":"Search Title is!.. aqeelraza","timestamp":"14:42:58"}
+{"level":"info","message":"::1 - - [18/May/2018:09:42:58 +0000] \"GET /api/driver/search/aqeelraza HTTP/1.1\" 200 56 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:42:58"}
+{"level":"info","message":"IN Search Route!..","timestamp":"14:43:06"}
+{"level":"info","message":"Search name is!.. aqeel raza","timestamp":"14:43:06"}
+{"level":"info","message":"Search Title is!.. aqeel raza","timestamp":"14:43:06"}
+{"level":"info","message":"::1 - - [18/May/2018:09:43:06 +0000] \"GET /api/driver/search/aqeel%20raza HTTP/1.1\" 200 490 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:43:06"}
+{"level":"info","message":"IN Search Route!..","timestamp":"14:43:17"}
+{"level":"info","message":"Search name is!.. aqeel","timestamp":"14:43:17"}
+{"level":"info","message":"Search Title is!.. aqeel","timestamp":"14:43:17"}
+{"level":"info","message":"::1 - - [18/May/2018:09:43:17 +0000] \"GET /api/driver/search/aqeel HTTP/1.1\" 200 490 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:43:17"}
+{"level":"info","message":"IN Search Route!..","timestamp":"14:52:32"}
+{"level":"info","message":"Search name is!.. asd","timestamp":"14:52:32"}
+{"level":"info","message":"Search Title is!.. asd","timestamp":"14:52:32"}
+{"level":"info","message":"::1 - - [18/May/2018:09:52:33 +0000] \"GET /api/driver/search/asd HTTP/1.1\" 200 56 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:52:33"}
+{"level":"info","message":"IN Search Route!..","timestamp":"14:52:41"}
+{"level":"info","message":"Search name is!.. aliraza","timestamp":"14:52:41"}
+{"level":"info","message":"Search Title is!.. aliraza","timestamp":"14:52:41"}
+{"level":"info","message":"::1 - - [18/May/2018:09:52:42 +0000] \"GET /api/driver/search/aliraza HTTP/1.1\" 200 56 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:52:42"}
+{"level":"info","message":"IN Search Route!..","timestamp":"14:52:48"}
+{"level":"info","message":"Search name is!.. bahria","timestamp":"14:52:48"}
+{"level":"info","message":"Search Title is!.. bahria","timestamp":"14:52:48"}
+{"level":"info","message":"::1 - - [18/May/2018:09:52:48 +0000] \"GET /api/driver/search/bahria HTTP/1.1\" 200 440 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:52:48"}
+{"level":"info","message":"IN Search Route!..","timestamp":"14:52:56"}
+{"level":"info","message":"Search name is!.. saddar","timestamp":"14:52:56"}
+{"level":"info","message":"Search Title is!.. saddar","timestamp":"14:52:56"}
+{"level":"info","message":"::1 - - [18/May/2018:09:52:57 +0000] \"GET /api/driver/search/saddar HTTP/1.1\" 200 440 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:52:57"}
+{"level":"info","message":"IN Search Route!..","timestamp":"14:53:02"}
+{"level":"info","message":"Search name is!.. klsjd","timestamp":"14:53:02"}
+{"level":"info","message":"Search Title is!.. klsjd","timestamp":"14:53:02"}
+{"level":"info","message":"::1 - - [18/May/2018:09:53:03 +0000] \"GET /api/driver/search/klsjd HTTP/1.1\" 200 56 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:53:03"}
+{"level":"info","message":"IN Search Route!..","timestamp":"14:53:11"}
+{"level":"info","message":"Search name is!.. lahore","timestamp":"14:53:11"}
+{"level":"info","message":"Search Title is!.. lahore","timestamp":"14:53:11"}
+{"level":"info","message":"::1 - - [18/May/2018:09:53:11 +0000] \"GET /api/driver/search/lahore HTTP/1.1\" 200 56 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:53:11"}
+{"level":"info","message":"IN Search Route!..","timestamp":"14:53:18"}
+{"level":"info","message":"Search name is!.. bluew area","timestamp":"14:53:18"}
+{"level":"info","message":"Search Title is!.. bluew area","timestamp":"14:53:18"}
+{"level":"info","message":"::1 - - [18/May/2018:09:53:18 +0000] \"GET /api/driver/search/bluew%20area HTTP/1.1\" 200 56 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:53:18"}
+{"level":"info","message":"IN Search Route!..","timestamp":"14:53:21"}
+{"level":"info","message":"Search name is!.. blue","timestamp":"14:53:21"}
+{"level":"info","message":"Search Title is!.. blue","timestamp":"14:53:21"}
+{"level":"info","message":"::1 - - [18/May/2018:09:53:22 +0000] \"GET /api/driver/search/blue HTTP/1.1\" 200 56 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:53:22"}
+{"level":"info","message":"IN Search Route!..","timestamp":"14:53:28"}
+{"level":"info","message":"Search name is!.. bahria","timestamp":"14:53:28"}
+{"level":"info","message":"Search Title is!.. bahria","timestamp":"14:53:28"}
+{"level":"info","message":"::1 - - [18/May/2018:09:53:29 +0000] \"GET /api/driver/search/bahria HTTP/1.1\" 200 440 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:53:29"}
+{"phoneNo":"03431469988","longitude":"33.673923450007095","latitude":"72.99943132380758","level":"info","message":"updateRiderLocation method called","timestamp":"15:37:10"}
+{"level":"info","message":"UserExists Method Called","timestamp":"15:37:13"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"15:37:13"}
+{"level":"info","message":"User Found with Phone Num. :03431469988","timestamp":"15:37:14"}
+{"level":"info","message":"location : 33.673923450007095,72.99943132380758","timestamp":"15:37:14"}
+{"level":"info","message":"User Location With Phone Num 03431469988","timestamp":"15:37:14"}
+{"level":"info","message":"::1 - - [18/May/2018:10:37:14 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1140 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:37:14"}
+{"phoneNo":"03431469988","longitude":"33.673923450007095","latitude":"72.99943132380758","level":"info","message":"updateRiderLocation method called","timestamp":"15:42:48"}
+{"level":"info","message":"UserExists Method Called","timestamp":"15:42:50"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"15:42:50"}
+{"level":"info","message":"User Found with Phone Num. :03431469988","timestamp":"15:42:50"}
+{"level":"info","message":"location : 33.673923450007095,72.99943132380758","timestamp":"15:42:50"}
+{"level":"info","message":"User Location With Phone Num 03431469988","timestamp":"15:42:50"}
+{"level":"info","message":"::1 - - [18/May/2018:10:42:50 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1140 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:42:50"}
+{"phoneNo":"03431469988","longitude":"33.673923450007095","latitude":"72.99943132380758","level":"info","message":"updateRiderLocation method called","timestamp":"15:45:19"}
+{"level":"info","message":"UserExists Method Called","timestamp":"15:45:27"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"15:45:27"}
+{"level":"info","message":"User Found with Phone Num. :03431469988","timestamp":"15:45:27"}
+{"level":"info","message":"location : 33.673923450007095,72.99943132380758","timestamp":"15:45:27"}
+{"level":"info","message":"User Location With Phone Num 03431469988","timestamp":"15:45:27"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [18/May/2018:10:45:27 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1140 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:45:27"}
+{"phoneNo":"03431469988","longitude":"33.673923450007095","latitude":"72.99943132380758","level":"info","message":"updateRiderLocation method called","timestamp":"15:47:57"}
+{"level":"info","message":"UserExists Method Called","timestamp":"15:48:03"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"15:48:03"}
+{"level":"info","message":"User Found with Phone Num. :03431469988","timestamp":"15:48:03"}
+{"level":"info","message":"location : 33.673923450007095,72.99943132380758","timestamp":"15:48:03"}
+{"level":"info","message":"User Location With Phone Num 03431469988","timestamp":"15:48:03"}
+{"level":"info","message":"::1 - - [18/May/2018:10:48:03 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1155 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:48:03"}
+{"phoneNo":"03431469988","longitude":"33.673923450007095","latitude":"72.99943132380758","level":"info","message":"updateRiderLocation method called","timestamp":"15:49:47"}
+{"level":"info","message":"UserExists Method Called","timestamp":"15:49:53"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"15:49:53"}
+{"level":"info","message":"User Found with Phone Num. :03431469988","timestamp":"15:49:53"}
+{"level":"info","message":"location : 33.673923450007095,72.99943132380758","timestamp":"15:49:53"}
+{"level":"info","message":"User Location With Phone Num 03431469988","timestamp":"15:49:54"}
+{"level":"info","message":"::1 - - [18/May/2018:10:49:54 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1573 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:49:54"}

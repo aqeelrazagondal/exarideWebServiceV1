@@ -144,10 +144,16 @@ exports.updateRiderLocation = async function (reqData, res) {
         let shiftRider = await ShiftRider.find({});
         if(!shiftRider) return res.jsonp({ status: "failure", message: "Failed To findind stops!", object: [] });
         for(let i = 0; i < shiftRider.length; i++){
+            console.log('shiftRIders  &&&&&&&&&&& ', shiftRider[i].pickUpLocName);
+            let pickUp = await Location.findOne({ title: shiftRider[i].pickUpLocName }); 
+            console.log('FIND A PICK UP LOCATION..!!!', pickUp);
+
             let stopRes = {
-                pickUpLocName: shiftRider[i].pickUpLocName,
-                pickUploc: shiftRider[i].pickUploc
+                pickUpID: pickUp._id,
+                pickUpLocName: pickUp.title,
+                pickUploc: pickUp.loc
             }
+
             listOfStops.push(stopRes);
         }
 
@@ -167,7 +173,6 @@ exports.updateRiderLocation = async function (reqData, res) {
                     }
                     else {
                         logger.info('User Location With Phone Num ' + phone);
-                        console.log('Save user ###############', user)
                         
                         res.jsonp({
                             status: "success",

@@ -19,17 +19,18 @@ router.get('/getAllShifts', async (req, res) => {
     let lisOfShifts = [];
 
     const shifts = await Shift.find({});
-    console.log(shifts);
-    if(!shifts) res.status(400).jsonp({ status:'failure', message: 'SHifts not FOund', object: [] });
-    
+    if(!shifts) return res.status(400).jsonp({ status:'failure', message: 'Shifts not found', object: [] });
+    console.log('Shifts Found', shifts);
 
     for(var i = 0; i < shifts.length; i++){
-        console.log(shifts[i].startLocName);
-        const locationStart = await Location.findOne({ title: shifts[i].startLocName })
-        console.log('Start location', locationStart.loc);
+        logger.info(shifts[i].startLocName);
+        const locationStart = await Location.findOne({ title: shifts[i].startLocName });
+        if(!locationStart) return res.status(400).jsonp({ status:'failure', message: 'Start location not found', object: [] });
+        logger.info('Start location', locationStart.loc);
 
         const locationEnd = await Location.findOne({ title: shifts[i].endLocName })
-        console.log('End Location ', locationEnd.loc);
+        if(!locationEnd) return res.status(400).jsonp({ status:'failure', message: 'End location not found', object: [] });
+        logger.info('End Location ', locationEnd.loc);
 
         shiftResObj = {
             title: shifts[i].title,
@@ -39,7 +40,6 @@ router.get('/getAllShifts', async (req, res) => {
             endLocLatLng: locationEnd.loc,
             shiftStatus: shifts[i].shiftStatus
         }
-
         lisOfShifts.push(shiftResObj);
     }
     
@@ -52,6 +52,7 @@ router.get('/getAllShifts', async (req, res) => {
 
 
 router.post('/', async (req, res) => {
+    logger.info('In POST shift route ');
     let title = req.body.title; 
     let vehicle = req.body.vehicle;
     let shiftStartTime = req.body.shiftStartTime;
@@ -59,19 +60,19 @@ router.post('/', async (req, res) => {
     let shiftStatus = req.body.shiftStatus;
 
     let shift = await Shift.findOne({ title });
-    if (shift) return res.status(400).send('Shift already registered.');
+    if (shift)  return res.status(400).jsonp({ status:'failure', message: 'Shift already registered.', object: [] });
     console.log(shift);
   
     let driver = await Driver.findOne({ _id: req.body._driverId });
-    if (!driver) return res.status(400).send('Driver Not found.');
+    if (!driver) return res.status(400).jsonp({ status:'failure', message: 'Driver not found by given ID.', object: [] });
     console.log(driver._id);
 
     let startLoc = await Location.findOne({ title: req.body.startLocName });
-    if (!startLoc) return res.status(400).send('Start Location not found.');
+    if (!startLoc) return res.status(400).jsonp({ status:'failure', message: 'Start location not found', object: [] });
     console.log('Start Location', startLoc.title);
 
     let endLoc = await Location.findOne({ title: req.body.endLocName });
-    if (!endLoc) return res.status(400).send('End Location not found.');
+    if (!endLoc)  return res.status(400).jsonp({ status:'failure', message: 'End location not found', object: [] });
     console.log('End Location', endLoc.title);
     
     let shiftResObj = new Shift({
@@ -96,6 +97,7 @@ router.post('/', async (req, res) => {
 });
 
 router.get('/:Id', async (req, res) => {
+    logger.info('IN SHFTS ROUTES, shifts are find by Driver ID. ', req.params.id)
     let shiftRiders;
     let riderTempObj;
     let userTempObj;
@@ -170,6 +172,7 @@ router.get('/:Id', async (req, res) => {
         listOfShiftRes.push( shiftResObj );
         listOfRiders = [];
     }
+    logger.info('Final shifts response by driver ID.');
     
     res.jsonp({
         status : "success",
