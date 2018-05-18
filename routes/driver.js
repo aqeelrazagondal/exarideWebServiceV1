@@ -20,14 +20,15 @@ const router = express.Router();
 
 router.patch('/:id', adminAuth, async (req, res) => {
 
+  logger.info('Ib driver info update route', id);
   const admin = await Admin.findOne({ email: req.body.email });
   if (!admin) return res.status(400).jsonp({ status: 'failure', message: 'Admin not found by given Email.', object: [] }); 
-  console.log('Admin found! ', admin);
+  logger.info('Admin found', admin.name);
 
   const driverQuery = req.params.id;
   const driver = await Driver.findOne({ _id: driverQuery });
   if(!driver) return res.status(400).jsonp({ status: 'failure', message: 'driver not found by given ID.', object: [] });
-  console.log('In Driver table UserID', driver._userId);
+  logger.info('In update driver info route', driver._userId);
 
   let userQuery = driver._userId; 
   const user = await User.findOne({ _id: userQuery });
@@ -64,15 +65,48 @@ router.get('/:id', async (req, res) => {
   res.jsonp({ status: 'Success', message: 'Uerr Found!.', object: user });
 });
   
-router.get('/', async (req, res) => {
+router.get('/', adminAuth, async (req, res) => {
+  let listofDrivers = [];
+  let driverResponseObject;
+
   const driver = await Driver.find({});
   for(var i = 0; i< driver.length; i++){
     console.log(driver[i]._userId);
+    const user = await User.findOne({ _id: driver[i]._userId });
+    // if(!user) return res.status(400).jsonp({ status: 'failure', messgae: 'Driver not found by given ID.', object: [] });
+    if(user){
+      driverResponseObject = {
+        _id: driver[i]._id,
+        name: user.name,
+        email: user.email,
+        profile_photo_url: user.profile_photo_url,
+        loc: user.loc,
+        last_shared_loc_time: user.last_shared_loc_time
+      }
+      listofDrivers.push(driverResponseObject);
+    }
   }
+
   res.jsonp({
-    driver: driver
+    status: 'success',
+    messgae: 'List of Drivers',
+    object: listofDrivers
   });
+  
 });
 
+// search by BUS name, and route/shift name name
+router.get('/search/:key', (req, res) => {
+  
+  var regex = new RegExp(req.params.key,'i');
+  // var regex = new RegExp('noodles', 'i');  // 'i' makes it case insensitive
+  console.log('regEXP ', regex);
+
+  User.find({ name: regex }, function(req, user){
+    res.send(user);
+  });
+ 
+
+});
 
 module.exports = router; 

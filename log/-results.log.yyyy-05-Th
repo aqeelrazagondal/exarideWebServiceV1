@@ -243,3 +243,20 @@
 {"level":"info","message":"::1 - - [17/May/2018:09:10:07 +0000] \"GET /api/driver HTTP/1.1\" 200 1107 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:10:07"}
 {"level":"info","message":"::1 - - [17/May/2018:09:11:03 +0000] \"GET /api/driver HTTP/1.1\" 200 1107 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:11:03"}
 {"level":"info","message":"::1 - - [17/May/2018:09:12:12 +0000] \"GET /api/driver HTTP/1.1\" 200 1107 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:12:12"}
+{"level":"info","message":"::1 - - [17/May/2018:09:22:38 +0000] \"GET /api/driver HTTP/1.1\" 400 74 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:22:38"}
+{"level":"info","message":"::1 - - [17/May/2018:09:23:03 +0000] \"GET /api/driver HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:23:03"}
+{"level":"info","message":"::1 - - [17/May/2018:09:23:47 +0000] \"GET /api/driver HTTP/1.1\" 200 791 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:23:47"}
+{"level":"info","message":"::1 - - [17/May/2018:10:44:38 +0000] \"GET /api/driver/aqeel HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:44:38"}
+{"level":"info","message":"::1 - - [17/May/2018:10:44:54 +0000] \"POST /api/driver/aqeel HTTP/1.1\" 404 156 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:44:54"}
+{"level":"info","message":"::1 - - [17/May/2018:10:45:33 +0000] \"GET /api/driver/aqeel HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:45:33"}
+{"level":"info","message":"::1 - - [17/May/2018:10:45:59 +0000] \"GET /api/driver/aqeelraza HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:45:59"}
+{"level":"info","message":"::1 - - [17/May/2018:12:25:33 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 404 82 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:25:33"}
+{"level":"info","message":"::1 - - [17/May/2018:12:27:34 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 404 82 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:27:34"}
+{"level":"info","message":"::1 - - [17/May/2018:12:27:38 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 404 82 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:27:38"}
+{"level":"info","message":"::1 - - [17/May/2018:12:28:47 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 404 82 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:28:47"}
+{"level":"info","message":"::1 - - [17/May/2018:12:29:02 +0000] \"GET /api/shifts/5af868521e68a72210da4d27 HTTP/1.1\" 200 808 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:29:02"}
+{"level":"info","message":"::1 - - [17/May/2018:12:30:12 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 404 82 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:30:12"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"17:31:08"}
+{"level":"info","message":"::1 - - [17/May/2018:12:31:10 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:31:10"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"17:31:32"}
+{"level":"info","message":"::1 - - [17/May/2018:12:31:34 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 801 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:31:34"}

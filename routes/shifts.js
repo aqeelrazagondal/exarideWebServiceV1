@@ -10,7 +10,46 @@ const ShiftRiders = require('../models/shiftRider');
 const Rider = require('../models/rider');
 const mongoose = require('mongoose');
 const express = require('express');
+const logger = require('../startup/logging');
 const router = express.Router();
+
+router.get('/getAllShifts', async (req, res) => {
+    logger.info('IN GET ALL SHIFTS ROUTE!');
+    let shiftResObj;
+    let lisOfShifts = [];
+
+    const shifts = await Shift.find({});
+    console.log(shifts);
+    if(!shifts) res.status(400).jsonp({ status:'failure', message: 'SHifts not FOund', object: [] });
+    
+
+    for(var i = 0; i < shifts.length; i++){
+        console.log(shifts[i].startLocName);
+        const locationStart = await Location.findOne({ title: shifts[i].startLocName })
+        console.log('Start location', locationStart.loc);
+
+        const locationEnd = await Location.findOne({ title: shifts[i].endLocName })
+        console.log('End Location ', locationEnd.loc);
+
+        shiftResObj = {
+            title: shifts[i].title,
+            startLocName: shifts[i].startLocName,
+            startLocLatLng: locationStart.loc,
+            endLocName: shifts[i].endLocName,
+            endLocLatLng: locationEnd.loc,
+            shiftStatus: shifts[i].shiftStatus
+        }
+
+        lisOfShifts.push(shiftResObj);
+    }
+    
+    res.jsonp({
+        status : "success",
+        message : "List of Shifts.",
+        object : lisOfShifts
+    });
+});
+
 
 router.post('/', async (req, res) => {
     let title = req.body.title; 

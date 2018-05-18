@@ -1,0 +1,14 @@
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"10:29:51"}
+{"level":"info","message":"::1 - - [18/May/2018:05:29:53 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 801 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:29:53"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"10:30:53"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [18/May/2018:05:30:57 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 801 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:30:57"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"10:31:18"}
+{"level":"info","message":"::1 - - [18/May/2018:05:31:23 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 801 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:31:23"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"10:31:56"}
+{"level":"info","message":"::1 - - [18/May/2018:05:31:58 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 801 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:31:58"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"10:32:12"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [18/May/2018:05:32:17 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 801 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:32:17"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"10:37:54"}
+{"level":"info","message":"::1 - - [18/May/2018:05:37:55 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:37:55"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"10:38:15"}
+{"level":"info","message":"::1 - - [18/May/2018:05:38:18 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 409 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:38:18"}
