@@ -105,6 +105,8 @@ router.get('/', async (req, res) => {
   let driverResponseObject;
 
   const driver = await Driver.find({});
+  if(!driver) return res.status(400).jsonp({ status: 'failure', messgae: 'Driver not found.', object: [] });
+  
   for(var i = 0; i< driver.length; i++){
     console.log(driver[i]._userId);
     const user = await User.findOne({ _id: driver[i]._userId });

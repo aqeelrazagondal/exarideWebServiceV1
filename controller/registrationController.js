@@ -9,7 +9,7 @@ var upload = multer({ dest: './public/images/profileImages' });
 var request=require("request");
 //package to generate a random number
 var randomize = require('randomatic');
-const {User, validate} = require('../models/user');
+const { User } = require('../models/user');
 const { Driver } = require('../models/driver');
 const Rider  = require('../models/rider');
 const Admin = require('../models/admin');
@@ -135,6 +135,7 @@ exports.sendVerificationCode = async function(reqData,res){
                         res.jsonp({status:"failure", message:"Some Error while saving user", object:[]}); 
                     }
 					else{
+                        console.log('################ SAVED USER IN DB ################', newuser.phone);
                     var headers = {
 
                         'Authorization':       'Basic ZmFsY29uLmV5ZTowMzM1NDc3OTU0NA==',

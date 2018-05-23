@@ -204,7 +204,6 @@ exports.riderPickUPLocation = async function(reqData, res){
         let listOfDrivers = [];
 
         logger.info("IN Riderpickuploaction");
-        let pickupLocName = reqData.pickupLocName;
         let phone = reqData.phoneNo;
         let longitude = reqData.longitude;
         let latitude = reqData.latitude;
@@ -223,8 +222,7 @@ exports.riderPickUPLocation = async function(reqData, res){
         console.log('Location saved', location);
 
         let rider = new Rider({
-            _pickUpLocationId: location._id,
-            pickupLocName: pickupLocName 
+            _pickUpLocationId: location._id
         });
         await rider.save();
         console.log('Rider saved!', rider);
