@@ -260,3 +260,27 @@
 {"level":"info","message":"::1 - - [17/May/2018:12:31:10 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:31:10"}
 {"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"17:31:32"}
 {"level":"info","message":"::1 - - [17/May/2018:12:31:34 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 801 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:31:34"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"01:39:48"}
+{"level":"info","message":"g11 markaz islamabad","timestamp":"01:39:52"}
+{"0":33.6961,"1":73.0491,"level":"info","message":"Start location","timestamp":"01:39:57"}
+{"0":33.7109,"1":73.0626,"level":"info","message":"End Location ","timestamp":"01:39:59"}
+{"level":"info","message":"exagic","timestamp":"01:39:59"}
+{"0":21.9723,"1":33.6564,"level":"info","message":"Start location","timestamp":"01:40:00"}
+{"0":21.9723,"1":33.6564,"level":"info","message":"End Location ","timestamp":"01:40:02"}
+{"level":"info","message":"::1 - - [23/May/2018:20:40:02 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 409 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:40:02"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"01:41:04"}
+{"level":"info","message":"g11 markaz islamabad","timestamp":"01:41:05"}
+{"0":33.6961,"1":73.0491,"level":"info","message":"Start location","timestamp":"01:41:06"}
+{"0":33.7109,"1":73.0626,"level":"info","message":"End Location ","timestamp":"01:41:06"}
+{"level":"info","message":"exagic","timestamp":"01:41:06"}
+{"0":21.9723,"1":33.6564,"level":"info","message":"Start location","timestamp":"01:41:10"}
+{"0":21.9723,"1":33.6564,"level":"info","message":"End Location ","timestamp":"01:41:10"}
+{"level":"info","message":"::1 - - [23/May/2018:20:41:10 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 409 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:41:10"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"01:45:57"}
+{"level":"info","message":"g11 markaz islamabad","timestamp":"01:46:09"}
+{"level":"info","message":"Start location","timestamp":"01:46:15"}
+{"level":"info","message":"End Location","timestamp":"01:46:17"}
+{"level":"info","message":"exagic","timestamp":"01:46:17"}
+{"level":"info","message":"Start location","timestamp":"01:46:18"}
+{"level":"info","message":"End Location","timestamp":"01:46:22"}
+{"level":"info","message":"::1 - - [23/May/2018:20:46:22 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 409 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:46:22"}

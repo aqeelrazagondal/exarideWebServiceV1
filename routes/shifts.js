@@ -26,11 +26,11 @@ router.get('/getAllShifts', async (req, res) => {
         logger.info(shifts[i].startLocName);
         const locationStart = await Location.findOne({ title: shifts[i].startLocName });
         if(!locationStart) return res.status(400).jsonp({ status:'failure', message: 'Start location not found', object: [] });
-        logger.info('Start location', locationStart.loc);
+        logger.info('Start location');
 
         const locationEnd = await Location.findOne({ title: shifts[i].endLocName })
         if(!locationEnd) return res.status(400).jsonp({ status:'failure', message: 'End location not found', object: [] });
-        logger.info('End Location ', locationEnd.loc);
+        logger.info('End Location');
 
         shiftResObj = {
             title: shifts[i].title,
