@@ -284,3 +284,63 @@
 {"level":"info","message":"Start location","timestamp":"01:46:18"}
 {"level":"info","message":"End Location","timestamp":"01:46:22"}
 {"level":"info","message":"::1 - - [23/May/2018:20:46:22 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 409 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:46:22"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"01:49:39"}
+{"level":"info","message":"g11 markaz islamabad","timestamp":"01:50:36"}
+{"level":"info","message":"Start location","timestamp":"01:51:10"}
+{"level":"info","message":"End Location","timestamp":"01:51:11"}
+{"level":"info","message":"exagic","timestamp":"01:51:11"}
+{"level":"info","message":"Start location","timestamp":"01:51:12"}
+{"level":"info","message":"End Location","timestamp":"01:51:20"}
+{"level":"info","message":"::1 - - [23/May/2018:20:51:20 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 409 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:51:20"}
+{"level":"info","message":"::1 - - [24/May/2018:06:16:13 +0000] \"POST /api/location HTTP/1.1\" 200 199 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:16:13"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"11:16:30"}
+{"level":"info","message":"g11 markaz islamabad","timestamp":"11:16:30"}
+{"level":"info","message":"Start location","timestamp":"11:16:30"}
+{"level":"info","message":"End Location","timestamp":"11:16:30"}
+{"level":"info","message":"exagic","timestamp":"11:16:30"}
+{"level":"info","message":"Start location","timestamp":"11:16:30"}
+{"level":"info","message":"End Location","timestamp":"11:16:31"}
+{"level":"info","message":"::1 - - [24/May/2018:06:16:31 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 409 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:16:31"}
+{"level":"info","message":"::1 - - [24/May/2018:06:19:55 +0000] \"POST /api/location HTTP/1.1\" 200 222 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:19:55"}
+{"level":"info","message":"::1 - - [24/May/2018:06:25:49 +0000] \"POST /api/shifts/5af868521e68a72210da4d27 HTTP/1.1\" 404 175 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:25:49"}
+{"level":"info","message":"In POST shift route ","timestamp":"11:26:11"}
+{"level":"info","message":"::1 - - [24/May/2018:06:26:11 +0000] \"POST /api/shifts HTTP/1.1\" 400 70 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:26:11"}
+{"level":"info","message":"In POST shift route ","timestamp":"11:26:38"}
+{"level":"info","message":"::1 - - [24/May/2018:06:26:39 +0000] \"POST /api/shifts HTTP/1.1\" 200 471 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:26:39"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"11:27:00"}
+{"level":"info","message":"g11 markaz islamabad","timestamp":"11:27:00"}
+{"level":"info","message":"Start location","timestamp":"11:27:00"}
+{"level":"info","message":"End Location","timestamp":"11:27:01"}
+{"level":"info","message":"dha phase 1, sector b","timestamp":"11:27:01"}
+{"level":"info","message":"::1 - - [24/May/2018:06:27:01 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 400 69 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:27:01"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"11:27:18"}
+{"level":"info","message":"g11 markaz islamabad","timestamp":"11:27:18"}
+{"level":"info","message":"Start location","timestamp":"11:27:18"}
+{"level":"info","message":"End Location","timestamp":"11:27:18"}
+{"level":"info","message":"dha phase 1, sector b","timestamp":"11:27:18"}
+{"level":"info","message":"::1 - - [24/May/2018:06:27:19 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 400 69 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:27:19"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"11:31:46"}
+{"level":"info","message":"g11 markaz islamabad","timestamp":"11:31:46"}
+{"level":"info","message":"Start location","timestamp":"11:31:46"}
+{"level":"info","message":"End Location","timestamp":"11:31:46"}
+{"level":"info","message":"dha phase 1, sector b","timestamp":"11:31:46"}
+{"level":"info","message":"::1 - - [24/May/2018:06:31:47 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 400 69 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:31:47"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"11:32:32"}
+{"level":"info","message":"g11 markaz islamabad","timestamp":"11:32:34"}
+{"level":"info","message":"Start location","timestamp":"11:32:34"}
+{"level":"info","message":"End Location","timestamp":"11:32:34"}
+{"level":"info","message":"dha phase 1, sector b","timestamp":"11:32:34"}
+{"level":"info","message":"::1 - - [24/May/2018:06:32:34 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 400 69 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:32:34"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"11:32:48"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [24/May/2018:06:32:51 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 854 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:32:51"}
+{"level":"info","message":"::1 - - [24/May/2018:06:33:14 +0000] \"POST /api/shifts/5af868521e68a72210da4d27 HTTP/1.1\" 404 175 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:33:14"}
+{"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"11:33:27"}
+{"level":"info","message":"::1 - - [24/May/2018:06:33:28 +0000] \"GET /api/shifts/5af868521e68a72210da4d27 HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:33:28"}
+{"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"11:34:38"}
+{"level":"info","message":"Final shifts response by driver ID.","timestamp":"11:34:39"}
+{"level":"info","message":"::1 - - [24/May/2018:06:34:39 +0000] \"GET /api/shifts/5af868521e68a72210da4d27 HTTP/1.1\" 200 242 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:34:39"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"11:34:48"}
+{"level":"info","message":"::1 - - [24/May/2018:06:34:49 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 444 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:34:49"}
+{"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"11:35:50"}
+{"level":"info","message":"Final shifts response by driver ID.","timestamp":"11:35:51"}
+{"level":"info","message":"::1 - - [24/May/2018:06:35:51 +0000] \"GET /api/shifts/5af868521e68a72210da4d27 HTTP/1.1\" 200 242 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:35:51"}
