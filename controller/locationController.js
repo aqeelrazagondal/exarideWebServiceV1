@@ -73,7 +73,7 @@ exports.updateDriverLocation = function(reqData, res){
         var longitude = reqData.longitude;
         var latitude = reqData.latitude;
         var userLoc = new Object({ latitude: latitude, longitude: longitude }); 
-        regController.userExists(email, function (user) {
+        userExists(email, function (user) {
             if (user) {
                 user.loc = [longitude, latitude];
                 user.last_shared_loc_time = new Date();

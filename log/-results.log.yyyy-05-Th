@@ -355,3 +355,15 @@
 {"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"11:58:51"}
 {"level":"info","message":"Final shifts response by driver ID.","timestamp":"11:58:53"}
 {"level":"info","message":"::1 - - [24/May/2018:06:58:53 +0000] \"GET /api/shifts/5af868521e68a72210da4d27 HTTP/1.1\" 200 245 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:58:53"}
+{"level":"info","message":"UserExists Method Called","timestamp":"12:16:16"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"12:16:16"}
+{"level":"info","message":"User Found with Email. :{ phone: '923431469988',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-24T07:11:45.801Z,\n  _id: 5af868511e68a72210da4d26,\n  name: 'aqeel raza',\n  email: 'aqeel146@gmail.com',\n  password: '$2a$10$17obbRwXgLslZdwX.n1JQeFYzI1dNRDy/qpSdwUMRU9nA57Umyr.O',\n  user_type: 'driver',\n  createdAt: 2018-05-13T16:31:14.036Z,\n  updatedAt: 2018-05-24T07:11:45.804Z,\n  __v: 208,\n  loc: [ 73.0913083, 33.519875 ],\n  verification_code: '6615' }","timestamp":"12:16:16"}
+{"level":"info","message":"location : 33.673923450007095,72.99943132380758","timestamp":"12:16:16"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"12:16:17"}
+{"level":"info","message":"::1 - - [24/May/2018:07:16:17 +0000] \"POST /api/users/updateDriverLocation HTTP/1.1\" 200 520 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:16:17"}
+{"level":"info","message":"UserExists Method Called","timestamp":"12:16:35"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"12:16:35"}
+{"level":"info","message":"User Found with Email. :{ phone: '923431469988',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-24T07:16:16.991Z,\n  _id: 5af868511e68a72210da4d26,\n  name: 'aqeel raza',\n  email: 'aqeel146@gmail.com',\n  password: '$2a$10$17obbRwXgLslZdwX.n1JQeFYzI1dNRDy/qpSdwUMRU9nA57Umyr.O',\n  user_type: 'driver',\n  createdAt: 2018-05-13T16:31:14.036Z,\n  updatedAt: 2018-05-24T07:16:17.007Z,\n  __v: 209,\n  loc: [ 33.673923450007095, 72.99943132380758 ],\n  verification_code: '6615' }","timestamp":"12:16:35"}
+{"level":"info","message":"location : 33.6739234,72.9994313","timestamp":"12:16:35"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"12:16:36"}
+{"level":"info","message":"::1 - - [24/May/2018:07:16:36 +0000] \"POST /api/users/updateDriverLocation HTTP/1.1\" 200 505 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:16:36"}
