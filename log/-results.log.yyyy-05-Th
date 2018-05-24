@@ -402,3 +402,146 @@
 {"level":"info","message":"location : 33.6734,72.9913","timestamp":"13:00:40"}
 {"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"13:00:41"}
 {"level":"info","message":"::1 - - [24/May/2018:08:00:41 +0000] \"POST /api/users/updateDriverLocation HTTP/1.1\" 200 499 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:00:41"}
+{"level":"info","message":"UserExists Method Called","timestamp":"13:06:37"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"13:06:37"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"13:06:37"}
+{"level":"info","message":"User Found with Email. :{ phone: '923431469988',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-24T08:04:45.895Z,\n  _id: 5af868511e68a72210da4d26,\n  name: 'aqeel raza',\n  email: 'aqeel146@gmail.com',\n  password: '$2a$10$17obbRwXgLslZdwX.n1JQeFYzI1dNRDy/qpSdwUMRU9nA57Umyr.O',\n  user_type: 'driver',\n  createdAt: 2018-05-13T16:31:14.036Z,\n  updatedAt: 2018-05-24T08:04:45.896Z,\n  __v: 213,\n  loc: [ 33.674, 72.313 ],\n  verification_code: '6615' }","timestamp":"13:06:37"}
+{"level":"info","message":"FOUND A USER aqeel146@gmail.com","timestamp":"13:06:37"}
+{"level":"info","message":"location : 33.6734,72.9913","timestamp":"13:06:37"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"13:06:38"}
+{"level":"info","message":"::1 - - [24/May/2018:08:06:38 +0000] \"POST /api/users/updateDriverLocation HTTP/1.1\" 200 499 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:06:38"}
+{"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"13:19:40"}
+{"level":"info","message":"Final shifts response by driver ID.","timestamp":"13:19:43"}
+{"level":"info","message":"::1 - - [24/May/2018:08:19:43 +0000] \"GET /api/shifts/5af868521e68a72210da4d27 HTTP/1.1\" 200 633 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:19:43"}
+{"level":"info","message":"UserExists Method Called","timestamp":"13:48:00"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"13:48:00"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"13:48:00"}
+{"level":"info","message":"User Found with Email. :{ phone: '923431469988',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-24T08:06:37.942Z,\n  _id: 5af868511e68a72210da4d26,\n  name: 'aqeel raza',\n  email: 'aqeel146@gmail.com',\n  password: '$2a$10$17obbRwXgLslZdwX.n1JQeFYzI1dNRDy/qpSdwUMRU9nA57Umyr.O',\n  user_type: 'driver',\n  createdAt: 2018-05-13T16:31:14.036Z,\n  updatedAt: 2018-05-24T08:06:37.950Z,\n  __v: 214,\n  loc: [ 33.6734, 72.9913 ],\n  verification_code: '6615' }","timestamp":"13:48:00"}
+{"level":"info","message":"FOUND A USER aqeel146@gmail.com","timestamp":"13:48:00"}
+{"level":"info","message":"location : 33.6734,72.9913","timestamp":"13:48:00"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"13:48:01"}
+{"level":"info","message":"::1 - - [24/May/2018:08:48:01 +0000] \"POST /api/users/updateDriverLocation HTTP/1.1\" 200 499 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:48:01"}
+{"level":"info","message":"UserExists Method Called","timestamp":"13:55:56"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"13:55:56"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"13:55:56"}
+{"level":"info","message":"User Found with Email. :{ phone: '923431469988',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-24T08:48:00.903Z,\n  _id: 5af868511e68a72210da4d26,\n  name: 'aqeel raza',\n  email: 'aqeel146@gmail.com',\n  password: '$2a$10$17obbRwXgLslZdwX.n1JQeFYzI1dNRDy/qpSdwUMRU9nA57Umyr.O',\n  user_type: 'driver',\n  createdAt: 2018-05-13T16:31:14.036Z,\n  updatedAt: 2018-05-24T08:48:00.903Z,\n  __v: 214,\n  loc: [ 33.6734, 72.9913 ],\n  verification_code: '6615' }","timestamp":"13:55:56"}
+{"level":"info","message":"FOUND A USER aqeel146@gmail.com","timestamp":"13:55:56"}
+{"level":"info","message":"location : 33.6734,72.9913","timestamp":"13:55:56"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"13:55:56"}
+{"level":"info","message":"::1 - - [24/May/2018:08:55:56 +0000] \"POST /api/users/updateDriverLocation HTTP/1.1\" 200 499 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:55:56"}
+{"level":"info","message":"UserExists Method Called","timestamp":"14:03:20"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"14:03:20"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"14:03:20"}
+{"level":"info","message":"User Found with Email. :{ phone: '923431469988',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-24T08:55:56.458Z,\n  _id: 5af868511e68a72210da4d26,\n  name: 'aqeel raza',\n  email: 'aqeel146@gmail.com',\n  password: '$2a$10$17obbRwXgLslZdwX.n1JQeFYzI1dNRDy/qpSdwUMRU9nA57Umyr.O',\n  user_type: 'driver',\n  createdAt: 2018-05-13T16:31:14.036Z,\n  updatedAt: 2018-05-24T08:55:56.458Z,\n  __v: 214,\n  loc: [ 33.6734, 72.9913 ],\n  verification_code: '6615' }","timestamp":"14:03:20"}
+{"level":"info","message":"FOUND A USER aqeel146@gmail.com","timestamp":"14:03:20"}
+{"level":"info","message":"location : 33.6734,72.9913","timestamp":"14:03:20"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"14:03:21"}
+{"level":"info","message":"::1 - - [24/May/2018:09:03:21 +0000] \"POST /api/users/updateDriverLocation HTTP/1.1\" 200 499 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:03:21"}
+{"level":"info","message":"UserExists Method Called","timestamp":"14:05:39"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"14:05:39"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"14:05:39"}
+{"level":"info","message":"User Found with Email. :{ phone: '923431469988',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-24T09:03:20.792Z,\n  _id: 5af868511e68a72210da4d26,\n  name: 'aqeel raza',\n  email: 'aqeel146@gmail.com',\n  password: '$2a$10$17obbRwXgLslZdwX.n1JQeFYzI1dNRDy/qpSdwUMRU9nA57Umyr.O',\n  user_type: 'driver',\n  createdAt: 2018-05-13T16:31:14.036Z,\n  updatedAt: 2018-05-24T09:03:20.804Z,\n  __v: 214,\n  loc: [ 33.6734, 72.9913 ],\n  verification_code: '6615' }","timestamp":"14:05:39"}
+{"level":"info","message":"FOUND A USER aqeel146@gmail.com","timestamp":"14:05:39"}
+{"level":"info","message":"location : 33.6734,72.9913","timestamp":"14:05:39"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"14:05:40"}
+{"level":"info","message":"::1 - - [24/May/2018:09:05:40 +0000] \"POST /api/users/updateDriverLocation HTTP/1.1\" 200 499 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:05:40"}
+{"level":"info","message":"UserExists Method Called","timestamp":"14:07:12"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"14:07:12"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"14:07:12"}
+{"level":"info","message":"User Found with Email. :{ phone: '923431469988',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-24T09:05:39.841Z,\n  _id: 5af868511e68a72210da4d26,\n  name: 'aqeel raza',\n  email: 'aqeel146@gmail.com',\n  password: '$2a$10$17obbRwXgLslZdwX.n1JQeFYzI1dNRDy/qpSdwUMRU9nA57Umyr.O',\n  user_type: 'driver',\n  createdAt: 2018-05-13T16:31:14.036Z,\n  updatedAt: 2018-05-24T09:05:39.853Z,\n  __v: 214,\n  loc: [ 33.6734, 72.9913 ],\n  verification_code: '6615' }","timestamp":"14:07:13"}
+{"level":"info","message":"FOUND A USER aqeel146@gmail.com","timestamp":"14:07:13"}
+{"level":"info","message":"location : 33.6734,72.9913","timestamp":"14:07:13"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"14:07:13"}
+{"level":"info","message":"::1 - - [24/May/2018:09:07:13 +0000] \"POST /api/users/updateDriverLocation HTTP/1.1\" 200 499 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:07:13"}
+{"level":"info","message":"::1 - - [24/May/2018:09:13:03 +0000] \"POST /api/auth HTTP/1.1\" 200 148 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:13:03"}
+{"$__":{"strictMode":true,"selected":{},"getters":{},"_id":{"_bsontype":"ObjectID","id":{"0":90,"1":248,"2":104,"3":81,"4":30,"5":104,"6":167,"7":34,"8":16,"9":218,"10":77,"11":38}},"wasPopulated":false,"activePaths":{"paths":{"phone":"init","profile_photo_url":"init","deactivate_user":"init","last_shared_loc_time":"init","_id":"init","name":"init","email":"init","password":"init","user_type":"init","createdAt":"init","updatedAt":"init","__v":"init","loc":"init","verification_code":"init"},"states":{"ignore":{},"default":{},"init":{"_id":true,"phone":true,"profile_photo_url":true,"deactivate_user":true,"last_shared_loc_time":true,"name":true,"email":true,"password":true,"user_type":true,"createdAt":true,"updatedAt":true,"__v":true,"loc":true,"verification_code":true},"modify":{},"require":{}},"stateNames":["require","modify","init","default","ignore"]},"pathsToScopes":{},"emitter":{"domain":null,"_events":{},"_eventsCount":0,"_maxListeners":0},"$options":true},"isNew":false,"_doc":{"phone":"923431469988","profile_photo_url":null,"deactivate_user":false,"last_shared_loc_time":"2018-05-24T09:07:13.079Z","_id":{"$ref":"$[\"$__\"][\"_id\"]"},"name":"aqeel raza","email":"aqeel146@gmail.com","password":"$2a$10$17obbRwXgLslZdwX.n1JQeFYzI1dNRDy/qpSdwUMRU9nA57Umyr.O","user_type":"driver","createdAt":"2018-05-13T16:31:14.036Z","updatedAt":"2018-05-24T09:07:13.079Z","__v":214,"loc":[33.6734,72.9913],"verification_code":"6615"},"$init":true,"level":"info","message":"Found a user! ","timestamp":"14:18:55"}
+{"$__":{"strictMode":true,"selected":{},"getters":{},"_id":{"_bsontype":"ObjectID","id":{"0":90,"1":248,"2":104,"3":81,"4":30,"5":104,"6":167,"7":34,"8":16,"9":218,"10":77,"11":38}},"wasPopulated":false,"activePaths":{"paths":{"phone":"init","profile_photo_url":"init","deactivate_user":"init","last_shared_loc_time":"init","_id":"init","name":"init","email":"init","password":"init","user_type":"init","createdAt":"init","updatedAt":"init","__v":"init","loc":"init","verification_code":"init"},"states":{"ignore":{},"default":{},"init":{"_id":true,"phone":true,"profile_photo_url":true,"deactivate_user":true,"last_shared_loc_time":true,"name":true,"email":true,"password":true,"user_type":true,"createdAt":true,"updatedAt":true,"__v":true,"loc":true,"verification_code":true},"modify":{},"require":{}},"stateNames":["require","modify","init","default","ignore"]},"pathsToScopes":{},"emitter":{"domain":null,"_events":{},"_eventsCount":0,"_maxListeners":0},"$options":true},"isNew":false,"_doc":{"phone":"923431469988","profile_photo_url":null,"deactivate_user":false,"last_shared_loc_time":"2018-05-24T09:07:13.079Z","_id":{"$ref":"$[\"$__\"][\"_id\"]"},"name":"aqeel raza","email":"aqeel146@gmail.com","password":"$2a$10$17obbRwXgLslZdwX.n1JQeFYzI1dNRDy/qpSdwUMRU9nA57Umyr.O","user_type":"driver","createdAt":"2018-05-13T16:31:14.036Z","updatedAt":"2018-05-24T09:07:13.079Z","__v":214,"loc":[33.6734,72.9913],"verification_code":"6615"},"$init":true,"level":"verbose","message":"Found a user! ","timestamp":"14:19:22"}
+{"level":"info","message":"::1 - - [24/May/2018:09:19:23 +0000] \"POST /api/auth HTTP/1.1\" 200 148 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:19:23"}
+{"level":"info","message":"::1 - - [24/May/2018:09:21:16 +0000] \"POST /api/auth HTTP/1.1\" 200 148 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:21:16"}
+{"level":"info","message":"UserExists Method Called","timestamp":"15:07:49"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"15:07:50"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"15:07:50"}
+{"level":"info","message":"User Found with Email. :{ phone: '923431469988',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-24T09:07:13.079Z,\n  _id: 5af868511e68a72210da4d26,\n  name: 'aqeel raza',\n  email: 'aqeel146@gmail.com',\n  password: '$2a$10$17obbRwXgLslZdwX.n1JQeFYzI1dNRDy/qpSdwUMRU9nA57Umyr.O',\n  user_type: 'driver',\n  createdAt: 2018-05-13T16:31:14.036Z,\n  updatedAt: 2018-05-24T09:07:13.079Z,\n  __v: 214,\n  loc: [ 33.6734, 72.9913 ],\n  verification_code: '6615' }","timestamp":"15:07:51"}
+{"level":"info","message":"FOUND A USER aqeel146@gmail.com","timestamp":"15:07:51"}
+{"level":"info","message":"location : 33.6734,72.9913","timestamp":"15:07:51"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"15:07:54"}
+{"level":"info","message":"::1 - - [24/May/2018:10:07:54 +0000] \"POST /api/users/updateDriverLocation HTTP/1.1\" 200 499 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:07:54"}
+{"level":"info","message":"UserExists Method Called","timestamp":"15:14:21"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"15:14:24"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"15:14:24"}
+{"level":"info","message":"User Found with Email. :{ phone: '923431469988',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-24T10:07:51.514Z,\n  _id: 5af868511e68a72210da4d26,\n  name: 'aqeel raza',\n  email: 'aqeel146@gmail.com',\n  password: '$2a$10$17obbRwXgLslZdwX.n1JQeFYzI1dNRDy/qpSdwUMRU9nA57Umyr.O',\n  user_type: 'driver',\n  createdAt: 2018-05-13T16:31:14.036Z,\n  updatedAt: 2018-05-24T10:07:52.695Z,\n  __v: 214,\n  loc: [ 33.6734, 72.9913 ],\n  verification_code: '6615' }","timestamp":"15:14:24"}
+{"level":"info","message":"location : 33.6734,72.9913","timestamp":"15:14:24"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"15:14:24"}
+{"level":"info","message":"::1 - - [24/May/2018:10:14:24 +0000] \"POST /api/users/updateDriverLocation HTTP/1.1\" 200 499 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:14:24"}
+{"level":"info","message":"UserExists Method Called","timestamp":"15:19:22"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"15:19:22"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"15:19:22"}
+{"level":"info","message":"User Found with Email. :{ phone: '923431469988',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-24T10:14:24.335Z,\n  _id: 5af868511e68a72210da4d26,\n  name: 'aqeel raza',\n  email: 'aqeel146@gmail.com',\n  password: '$2a$10$17obbRwXgLslZdwX.n1JQeFYzI1dNRDy/qpSdwUMRU9nA57Umyr.O',\n  user_type: 'driver',\n  createdAt: 2018-05-13T16:31:14.036Z,\n  updatedAt: 2018-05-24T10:14:24.343Z,\n  __v: 214,\n  loc: [ 33.6734, 72.9913 ],\n  verification_code: '6615' }","timestamp":"15:19:22"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"15:19:22"}
+{"level":"info","message":"::1 - - [24/May/2018:10:19:22 +0000] \"POST /api/users/updateDriverLocation HTTP/1.1\" 200 499 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:19:22"}
+{"level":"info","message":"UserExists Method Called","timestamp":"15:19:45"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"15:19:45"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"15:19:45"}
+{"level":"info","message":"User Found with Email. :{ phone: '923431469988',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-24T10:19:22.412Z,\n  _id: 5af868511e68a72210da4d26,\n  name: 'aqeel raza',\n  email: 'aqeel146@gmail.com',\n  password: '$2a$10$17obbRwXgLslZdwX.n1JQeFYzI1dNRDy/qpSdwUMRU9nA57Umyr.O',\n  user_type: 'driver',\n  createdAt: 2018-05-13T16:31:14.036Z,\n  updatedAt: 2018-05-24T10:19:22.422Z,\n  __v: 214,\n  loc: [ 33.6734, 72.9913 ],\n  verification_code: '6615' }","timestamp":"15:19:46"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"15:19:46"}
+{"level":"info","message":"::1 - - [24/May/2018:10:19:46 +0000] \"POST /api/users/updateDriverLocation HTTP/1.1\" 200 507 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:19:46"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"17:24:13"}
+{"level":"info","message":"Start location","timestamp":"17:24:14"}
+{"level":"info","message":"End Location","timestamp":"17:24:14"}
+{"level":"info","message":"::1 - - [24/May/2018:12:24:14 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 178 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:24:14"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"17:27:11"}
+{"level":"info","message":"Start location","timestamp":"17:27:13"}
+{"level":"info","message":"End Location","timestamp":"17:27:14"}
+{"level":"info","message":"::1 - - [24/May/2018:12:27:14 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 178 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:27:14"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"17:32:31"}
+{"level":"info","message":"Start location","timestamp":"17:32:32"}
+{"level":"info","message":"End Location","timestamp":"17:32:32"}
+{"level":"info","message":"::1 - - [24/May/2018:12:32:32 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:32:32"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"17:33:15"}
+{"level":"info","message":"Start location","timestamp":"17:33:16"}
+{"level":"info","message":"End Location","timestamp":"17:33:16"}
+{"level":"info","message":"::1 - - [24/May/2018:12:33:16 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:33:16"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"17:34:15"}
+{"level":"info","message":"Start location","timestamp":"17:34:15"}
+{"level":"info","message":"End Location","timestamp":"17:34:15"}
+{"level":"info","message":"::1 - - [24/May/2018:12:34:15 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:34:15"}
+{"level":"info","message":"Final shifts response by driver ID.","timestamp":"18:33:16"}
+{"level":"info","message":"::1 - - [24/May/2018:13:33:16 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 633 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"18:33:16"}
+{"level":"info","message":"::1 - - [24/May/2018:13:41:32 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"18:41:32"}
+{"level":"info","message":"::1 - - [24/May/2018:13:42:34 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"18:42:34"}
+{"level":"info","message":"::1 - - [24/May/2018:13:44:05 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"18:44:05"}
+{"level":"info","message":"::1 - - [24/May/2018:13:44:27 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"18:44:27"}
+{"level":"info","message":"::1 - - [24/May/2018:13:45:49 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"18:45:49"}
+{"level":"info","message":"::1 - - [24/May/2018:13:46:17 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"18:46:17"}
+{"level":"info","message":"::1 - - [24/May/2018:13:46:51 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"18:46:51"}
+{"level":"info","message":"::1 - - [24/May/2018:13:49:03 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"18:49:03"}
+{"level":"info","message":"::1 - - [24/May/2018:13:50:59 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"18:50:59"}
+{"level":"info","message":"::1 - - [24/May/2018:13:52:14 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"18:52:14"}
+{"level":"info","message":"::1 - - [24/May/2018:13:52:56 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"18:52:56"}
+{"level":"info","message":"::1 - - [24/May/2018:13:53:31 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"18:53:31"}
+{"level":"info","message":"::1 - - [24/May/2018:13:54:45 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"18:54:45"}
+{"level":"info","message":"::1 - - [24/May/2018:13:55:12 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"18:55:12"}
+{"level":"info","message":"::1 - - [24/May/2018:13:56:36 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"18:56:36"}
+{"level":"info","message":"::1 - - [24/May/2018:15:08:06 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"20:08:06"}
+{"level":"info","message":"::1 - - [24/May/2018:15:08:46 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"20:08:46"}
+{"level":"info","message":"::1 - - [24/May/2018:15:10:01 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"20:10:01"}
+{"level":"info","message":"::1 - - [24/May/2018:15:12:12 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 60 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"20:12:12"}
+{"level":"info","message":"::1 - - [24/May/2018:15:13:20 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"20:13:20"}
+{"level":"info","message":"::1 - - [24/May/2018:15:13:38 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 60 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"20:13:38"}
+{"level":"info","message":"::1 - - [24/May/2018:15:24:40 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"20:24:40"}
+{"level":"info","message":"::1 - - [24/May/2018:15:25:19 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"20:25:19"}
+{"level":"info","message":"::1 - - [24/May/2018:15:27:10 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 206 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"20:27:10"}
+{"level":"info","message":"::1 - - [24/May/2018:15:27:34 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"20:27:34"}
+{"level":"info","message":"::1 - - [24/May/2018:15:28:05 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"20:28:05"}
+{"level":"info","message":"::1 - - [24/May/2018:16:51:41 +0000] \"POST /api/location HTTP/1.1\" 200 177 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"21:51:41"}
+{"level":"info","message":"::1 - - [24/May/2018:16:53:31 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"21:53:31"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [24/May/2018:16:54:22 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 206 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"21:54:22"}
+{"level":"info","message":"::1 - - [24/May/2018:16:55:42 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 239 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"21:55:42"}
+{"level":"info","message":"::1 - - [24/May/2018:16:56:32 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"21:56:32"}
+{"level":"info","message":"::1 - - [24/May/2018:16:56:57 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 265 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"21:56:57"}
+{"level":"info","message":"::1 - - [24/May/2018:17:02:12 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 2167 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"22:02:12"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [24/May/2018:17:04:45 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"22:04:45"}
+{"level":"info","message":"::1 - - [24/May/2018:17:05:42 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 2167 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"22:05:42"}
+{"level":"info","message":"::1 - - [24/May/2018:17:10:53 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 2167 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"22:10:53"}
+{"level":"info","message":"::1 - - [24/May/2018:17:12:14 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 2167 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"22:12:14"}
+{"level":"info","message":"::1 - - [24/May/2018:17:15:10 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 586 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"22:15:10"}

@@ -29,7 +29,6 @@ var userExists = function(email, callback){
         }
         else{
             if (email){
-                console.log('Found a user ', email);
                 logger.info('User Found with Email. :'+email);                
                 console.log("user found with Email. :"+email);
                 callback (email);
@@ -68,15 +67,15 @@ var locationExists = function(id,callback){
 }
 
 exports.updateDriverLocation = function(reqData, res){
+
     try {
         var email = reqData.email;
         var longitude = reqData.longitude;
         var latitude = reqData.latitude;
-        var userLoc = new Object({ latitude: latitude, longitude: longitude }); 
+        // var userLoc = new Object({ latitude: latitude, longitude: longitude }); 
         userExists(email, function (user) {
             if (user) {
-                console.log('########### FOUND A USER ##########', user);
-                logger.info('FOUND A USER', user.email);
+                
                 user.loc = [longitude, latitude];
                 user.last_shared_loc_time = new Date();
                 user.save(function (err, user) {
@@ -84,8 +83,10 @@ exports.updateDriverLocation = function(reqData, res){
                         logger.error('Some Error while updating user' + err);
                     }
                     else {
-                        logger.info('User Location With email ' + email);
-                        console.log('Save user ###############', user)
+                        logger.info('User Location With email ' + user.email);
+                        console.log('USER LOCATION *************** ', user.loc);
+                        console.log('user.last_shared_loc_time', user.last_shared_loc_time);
+                        console.log('########### FOUND A USER ##########', user);
                         
                         res.jsonp({
                             status: "success",
@@ -94,8 +95,6 @@ exports.updateDriverLocation = function(reqData, res){
                         });
                     }
                 });
-
-                logger.info('location : ' + user.loc);
             }
             else {
                 res.jsonp({
@@ -107,7 +106,7 @@ exports.updateDriverLocation = function(reqData, res){
         });
 
     } catch (err) {
-        logger.info('An Exception Has occured in updateUserLocation method' + err);
+        logger.info('An Exception Has occured in updateDriverLocation method' + err);
     }
     logger.info(' Exit UPDATE DRIVER LOCATION Method');
 }

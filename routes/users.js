@@ -207,7 +207,7 @@ router.post('/updateDriverLocation', function (req, res) {
   }
   console.log("in routes /updateDriverLocation");
   var reqData = req.body;
-  LocController.updateDriverLocation(reqData, res);
+  LocController.updateDriverLocation (reqData, res);
 });
 
 module.exports = router; 
