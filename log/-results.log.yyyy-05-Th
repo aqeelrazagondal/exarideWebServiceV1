@@ -367,3 +367,11 @@
 {"level":"info","message":"location : 33.6739234,72.9994313","timestamp":"12:16:35"}
 {"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"12:16:36"}
 {"level":"info","message":"::1 - - [24/May/2018:07:16:36 +0000] \"POST /api/users/updateDriverLocation HTTP/1.1\" 200 505 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:16:36"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"12:28:05"}
+{"level":"info","message":"Start location","timestamp":"12:28:05"}
+{"level":"info","message":"End Location","timestamp":"12:28:06"}
+{"level":"info","message":"::1 - - [24/May/2018:07:28:06 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 549 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:28:06"}
+{"level":"info","message":"IN GET ALL SHIFTS ROUTE!","timestamp":"12:28:44"}
+{"level":"info","message":"Start location","timestamp":"12:28:45"}
+{"level":"info","message":"End Location","timestamp":"12:28:45"}
+{"level":"info","message":"::1 - - [24/May/2018:07:28:45 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 178 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:28:45"}

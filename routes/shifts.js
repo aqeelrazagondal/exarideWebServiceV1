@@ -23,21 +23,19 @@ router.get('/getAllShifts', async (req, res) => {
     console.log('Shifts Found', shifts);
 
     for(var i = 0; i < shifts.length; i++){
-        const locationStart = await Location.findOne({ title: shifts[i].startLocName });
+        const locationStart = await Location.findOne({ _id: shifts[i]._startLocId });
         if(!locationStart) return res.status(400).jsonp({ status:'failure', message: 'Start location not found', object: [] });
         logger.info('Start location');
         console.log('Start location', locationStart);
 
-        const locationEnd = await Location.findOne({ title: shifts[i].endLocName })
+        const locationEnd = await Location.findOne({ _id: shifts[i]._endLocID })
         if(!locationEnd) return res.status(400).jsonp({ status:'failure', message: 'End location not found', object: [] });
         logger.info('End Location');
 
         shiftResObj = {
             title: shifts[i].title,
-            startLocName: shifts[i].startLocName,
-            startLocLatLng: locationStart.loc,
-            endLocName: shifts[i].endLocName,
-            endLocLatLng: locationEnd.loc,
+            startLocation: locationStart.loc,
+            endLocation: locationEnd.loc,
             shiftStatus: shifts[i].shiftStatus
         }
         lisOfShifts.push(shiftResObj);
@@ -46,7 +44,7 @@ router.get('/getAllShifts', async (req, res) => {
     res.jsonp({
         status : "success",
         message : "List of Shifts.",
-        object : shifts
+        object : shiftResObj
     });
 });
 
