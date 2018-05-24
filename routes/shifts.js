@@ -23,8 +23,9 @@ router.get('/getAllShifts', async (req, res) => {
     const shifts = await Shift.find({}).sort('-date');
     if ( !shifts ) return res.status(404).jsonp({ status : "failure", message : "Shift cannot fint by the given ID.", object : []});
     // console.log('List of shifts', shifts);
+    console.log('shifts', shifts);
 
-   // console.log('shifts.length', shifts.length);
+    console.log('shifts.length', shifts.length);
 
     for(var i = 0; i < shifts.length; i++){
     // list of stops
@@ -59,14 +60,13 @@ router.get('/getAllShifts', async (req, res) => {
                 startLoc: startLoc.loc,
                 endLoc: endLoc.loc,
                 listOfStops: listOfStops
-            }
-            
-            
+            }   
         }
-        listOfShifts.push(shiftRes);
-        
     }
-
+    
+    listOfShifts.push(shiftRes); 
+    console.log('listOfShifts', listOfShifts);
+   
 
     
     res.jsonp({
