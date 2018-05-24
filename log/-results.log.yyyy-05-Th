@@ -344,3 +344,14 @@
 {"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"11:35:50"}
 {"level":"info","message":"Final shifts response by driver ID.","timestamp":"11:35:51"}
 {"level":"info","message":"::1 - - [24/May/2018:06:35:51 +0000] \"GET /api/shifts/5af868521e68a72210da4d27 HTTP/1.1\" 200 242 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:35:51"}
+{"level":"info","message":"In POST shift route ","timestamp":"11:44:39"}
+{"level":"info","message":"::1 - - [24/May/2018:06:44:41 +0000] \"POST /api/shifts HTTP/1.1\" 200 372 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:44:41"}
+{"level":"info","message":"In POST shift route ","timestamp":"11:47:15"}
+{"level":"info","message":"::1 - - [24/May/2018:06:47:17 +0000] \"POST /api/shifts HTTP/1.1\" 200 551 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:47:17"}
+{"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"11:50:33"}
+{"level":"info","message":"::1 - - [24/May/2018:06:50:37 +0000] \"GET /api/shifts/5af868521e68a72210da4d27 HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:50:37"}
+{"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"11:58:20"}
+{"level":"info","message":"::1 - - [24/May/2018:06:58:21 +0000] \"GET /api/shifts/5af868521e68a72210da4d27 HTTP/1.1\" 404 88 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:58:21"}
+{"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"11:58:51"}
+{"level":"info","message":"Final shifts response by driver ID.","timestamp":"11:58:53"}
+{"level":"info","message":"::1 - - [24/May/2018:06:58:53 +0000] \"GET /api/shifts/5af868521e68a72210da4d27 HTTP/1.1\" 200 245 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:58:53"}

@@ -23,7 +23,6 @@ router.get('/getAllShifts', async (req, res) => {
     console.log('Shifts Found', shifts);
 
     for(var i = 0; i < shifts.length; i++){
-        logger.info(shifts[i].startLocName);
         const locationStart = await Location.findOne({ title: shifts[i].startLocName });
         if(!locationStart) return res.status(400).jsonp({ status:'failure', message: 'Start location not found', object: [] });
         logger.info('Start location');
@@ -68,19 +67,21 @@ router.post('/', async (req, res) => {
     if (!driver) return res.status(400).jsonp({ status:'failure', message: 'Driver not found by given ID.', object: [] });
     console.log(driver._id);
 
-    let startLoc = await Location.findOne({ title: req.body.startLocName });
+    let startLoc = await Location.findOne({ _id: req.body._startLocId });
     if (!startLoc) return res.status(400).jsonp({ status:'failure', message: 'Start location not found', object: [] });
-    console.log('Start Location', startLoc.title);
+    console.log('Start Location ', startLoc);
 
-    let endLoc = await Location.findOne({ title: req.body.endLocName });
+    let endLoc = await Location.findOne({ _id: req.body._endLocID });
     if (!endLoc)  return res.status(400).jsonp({ status:'failure', message: 'End location not found', object: [] });
-    console.log('End Location', endLoc.title);
+    console.log('End Location ', endLoc);
     
     let shiftResObj = new Shift({
         title: title,
         _driverId: driver._id,
+        _startLocId: startLoc._id,
         startLocName: startLoc.title,
-        endLocName: endLoc.title,
+        _endLocID: endLoc._id,
+        endLocName:  endLoc.title,
         vehicle: vehicle,
         shiftStartTime: shiftStartTime,
         shiftEndTime: shiftEndTime,
@@ -158,9 +159,11 @@ router.get('/:Id', async (req, res) => {
         myDate3 = new Date(shifts[i].shiftStartTime);
         let shiftEndT = myDate2.getTime();
 
-        const startLocation = await Location.findOne({ title: shifts[i].startLocName });
-        const endLocation = await Location.findOne({ title: shifts[i].endLocName });
-
+        const startLocation = await Location.findOne({ _id: shifts[i]._startLocId });
+        if(!startLocation) return res.status(404).jsonp({ status : "failure", message : "Start location not found with the given ID.", object : []});
+        
+        const endLocation = await Location.findOne({ _id: shifts[i]._endLocID });
+        if(!endLocation) return res.status(404).jsonp({ status : "failure", message : "End Location not found with the given ID.", object : []});
         shiftResObj = {
             title: shifts[i].title,
             startLoc: startLocation.loc,
