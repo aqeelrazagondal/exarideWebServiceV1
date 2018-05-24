@@ -29,7 +29,7 @@ var userExists = function(email, callback){
         }
         else{
             if (email){
-                console.log('Fpund a user ', email);
+                console.log('Found a user ', email);
                 logger.info('User Found with Email. :'+email);                
                 console.log("user found with Email. :"+email);
                 callback (email);
@@ -75,6 +75,8 @@ exports.updateDriverLocation = function(reqData, res){
         var userLoc = new Object({ latitude: latitude, longitude: longitude }); 
         userExists(email, function (user) {
             if (user) {
+                console.log('########### FOUND A USER ##########', user);
+                logger.info('FOUND A USER', user.email);
                 user.loc = [longitude, latitude];
                 user.last_shared_loc_time = new Date();
                 user.save(function (err, user) {
@@ -107,6 +109,7 @@ exports.updateDriverLocation = function(reqData, res){
     } catch (err) {
         logger.info('An Exception Has occured in updateUserLocation method' + err);
     }
+    logger.info(' Exit UPDATE DRIVER LOCATION Method');
 }
 
 exports.updateRiderLocation = async function (reqData, res) {

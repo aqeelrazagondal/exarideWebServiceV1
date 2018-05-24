@@ -185,9 +185,8 @@ router.post('/updateDriverLoc', function (req, res) {
   if (req.body === undefined || req.body === null) {
     res.end("Empty Body");
   }
-  console.log("in routes /location");
+  console.log("in routes /updateDriverLoc");
   var reqData = req.body;
-  // console.log(reqData);
   LocController.updateDriverLocation(reqData, res);
 });
 
@@ -196,9 +195,8 @@ router.post('/updateLocation', function (req, res) {
   if (req.body === undefined || req.body === null) {
     res.end("Empty Body");
   }
-  console.log("in routes /location");
+  console.log("in routes /updateLocation");
   var reqData = req.body;
-  // console.log(reqData);
   LocController.updateRiderLocation(reqData, res);
 });
 
@@ -207,9 +205,8 @@ router.post('/updateDriverLocation', function (req, res) {
   if (req.body === undefined || req.body === null) {
     res.end("Empty Body");
   }
-  console.log("in routes /location");
+  console.log("in routes /updateDriverLocation");
   var reqData = req.body;
-  // console.log(reqData);
   LocController.updateDriverLocation(reqData, res);
 });
 
