@@ -16,6 +16,7 @@ const router = express.Router();
 router.get('/getAllShifts', async (req, res) => {
     let listOfStops = [];
     let listOfShifts =  [];
+    let listOfShiftsArray = [];
     let shiftRiderRes;
     let shiftRes;
 
@@ -23,52 +24,48 @@ router.get('/getAllShifts', async (req, res) => {
     const shifts = await Shift.find({}).sort('-date');
     if ( !shifts ) return res.status(404).jsonp({ status : "failure", message : "Shift cannot fint by the given ID.", object : []});
     // console.log('List of shifts', shifts);
-    console.log('shifts', shifts);
+    // console.log('shifts', shifts);
 
     console.log('shifts.length', shifts.length);
 
     for(var i = 0; i < shifts.length; i++){
-    // list of stops
+
         let shiftRider = await ShiftRider.find({_shiftId: shifts[i]._id});
         if(!shiftRider) return res.jsonp({ status: "failure", message: "Failed To finding stops!", object: [] });
         
+        console.log('shifts[i]._id', shifts[i]._id)
         console.log('shiftRider.length', shiftRider.length);
 
         for(var j = 0; j < shiftRider.length; j++){
-            // console.log('shiftRider', shiftRider);
+           
             if(shiftRider){
                 // shift rider response
                 shiftRiderRes = {
-                    _id: shiftRider[i]._id,
-                    _shiftId: shiftRider[i]._shiftId,
-                    pickUploc: shiftRider[i].pickUploc
+                    _id: shiftRider[j]._id,
+                    _shiftId: shiftRider[j]._shiftId,
+                    pickUploc: shiftRider[j].pickUploc
                 }
                 listOfStops.push(shiftRiderRes);
             }
-    
-            let startLoc = await Location.findOne({ _id: shifts[i]._startLocId });
-            if(!startLoc) return res.status(404).jsonp({ status : "failure", message : "Location not found by the given ID.", object : []});
-    
-            console.log('shifts[i]._startLocId', shifts[i]._startLocId);
-            console.log('shifts[i]._endLocID', shifts[i]._endLocID);
-    
-            let endLoc = await Location.findOne({ _id: shifts[i]._endLocID });
-            if(!endLoc) return res.status(404).jsonp({ status : "failure", message : "Location not found by the given ID.", object : []});
-    
-            shiftRes = {
-                title: shifts[i].title,
-                startLoc: startLoc.loc,
-                endLoc: endLoc.loc,
-                listOfStops: listOfStops
-            }   
         }
+        let startLoc = await Location.findOne({ _id: shifts[i]._startLocId });
+        if(!startLoc) return res.status(404).jsonp({ status : "failure", message : "Location not found by the given ID.", object : []});
+    
+        let endLoc = await Location.findOne({ _id: shifts[i]._endLocID });
+        if(!endLoc) return res.status(404).jsonp({ status : "failure", message : "Location not found by the given ID.", object : []});
+    
+        shiftRes = {
+            title: shifts[i].title,
+            startLoc: startLoc.loc,
+            endLoc: endLoc.loc,
+            listOfStops: listOfStops
+        } 
+        console.log('shiftRes', shiftRes);
+        
+        listOfShifts.push(shiftRes);  
+        // console.log('listOfShifts', listOfShifts);
     }
-    
-    listOfShifts.push(shiftRes); 
-    console.log('listOfShifts', listOfShifts);
-   
 
-    
     res.jsonp({
         status : "success",
         message : "List of Shifts.",

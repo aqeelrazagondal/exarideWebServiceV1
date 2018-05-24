@@ -181,3 +181,17 @@
 {"level":"info","message":"location : 33.673923450007095,72.99943132380758","timestamp":"15:49:53"}
 {"level":"info","message":"User Location With Phone Num 03431469988","timestamp":"15:49:54"}
 {"level":"info","message":"::1 - - [18/May/2018:10:49:54 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1573 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:49:54"}
+{"level":"info","message":"::1 - - [24/May/2018:19:16:48 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 586 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:16:48"}
+{"level":"info","message":"::1 - - [24/May/2018:19:17:19 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 2167 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:17:19"}
+{"level":"info","message":"::1 - - [24/May/2018:19:17:55 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 591 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:17:55"}
+{"level":"info","message":"::1 - - [24/May/2018:19:20:02 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 591 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:20:02"}
+{"level":"info","message":"::1 - - [24/May/2018:19:21:37 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 591 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:21:37"}
+{"level":"info","message":"::1 - - [24/May/2018:19:22:22 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 591 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:22:22"}
+{"level":"info","message":"::1 - - [24/May/2018:19:23:06 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 591 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:23:06"}
+{"level":"info","message":"::1 - - [24/May/2018:19:24:16 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 591 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:24:16"}
+{"level":"info","message":"::1 - - [24/May/2018:19:32:46 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 591 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:32:46"}
+{"level":"info","message":"::1 - - [24/May/2018:19:35:21 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 591 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:35:21"}
+{"level":"info","message":"::1 - - [24/May/2018:19:40:12 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 591 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:40:12"}
+{"level":"info","message":"::1 - - [24/May/2018:19:42:45 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 1331 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:42:45"}
+{"level":"info","message":"::1 - - [24/May/2018:19:48:28 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 1331 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:48:28"}
+{"level":"info","message":"::1 - - [24/May/2018:19:54:05 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 1331 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:54:05"}
