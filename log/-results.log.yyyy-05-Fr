@@ -275,3 +275,5 @@
 {"level":"info","message":"::1 - - [25/May/2018:07:36:37 +0000] \"GET /api/driver/search/bahria HTTP/1.1\" 200 552 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:36:37"}
 {"level":"info","message":"::1 - - [25/May/2018:07:53:24 +0000] \"POST /api/users/register HTTP/1.1\" 200 132 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:53:24"}
 {"level":"info","message":"::1 - - [25/May/2018:07:56:38 +0000] \"POST /api/users/register HTTP/1.1\" 400 24 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:56:38"}
+{"level":"info","message":"::1 - - [25/May/2018:09:27:38 +0000] \"POST /api/users/register HTTP/1.1\" 400 24 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:27:38"}
+{"level":"info","message":"::1 - - [25/May/2018:09:28:02 +0000] \"POST /api/users/register HTTP/1.1\" 200 135 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:28:02"}
