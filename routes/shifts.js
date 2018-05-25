@@ -34,15 +34,15 @@ router.get('/getAllShifts', async (req, res) => {
         if(!shiftRider) return res.jsonp({ status: "failure", message: "Failed To finding stops!", object: [] });
         
         console.log('shifts[i]._id', shifts[i]._id)
-        console.log('shiftRider.length', shiftRider.length);
+        
 
         for(var j = 0; j < shiftRider.length; j++){
-           
+            console.log('shiftRider.length', shiftRider.length);
+
             if(shiftRider){
                 // shift rider response
                 shiftRiderRes = {
                     _id: shiftRider[j]._id,
-                    _shiftId: shiftRider[j]._shiftId,
                     pickUploc: shiftRider[j].pickUploc
                 }
                 listOfStops.push(shiftRiderRes);
@@ -59,8 +59,7 @@ router.get('/getAllShifts', async (req, res) => {
             startLoc: startLoc.loc,
             endLoc: endLoc.loc,
             listOfStops: listOfStops
-        } 
-        console.log('shiftRes', shiftRes);
+        }
         
         listOfShifts.push(shiftRes);  
         // console.log('listOfShifts', listOfShifts);

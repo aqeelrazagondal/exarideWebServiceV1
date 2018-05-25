@@ -250,3 +250,7 @@
 {"level":"info","message":"User Exists Response : { phone: '923311334441',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-23T07:18:56.567Z,\n  _id: 5b0515e008eaf600142c2632,\n  verified_user: false,\n  verification_code: '9794',\n  user_type: 'rider',\n  createdAt: 2018-05-23T07:18:56.579Z,\n  updatedAt: 2018-05-23T07:18:56.579Z,\n  __v: 0 }","timestamp":"04:14:07"}
 {"level":"info","message":"::1 - - [24/May/2018:23:14:07 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 74 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"04:14:07"}
 {"level":"info","message":"Sucessful Response of SMS API : 923311334441","timestamp":"04:14:08"}
+{"level":"info","message":"::1 - - [25/May/2018:06:35:54 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 1331 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:35:54"}
+{"level":"info","message":"::1 - - [25/May/2018:06:39:21 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 1331 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:39:21"}
+{"level":"info","message":"::1 - - [25/May/2018:06:40:49 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 1331 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:40:49"}
+{"level":"info","message":"::1 - - [25/May/2018:06:41:59 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 951 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:41:59"}
