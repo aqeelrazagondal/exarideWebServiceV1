@@ -55,19 +55,21 @@ router.get('/search/:key', async (req, res) => {
 
 router.patch('/:id', adminAuth, async (req, res) => {
 
-  logger.info('Ib driver info update route', id);
-  const admin = await Admin.findOne({ email: req.body.email });
-  if (!admin) return res.status(400).jsonp({ status: 'failure', message: 'Admin not found by given Email.', object: [] }); 
-  logger.info('Admin found', admin.name);
+  // logger.info('Ib driver info update route', id);
+  // const admin = await Admin.findOne({ email: req.body.email });
+  // if (!admin) return res.status(400).jsonp({ status: 'failure', message: 'Admin not found by given Email.', object: [] }); 
+  // logger.info('Admin found', admin.name);
 
   const driverQuery = req.params.id;
   const driver = await Driver.findOne({ _id: driverQuery });
   if(!driver) return res.status(400).jsonp({ status: 'failure', message: 'driver not found by given ID.', object: [] });
-  logger.info('In update driver info route', driver._userId);
+  logger.info('In update driver info route');
 
   let userQuery = driver._userId; 
+  console.log('userQuery', userQuery);
+  
   const user = await User.findOne({ _id: userQuery });
-  user.email = req.body.newEmail;
+  user.email = req.body.email;
   user.name = req.body.name;
   user.phone = req.body.phone; 
   await user.save();

@@ -254,3 +254,15 @@
 {"level":"info","message":"::1 - - [25/May/2018:06:39:21 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 1331 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:39:21"}
 {"level":"info","message":"::1 - - [25/May/2018:06:40:49 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 1331 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:40:49"}
 {"level":"info","message":"::1 - - [25/May/2018:06:41:59 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 951 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:41:59"}
+{"level":"info","message":"::1 - - [25/May/2018:06:48:28 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 951 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:48:28"}
+{"level":"info","message":"::1 - - [25/May/2018:06:53:03 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 951 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:53:03"}
+{"level":"info","message":"::1 - - [25/May/2018:06:54:11 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 951 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:54:11"}
+{"level":"info","message":"::1 - - [25/May/2018:06:55:17 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 951 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:55:17"}
+{"level":"info","message":"::1 - - [25/May/2018:06:57:35 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 610 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"11:57:35"}
+{"level":"info","message":"::1 - - [25/May/2018:07:01:52 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 610 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:01:52"}
+{"level":"info","message":"::1 - - [25/May/2018:07:06:37 +0000] \"POST /api/admin/login HTTP/1.1\" 200 128 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:06:37"}
+{"_bsontype":"ObjectID","id":{"0":90,"1":253,"2":62,"3":242,"4":85,"5":229,"6":110,"7":44,"8":52,"9":107,"10":150,"11":244},"level":"info","message":"In update driver info route","timestamp":"12:27:00"}
+{"level":"info","message":"In update driver info route","timestamp":"12:28:00"}
+{"level":"info","message":"::1 - - [25/May/2018:07:28:00 +0000] \"PATCH /api/driver/5afd3ef355e56e2c346b96f5 HTTP/1.1\" 400 511 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:28:00"}
+{"level":"info","message":"In update driver info route","timestamp":"12:28:11"}
+{"level":"info","message":"::1 - - [25/May/2018:07:28:12 +0000] \"PATCH /api/driver/5afd3ef355e56e2c346b96f5 HTTP/1.1\" 400 509 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:28:12"}
