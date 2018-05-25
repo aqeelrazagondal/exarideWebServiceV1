@@ -195,3 +195,58 @@
 {"level":"info","message":"::1 - - [24/May/2018:19:42:45 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 1331 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:42:45"}
 {"level":"info","message":"::1 - - [24/May/2018:19:48:28 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 1331 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:48:28"}
 {"level":"info","message":"::1 - - [24/May/2018:19:54:05 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 1331 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:54:05"}
+{"level":"info","message":"Image File Received Temp Name :image-1527203077156.jpg","timestamp":"04:04:37"}
+{"level":"info","message":"Image is Uploaded","timestamp":"04:04:37"}
+{"level":"info","message":"imageUrl : https://brandedsms.net/postvideo/upload/2018-05-2500-04-39-WTCimage.jpg","timestamp":"04:04:39"}
+{"level":"info","message":"UserExists Method Called","timestamp":"04:04:39"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"04:04:39"}
+{"level":"info","message":" Exit RegistrationController.completeProfile Method","timestamp":"04:04:39"}
+{"level":"info","message":"Setting tempFileNames to Null","timestamp":"04:04:39"}
+{"level":"info","message":"User Not Found with Phone Num. :null","timestamp":"04:04:40"}
+{"level":"info","message":"Image File Received Temp Name :image-1527203230204.jpg","timestamp":"04:07:10"}
+{"level":"info","message":"Image is Uploaded","timestamp":"04:07:10"}
+{"level":"info","message":"imageUrl : https://brandedsms.net/postvideo/upload/2018-05-2500-07-12-WTCimage.jpg","timestamp":"04:07:12"}
+{"level":"info","message":"UserExists Method Called","timestamp":"04:07:12"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"04:07:12"}
+{"level":"info","message":" Exit RegistrationController.completeProfile Method","timestamp":"04:07:12"}
+{"level":"info","message":"Setting tempFileNames to Null","timestamp":"04:07:12"}
+{"level":"info","message":"User Not Found with Phone Num. :null","timestamp":"04:07:12"}
+{"level":"info","message":"Image File Received Temp Name :image-1527203266748.jpg","timestamp":"04:07:46"}
+{"level":"info","message":"Image is Uploaded","timestamp":"04:07:46"}
+{"level":"info","message":"imageUrl : https://brandedsms.net/postvideo/upload/2018-05-2500-07-48-WTCimage.jpg","timestamp":"04:07:49"}
+{"level":"info","message":"UserExists Method Called","timestamp":"04:07:49"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"04:07:49"}
+{"level":"info","message":" Exit RegistrationController.completeProfile Method","timestamp":"04:07:49"}
+{"level":"info","message":"Setting tempFileNames to Null","timestamp":"04:07:49"}
+{"level":"info","message":"User Not Found with Phone Num. :null","timestamp":"04:07:49"}
+{"level":"info","message":"User Not Found to Update With Phone Num 923331112224","timestamp":"04:07:49"}
+{"level":"info","message":"::1 - - [24/May/2018:23:07:49 +0000] \"POST /api/users/profile HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"04:07:49"}
+{"level":"info","message":"Image File Received Temp Name :image-1527203428102.jpg","timestamp":"04:10:28"}
+{"level":"info","message":"Image is Uploaded","timestamp":"04:10:28"}
+{"level":"info","message":"imageUrl : https://brandedsms.net/postvideo/upload/2018-05-2500-10-30-WTCimage.jpg","timestamp":"04:10:30"}
+{"level":"info","message":"UserExists Method Called","timestamp":"04:10:30"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"04:10:30"}
+{"level":"info","message":" Exit RegistrationController.completeProfile Method","timestamp":"04:10:30"}
+{"level":"info","message":"Setting tempFileNames to Null","timestamp":"04:10:30"}
+{"level":"info","message":"User Found with Phone Num. :{ phone: '923331112224',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-23T06:37:48.518Z,\n  _id: 5b050c3cc677fb2b64a65ba3,\n  name: 'bbbccc',\n  email: 'bbbccc@gmail.com',\n  password: '$2a$10$hiDAVIE6VSBuPY6MteqgjO42tfSdx97uJ86sl/Z1ztQJ678WY01Nm',\n  user_type: 'rider',\n  createdAt: 2018-05-23T06:37:48.629Z,\n  updatedAt: 2018-05-23T06:38:15.559Z,\n  __v: 0,\n  verification_code: '0365' }","timestamp":"04:10:30"}
+{"level":"error","message":"Some Error while updating userValidationError: name: Path `name` (`Umer`) is shorter than the minimum allowed length (5).","timestamp":"04:10:30"}
+{"level":"info","message":"::1 - - [24/May/2018:23:10:58 +0000] \"POST /api/users/profile HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"04:10:58"}
+{"level":"info","message":"Image File Received Temp Name :image-1527203468419.jpg","timestamp":"04:11:08"}
+{"level":"info","message":"Image is Uploaded","timestamp":"04:11:08"}
+{"level":"info","message":"imageUrl : https://brandedsms.net/postvideo/upload/2018-05-2500-11-10-WTCimage.jpg","timestamp":"04:11:10"}
+{"level":"info","message":"UserExists Method Called","timestamp":"04:11:10"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"04:11:10"}
+{"level":"info","message":" Exit RegistrationController.completeProfile Method","timestamp":"04:11:10"}
+{"level":"info","message":"Setting tempFileNames to Null","timestamp":"04:11:10"}
+{"level":"info","message":"User Found with Phone Num. :{ phone: '923331112224',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-23T06:37:48.518Z,\n  _id: 5b050c3cc677fb2b64a65ba3,\n  name: 'bbbccc',\n  email: 'bbbccc@gmail.com',\n  password: '$2a$10$hiDAVIE6VSBuPY6MteqgjO42tfSdx97uJ86sl/Z1ztQJ678WY01Nm',\n  user_type: 'rider',\n  createdAt: 2018-05-23T06:37:48.629Z,\n  updatedAt: 2018-05-23T06:38:15.559Z,\n  __v: 0,\n  verification_code: '0365' }","timestamp":"04:11:10"}
+{"level":"info","message":"User updated With Phone Num 923331112224","timestamp":"04:11:11"}
+{"level":"info","message":"::1 - - [24/May/2018:23:11:11 +0000] \"POST /api/users/profile HTTP/1.1\" 200 598 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"04:11:11"}
+{"level":"verbose","message":"verificationcode-POST called ","timestamp":"04:14:07"}
+{"level":"info","message":"RegistrationController.sendVerificationCode called  :923311334441","timestamp":"04:14:07"}
+{"level":"info","message":"UserExists Method Called","timestamp":"04:14:07"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"04:14:07"}
+{"level":"info","message":" Exit RegistrationController.sendVerificationCode Method","timestamp":"04:14:07"}
+{"level":"info","message":"User Found with Phone Num. :{ phone: '923311334441',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-23T07:18:56.567Z,\n  _id: 5b0515e008eaf600142c2632,\n  verified_user: false,\n  verification_code: '9794',\n  user_type: 'rider',\n  createdAt: 2018-05-23T07:18:56.579Z,\n  updatedAt: 2018-05-23T07:18:56.579Z,\n  __v: 0 }","timestamp":"04:14:07"}
+{"level":"info","message":"User Exists Response : { phone: '923311334441',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-23T07:18:56.567Z,\n  _id: 5b0515e008eaf600142c2632,\n  verified_user: false,\n  verification_code: '9794',\n  user_type: 'rider',\n  createdAt: 2018-05-23T07:18:56.579Z,\n  updatedAt: 2018-05-23T07:18:56.579Z,\n  __v: 0 }","timestamp":"04:14:07"}
+{"level":"info","message":"::1 - - [24/May/2018:23:14:07 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 74 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"04:14:07"}
+{"level":"info","message":"Sucessful Response of SMS API : 923311334441","timestamp":"04:14:08"}

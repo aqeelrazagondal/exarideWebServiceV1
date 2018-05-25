@@ -291,7 +291,7 @@ module.exports.completeProfile = function(req, imageUrl, res) {
                 });             
             }
             else{
-                logger.info('User Not Found to Update With Phone Num ' + phoneNo );
+                logger.info('User Not Found to Update With Phone Num ' + phone );
                 res.jsonp({status:"failure", message:"No User Found to Update!", object:[] }); 
             }     
         });
