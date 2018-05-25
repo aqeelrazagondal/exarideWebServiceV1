@@ -277,3 +277,9 @@
 {"level":"info","message":"::1 - - [25/May/2018:07:56:38 +0000] \"POST /api/users/register HTTP/1.1\" 400 24 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:56:38"}
 {"level":"info","message":"::1 - - [25/May/2018:09:27:38 +0000] \"POST /api/users/register HTTP/1.1\" 400 24 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:27:38"}
 {"level":"info","message":"::1 - - [25/May/2018:09:28:02 +0000] \"POST /api/users/register HTTP/1.1\" 200 135 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:28:02"}
+{"level":"info","message":"::1 - - [25/May/2018:09:52:41 +0000] \"POST /api/location HTTP/1.1\" 200 252 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:52:41"}
+{"level":"info","message":"::1 - - [25/May/2018:09:53:46 +0000] \"POST /api/location HTTP/1.1\" 400 28 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:53:46"}
+{"level":"info","message":"::1 - - [25/May/2018:09:54:42 +0000] \"POST /api/location HTTP/1.1\" 200 233 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:54:42"}
+{"level":"info","message":"::1 - - [25/May/2018:09:57:42 +0000] \"POST /api/location HTTP/1.1\" 400 28 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:57:42"}
+{"level":"info","message":"::1 - - [25/May/2018:09:57:55 +0000] \"POST /api/location HTTP/1.1\" 400 28 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:57:55"}
+{"level":"info","message":"::1 - - [25/May/2018:10:00:26 +0000] \"POST /api/location HTTP/1.1\" 200 235 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:00:26"}

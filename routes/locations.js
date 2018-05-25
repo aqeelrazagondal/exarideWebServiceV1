@@ -16,7 +16,11 @@ router.post('/', async (req, res) => {
     location = new Location(_.pick(req.body, ['title', 'loc']));
     await location.save();
 
-    res.send(location);
+    res.status(200).jsonp({
+        status: 'success',
+        message: 'Location saved successfully!',
+        object: location
+    });
 });
 
 module.exports = router; 

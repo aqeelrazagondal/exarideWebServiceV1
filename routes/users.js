@@ -74,6 +74,7 @@ router.post('/register', adminAuth, async (req, res) => {
         _userId: user._id,
         name: user.name,
         email: user.email
+
     });
     await newDriver.save();
   }

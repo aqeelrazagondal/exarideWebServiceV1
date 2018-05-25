@@ -4,9 +4,10 @@ const Joi = require('joi');
 const LocationSchema = new mongoose.Schema({
 
     title: {
-        type: String
+        type: String,
+        lowercase: true
     },
-    description:{type:String,default:null },
+    // description:{type:String,default:null },
     loc: {
         type: [Number],  // [<longitude>, <latitude>]
         index: '2d'      // create the geospatial index
