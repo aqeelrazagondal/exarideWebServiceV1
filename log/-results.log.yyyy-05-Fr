@@ -266,3 +266,12 @@
 {"level":"info","message":"::1 - - [25/May/2018:07:28:00 +0000] \"PATCH /api/driver/5afd3ef355e56e2c346b96f5 HTTP/1.1\" 400 511 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:28:00"}
 {"level":"info","message":"In update driver info route","timestamp":"12:28:11"}
 {"level":"info","message":"::1 - - [25/May/2018:07:28:12 +0000] \"PATCH /api/driver/5afd3ef355e56e2c346b96f5 HTTP/1.1\" 400 509 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:28:12"}
+{"level":"info","message":"::1 - - [25/May/2018:07:31:06 +0000] \"GET /api/driver/5afd43a7cfd08435d0412185 HTTP/1.1\" 200 59 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:31:06"}
+{"level":"info","message":"::1 - - [25/May/2018:07:31:36 +0000] \"GET /api/driver/5afd43a7cfd08435d0412185 HTTP/1.1\" 200 59 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:31:36"}
+{"level":"info","message":"::1 - - [25/May/2018:07:31:54 +0000] \"GET /api/driver/5afd3ef355e56e2c346b96f5 HTTP/1.1\" 200 514 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:31:54"}
+{"level":"info","message":"IN Search Route!..","timestamp":"12:36:37"}
+{"level":"info","message":"Search name is!.. bahria","timestamp":"12:36:37"}
+{"level":"info","message":"Search Title is!.. bahria","timestamp":"12:36:37"}
+{"level":"info","message":"::1 - - [25/May/2018:07:36:37 +0000] \"GET /api/driver/search/bahria HTTP/1.1\" 200 552 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:36:37"}
+{"level":"info","message":"::1 - - [25/May/2018:07:53:24 +0000] \"POST /api/users/register HTTP/1.1\" 200 132 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:53:24"}
+{"level":"info","message":"::1 - - [25/May/2018:07:56:38 +0000] \"POST /api/users/register HTTP/1.1\" 400 24 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:56:38"}

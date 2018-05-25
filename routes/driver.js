@@ -67,7 +67,7 @@ router.patch('/:id', adminAuth, async (req, res) => {
 
   let userQuery = driver._userId; 
   console.log('userQuery', userQuery);
-  
+
   const user = await User.findOne({ _id: userQuery });
   user.email = req.body.email;
   user.name = req.body.name;
@@ -91,7 +91,7 @@ router.delete('/:id', adminAuth, async (req, res) => {
   res.jsonp({ status: 'Success', message: 'User Deleted!.', object: user });
 });
   
-router.get('/:id', async (req, res) => {
+router.get('/:id', adminAuth, async (req, res) => {
   const query = req.params.id;
   const driver = await Driver.findOne({ _id: query });
   if (!driver) return res.status(404).send('Driver with the given ID was not found.');
@@ -102,7 +102,7 @@ router.get('/:id', async (req, res) => {
   res.jsonp({ status: 'Success', message: 'Uerr Found!.', object: user });
 });
   
-router.get('/', async (req, res) => {
+router.get('/', adminAuth, async (req, res) => {
   let listofDrivers = [];
   let driverResponseObject;
 
