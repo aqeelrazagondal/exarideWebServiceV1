@@ -110,6 +110,7 @@ router.get('/', adminAuth, async (req, res) => {
   if(!driver) return res.status(400).jsonp({ status: 'failure', messgae: 'Driver not found.', object: [] });
   
   for(var i = 0; i< driver.length; i++){
+     
     console.log(driver[i]._userId);
     const user = await User.findOne({ _id: driver[i]._userId });
     // if(!user) return res.status(400).jsonp({ status: 'failure', messgae: 'Driver not found by given ID.', object: [] });
@@ -118,6 +119,7 @@ router.get('/', adminAuth, async (req, res) => {
         _id: driver[i]._id,
         name: user.name,
         email: user.email,
+        phone: user.phone,
         profile_photo_url: user.profile_photo_url,
         loc: user.loc,
         last_shared_loc_time: user.last_shared_loc_time

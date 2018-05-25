@@ -283,3 +283,7 @@
 {"level":"info","message":"::1 - - [25/May/2018:09:57:42 +0000] \"POST /api/location HTTP/1.1\" 400 28 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:57:42"}
 {"level":"info","message":"::1 - - [25/May/2018:09:57:55 +0000] \"POST /api/location HTTP/1.1\" 400 28 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:57:55"}
 {"level":"info","message":"::1 - - [25/May/2018:10:00:26 +0000] \"POST /api/location HTTP/1.1\" 200 235 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:00:26"}
+{"level":"info","message":"In update driver info route","timestamp":"15:06:09"}
+{"level":"info","message":"::1 - - [25/May/2018:10:06:10 +0000] \"PATCH /api/driver/5afd3ef355e56e2c346b96f5 HTTP/1.1\" 400 548 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:06:10"}
+{"level":"info","message":"::1 - - [25/May/2018:11:00:49 +0000] \"GET /api/driver HTTP/1.1\" 401 33 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:00:49"}
+{"level":"info","message":"::1 - - [25/May/2018:11:01:14 +0000] \"GET /api/driver HTTP/1.1\" 200 1510 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:01:14"}
