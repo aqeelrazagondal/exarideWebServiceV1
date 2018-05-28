@@ -40,6 +40,7 @@ const userSchema = new mongoose.Schema({
   deactivate_user: { type: Boolean, default: false },
   country_code: String,
   verification_code: String,
+  message: {type: String, default: null },
   palyer_id: String,
   access_code: String,
   last_shared_loc_time: { type: Date, default: Date.now }

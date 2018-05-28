@@ -14,6 +14,7 @@ var fs = require('fs');
 const logger = require('../startup/logging');
 const regCtrl = require('../controller/registrationController');
 const LocController = require('../controller/locationController');
+const chatController = require('../controller/chatController');
 const router = express.Router();
 
 router.post('/register', async (req, res) => {                         
@@ -70,6 +71,17 @@ router.post('/login', async (req, res) => {
     }  
     
 });
+
+router.post('/sendSmsToAllDrivers', function (req, res) {
+
+  if (req.body === undefined || req.body === null) {
+    res.end("Empty Body");
+  }
+  console.log("in routes /sendSmsToAllDrivers");
+  var reqData = req.body;
+  chatController.sendMessageToDriver(reqData, res);
+});
+
 
 function validate(req) {
     const schema = {

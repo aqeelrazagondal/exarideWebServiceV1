@@ -101,3 +101,100 @@
 {"level":"info","message":"User Exists Response : { phone: '03456987565',\n  profile_photo_url: null,\n  deactivate_user: false,\n  last_shared_loc_time: 2018-05-15T15:53:52.095Z,\n  _id: 5afb0290d3884d00142ebdeb,\n  verified_user: false,\n  verification_code: '9317',\n  user_type: 'rider',\n  createdAt: 2018-05-15T15:53:52.107Z,\n  updatedAt: 2018-05-15T15:53:52.107Z,\n  __v: 0 }","timestamp":"20:54:21"}
 {"level":"info","message":"::1 - - [15/May/2018:15:54:22 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 74 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"20:54:22"}
 {"level":"info","message":"Sucessful Response of SMS API : 03456987565","timestamp":"20:54:23"}
+{"level":"info","message":"ChatController.sendMessageToDriver called  :","timestamp":"00:57:03"}
+{"level":"info","message":"::1 - - [28/May/2018:19:57:06 +0000] \"POST /api/admin/sendSmsToAllDrivers HTTP/1.1\" 200 59 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:57:06"}
+{"level":"info","message":"An Exception Has occured in sendVerificationCode methodError: Can't set headers after they are sent.","timestamp":"00:57:07"}
+{"level":"info","message":"ChatController.sendMessageToDriver called  :","timestamp":"00:57:49"}
+{"level":"info","message":"An Exception Has occured in sendVerificationCode methodTypeError: Cannot read property 'phone' of null","timestamp":"00:57:55"}
+{"level":"info","message":"::1 - - [28/May/2018:19:57:55 +0000] \"POST /api/admin/sendSmsToAllDrivers HTTP/1.1\" 200 59 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"00:57:55"}
+{"level":"info","message":"ChatController.sendMessageToDriver called  :","timestamp":"00:59:57"}
+{"level":"info","message":"An Exception Has occured in sendVerificationCode methodWriteError({\"code\":11000,\"index\":0,\"errmsg\":\"E11000 duplicate key error index: vidly.users.$phone_1 dup key: { : null }\",\"op\":{\"phone\":null,\"profile_photo_url\":null,\"deactivate_user\":false,\"last_shared_loc_time\":\"2018-05-28T19:59:57.992Z\",\"_id\":\"5b0c5fbd81cf6b04884e7add\",\"message\":\"TEST MESSAGE FROM ADMIN\",\"createdAt\":\"2018-05-28T19:59:58.000Z\",\"updatedAt\":\"2018-05-28T19:59:58.000Z\",\"__v\":0}})","timestamp":"00:59:58"}
+{"level":"info","message":"ChatController.sendMessageToDriver called  :","timestamp":"01:01:08"}
+{"level":"info","message":"User Created With Phone Num 034314725896","timestamp":"01:01:12"}
+{"level":"info","message":"::1 - - [28/May/2018:20:01:12 +0000] \"POST /api/admin/sendSmsToAllDrivers HTTP/1.1\" 200 68 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:01:12"}
+{"level":"info","message":"User Created With Phone Num 923431469988","timestamp":"01:01:13"}
+{"level":"info","message":"An Exception Has occured in sendVerificationCode methodError: Can't set headers after they are sent.","timestamp":"01:01:13"}
+{"level":"info","message":"::1 - - [28/May/2018:20:09:43 +0000] \"POST /api/users/register HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:09:43"}
+{"level":"info","message":"::1 - - [28/May/2018:20:17:25 +0000] \"POST /api/users/register HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:17:25"}
+{"level":"info","message":"::1 - - [28/May/2018:20:17:52 +0000] \"POST /api/users/register HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:17:52"}
+{"level":"info","message":"::1 - - [28/May/2018:20:19:36 +0000] \"POST /api/users/register HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:19:36"}
+{"level":"info","message":"::1 - - [28/May/2018:20:23:32 +0000] \"POST /api/users/register HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:23:32"}
+{"level":"info","message":"::1 - - [28/May/2018:20:24:01 +0000] \"POST /api/users/register HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:24:01"}
+{"level":"info","message":"ChatController.sendMessageToDriver called  :","timestamp":"01:28:56"}
+{"level":"info","message":"User Created With Phone Num 034314725896","timestamp":"01:28:56"}
+{"level":"info","message":"::1 - - [28/May/2018:20:28:56 +0000] \"POST /api/admin/sendSmsToAllDrivers HTTP/1.1\" 200 68 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:28:56"}
+{"level":"info","message":"User Created With Phone Num 923431469988","timestamp":"01:28:57"}
+{"level":"info","message":"An Exception Has occured in sendVerificationCode methodError: Can't set headers after they are sent.","timestamp":"01:28:57"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"01:28:57"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"01:28:58"}
+{"level":"info","message":"::1 - - [28/May/2018:20:32:36 +0000] \"POST /api/users/register HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:32:36"}
+{"level":"info","message":"::1 - - [28/May/2018:20:34:21 +0000] \"POST /api/users/register HTTP/1.1\" 400 24 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:34:21"}
+{"level":"info","message":"::1 - - [28/May/2018:20:34:52 +0000] \"POST /api/users/register HTTP/1.1\" 200 130 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:34:52"}
+{"level":"info","message":"ChatController.sendMessageToDriver called  :","timestamp":"01:35:43"}
+{"level":"info","message":"User Created With Phone Num 034314725896","timestamp":"01:35:44"}
+{"level":"info","message":"::1 - - [28/May/2018:20:35:44 +0000] \"POST /api/admin/sendSmsToAllDrivers HTTP/1.1\" 200 68 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:35:44"}
+{"level":"info","message":"User Created With Phone Num 923431469988","timestamp":"01:35:44"}
+{"level":"info","message":"An Exception Has occured in sendVerificationCode methodError: Can't set headers after they are sent.","timestamp":"01:35:44"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"01:35:45"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"01:35:45"}
+{"level":"info","message":"ChatController.sendMessageToDriver called  :","timestamp":"01:37:16"}
+{"level":"info","message":"User Created With Phone Num 034314725896","timestamp":"01:37:17"}
+{"level":"info","message":"::1 - - [28/May/2018:20:37:17 +0000] \"POST /api/admin/sendSmsToAllDrivers HTTP/1.1\" 200 68 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:37:17"}
+{"level":"info","message":"User Created With Phone Num 923431469988","timestamp":"01:37:17"}
+{"level":"info","message":"An Exception Has occured in sendVerificationCode methodError: Can't set headers after they are sent.","timestamp":"01:37:17"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"01:37:18"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"01:37:18"}
+{"level":"info","message":"ChatController.sendMessageToDriver called  :","timestamp":"01:42:19"}
+{"level":"info","message":"User Found with mobile number 034314725896","timestamp":"01:42:20"}
+{"level":"info","message":"User Found with mobile number 923431469988","timestamp":"01:42:20"}
+{"level":"info","message":"User Found with mobile number 03431112233","timestamp":"01:42:20"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"01:42:21"}
+{"level":"info","message":"An Exception Has occured in sendMessageToDriver methodTypeError: Cannot read property 'phone' of null","timestamp":"01:42:21"}
+{"level":"info","message":"::1 - - [28/May/2018:20:42:21 +0000] \"POST /api/admin/sendSmsToAllDrivers HTTP/1.1\" 200 59 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:42:21"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"01:42:21"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"01:42:21"}
+{"level":"info","message":"ChatController.sendMessageToDriver called  :","timestamp":"01:45:14"}
+{"level":"info","message":"User Found with mobile number 034314725896","timestamp":"01:45:16"}
+{"level":"info","message":"User Found with mobile number 923431469988","timestamp":"01:45:17"}
+{"level":"info","message":"User Found with mobile number 03431112233","timestamp":"01:45:19"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"01:45:19"}
+{"level":"info","message":"An Exception Has occured in sendMessageToDriver methodTypeError: Cannot read property 'phone' of null","timestamp":"01:45:19"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"01:45:20"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"01:45:20"}
+{"level":"info","message":"::1 - - [28/May/2018:20:47:14 +0000] \"POST /api/admin/sendSmsToAllDrivers HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:47:14"}
+{"level":"info","message":"ChatController.sendMessageToDriver called  :","timestamp":"01:50:38"}
+{"level":"info","message":" Exit chatController.sendMessageToDriver Method","timestamp":"01:50:46"}
+{"level":"info","message":"::1 - - [28/May/2018:20:50:46 +0000] \"POST /api/admin/sendSmsToAllDrivers HTTP/1.1\" 200 58 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:50:46"}
+{"level":"info","message":"ChatController.sendMessageToDriver called  :","timestamp":"01:53:35"}
+{"level":"info","message":"User Found with mobile number 034314725896","timestamp":"01:53:39"}
+{"level":"info","message":"User Found with mobile number 923431469988","timestamp":"01:53:39"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"01:53:40"}
+{"level":"info","message":"User Found with mobile number 03431112233","timestamp":"01:53:40"}
+{"level":"info","message":"User Found with mobile number 03331112223","timestamp":"01:53:41"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"01:53:41"}
+{"level":"info","message":"User Found with mobile number 1111112","timestamp":"01:53:42"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"01:53:42"}
+{"level":"info","message":"User Found with mobile number 923344600341","timestamp":"01:53:42"}
+{"level":"info","message":" Exit chatController.sendMessageToDriver Method","timestamp":"01:53:42"}
+{"level":"info","message":"::1 - - [28/May/2018:20:53:42 +0000] \"POST /api/admin/sendSmsToAllDrivers HTTP/1.1\" 200 58 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"01:53:42"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"01:53:42"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"01:53:43"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"01:53:43"}
+{"level":"info","message":"::1 - - [28/May/2018:21:06:38 +0000] \"POST /api/users/register HTTP/1.1\" 200 132 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"02:06:38"}
+{"level":"info","message":"ChatController.sendMessageToDriver called  :","timestamp":"02:07:56"}
+{"level":"info","message":"User Found with mobile number 034314725896","timestamp":"02:07:58"}
+{"level":"info","message":"User Found with mobile number 923431469988","timestamp":"02:07:59"}
+{"level":"info","message":"User Found with mobile number 03431112233","timestamp":"02:08:00"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"02:08:00"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"02:08:01"}
+{"level":"info","message":"User Found with mobile number 03331112223","timestamp":"02:08:01"}
+{"level":"info","message":"User Found with mobile number 1111112","timestamp":"02:08:02"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"02:08:02"}
+{"level":"info","message":"User Found with mobile number 923344600341","timestamp":"02:08:02"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"02:08:03"}
+{"level":"info","message":"User Found with mobile number 923345022570","timestamp":"02:08:03"}
+{"level":"info","message":" Exit chatController.sendMessageToDriver Method","timestamp":"02:08:03"}
+{"level":"info","message":"::1 - - [28/May/2018:21:08:03 +0000] \"POST /api/admin/sendSmsToAllDrivers HTTP/1.1\" 200 58 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"02:08:03"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"02:08:04"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"02:08:04"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"02:08:04"}
