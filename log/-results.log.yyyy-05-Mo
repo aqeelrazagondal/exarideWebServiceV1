@@ -223,3 +223,19 @@
 {"level":"info","message":"location : 33.673923450007095,72.99943132380758","timestamp":"15:00:20"}
 {"level":"info","message":"User Location With Phone Num 03431469988","timestamp":"15:00:20"}
 {"level":"info","message":"::1 - - [14/May/2018:10:00:20 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1128 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:00:20"}
+{"phoneNo":"923431469988","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"15:44:47"}
+{"level":"info","message":"An Exception Has occured in updateUserLocation methodTypeError: Cannot read property '_id' of null","timestamp":"15:44:56"}
+{"level":"info","message":"::1 - - [28/May/2018:10:46:47 +0000] \"POST /api/users/updateLocation HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:46:47"}
+{"level":"info","message":"IN Riderpickuploaction","timestamp":"15:48:47"}
+{"level":"info","message":"::1 - - [28/May/2018:10:48:52 +0000] \"POST /api/riders/pickuplocation HTTP/1.1\" 200 73 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:48:52"}
+{"level":"info","message":"IN Riderpickuploaction","timestamp":"15:49:23"}
+{"level":"info","message":"::1 - - [28/May/2018:10:49:28 +0000] \"POST /api/riders/pickuplocation HTTP/1.1\" 200 73 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:49:28"}
+{"phoneNo":"923431469988","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"15:56:02"}
+{"level":"info","message":"An Exception Has occured in updateRiderLocation methodTypeError: Cannot read property '_id' of null","timestamp":"15:56:07"}
+{"phoneNo":"923431469988","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"15:57:58"}
+{"level":"info","message":"UserExists Method Called","timestamp":"15:58:06"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"15:58:06"}
+{"level":"info","message":"User Found with Phone Num. :923431469988","timestamp":"15:58:07"}
+{"level":"info","message":"location : 33.6739234,72.9994313","timestamp":"15:58:07"}
+{"level":"info","message":"User Location With Phone Num 923431469988","timestamp":"15:58:07"}
+{"level":"info","message":"::1 - - [28/May/2018:10:58:07 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1140 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:58:07"}

@@ -128,37 +128,42 @@ exports.updateRiderLocation = async function (reqData, res) {
         let driver = await Driver.find({});
         if(!driver) return res.jsonp({ status: "failure", message: "Failed To update Location!", object: [] });
         // console.log('LIST OF DRIVERS ', driver );
-
-        for(let i = 0; i < driver.length; i++){
-            userObj = await User.find({ _id: driver[i]._userId });
-
-            for(let j = 0; j < userObj.length; j++){
-                userResObj = {
-                    profile_photo_url: userObj[j].profile_photo_url,
-                    loc: userObj[j].loc,
-                    name: userObj[j].name
+        if(driver){
+            for(let i = 0; i < driver.length; i++){
+                userObj = await User.find({ _id: driver[i]._userId });
+                if(userObj){
+                    for(let j = 0; j < userObj.length; j++){
+                        userResObj = {
+                            profile_photo_url: userObj[j].profile_photo_url,
+                            loc: userObj[j].loc,
+                            name: userObj[j].name
+                        }
+                        listOfDrivers.push(userResObj);
+                    }
                 }
-                listOfDrivers.push(userResObj);
             }
         }
+
         // finding list of stops
         // list of stops
         let shiftRider = await ShiftRider.find({});
         if(!shiftRider) return res.jsonp({ status: "failure", message: "Failed To findind stops!", object: [] });
-        for(let i = 0; i < shiftRider.length; i++){
-            console.log('shiftRIders  &&&&&&&&&&& ', shiftRider[i].pickUpLocName);
-            let pickUp = await Location.findOne({ title: shiftRider[i].pickUpLocName }); 
-            console.log('FIND A PICK UP LOCATION..!!!', pickUp);
-
-            let stopRes = {
-                pickUpID: pickUp._id,
-                pickUpLocName: pickUp.title,
-                pickUploc: pickUp.loc
+        if(shiftRider){
+            for(let i = 0; i < shiftRider.length; i++){
+                console.log('shiftRIders  &&&&&&&&&&& ', shiftRider[i].pickUpLocName);
+                let pickUp = await Location.findOne({ title: shiftRider[i].pickUpLocName }); 
+                console.log('FIND A PICK UP LOCATION..!!!', pickUp);
+                if(pickUp){
+                    console.log('FIND A PICK UP LOCATION..!!!', pickUp);
+                    let stopRes = {
+                        pickUpID: pickUp._id,
+                        pickUpLocName: pickUp.title,
+                        pickUploc: pickUp.loc
+                    }
+                    listOfStops.push(stopRes);
+                }    
             }
-
-            listOfStops.push(stopRes);
-        }
-
+        }   
 
         riderRsponseObject = {
             listOfDrivers: listOfDrivers,
@@ -195,7 +200,7 @@ exports.updateRiderLocation = async function (reqData, res) {
             }
         });
     } catch (err) {
-        logger.info('An Exception Has occured in updateUserLocation method' + err);
+        logger.info('An Exception Has occured in updateRiderLocation method' + err);
     }
 }
 
