@@ -150,11 +150,11 @@ exports.updateRiderLocation = async function (reqData, res) {
         if(!shiftRider) return res.jsonp({ status: "failure", message: "Failed To findind stops!", object: [] });
         if(shiftRider){
             for(let i = 0; i < shiftRider.length; i++){
-                console.log('shiftRIders  &&&&&&&&&&& ', shiftRider[i].pickUpLocName);
+                // console.log('shiftRIders  &&&&&&&&&&& ', shiftRider[i].pickUpLocName);
                 let pickUp = await Location.findOne({ title: shiftRider[i].pickUpLocName }); 
-                console.log('FIND A PICK UP LOCATION..!!!', pickUp);
+                // console.log('FIND A PICK UP LOCATION..!!!', pickUp);
                 if(pickUp){
-                    console.log('FIND A PICK UP LOCATION..!!!', pickUp);
+                    // console.log('FIND A PICK UP LOCATION..!!!', pickUp);
                     let stopRes = {
                         pickUpID: pickUp._id,
                         pickUpLocName: pickUp.title,
@@ -169,10 +169,12 @@ exports.updateRiderLocation = async function (reqData, res) {
             listOfDrivers: listOfDrivers,
             listOfStops: listOfStops
         };
-        
+        console.log('Number reqData Entered by Mobile!', reqData.phoneNo);
+
         const user = await User.findOne({phone: reqData.phoneNo});
         if(!user) return res.jsonp({ status: 'failure', message: 'Rider not found ', object: [] });
 
+        console.log('User found with Phone number !', user.phone);
         if(user){
             user.loc = [longitude, latitude];
             user.last_shared_loc_time = new Date();

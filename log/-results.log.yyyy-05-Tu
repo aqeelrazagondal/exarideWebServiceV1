@@ -261,3 +261,7 @@
 {"level":"info","message":"::1 - - [29/May/2018:08:08:24 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1045 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:08:24"}
 {"phoneNo":"92312444444999213","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"13:08:52"}
 {"level":"info","message":"::1 - - [29/May/2018:08:08:57 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:08:57"}
+{"phoneNo":"","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"13:10:45"}
+{"level":"info","message":"::1 - - [29/May/2018:08:10:50 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1045 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:10:50"}
+{"longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"13:14:52"}
+{"level":"info","message":"::1 - - [29/May/2018:08:14:58 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1045 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:14:58"}

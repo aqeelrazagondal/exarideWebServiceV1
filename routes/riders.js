@@ -31,7 +31,11 @@ router.post('/pickuplocation', function (req, res) {
 router.post('/alert', function(req, res) {
 
   if (req.body === undefined || req.body === null) {
-    res.end("Empty Body");
+    res.send("Empty Body");
+  }
+  
+  if(req.body.phoneNo === null){
+    res.send('Empty PhoneNo');
   }
   console.log("in routes /alert");
   var reqData = req.body;
