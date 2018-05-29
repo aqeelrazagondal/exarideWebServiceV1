@@ -332,3 +332,5 @@
 {"level":"info","message":"::1 - - [29/May/2018:10:07:32 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" 200 500 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:07:32"}
 {"phoneNo":"04341234321","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"15:07:47"}
 {"level":"info","message":"::1 - - [29/May/2018:10:07:55 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1379 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:07:55"}
+{"phoneNo":"04341234321","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"15:36:59"}
+{"level":"info","message":"::1 - - [29/May/2018:10:37:06 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1384 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:37:06"}
