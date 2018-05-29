@@ -55,11 +55,6 @@ router.get('/search/:key', async (req, res) => {
 
 router.patch('/:id', adminAuth, async (req, res) => {
 
-  // logger.info('Ib driver info update route', id);
-  // const admin = await Admin.findOne({ email: req.body.email });
-  // if (!admin) return res.status(400).jsonp({ status: 'failure', message: 'Admin not found by given Email.', object: [] }); 
-  // logger.info('Admin found', admin.name);
-
   const driverQuery = req.params.id;
   const driver = await Driver.findOne({ _id: driverQuery });
   if(!driver) return res.status(400).jsonp({ status: 'failure', message: 'driver not found by given ID.', object: [] });
@@ -76,7 +71,7 @@ router.patch('/:id', adminAuth, async (req, res) => {
  
   if (!user) return res.status(404).send('User not found by the givem ID.');
 
-  res.status(400).jsonp({ status: 'success', message: 'Driver Info Updated.', object: user });
+  res.status(200).jsonp({ status: 'success', message: 'Driver Info Updated.', object: user });
 });
   
 router.delete('/:id', adminAuth, async (req, res) => {
