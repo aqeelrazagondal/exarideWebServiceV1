@@ -296,3 +296,24 @@
 {"level":"info","message":"User Created With Phone Num 123123122223","timestamp":"14:19:02"}
 {"level":"info","message":"::1 - - [29/May/2018:09:19:02 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 68 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:19:02"}
 {"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"14:19:02"}
+{"level":"verbose","message":"verificationcode-POST called ","timestamp":"14:24:56"}
+{"level":"info","message":"RegistrationController.sendVerificationCode called  :923124999213","timestamp":"14:24:56"}
+{"level":"info","message":"UserExists Method Called","timestamp":"14:24:56"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"14:24:56"}
+{"level":"info","message":" Exit RegistrationController.sendVerificationCode Method","timestamp":"14:24:56"}
+{"level":"info","message":"User Not Found with Phone Num. :null","timestamp":"14:24:56"}
+{"level":"info","message":"User Exists Response : null","timestamp":"14:24:56"}
+{"level":"info","message":" User does not exist,  Creating user","timestamp":"14:24:56"}
+{"level":"info","message":"User Created With Phone Num 923124999213","timestamp":"14:24:57"}
+{"level":"info","message":"::1 - - [29/May/2018:09:24:57 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 68 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:24:57"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"14:24:57"}
+{"level":"info","message":"::1 - - [29/May/2018:09:27:39 +0000] \"POST /api/auth HTTP/1.1\" 200 148 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:27:40"}
+{"level":"info","message":"::1 - - [29/May/2018:09:43:06 +0000] \"POST /api/users/register HTTP/1.1\" 401 33 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:43:06"}
+{"level":"info","message":"::1 - - [29/May/2018:09:43:37 +0000] \"POST /api/users/register HTTP/1.1\" 200 125 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:43:37"}
+{"level":"info","message":"ChatController.sendAlertToDriver called  :","timestamp":"14:49:38"}
+{"level":"info","message":"ChatController.sendAlertToDriver called  :","timestamp":"14:51:04"}
+{"level":"info","message":"ChatController.sendAlertToDriver called  :","timestamp":"14:51:32"}
+{"level":"info","message":"User Found with mobile number 923124999213","timestamp":"14:51:33"}
+{"level":"info","message":" Exit chatController.sendAlertToRider Method","timestamp":"14:51:33"}
+{"level":"info","message":"::1 - - [29/May/2018:09:51:33 +0000] \"POST /api/riders/alertToDriver HTTP/1.1\" 200 55 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:51:33"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"14:51:33"}

@@ -33,13 +33,25 @@ router.post('/alert', function(req, res) {
   if (req.body === undefined || req.body === null) {
     res.send("Empty Body");
   }
-  
+
   if(req.body.phoneNo === null){
     res.send('Empty PhoneNo');
   }
   console.log("in routes /alert");
   var reqData = req.body;
   chatController.sendAlertToRider(reqData, res);
+
+});
+
+router.post('/alertToDriver', function(req, res) {
+
+  if (req.body === undefined || req.body === null) {
+    res.send("Empty Body");
+  }
+  
+  console.log("in routes /alert");
+  var reqData = req.body;
+  chatController.sendAlertToDriver(reqData, res);
 
 });
 
