@@ -10,8 +10,7 @@ var RiderSchema   = new mongoose.Schema({
     pickupLocName: String,
     last_shared_loc_time: Date,
     active: { type: Boolean, default: false },
-    name: String,
-    phone: { type: String, default: null }
+    name: String
    
 } , {timestamps: true});
 // Export the Mongoose model

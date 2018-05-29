@@ -265,3 +265,34 @@
 {"level":"info","message":"::1 - - [29/May/2018:08:10:50 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1045 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:10:50"}
 {"longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"13:14:52"}
 {"level":"info","message":"::1 - - [29/May/2018:08:14:58 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1045 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:14:58"}
+{"phoneNo":"923124999213","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"13:19:17"}
+{"level":"info","message":"::1 - - [29/May/2018:08:19:24 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1045 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:19:24"}
+{"level":"info","message":"IN Riderpickuploaction","timestamp":"13:36:46"}
+{"level":"info","message":"::1 - - [29/May/2018:08:36:49 +0000] \"POST /api/riders/pickuplocation HTTP/1.1\" 200 73 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:36:49"}
+{"level":"info","message":"ChatController.sendAlertToRider called  :","timestamp":"13:49:28"}
+{"level":"info","message":" Exit chatController.sendAlertToRider Method","timestamp":"13:49:28"}
+{"level":"info","message":"::1 - - [29/May/2018:08:49:28 +0000] \"POST /api/riders/alert HTTP/1.1\" 200 55 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:49:28"}
+{"level":"info","message":"IN Riderpickuploaction","timestamp":"14:02:57"}
+{"level":"info","message":"::1 - - [29/May/2018:09:02:58 +0000] \"POST /api/riders/pickuplocation HTTP/1.1\" 200 70 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:02:58"}
+{"level":"verbose","message":"verificationcode-POST called ","timestamp":"14:17:32"}
+{"level":"info","message":"RegistrationController.sendVerificationCode called  :123123123","timestamp":"14:17:32"}
+{"level":"info","message":"UserExists Method Called","timestamp":"14:17:32"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"14:17:32"}
+{"level":"info","message":" Exit RegistrationController.sendVerificationCode Method","timestamp":"14:17:32"}
+{"level":"info","message":"User Not Found with Phone Num. :null","timestamp":"14:17:33"}
+{"level":"info","message":"User Exists Response : null","timestamp":"14:17:33"}
+{"level":"info","message":" User does not exist,  Creating user","timestamp":"14:17:33"}
+{"level":"info","message":"User Created With Phone Num 123123123","timestamp":"14:17:33"}
+{"level":"info","message":"::1 - - [29/May/2018:09:17:33 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 68 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:17:33"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"14:17:34"}
+{"level":"verbose","message":"verificationcode-POST called ","timestamp":"14:19:01"}
+{"level":"info","message":"RegistrationController.sendVerificationCode called  :123123122223","timestamp":"14:19:01"}
+{"level":"info","message":"UserExists Method Called","timestamp":"14:19:01"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"14:19:01"}
+{"level":"info","message":" Exit RegistrationController.sendVerificationCode Method","timestamp":"14:19:01"}
+{"level":"info","message":"User Not Found with Phone Num. :null","timestamp":"14:19:01"}
+{"level":"info","message":"User Exists Response : null","timestamp":"14:19:01"}
+{"level":"info","message":" User does not exist,  Creating user","timestamp":"14:19:01"}
+{"level":"info","message":"User Created With Phone Num 123123122223","timestamp":"14:19:02"}
+{"level":"info","message":"::1 - - [29/May/2018:09:19:02 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 68 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:19:02"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"14:19:02"}

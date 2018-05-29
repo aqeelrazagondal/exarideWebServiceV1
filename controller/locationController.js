@@ -203,7 +203,7 @@ exports.riderPickUPLocation = async function(reqData, res){
         let longitude = reqData.longitude;
         let latitude = reqData.latitude;
         let radius = reqData.radius;
-        let userLoc = new Object({ latitude: latitude, longitude: longitude }); 
+ 
 
         let user = await User.findOne({ phone });
         if(!user) return res.jsonp({ status: "failure", message: "Failed To Finding rider!", object: [] });
@@ -216,33 +216,15 @@ exports.riderPickUPLocation = async function(reqData, res){
         await location.save();
         console.log('Location saved', location);
 
-        let rider = new Rider({
-            _pickUpLocationId: location._id
-        });
+        let query =  user._id;
+        console.log('query', query);
+
+        let rider = await Rider.findOne({ _userId: query });
+        if(!rider) return res.jsonp({ status: 'failure', message: 'Rider not found by userID', object: [] });
+
+        rider._pickUpLocationId = location._id;
         await rider.save();
         console.log('Rider saved!', rider);
-
-        // finding list of drivers
-        let driver = await Driver.find({});
-        if(!driver) return res.jsonp({ status: "failure", message: "Failed To update Location!", object: [] });
-        // console.log('LIST OF DRIVERS ', driver );
- 
-        for(let i = 0; i < driver.length; i++){
-            userObj = await User.find({ _id: driver[i]._userId });
- 
-            for(let j = 0; j < userObj.length; j++){
-                userResObj = {
-                    profile_photo_url: userObj[j].profile_photo_url,
-                    loc: userObj[j].loc,
-                    name: userObj[j].name
-                }
-                listOfDrivers.push(userResObj);
-            }
-        }
-
-        let pickUpResObj =  {
-            listOfDrivers: listOfDrivers
-        }
 
         res.jsonp({
             status: "success",

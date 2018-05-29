@@ -101,7 +101,7 @@ var adminExists= function(email,callback){
     logger.info(' Exit AdminExists Method');	
 } 
 
-exports.sendVerificationCode = async function(reqData,res){
+exports.sendVerificationCode = function(reqData, res){
     
     try{        
     logger.info('RegistrationController.sendVerificationCode called  :'  + reqData.phoneNo );
@@ -123,7 +123,7 @@ exports.sendVerificationCode = async function(reqData,res){
 		logger.info('User Exists Response : ' + user );
         if (!user){
              logger.info (" User does not exist,  Creating user");
-            if (resend==="true"||resend==1){
+            if (resend==="true" || resend==1){
                 res.jsonp({ status:"failure", message:"Please Create User First", object:[] }); 
             }
             else{
@@ -172,10 +172,25 @@ exports.sendVerificationCode = async function(reqData,res){
                         logger.info('Response/Error of SMS API : ' + error );
                     }
                 });
+
+                
+                let newRider= new Rider({
+                    _userId: user._id
+                });
+                newRider.save(function (err, user) {
+                    if(err){
+                        logger.error('Some Error while saving user' + err );
+                        res.jsonp({status:"failure", message:"Some Error while saving user", object:[]}); 
+                    }
+					else{
+                        console.log('_userId **********  ' + newRider._userId);
+                    }
+                })
+            
 				logger.info('User Created With Phone Num ' + phoneNo );
-				res.jsonp({status:"success", message:"Verification code Sent!", object:[]});	 
-                }    
-                }); 
+				res.jsonp({status:"success", message:"Verification code Sent!", object: [] });	 
+            }    
+            }); 
             } 
               
         }
