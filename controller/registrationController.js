@@ -19,30 +19,35 @@ const logger = require('../startup/logging');
 
 module.exports.userExists = function(phoneNo,callback){
     logger.info('UserExists Method Called');
-    var query = { phone: phoneNo };
-    User.findOne(query).exec(function(err, user){
-        if (err){
-            logger.error('Some Error while finding user' + err );
-            res.status(400).send({status:"failure",
-                                  message:err,
-                                  object:[]
-            });
-        }
-        else{
-            if (user){
-                logger.info('User Found with Phone Num. :'+phoneNo);                
-                console.log("user found with phone no "+phoneNo);
-                console.log('user found by found number ', user)
-                callback (user);
+    if(phoneNo === undefined || phoneNo === null){
+        res.jsonp({ status: 'failure', message: 'phoneNo is empty or undefined', object: [] });
+    }else{
+        var query = { phone: phoneNo };
+        User.findOne(query).exec(function(err, user){
+            if (err){
+                logger.error('Some Error while finding user' + err );
+                res.status(400).send({status:"failure",
+                                      message:err,
+                                      object:[]
+                });
             }
             else{
-                logger.info('User Not Found with Phone Num. :'+phoneNo);
-                console.log("user not found with phone no "+phoneNo);
-                callback( user);
-            }
-       }
-     });
-    logger.info(' Exit UserExists Method');
+                if (user){
+                    logger.info('User Found with Phone Num. :'+phoneNo);                
+                    console.log("user found with phone no "+phoneNo);
+                    console.log('user found by Phone number ', user)
+                    callback (user);
+                }
+                else{
+                    logger.info('User Not Found with Phone Num. :'+phoneNo);
+                    console.log("user not found with phone no "+phoneNo);
+                    callback( user);
+                }
+           }
+         });
+        logger.info(' Exit UserExists Method');
+    }
+    
 }
 
 var userExists = function(phoneNo,callback){

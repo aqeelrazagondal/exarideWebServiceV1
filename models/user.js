@@ -35,6 +35,7 @@ const userSchema = new mongoose.Schema({
   regNo: String,
   profile_photo_url: { type: String, default: null },
   active: Boolean,
+  alert: Boolean,
   OS: String,
   verified_user: Boolean,
   deactivate_user: { type: Boolean, default: false },

@@ -202,14 +202,4 @@ router.post('/updateLocation', function (req, res) {
   LocController.updateRiderLocation(reqData, res);
 });
 
-// router.post('/updateDriverLocation', function (req, res) {
-
-//   if (req.body === undefined || req.body === null) {
-//     res.end("Empty Body");
-//   }
-//   console.log("in routes /updateDriverLocation");
-//   var reqData = req.body;
-//   LocController.updateDriverLocation (reqData, res);
-// });
-
 module.exports = router; 

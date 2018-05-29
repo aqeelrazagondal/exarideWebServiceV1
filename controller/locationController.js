@@ -72,7 +72,6 @@ exports.updateDriverLocation = function(reqData, res){
         var email = reqData.email;
         var longitude = reqData.longitude;
         var latitude = reqData.latitude;
-        // var userLoc = new Object({ latitude: latitude, longitude: longitude }); 
         userExists(email, function (user) {
             if (user) {
                 
@@ -114,6 +113,7 @@ exports.updateDriverLocation = function(reqData, res){
 exports.updateRiderLocation = async function (reqData, res) {
     logger.info('updateRiderLocation method called', reqData);
     try {
+
         let riderRsponseObject;
         let userObj, stopResObj;
         let listOfStops = [];
@@ -170,35 +170,21 @@ exports.updateRiderLocation = async function (reqData, res) {
             listOfStops: listOfStops
         };
         
-        regController.userExists(phone, function (user) {
-            if (user) {
-                user.loc = [longitude, latitude];
-                user.last_shared_loc_time = new Date();
-                user.save(function (err, user) {
-                    if (err) {
-                        logger.error('Some Error while updating user' + err);
-                    }
-                    else {
-                        logger.info('User Location With Phone Num ' + phone);
-                        
-                        res.jsonp({
-                            status: "success",
-                            message: "Location Updated!",
-                            object: riderRsponseObject
-                        });
-                    }
-                });
+        const user = await User.findOne({phone: reqData.phoneNo});
+        if(!user) return res.jsonp({ status: 'failure', message: 'Rider not found ', object: [] });
 
-                logger.info('location : ' + user.loc);
-            }
-            else {
-                res.jsonp({
-                    status: "failure",
-                    message: "Failed To update Location!",
-                    object: []
-                });
-            }
-        });
+        if(user){
+            user.loc = [longitude, latitude];
+            user.last_shared_loc_time = new Date();
+            await user.save();
+
+            res.jsonp({
+                status: "success",
+                message: "Location Updated!",
+                object: riderRsponseObject
+            });
+        }
+       
     } catch (err) {
         logger.info('An Exception Has occured in updateRiderLocation method' + err);
     }

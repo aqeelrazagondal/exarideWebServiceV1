@@ -1,9 +1,5 @@
-var multer  = require('multer')
-var upload = multer({ dest: './public/images/profileImages' });
 //package for making HTTP Request
 var request = require("request");
-//package to generate a random number
-var randomize = require('randomatic');
 const { User } = require('../models/user');
 const { Driver } = require('../models/driver');
 const Rider  = require('../models/rider');
@@ -27,7 +23,7 @@ exports.sendMessageToDriver = async function(reqData,res){
                 console.log('USER ID !!!!', driver[i]._userId );
                 const user = await User.findOne({ _id: driver[i]._userId });
                 // if( !user ) res.jsonp({ status: 'failure', message: 'user not found', object: [] });
-                console.log('USERS PHONE NUMBER FOUND', user);
+                console.log('USERS PHONE NUMBER FOUND', user.phone);
                 
                 if(user.phone){
                     
@@ -54,10 +50,10 @@ exports.sendMessageToDriver = async function(reqData,res){
                         headers: headers,
                  
                         json: {
-                            'from': 'ALDAALAH',
-                             'to': user.phone,
-                             'text': adminMessage
-                          }
+                            'from': 'BMS',
+                            'to': user.phone,
+                            'text': adminMessage
+                        }
                     }
         
                     // Start the request
@@ -81,5 +77,24 @@ exports.sendMessageToDriver = async function(reqData,res){
     logger.info(' Exit chatController.sendMessageToDriver Method');
     }catch (err){
 		logger.info('An Exception Has occured in sendMessageToDriver method' + err);
+	}
+}
+
+exports.sendAlertToRider = async function(reqData,res){
+    
+    try{
+        let alert = reqData.alert;         
+        logger.info('ChatController.sendAlertToRider called  :');
+        const user = await User.findOne({ phone: reqData.phoneNo });
+        if(!user) return res.jsonp({ status: 'failure', message: 'Rider not found', object: [] });
+
+        user.alert = alert;
+        await user.save();
+       
+        res.jsonp({ status:"success", message:"Alert Set!", object:[] });	  
+        logger.info(' Exit chatController.sendAlertToRider Method');
+    
+    }catch (err){
+		logger.info('An Exception Has occured in sendAlertToRider method' + err);
 	}
 }

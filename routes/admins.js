@@ -1,4 +1,5 @@
 const auth = require('../middleware/auth');
+const adminAuth = require('../middleware/adminAuth');
 const jwt = require('jsonwebtoken');
 const config = require('config');
 const Joi = require('joi');
@@ -72,7 +73,7 @@ router.post('/login', async (req, res) => {
     
 });
 
-router.post('/sendSmsToAllDrivers', function (req, res) {
+router.post('/sendSmsToAllDrivers', adminAuth, function (req, res) {
 
   if (req.body === undefined || req.body === null) {
     res.end("Empty Body");

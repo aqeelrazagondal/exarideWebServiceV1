@@ -198,3 +198,66 @@
 {"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"02:08:04"}
 {"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"02:08:04"}
 {"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"02:08:04"}
+{"level":"info","message":"ChatController.sendMessageToDriver called  :","timestamp":"10:58:00"}
+{"level":"info","message":"User Found with mobile number 034314725896","timestamp":"10:58:01"}
+{"level":"info","message":" Exit chatController.sendMessageToDriver Method","timestamp":"10:58:01"}
+{"level":"info","message":"::1 - - [29/May/2018:05:58:01 +0000] \"POST /api/admin/sendSmsToAllDrivers HTTP/1.1\" 200 58 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:58:01"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"10:58:02"}
+{"level":"info","message":"ChatController.sendMessageToDriver called  :","timestamp":"10:59:55"}
+{"level":"info","message":"User Found with mobile number 923124999213","timestamp":"10:59:55"}
+{"level":"info","message":" Exit chatController.sendMessageToDriver Method","timestamp":"10:59:55"}
+{"level":"info","message":"::1 - - [29/May/2018:05:59:55 +0000] \"POST /api/admin/sendSmsToAllDrivers HTTP/1.1\" 200 58 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"10:59:55"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"10:59:56"}
+{"level":"info","message":"IN Riderpickuploaction","timestamp":"12:24:30"}
+{"level":"info","message":"::1 - - [29/May/2018:07:24:34 +0000] \"POST /api/riders/pickuplocation HTTP/1.1\" 200 73 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:24:34"}
+{"phoneNo":"923124999213","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"12:33:50"}
+{"level":"info","message":"UserExists Method Called","timestamp":"12:33:56"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"12:33:56"}
+{"level":"info","message":"User Found with Phone Num. :923124999213","timestamp":"12:33:57"}
+{"level":"info","message":"location : 33.6739234,72.9994313","timestamp":"12:33:57"}
+{"level":"info","message":"User Location With Phone Num 923124999213","timestamp":"12:33:57"}
+{"level":"info","message":"::1 - - [29/May/2018:07:33:57 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1045 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:33:57"}
+{"phoneNo":"","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"12:34:40"}
+{"level":"info","message":"UserExists Method Called","timestamp":"12:34:46"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"12:34:46"}
+{"level":"info","message":"User Not Found with Phone Num. :","timestamp":"12:34:46"}
+{"level":"info","message":"::1 - - [29/May/2018:07:34:46 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 71 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:34:46"}
+{"longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"12:35:22"}
+{"level":"info","message":"UserExists Method Called","timestamp":"12:35:28"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"12:35:28"}
+{"level":"info","message":"User Found with Phone Num. :undefined","timestamp":"12:35:28"}
+{"level":"info","message":"location : 33.6739234,72.9994313","timestamp":"12:35:28"}
+{"level":"info","message":"User Location With Phone Num undefined","timestamp":"12:35:28"}
+{"level":"info","message":"::1 - - [29/May/2018:07:35:28 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1045 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:35:28"}
+{"phoneNo":"","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"12:43:51"}
+{"level":"info","message":"An Exception Has occured in updateRiderLocation methodReferenceError: req is not defined","timestamp":"12:43:51"}
+{"level":"info","message":"::1 - - [29/May/2018:07:44:05 +0000] \"POST /api/users/updateLocation HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:44:05"}
+{"level":"error","message":"400 - Unexpected token , in JSON at position 15 - /api/users/updateLocation - POST - ::1","timestamp":"12:44:12"}
+{"longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"12:44:27"}
+{"level":"info","message":"An Exception Has occured in updateRiderLocation methodReferenceError: req is not defined","timestamp":"12:44:27"}
+{"longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"12:44:44"}
+{"level":"info","message":"An Exception Has occured in updateRiderLocation methodReferenceError: req is not defined","timestamp":"12:44:44"}
+{"level":"info","message":"::1 - - [29/May/2018:07:45:33 +0000] \"POST /api/users/updateLocation HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:45:33"}
+{"level":"info","message":"::1 - - [29/May/2018:07:53:08 +0000] \"POST /api/riders/alert HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:53:08"}
+{"level":"info","message":"An Exception Has occured in sendAlertToRider methodReferenceError: req is not defined","timestamp":"12:53:35"}
+{"level":"info","message":"ChatController.sendAlertToRider called  :","timestamp":"12:56:17"}
+{"level":"info","message":" Exit chatController.sendAlertToRider Method","timestamp":"12:56:18"}
+{"level":"info","message":"::1 - - [29/May/2018:07:56:18 +0000] \"POST /api/riders/alert HTTP/1.1\" 200 55 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:56:18"}
+{"phoneNo":"","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"13:01:47"}
+{"level":"info","message":"UserExists Method Called","timestamp":"13:01:52"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"13:01:52"}
+{"level":"info","message":"User Found with Phone Num. :","timestamp":"13:01:52"}
+{"level":"info","message":"location : 33.6739234,72.9994313","timestamp":"13:01:52"}
+{"level":"info","message":"User Location With Phone Num ","timestamp":"13:01:52"}
+{"level":"info","message":"::1 - - [29/May/2018:08:01:52 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1045 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:01:52"}
+{"phoneNo":"","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"13:04:08"}
+{"level":"info","message":"UserExists Method Called","timestamp":"13:04:13"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"13:04:13"}
+{"level":"info","message":"User Found with Phone Num. :","timestamp":"13:04:14"}
+{"level":"info","message":"location : 33.6739234,72.9994313","timestamp":"13:04:14"}
+{"level":"info","message":"User Location With Phone Num ","timestamp":"13:04:14"}
+{"level":"info","message":"::1 - - [29/May/2018:08:04:14 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1045 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:04:14"}
+{"phoneNo":"923124999213","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"13:08:18"}
+{"level":"info","message":"::1 - - [29/May/2018:08:08:24 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1045 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:08:24"}
+{"phoneNo":"92312444444999213","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"13:08:52"}
+{"level":"info","message":"::1 - - [29/May/2018:08:08:57 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:08:57"}
