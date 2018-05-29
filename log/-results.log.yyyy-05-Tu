@@ -317,3 +317,18 @@
 {"level":"info","message":" Exit chatController.sendAlertToRider Method","timestamp":"14:51:33"}
 {"level":"info","message":"::1 - - [29/May/2018:09:51:33 +0000] \"POST /api/riders/alertToDriver HTTP/1.1\" 200 55 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:51:33"}
 {"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"14:51:33"}
+{"level":"info","message":"::1 - - [29/May/2018:09:58:33 +0000] \"POST /api/auth HTTP/1.1\" 200 150 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:58:33"}
+{"phoneNo":"04341234321","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"15:03:09"}
+{"level":"info","message":"::1 - - [29/May/2018:10:03:15 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1088 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:03:15"}
+{"phoneNo":"04341234321","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"15:04:31"}
+{"level":"info","message":"::1 - - [29/May/2018:10:04:38 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1088 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:04:38"}
+{"phoneNo":"04341234321","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"15:05:09"}
+{"level":"info","message":"::1 - - [29/May/2018:10:05:16 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1352 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:05:16"}
+{"level":"info","message":"UserExists Method Called","timestamp":"15:07:32"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"15:07:32"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"15:07:32"}
+{"level":"info","message":"User Found with Email. :{ phone: '923124999213',\n  profile_photo_url: null,\n  deactivate_user: false,\n  message: 'MSG from POSTMAN',\n  last_shared_loc_time: 2018-05-29T09:43:36.712Z,\n  _id: 5b0d20c84b7adc30a4076bdd,\n  name: 'Nadeem',\n  email: 'nadeem1234@gmail.com',\n  password: '$2a$10$GL2HbnvVFOcPk/lEPKv8T.KJ4lMsxWP8pFSGtuNIn4pmY3sOSEAGW',\n  user_type: 'driver',\n  createdAt: 2018-05-29T09:43:36.865Z,\n  updatedAt: 2018-05-29T09:51:32.988Z,\n  __v: 0 }","timestamp":"15:07:32"}
+{"level":"info","message":"User Location With email nadeem1234@gmail.com","timestamp":"15:07:32"}
+{"level":"info","message":"::1 - - [29/May/2018:10:07:32 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" 200 500 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:07:32"}
+{"phoneNo":"04341234321","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"15:07:47"}
+{"level":"info","message":"::1 - - [29/May/2018:10:07:55 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1379 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:07:55"}

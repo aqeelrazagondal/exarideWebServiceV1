@@ -113,7 +113,6 @@ exports.sendVerificationCode = function(reqData, res){
     var requestUrl;
     var user_type = 'rider';
     var newRider;
-	//var host;
 	//generate a code and set to user.verification_code
 	code=randomize('0', 4);
 	verificationMsg="Verification code for BMS Application : " + code;
@@ -155,7 +154,7 @@ exports.sendVerificationCode = function(reqData, res){
                     headers: headers,
              
                     json: {
-                        'from': 'ALDAALAH',
+                        'from': 'BMS',
                          'to': user.phone,
                          'text':verificationMsg
                       }
@@ -177,6 +176,7 @@ exports.sendVerificationCode = function(reqData, res){
                 let newRider= new Rider({
                     _userId: user._id
                 });
+
                 newRider.save(function (err, user) {
                     if(err){
                         logger.error('Some Error while saving user' + err );
@@ -217,7 +217,7 @@ exports.sendVerificationCode = function(reqData, res){
                     headers: headers,
 
                     json: {
-                        'from': 'EXARIDE',
+                        'from': 'BMS',
                         'to': user.phone,
                         'text':verificationMsg
                     }

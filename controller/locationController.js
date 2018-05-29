@@ -134,6 +134,7 @@ exports.updateRiderLocation = async function (reqData, res) {
                 if(userObj){
                     for(let j = 0; j < userObj.length; j++){
                         userResObj = {
+                            _id: driver[i]._id,
                             profile_photo_url: userObj[j].profile_photo_url,
                             loc: userObj[j].loc,
                             name: userObj[j].name
@@ -150,11 +151,11 @@ exports.updateRiderLocation = async function (reqData, res) {
         if(!shiftRider) return res.jsonp({ status: "failure", message: "Failed To findind stops!", object: [] });
         if(shiftRider){
             for(let i = 0; i < shiftRider.length; i++){
-                // console.log('shiftRIders  &&&&&&&&&&& ', shiftRider[i].pickUpLocName);
+                console.log('shiftRIders  &&&&&&&&&&& ', shiftRider[i].pickUpLocName);
                 let pickUp = await Location.findOne({ title: shiftRider[i].pickUpLocName }); 
-                // console.log('FIND A PICK UP LOCATION..!!!', pickUp);
+                console.log('FIND A PICK UP LOCATION..!!!', pickUp);
                 if(pickUp){
-                    // console.log('FIND A PICK UP LOCATION..!!!', pickUp);
+    
                     let stopRes = {
                         pickUpID: pickUp._id,
                         pickUpLocName: pickUp.title,
