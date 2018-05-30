@@ -13,40 +13,32 @@ const router = express.Router();
 
 router.post('/', async (req, res) => {
 
-    let shift = await Shift.findOne({ _id: req.body._shiftId });
-    if (!shift) return res.status(400).send('Shift not Found.');
+    
 
-    let _riderId = req.body._riderId;
-    let pickUpTime = req.body.pickUpTime;
-    let dropOfTime = req.body.dropOfTime;
+    let shift = await Shift.findOne({ _id: req.body._shiftId });
+    if (!shift) return res.status(400).jsonp({ status: 'failure', message: 'Shift not Found.', object: [] });
+
     let shiftStartTime = req.body.shiftStartTime;
     let shiftEndTime = req.body.shiftEndTime;
 
-    let rider = await Rider.findOne({ _id: _riderId });
-    if(!rider)  return res.status(400).send('Rider id not found.');
+    let stop = await Location.findOne({ _id: req.body._stopId });
+    if (!stop) return res.status(400).jsonp({ status: 'failure', message: 'Stop Location not Found By given ID.', object: [] });
 
-    let pickUpLocName = await Location.findOne({ title: req.body.pickUpLocName });
-    if (!pickUpLocName) return res.status(400).send('pickUpLocName not found.');
-
-    let dropOfLocName = await Location.findOne({ title: req.body.dropOfLocName });
-    if (!dropOfLocName) return res.status(400).send('dropOfLocName not found.');
+    // let shiftRider = await shiftRider.findOne({ pickUploc: stop.loc });
+    // if (shiftRider) return res.status(400).jsonp({ status: 'failure', message: 'Stop Location added.', object: [] });
     
     let riderResObj = new shiftRider ({
+        
         _shiftId: shift._id,
-        _riderId: rider._id,
-        pickUpLocName: pickUpLocName.title,
-        pickUploc: pickUpLocName.loc,
-        dropOfLocName: dropOfLocName.title,
-        dropOfLoc: dropOfLocName.loc,
-        pickUpTime: pickUpTime,
-        dropOfTime: dropOfTime,
+        _stopId: stop._id
+    
     });
 
     await riderResObj.save();
     
     res.jsonp({
         status : "success",
-        message : "successfully saved.",
+        message : "successfully stop added!.",
         object : riderResObj
     });
       

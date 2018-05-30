@@ -334,3 +334,32 @@
 {"level":"info","message":"::1 - - [29/May/2018:10:07:55 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1379 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:07:55"}
 {"phoneNo":"04341234321","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"15:36:59"}
 {"level":"info","message":"::1 - - [29/May/2018:10:37:06 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1384 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:37:06"}
+{"phoneNo":"04341234321","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"16:31:58"}
+{"level":"info","message":"::1 - - [29/May/2018:11:32:04 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1382 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:32:04"}
+{"phoneNo":"04341234321","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"16:38:22"}
+{"level":"info","message":"::1 - - [29/May/2018:11:38:26 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1061 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:38:26"}
+{"phoneNo":"04341234321","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"16:57:21"}
+{"level":"info","message":"::1 - - [29/May/2018:11:57:26 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1064 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:57:26"}
+{"level":"verbose","message":"verificationcode-POST called ","timestamp":"17:04:02"}
+{"level":"info","message":"RegistrationController.sendVerificationCode called  :923238513150","timestamp":"17:04:02"}
+{"level":"info","message":"UserExists Method Called","timestamp":"17:04:02"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"17:04:02"}
+{"level":"info","message":" Exit RegistrationController.sendVerificationCode Method","timestamp":"17:04:02"}
+{"level":"info","message":"User Found with Phone Num. :{ phone: '923238513150',\n  profile_photo_url: null,\n  deactivate_user: false,\n  message: 'MSG from POSTMAN',\n  last_shared_loc_time: 2018-05-14T06:57:55.441Z,\n  _id: 5af34a0bf4df082aaca52da0,\n  name: 'Naveed 1',\n  email: 'Naveed123@gmail.com',\n  password: '$2a$10$U67rSK2X1uoYzZppxMCEwed8KsDFocg7TZzInpNQSIweFhT8AuHbW',\n  user_type: 'driver',\n  createdAt: 2018-05-09T19:20:43.898Z,\n  updatedAt: 2018-05-29T11:07:13.954Z,\n  __v: 1,\n  loc: [ 73.112831, 33.52555 ] }","timestamp":"17:04:02"}
+{"level":"info","message":"User Exists Response : { phone: '923238513150',\n  profile_photo_url: null,\n  deactivate_user: false,\n  message: 'MSG from POSTMAN',\n  last_shared_loc_time: 2018-05-14T06:57:55.441Z,\n  _id: 5af34a0bf4df082aaca52da0,\n  name: 'Naveed 1',\n  email: 'Naveed123@gmail.com',\n  password: '$2a$10$U67rSK2X1uoYzZppxMCEwed8KsDFocg7TZzInpNQSIweFhT8AuHbW',\n  user_type: 'driver',\n  createdAt: 2018-05-09T19:20:43.898Z,\n  updatedAt: 2018-05-29T11:07:13.954Z,\n  __v: 1,\n  loc: [ 73.112831, 33.52555 ] }","timestamp":"17:04:02"}
+{"level":"info","message":"::1 - - [29/May/2018:12:04:02 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 74 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:04:02"}
+{"level":"info","message":"Sucessful Response of SMS API : 923238513150","timestamp":"17:04:03"}
+{"level":"verbose","message":"verificationcode-POST called ","timestamp":"17:05:54"}
+{"level":"info","message":"RegistrationController.sendVerificationCode called  :923311334441","timestamp":"17:05:54"}
+{"level":"info","message":"UserExists Method Called","timestamp":"17:05:54"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"17:05:54"}
+{"level":"info","message":" Exit RegistrationController.sendVerificationCode Method","timestamp":"17:05:54"}
+{"level":"info","message":"User Found with Phone Num. :{ phone: '923311334441',\n  profile_photo_url: null,\n  deactivate_user: false,\n  message: null,\n  last_shared_loc_time: 2018-05-24T23:28:35.991Z,\n  _id: 5b074aa3d6025800141819cf,\n  verified_user: false,\n  verification_code: '9932',\n  user_type: 'rider',\n  createdAt: 2018-05-24T23:28:35.993Z,\n  updatedAt: 2018-05-24T23:35:14.927Z,\n  __v: 0 }","timestamp":"17:05:54"}
+{"level":"info","message":"User Exists Response : { phone: '923311334441',\n  profile_photo_url: null,\n  deactivate_user: false,\n  message: null,\n  last_shared_loc_time: 2018-05-24T23:28:35.991Z,\n  _id: 5b074aa3d6025800141819cf,\n  verified_user: false,\n  verification_code: '9932',\n  user_type: 'rider',\n  createdAt: 2018-05-24T23:28:35.993Z,\n  updatedAt: 2018-05-24T23:35:14.927Z,\n  __v: 0 }","timestamp":"17:05:54"}
+{"level":"info","message":"::1 - - [29/May/2018:12:05:54 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 74 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:05:54"}
+{"level":"info","message":"Sucessful Response of SMS API : 923311334441","timestamp":"17:05:55"}
+{"level":"info","message":"ChatController.sendAlertToDriver called  :","timestamp":"17:13:42"}
+{"level":"info","message":"User Found with mobile number 923311334441","timestamp":"17:13:43"}
+{"level":"info","message":" Exit chatController.sendAlertToRider Method","timestamp":"17:13:43"}
+{"level":"info","message":"::1 - - [29/May/2018:12:13:43 +0000] \"POST /api/riders/alertToDriver HTTP/1.1\" 200 66 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:13:43"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"17:13:44"}
