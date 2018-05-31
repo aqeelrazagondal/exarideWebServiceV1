@@ -352,3 +352,78 @@
 {"level":"info","message":"::1 - - [30/May/2018:07:05:20 +0000] \"POST /api/riders HTTP/1.1\" 200 263 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:05:20"}
 {"phoneNo":"04341234321","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"12:05:43"}
 {"level":"info","message":"::1 - - [30/May/2018:07:05:49 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1060 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:05:49"}
+{"phoneNo":"04341234321","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"12:11:58"}
+{"level":"info","message":"::1 - - [30/May/2018:07:12:04 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 1060 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:12:04"}
+{"level":"info","message":"::1 - - [30/May/2018:08:17:56 +0000] \"POST /api/users/register HTTP/1.1\" 200 124 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:17:56"}
+{"level":"info","message":"UserExists Method Called","timestamp":"13:21:04"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"13:21:04"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"13:21:04"}
+{"level":"info","message":"User Found with Email. :{ phone: '923315845506',\n  profile_photo_url: null,\n  deactivate_user: false,\n  message: null,\n  last_shared_loc_time: 2018-05-30T08:17:55.894Z,\n  _id: 5b0e5e334111d22618dfe4a2,\n  name: 'Waseem',\n  email: 'Waseem123@gmail.com',\n  password: '$2a$10$OWXi1hByqbarBeo9EpwBJ.TGMQWX.e/6xGSA1iUikREbNeqRGodJS',\n  user_type: 'driver',\n  createdAt: 2018-05-30T08:17:56.060Z,\n  updatedAt: 2018-05-30T08:17:56.060Z,\n  __v: 0 }","timestamp":"13:21:04"}
+{"level":"info","message":"User Location With email Waseem123@gmail.com","timestamp":"13:21:05"}
+{"level":"info","message":"::1 - - [30/May/2018:08:21:05 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" 200 486 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:21:05"}
+{"level":"info","message":"In POST shift route ","timestamp":"15:23:12"}
+{"level":"info","message":"::1 - - [30/May/2018:10:23:43 +0000] \"POST /api/shifts/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:23:43"}
+{"level":"info","message":"In POST shift route ","timestamp":"15:24:28"}
+{"level":"info","message":"::1 - - [30/May/2018:10:24:28 +0000] \"POST /api/shifts/ HTTP/1.1\" 400 70 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:24:28"}
+{"level":"info","message":"In POST shift route ","timestamp":"15:25:48"}
+{"level":"info","message":"::1 - - [30/May/2018:10:25:49 +0000] \"POST /api/shifts/ HTTP/1.1\" 200 575 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:25:49"}
+{"level":"info","message":"In POST shift route ","timestamp":"15:46:58"}
+{"level":"info","message":"In POST shift route ","timestamp":"15:48:05"}
+{"level":"info","message":"::1 - - [30/May/2018:10:48:05 +0000] \"POST /api/shifts/ HTTP/1.1\" 400 70 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:48:05"}
+{"level":"info","message":"In POST shift route ","timestamp":"15:48:51"}
+{"level":"info","message":"::1 - - [30/May/2018:10:48:52 +0000] \"POST /api/shifts/ HTTP/1.1\" 200 575 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:48:52"}
+{"level":"info","message":"In POST shift route ","timestamp":"15:54:05"}
+{"level":"info","message":"::1 - - [30/May/2018:10:54:06 +0000] \"POST /api/shifts/ HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:54:06"}
+{"level":"info","message":"In POST shift route ","timestamp":"15:54:35"}
+{"level":"info","message":"::1 - - [30/May/2018:10:54:36 +0000] \"POST /api/shifts/ HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:54:36"}
+{"level":"info","message":"In POST shift route ","timestamp":"16:02:33"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:02:49"}
+{"level":"info","message":"::1 - - [30/May/2018:11:02:49 +0000] \"POST /api/shifts/ HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:02:49"}
+{"level":"info","message":"::1 - - [30/May/2018:11:06:19 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 785 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:06:19"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:17:38"}
+{"level":"info","message":"::1 - - [30/May/2018:11:17:38 +0000] \"POST /api/shifts/ HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:17:38"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:17:58"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:19:47"}
+{"level":"info","message":"::1 - - [30/May/2018:11:19:48 +0000] \"POST /api/shifts/ HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:19:48"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:25:16"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:27:08"}
+{"level":"info","message":"::1 - - [30/May/2018:11:27:12 +0000] \"POST /api/shifts/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:27:12"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:31:22"}
+{"level":"info","message":"::1 - - [30/May/2018:11:31:22 +0000] \"POST /api/shifts/ HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:31:22"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:31:59"}
+{"level":"info","message":"::1 - - [30/May/2018:11:32:04 +0000] \"POST /api/shifts/ HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:32:04"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:32:58"}
+{"level":"info","message":"::1 - - [30/May/2018:11:32:58 +0000] \"POST /api/shifts/ HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:32:58"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:39:01"}
+{"level":"info","message":"::1 - - [30/May/2018:11:39:01 +0000] \"POST /api/shifts/ HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:39:01"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:40:19"}
+{"level":"info","message":"::1 - - [30/May/2018:11:40:19 +0000] \"POST /api/shifts/ HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:40:19"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:41:13"}
+{"level":"info","message":"::1 - - [30/May/2018:11:41:20 +0000] \"POST /api/shifts/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:41:20"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:42:11"}
+{"level":"info","message":"::1 - - [30/May/2018:11:42:15 +0000] \"POST /api/shifts/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:42:15"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:43:39"}
+{"level":"info","message":"::1 - - [30/May/2018:11:43:45 +0000] \"POST /api/shifts/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:43:45"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:44:34"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:44:48"}
+{"level":"info","message":"::1 - - [30/May/2018:11:44:56 +0000] \"POST /api/shifts/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:44:56"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:45:59"}
+{"level":"info","message":"::1 - - [30/May/2018:11:46:05 +0000] \"POST /api/shifts/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:46:05"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:48:19"}
+{"level":"info","message":"::1 - - [30/May/2018:11:48:19 +0000] \"POST /api/shifts/ HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:48:19"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:49:36"}
+{"level":"info","message":"::1 - - [30/May/2018:11:49:40 +0000] \"POST /api/shifts/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:49:40"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:50:30"}
+{"level":"info","message":"::1 - - [30/May/2018:11:50:30 +0000] \"POST /api/shifts/ HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:50:30"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:51:58"}
+{"level":"info","message":"::1 - - [30/May/2018:11:51:58 +0000] \"POST /api/shifts/ HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:51:58"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:52:27"}
+{"level":"info","message":"::1 - - [30/May/2018:11:52:27 +0000] \"POST /api/shifts/ HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:52:27"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:52:52"}
+{"level":"info","message":"::1 - - [30/May/2018:11:52:52 +0000] \"POST /api/shifts/ HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:52:52"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:53:53"}
+{"level":"info","message":"::1 - - [30/May/2018:11:53:58 +0000] \"POST /api/shifts/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:53:58"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:55:20"}
+{"level":"info","message":"::1 - - [30/May/2018:11:55:27 +0000] \"POST /api/shifts/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:55:27"}
+{"level":"info","message":"In ADD shift route ","timestamp":"16:56:57"}
+{"level":"info","message":"::1 - - [30/May/2018:11:56:58 +0000] \"POST /api/shifts/ HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"16:56:58"}

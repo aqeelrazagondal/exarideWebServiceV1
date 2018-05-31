@@ -554,3 +554,25 @@
 {"level":"info","message":"::1 - - [24/May/2018:18:49:04 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 591 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"23:49:04"}
 {"level":"info","message":"::1 - - [24/May/2018:18:54:18 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 591 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"23:54:18"}
 {"level":"info","message":"::1 - - [24/May/2018:18:57:37 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 586 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"23:57:37"}
+{"level":"info","message":"IN Riderpickuploaction","timestamp":"12:58:35"}
+{"level":"info","message":"::1 - - [31/May/2018:07:58:41 +0000] \"POST /api/riders/pickuplocation HTTP/1.1\" 200 70 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"12:58:41"}
+{"level":"info","message":"IN Riderpickuploaction","timestamp":"13:00:52"}
+{"level":"info","message":"::1 - - [31/May/2018:08:00:52 +0000] \"POST /api/riders/pickuplocation HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:00:52"}
+{"level":"info","message":"IN Riderpickuploaction","timestamp":"13:06:09"}
+{"level":"info","message":"::1 - - [31/May/2018:08:06:10 +0000] \"POST /api/riders/pickuplocation HTTP/1.1\" 200 70 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:06:10"}
+{"level":"info","message":"IN Riderpickuploaction","timestamp":"13:07:07"}
+{"level":"info","message":"An Exception Has occured in RiderPickUpLocation methodReferenceError: rider is not defined","timestamp":"13:07:11"}
+{"level":"info","message":"::1 - - [31/May/2018:08:07:20 +0000] \"POST /api/riders/pickuplocation HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:07:20"}
+{"level":"verbose","message":"verificationcode-POST called ","timestamp":"13:09:16"}
+{"level":"info","message":"RegistrationController.sendVerificationCode called  :9234657894","timestamp":"13:09:16"}
+{"level":"info","message":"UserExists Method Called","timestamp":"13:09:16"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"13:09:16"}
+{"level":"info","message":" Exit RegistrationController.sendVerificationCode Method","timestamp":"13:09:16"}
+{"level":"info","message":"User Not Found with Phone Num. :null","timestamp":"13:09:17"}
+{"level":"info","message":"User Exists Response : null","timestamp":"13:09:17"}
+{"level":"info","message":" User does not exist,  Creating user","timestamp":"13:09:17"}
+{"level":"info","message":"User Created With Phone Num 9234657894","timestamp":"13:09:17"}
+{"level":"info","message":"::1 - - [31/May/2018:08:09:17 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 68 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:09:17"}
+{"level":"info","message":"Sucessful Response of SMS API : [object Object]","timestamp":"13:09:18"}
+{"level":"info","message":"IN Riderpickuploaction","timestamp":"13:18:26"}
+{"level":"info","message":"::1 - - [31/May/2018:08:18:33 +0000] \"POST /api/riders/pickuplocation HTTP/1.1\" 200 73 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"13:18:33"}

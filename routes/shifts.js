@@ -11,6 +11,7 @@ const ShiftRider = require('../models/shiftRider');
 const mongoose = require('mongoose');
 const express = require('express');
 const logger = require('../startup/logging');
+const moment = require('moment');
 const router = express.Router();
 
 router.get('/getAllShifts', async (req, res) => {
@@ -65,28 +66,41 @@ router.get('/getAllShifts', async (req, res) => {
 
 
 router.post('/', async (req, res) => {
-    logger.info('In POST shift route ');
+    logger.info('In ADD shift route ');
     let title = req.body.title; 
     let vehicle = req.body.vehicle;
     let shiftStartTime = req.body.shiftStartTime;
     let shiftEndTime = req.body.shiftEndTime;
     let shiftStatus = req.body.shiftStatus;
 
+    var dateStart = "2018-10-15"+shiftStartTime+"000Z";
+    console.log('date ' +dateStart);
+
+    var dateEnd = "2018-5-30T"+shiftEndTime+"000Z";
+    console.log('date ' +dateEnd);
+    
+    // var b = "05 October 2011 "+shiftStartTime+" UTC";
+    // var event = new Date(b);
+    
+    // console.log(event.toString());
+    // console.log(event.toISOString());
+    
+
     let shift = await Shift.findOne({ title });
     if (shift)  return res.status(400).jsonp({ status:'failure', message: 'Shift already registered.', object: [] });
-    console.log(shift);
+    console.log('shift' + shift);
   
     let driver = await Driver.findOne({ _id: req.body._driverId });
     if (!driver) return res.status(400).jsonp({ status:'failure', message: 'Driver not found by given ID.', object: [] });
-    console.log(driver._id);
+    console.log('driver ID' + driver._id);
 
     let startLoc = await Location.findOne({ _id: req.body._startLocId });
     if (!startLoc) return res.status(400).jsonp({ status:'failure', message: 'Start location not found', object: [] });
-    console.log('Start Location ', startLoc);
+    console.log('Start Location ' +startLoc);
 
     let endLoc = await Location.findOne({ _id: req.body._endLocID });
     if (!endLoc)  return res.status(400).jsonp({ status:'failure', message: 'End location not found', object: [] });
-    console.log('End Location ', endLoc);
+    console.log('End Location ' +endLoc);
     
 
     let shiftResObj = new Shift({

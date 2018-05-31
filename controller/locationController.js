@@ -220,10 +220,11 @@ exports.riderPickUPLocation = async function(reqData, res){
         let query =  user._id;
         console.log('query', query);
 
-        let rider = await Rider.findOne({ _userId: query });
+        let rider = await Rider.findOne({ _userId: user._id });
         if(!rider) return res.jsonp({ status: 'failure', message: 'Rider not found by userID', object: [] });
 
         rider._pickUpLocationId = location._id;
+        
         await rider.save();
         console.log('Rider saved!', rider);
 
