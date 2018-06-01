@@ -150,7 +150,7 @@ router.get('/:Id', async (req, res) => {
     for (var i = 0; i < shifts.length; i++) {
         
         // finding list of riders in shiftriders table
-        shiftRiders = await ShiftRiders.find({ _shiftId: shifts[i]._id });
+        shiftRiders = await ShiftRider.find({ _shiftId: shifts[i]._id });
         if ( !shiftRiders ) return res.status(404).jsonp({ status : "failure", message : "The Rider with the given ID was not found.", object : []});
         
         for(var j = 0; j < shiftRiders.length; j++){
