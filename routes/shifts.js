@@ -64,6 +64,60 @@ router.get('/getAllShifts', async (req, res) => {
     });
 });
 
+router.get('/allShifts', async (req, res) => {
+    let listOfStops = [];
+    let listOfShifts =  [];
+    let listOfShiftsArray = [];
+    let shiftRiderRes;
+    let shiftRes;
+
+    // finding shift for against given driver ID 
+    const shifts = await Shift.find({}).sort('-date');
+    if ( !shifts ) return res.status(404).jsonp({ status : "failure", message : "Shift cannot fint by the given ID.", object : []});
+    
+    for(var i = 0; i < shifts.length; i++){
+
+        let shiftRider = await ShiftRider.find({_shiftId: shifts[i]._id});
+        if(!shiftRider) return res.jsonp({ status: "failure", message: "Failed To finding stops!", object: [] });
+        
+        for(var j = 0; j < shiftRider.length; j++){
+            
+            if(shiftRider){
+                shiftRiderRes = {
+                    _id: shiftRider[j]._id,
+                    pickUploc: shiftRider[j].pickUploc
+                }
+                listOfStops.push(shiftRiderRes);
+            }
+        }
+        let startLoc = await Location.findOne({ _id: shifts[i]._startLocId });
+        if(!startLoc) return res.status(404).jsonp({ status : "failure", message : "Location not found by the given ID.", object : []});
+    
+        let endLoc = await Location.findOne({ _id: shifts[i]._endLocID });
+        if(!endLoc) return res.status(404).jsonp({ status : "failure", message : "Location not found by the given ID.", object : []});
+    
+        shiftRes = {
+            title: shifts[i].title,
+            startLoc: startLoc.loc,
+            endLoc: endLoc.loc,
+            shiftStartTime: shifts[i].shiftStartTime,
+            shiftEndTime: shifts[i].shiftEndTime,
+            listOfStops: listOfStops
+        }
+        
+        listOfShifts.push(shiftRes);
+        listOfStops = [];  
+    }
+
+    res.jsonp({
+        status : "success",
+        message : "List of Shifts.",
+        object : listOfShifts
+    });
+});
+
+
+
 
 router.post('/', async (req, res) => {
     logger.info('In ADD shift route ');
@@ -240,7 +294,8 @@ router.post('/status', async (req, res) => {
 
     res.jsonp({
         status: 'success',
-        object: shift
+        message: 'shift status updated!',
+        object: []
     });
 
 });

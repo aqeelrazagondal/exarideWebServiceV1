@@ -20,3 +20,5 @@
 {"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"14:52:20"}
 {"level":"info","message":"Final shifts response by driver ID.","timestamp":"14:52:26"}
 {"level":"info","message":"::1 - - [07/Jun/2018:09:52:26 +0000] \"GET /api/shifts/5af868521e68a72210da4d27 HTTP/1.1\" 200 1419 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:52:26"}
+{"level":"info","message":"::1 - - [07/Jun/2018:09:55:53 +0000] \"POST /api/shifts/status HTTP/1.1\" 200 467 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:55:53"}
+{"level":"info","message":"::1 - - [07/Jun/2018:12:33:38 +0000] \"GET /api/shifts/allShifts HTTP/1.1\" 200 1381 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:33:38"}

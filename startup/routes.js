@@ -13,6 +13,8 @@ const riders = require('../routes/riders');
 const admin = require('../routes/admins');
 const drivers = require('../routes/driver');
 const cors = require('cors');
+require('winston-mongodb');
+require('express-async-errors');
 
 module.exports = function(app) {
     
