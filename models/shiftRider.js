@@ -10,6 +10,7 @@ const shiftRidersSchema   = new mongoose.Schema({
     _shiftId: { type: mongoose.Schema.Types.ObjectId, ref: 'Shift' },
     _stopId: {type: mongoose.Schema.Types.ObjectId, ref: 'Location' },
     riderName: String,
+    _riderId:{ type: mongoose.Schema.Types.ObjectId, ref: 'Rider' },
     pickUpTime: Date,
     dropOfTime: Date,
     pickUpLocName: {

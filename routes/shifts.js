@@ -73,11 +73,17 @@ router.post('/', async (req, res) => {
     let shiftEndTime = req.body.shiftEndTime;
     let shiftStatus = req.body.shiftStatus;
 
-    var dateStart = "2018-10-15"+shiftStartTime+"000Z";
-    console.log('date ' +dateStart);
+    var dateStart = shiftStartTime;
+    console.log('dateStart :' +dateStart);
 
-    var dateEnd = "2018-5-30T"+shiftEndTime+"000Z";
-    console.log('date ' +dateEnd);
+    var dateEnd = shiftEndTime;
+    console.log('dateEnd :' +dateEnd);
+
+    // var dateStart = "2018-10-15"+shiftStartTime+"000Z";
+    // console.log('date ' +dateStart);
+
+    // var dateEnd = "2018-5-30T"+shiftEndTime+"000Z";
+    // console.log('date ' +dateEnd);
     
     // var b = "05 October 2011 "+shiftStartTime+" UTC";
     // var event = new Date(b);
@@ -155,8 +161,14 @@ router.get('/:Id', async (req, res) => {
         
         for(var j = 0; j < shiftRiders.length; j++){
             // finding rider with given rider ID 
+            
+            console.log('pickUpLocName:  ', shiftRiders[j].pickUpLocName);
+            console.log('Rider ID:  ', shiftRiders[j]._riderId);
+            console.log('_id:  ', shiftRiders[j]._id);
+            console.log('createdAt:  ', shiftRiders[j].createdAt);
+
             riderTempObj = await Rider.findOne({ _id: shiftRiders[j]._riderId });
-            console.log('Rider response object ', riderResObj);
+             console.log('Rider Temp object ', riderTempObj);
 
             if( riderTempObj ){
                 userTempObj = await User.findOne({ _id: riderTempObj._userId });

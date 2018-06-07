@@ -112,6 +112,7 @@ router.get('/', adminAuth, async (req, res) => {
     if(user){
       driverResponseObject = {
         _id: driver[i]._id,
+        panic: driver[i].panic,
         name: user.name,
         email: user.email,
         phone: user.phone,
@@ -129,6 +130,26 @@ router.get('/', adminAuth, async (req, res) => {
     object: listofDrivers
   });
   
+});
+
+router.post('/panic', async (req, res) => {                           
+		
+	if(req.body === undefined||req.body === null) {
+    res.end("Empty Body");  
+  }
+  logger.verbose('panic-POST called ');
+  
+  let driverId = req.body.id;
+  let panicFlag = req.body.panic;
+
+  const driver = await Driver.findOne({ _id: driverId });
+  driver.panic = panicFlag;
+  await driver.save();
+ 
+  if (!driver) return res.status(404).send('Driver not found by the givem ID.');
+
+  res.status(200).jsonp({ status: 'success', message: 'Driver Info Updated.', object: driver });
+
 });
 
 module.exports = router; 
