@@ -70,6 +70,8 @@ router.get('/allShifts', async (req, res) => {
     let listOfShiftsArray = [];
     let shiftRiderRes;
     let shiftRes;
+    
+    logger.info('In allSHifts method...!');
 
     // finding shift for against given driver ID 
     const shifts = await Shift.find({}).sort('-date');
