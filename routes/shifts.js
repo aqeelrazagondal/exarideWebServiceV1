@@ -45,8 +45,10 @@ router.get('/getAllShifts', async (req, res) => {
     
         let endLoc = await Location.findOne({ _id: shifts[i]._endLocID });
         if(!endLoc) return res.status(404).jsonp({ status : "failure", message : "Location not found by the given ID.", object : []});
-    
+        
+        console.log('shifts[i]._id', shifts[i]._id);
         shiftRes = {
+            id: shifts[i]._id,
             title: shifts[i].title,
             startLoc: startLoc.loc,
             endLoc: endLoc.loc,
