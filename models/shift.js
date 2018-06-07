@@ -31,7 +31,7 @@ const ShiftSchema   = new mongoose.Schema({
     vehicle: String,
     shiftStartTime: Date,
     shiftEndTime: Date,
-    shiftStatus: String
+    shiftStatus: Boolean
     
 }, {timestamps: true});
 //VehicleSchema.index({_userId})

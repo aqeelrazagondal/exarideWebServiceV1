@@ -168,18 +168,20 @@ router.get('/:Id', async (req, res) => {
             console.log('createdAt:  ', shiftRiders[j].createdAt);
 
             riderTempObj = await Rider.findOne({ _id: shiftRiders[j]._riderId });
-             console.log('Rider Temp object ', riderTempObj);
+            console.log('Rider Temp object ', riderTempObj);
 
             if( riderTempObj ){
                 userTempObj = await User.findOne({ _id: riderTempObj._userId });
 
                 if(userTempObj){
-                    myDate = new Date(shiftRiders[j].pickUpTime);
+                    myDate = shiftRiders[j].pickUpTime
                     let pickUpT = myDate.getTime();
+                    console.log('PICK UP TIME', pickUpT);
     
                     myDate1 = new Date(shiftRiders[j].dropOfTime);
                     let dropOfT = myDate1.getTime();
-                    
+                    console.log('PICK UP TIME', dropOfT);
+
                     riderResObj = {
                         profile_photo_url: userTempObj.profile_photo_url,
                         name: riderTempObj.name,
@@ -197,7 +199,7 @@ router.get('/:Id', async (req, res) => {
         let shiftStartT = myDate2.getTime();
 
         myDate3 = new Date(shifts[i].shiftStartTime);
-        let shiftEndT = myDate2.getTime();
+        let shiftEndT = myDate3.getTime();
 
         const startLocation = await Location.findOne({ _id: shifts[i]._startLocId });
         if(!startLocation) return res.status(404).jsonp({ status : "failure", message : "Start location not found with the given ID.", object : []});
@@ -223,6 +225,24 @@ router.get('/:Id', async (req, res) => {
         message : "List of Shifts.",
         object : listOfShiftRes
     });
+});
+
+router.post('/status', async (req, res) => {
+
+    let shiftID = req.body.shiftID;
+    let shiftStatus = req.body.shiftStatus;
+
+    let shift = await Shift.findOne({ _id: shiftID });
+    console.log('Found a Shift!', shift);
+
+    shift.shiftStatus = shiftStatus;
+    await shift.save();
+
+    res.jsonp({
+        status: 'success',
+        object: shift
+    });
+
 });
 
 module.exports = router; 

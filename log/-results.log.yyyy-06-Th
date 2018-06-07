@@ -1,0 +1,22 @@
+{"level":"info","message":"::1 - - [07/Jun/2018:09:27:12 +0000] \"POST /shifts/status HTTP/1.1\" 404 153 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:27:12"}
+{"level":"info","message":"::1 - - [07/Jun/2018:09:27:36 +0000] \"POST /api/shifts/status HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:27:36"}
+{"level":"info","message":"::1 - - [07/Jun/2018:09:30:31 +0000] \"POST /api/shifts/status HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:30:31"}
+{"level":"info","message":"::1 - - [07/Jun/2018:09:33:00 +0000] \"POST /api/shifts/status HTTP/1.1\" 200 522 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:33:00"}
+{"level":"info","message":"::1 - - [07/Jun/2018:09:44:05 +0000] \"POST /api/shifts/5af868511e68a72210da4d26 HTTP/1.1\" 404 175 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:44:05"}
+{"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"14:44:16"}
+{"level":"info","message":"::1 - - [07/Jun/2018:09:44:16 +0000] \"GET /api/shifts/5af868511e68a72210da4d26 HTTP/1.1\" 404 82 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:44:16"}
+{"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"14:44:46"}
+{"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"14:44:46"}
+{"level":"info","message":"Final shifts response by driver ID.","timestamp":"14:44:52"}
+{"level":"info","message":"::1 - - [07/Jun/2018:09:44:52 +0000] \"GET /api/shifts/5af868521e68a72210da4d27 HTTP/1.1\" 200 1419 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:44:52"}
+{"level":"info","message":"Final shifts response by driver ID.","timestamp":"14:44:52"}
+{"level":"info","message":"::1 - - [07/Jun/2018:09:44:52 +0000] \"GET /api/shifts/5af868521e68a72210da4d27 HTTP/1.1\" 200 1419 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:44:52"}
+{"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"14:47:16"}
+{"level":"info","message":"Final shifts response by driver ID.","timestamp":"14:47:26"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [07/Jun/2018:09:47:26 +0000] \"GET /api/shifts/5af868521e68a72210da4d27 HTTP/1.1\" 200 1419 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:47:26"}
+{"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"14:50:37"}
+{"level":"info","message":"Final shifts response by driver ID.","timestamp":"14:50:43"}
+{"level":"info","message":"::1 - - [07/Jun/2018:09:50:43 +0000] \"GET /api/shifts/5af868521e68a72210da4d27 HTTP/1.1\" 200 1419 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:50:43"}
+{"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"14:52:20"}
+{"level":"info","message":"Final shifts response by driver ID.","timestamp":"14:52:26"}
+{"level":"info","message":"::1 - - [07/Jun/2018:09:52:26 +0000] \"GET /api/shifts/5af868521e68a72210da4d27 HTTP/1.1\" 200 1419 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:52:26"}
