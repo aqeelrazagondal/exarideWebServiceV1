@@ -28,3 +28,6 @@
 {"level":"info","message":"::1 - - [07/Jun/2018:17:14:14 +0000] \"GET /api/shifts/allShifts HTTP/1.1\" 200 1161 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"22:14:14"}
 {"level":"info","message":"::1 - - [07/Jun/2018:17:14:28 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 945 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"22:14:28"}
 {"level":"info","message":"::1 - - [07/Jun/2018:17:15:02 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 945 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"22:15:02"}
+{"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"22:47:58"}
+{"level":"info","message":"Final shifts response by driver ID.","timestamp":"22:48:07"}
+{"level":"info","message":"::1 - - [07/Jun/2018:17:48:07 +0000] \"GET /api/shifts/5af868521e68a72210da4d27 HTTP/1.1\" 200 1547 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"22:48:07"}
