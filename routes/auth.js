@@ -32,7 +32,8 @@ router.post('/', async (req, res) => {
   userResponseObject = {
     "_id" : driver._id,
     "email" : user.email,
-    "userType" : user.user_type
+    "userType" : user.user_type,
+    "name" : user.name
   };
   
   const token = user.generateAuthToken();
