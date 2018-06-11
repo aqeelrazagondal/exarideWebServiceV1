@@ -1,6 +1,7 @@
 const auth = require('../middleware/auth');
 const jwt = require('jsonwebtoken');
 const config = require('config');
+var GeoPoint = require('geopoint');
 const _ = require('lodash');
 var multer  = require('multer')
 var upload = multer({ dest: './public/images/profileImages' });
@@ -66,12 +67,25 @@ var locationExists = function(id,callback){
     logger.info(' Exit MarkerExists Method');
 }
 
-exports.updateDriverLocation = function(reqData, res){
+exports.updateDriverLocation = async function(reqData, res){
 
     try {
         var email = reqData.email;
         var longitude = reqData.longitude;
         var latitude = reqData.latitude;
+        var shiftRider = await ShiftRider.find();
+        console.log(shiftRider);
+        for(var i = 0; i < shiftRider.length; i++){
+            console.log('shiftRider[i].pickUploc[0] ' +shiftRider[i].pickUploc[0]);
+            console.log('shiftRider[i].pickUploc[1] ' +shiftRider[i].pickUploc[1]);
+
+            var lat1 = shiftRider[i].pickUploc[0];
+            var lat2 = shiftRider[i].pickUploc[1];
+
+            var point1 = new GeoPoint(lat1, long1);
+            var point2 = new GeoPoint(lat2, long2);
+        }
+        
         userExists(email, function (user) {
             if (user) {
                 
@@ -83,8 +97,6 @@ exports.updateDriverLocation = function(reqData, res){
                     }
                     else {
                         logger.info('User Location With email ' + user.email);
-                        console.log('USER LOCATION *************** ', user.loc);
-                        console.log('user.last_shared_loc_time', user.last_shared_loc_time);
                         console.log('########### FOUND A USER ##########', user);
                         
                         res.jsonp({

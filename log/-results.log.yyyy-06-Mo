@@ -8,3 +8,25 @@
 {"level":"info","message":"::1 - - [11/Jun/2018:09:44:01 +0000] \"DELETE /api/shifts/5b1a5e2c2cddd30014e296f7 HTTP/1.1\" 200 497 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:44:01"}
 {"level":"info","message":"::1 - - [11/Jun/2018:10:11:49 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:11:49"}
 {"level":"info","message":"::1 - - [11/Jun/2018:10:12:06 +0000] \"GET /api/shifts/AllShifts HTTP/1.1\" 401 33 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:12:06"}
+{"level":"info","message":"UserExists Method Called","timestamp":"15:21:21"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"15:21:31"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"15:21:31"}
+{"level":"info","message":"User Not Found with Email. :null","timestamp":"15:21:31"}
+{"level":"info","message":"::1 - - [11/Jun/2018:10:21:31 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" 200 71 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:21:31"}
+{"level":"info","message":"UserExists Method Called","timestamp":"15:21:58"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"15:21:58"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"15:21:58"}
+{"level":"info","message":"User Found with Email. :{ phone: '923311334441',\n  profile_photo_url: null,\n  deactivate_user: false,\n  message: 'Pic student plz',\n  last_shared_loc_time: 2018-06-08T06:55:16.042Z,\n  _id: 5af868511e68a72210da4d26,\n  name: 'aqeel raza 1',\n  email: 'aqeel146@gmail.com',\n  password: '$2a$10$17obbRwXgLslZdwX.n1JQeFYzI1dNRDy/qpSdwUMRU9nA57Umyr.O',\n  user_type: 'driver',\n  createdAt: 2018-05-13T16:31:14.036Z,\n  updatedAt: 2018-06-08T06:55:16.055Z,\n  __v: 315,\n  loc: [ 73.0921683, 33.5217067 ],\n  verification_code: '3554',\n  alert: true }","timestamp":"15:21:58"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"15:22:00"}
+{"level":"info","message":"::1 - - [11/Jun/2018:10:22:00 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" 200 546 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:22:00"}
+{"level":"info","message":"UserExists Method Called","timestamp":"15:24:40"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"15:24:40"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"15:24:40"}
+{"level":"info","message":"User Found with Email. :{ phone: '923311334441',\n  profile_photo_url: null,\n  deactivate_user: false,\n  message: 'Pic student plz',\n  last_shared_loc_time: 2018-06-11T10:21:59.934Z,\n  _id: 5af868511e68a72210da4d26,\n  name: 'aqeel raza 1',\n  email: 'aqeel146@gmail.com',\n  password: '$2a$10$17obbRwXgLslZdwX.n1JQeFYzI1dNRDy/qpSdwUMRU9nA57Umyr.O',\n  user_type: 'driver',\n  createdAt: 2018-05-13T16:31:14.036Z,\n  updatedAt: 2018-06-11T10:21:59.941Z,\n  __v: 316,\n  loc: [ 73.113498, 33.629274 ],\n  verification_code: '3554',\n  alert: true }","timestamp":"15:24:40"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"15:24:41"}
+{"level":"info","message":"::1 - - [11/Jun/2018:10:24:41 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" 200 546 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:24:41"}
+{"level":"info","message":"An Exception Has occured in updateDriverLocation methodTypeError: Cannot read property '0' of undefined","timestamp":"15:25:54"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"15:25:54"}
+{"level":"info","message":"::1 - - [11/Jun/2018:10:26:01 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:26:01"}
+{"phoneNo":"04341234321","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"15:32:25"}
+{"level":"info","message":"::1 - - [11/Jun/2018:10:32:35 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 896 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:32:35"}
