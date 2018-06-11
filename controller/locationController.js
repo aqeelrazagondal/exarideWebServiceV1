@@ -90,19 +90,30 @@ exports.updateDriverLocation = async function(reqData, res){
                         console.log('########### FOUND A USER ##########', user);
 
                         for(var i = 0; i < shiftRider.length; i++){
-                            console.log('shiftRider[i].pickUploc[0] ' +shiftRider[i].pickUploc[0]);
-                            console.log('shiftRider[i].pickUploc[1] ' +shiftRider[i].pickUploc[1]);
-                
-                            var long1 = shiftRider[i].pickUploc[0];
-                            var lat1 = shiftRider[i].pickUploc[1];
-                            console.log('Pick up point long1 ' + long1 + 'latitude ' + lat1);
 
-                            var long2 = user.loc[0];
-                            var lat2 = user.loc[1];
-                            console.log('Pick up point long1 ' + long2 + 'latitude ' + lat2);
+                            if(shiftRider[i].pickUploc){
+                                var long1 = shiftRider[i].pickUploc[0];
+                                var lat1 = shiftRider[i].pickUploc[1];
+                                console.log('Pick up point long ' + long1 + ' latitude ' + lat1);
+    
+                                var long2 = user.loc[0];
+                                var lat2 = user.loc[1];
+                                console.log('Driver location long ' + long2 + ' latitude ' +lat2);    
+                            }
 
                             var point1 = new GeoPoint(lat1, long1);
                             var point2 = new GeoPoint(lat2, long2);
+                            var distance = point1.distanceTo(point2, true)//output in kilometers
+                            console.log('distance ################### ' +distance);
+                            
+                            var distanceInMeter = distance * 1000;
+                            console.log('Distance in meter '+distanceInMeter);
+                            
+                            var intvalue = Math.floor( distanceInMeter );
+                            if(intvalue < 13000){
+                                console.log('Send ALERT to Rider');
+                            }
+
                         }
                     
                         

@@ -147,38 +147,68 @@ var upload = multer({ storage : storage });
 router.post('/profile', upload.fields([{ name: 'image', maxCount: 1}]),
 	function(req, resp, next){
 
-  logger.info ("Image is Uploaded");
-  var form = new FormData();
-    
-  console.log("imageFileTempName: "+imageFileTempName);
-  form.append('image', fs.createReadStream( './/public//images//'+imageFileTempName));
-  form.submit('https://brandedsms.net/postvideo/postimage.php', function(err, res) {
+  // logger.info ("Image is Uploaded");
+        var form = new FormData();
+        var phone = req.body.phoneNo;
+        var name = req.body.name;
+        var regNo = req.body.regNo; 
+
+        regCtrl.userExists(phone,function(user){
+          if (user){            
+              //update user model
+              if (phone)
+                  user.regNo = regNo;
+                  user.name = name;
+                  // user.profile_photo_url = imageUrl;
+                  user.active = false;
+                  user.verified_user = true;  
+                  user.deactivate_user = false;
+                  
+                  user.save(function (err, user){
+                      if(err){
+                          logger.error('Some Error while updating user' + err );		 
+                      }
+                      else{
+                          logger.info('User updated With Phone Num ' + phone );			  
+                          resp.jsonp({status:"success", message:"Profile Updated!", object:user}); 
+                      }
+              });             
+          }
+          else{
+              logger.info('User Not Found to Update With Phone Num ' + phone );
+              res.jsonp({status:"failure", message:"No User Found to Update!", object:[] }); 
+          }  
+        });   
+
+  // console.log("imageFileTempName: "+imageFileTempName);
+  // form.append('image', fs.createReadStream( './/public//images//'+imageFileTempName));
+  // form.submit('https://brandedsms.net/postvideo/postimage.php', function(err, res) {
   
-  console.log("In submit");
-  if (err){
-    logger.info("Error : "+ err);
-    resp.jsonp({status:"Failure", message:"Error Uploading Image", object:[]});
-      }else{
-        console.log("In else");
-        var body = '';
-        res.on('data', function(chunk) {
-          body += chunk;
-        });
-        res.on('end', function() {
-          console.log("body : "+body);
-          var urls = JSON.parse(body);
-          console.log("video : "+urls.imageurl);
+  // console.log("In submit");
+  // if (err){
+  //   logger.info("Error : "+ err);
+  //   resp.jsonp({status:"Failure", message:"Error Uploading Image", object:[]});
+  //     }else{
+  //       console.log("In else");
+  //       var body = '';
+  //       res.on('data', function(chunk) {
+  //         body += chunk;
+  //       });
+  //       res.on('end', function() {
+  //         console.log("body : "+body);
+  //         var urls = JSON.parse(body);
+  //         console.log("video : "+urls.imageurl);
          
-          var imageUrl=urls.imageurl;
+  //         var imageUrl=urls.imageurl;
       
-        regCtrl.completeProfile(req, imageUrl, resp);  
-        logger.info ("Setting tempFileNames to Null");
-        tempFileName="";
-        videoFileTempName="";
-        imageFileTempName="";
-        });
-      }	
-    });
+  //       regCtrl.completeProfile(req, imageUrl, resp);  
+  //       logger.info ("Setting tempFileNames to Null");
+  //       tempFileName="";
+  //       videoFileTempName="";
+  //       imageFileTempName="";
+  //       });
+  //     }	
+  //   });
 		
 });
 
