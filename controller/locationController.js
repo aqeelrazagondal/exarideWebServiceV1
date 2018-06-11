@@ -151,7 +151,7 @@ exports.updateRiderLocation = async function (reqData, res) {
         if(!shiftRider) return res.jsonp({ status: "failure", message: "Failed To findind stops!", object: [] });
         if(shiftRider){
             for(let i = 0; i < shiftRider.length; i++){
-                
+                console.log('shiftRider[i]._stopId', shiftRider[i]._stopId);
                 let pickUp = await Location.findOne({ _id: shiftRider[i]._stopId }); 
                 console.log('FIND A PICK UP LOCATION..!!!', pickUp);
                 if(pickUp){

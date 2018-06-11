@@ -84,13 +84,13 @@ exports.sendAlertToRider = async function(reqData,res){
     
     try{
         let alert = reqData.alert;         
-        logger.info('ChatController.sendAlertToRider called  :');
+        logger.info('ChatController.sendAlertToRider called - phone :  ' + reqData.phoneNo + 'alert : '+  reqData.alert );
         const user = await User.findOne({ phone: reqData.phoneNo });
         if(!user) return res.jsonp({ status: 'failure', message: 'Rider not found', object: [] });
 
         user.alert = alert;
         await user.save();
-       
+        logger.info('user alert ' + user.alert);
         res.jsonp({ status:"success", message:"Alert Set!", object:[] });	  
         logger.info(' Exit chatController.sendAlertToRider Method');
     
