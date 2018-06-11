@@ -84,6 +84,7 @@ router.get('/allShifts', adminAuth, async (req, res) => {
     let shiftRes;
     
     logger.info('In allSHifts method...!');
+    logger.info('In allSHifts ...!');
 
     // finding shift for against given driver ID 
     const shifts = await Shift.find({}).sort('-date');
@@ -146,18 +147,6 @@ router.post('/', async (req, res) => {
 
     var dateEnd = shiftEndTime;
     console.log('dateEnd :' +dateEnd);
-
-    // var dateStart = "2018-10-15"+shiftStartTime+"000Z";
-    // console.log('date ' +dateStart);
-
-    // var dateEnd = "2018-5-30T"+shiftEndTime+"000Z";
-    // console.log('date ' +dateEnd);
-    
-    // var b = "05 October 2011 "+shiftStartTime+" UTC";
-    // var event = new Date(b);
-    
-    // console.log(event.toString());
-    // console.log(event.toISOString());
     
 
     let shift = await Shift.findOne({ title });
