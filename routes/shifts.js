@@ -76,7 +76,7 @@ router.get('/getAllShifts', async (req, res) => {
     });
 });
 
-router.get('/allShifts', async (req, res) => {
+router.get('/allShifts', adminAuth, async (req, res) => {
     let listOfStops = [];
     let listOfShifts =  [];
     let listOfShiftsArray = [];
