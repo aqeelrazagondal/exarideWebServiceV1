@@ -1,0 +1,8 @@
+{"level":"info","message":"::1 - - [11/Jun/2018:09:41:39 +0000] \"DELETE /api/shifts/1d1af2d1s2fasd HTTP/1.1\" 401 33 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:41:39"}
+{"level":"info","message":"::1 - - [11/Jun/2018:09:42:05 +0000] \"DELETE /api/shifts/1d1af2d1s2fasd HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:42:05"}
+{"level":"info","message":"::1 - - [11/Jun/2018:09:42:28 +0000] \"DELETE /api/shifts/1d1af2d1s2fasd HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:42:28"}
+{"level":"info","message":"::1 - - [11/Jun/2018:09:42:39 +0000] \"DELETE /api/shifts HTTP/1.1\" 404 152 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:42:39"}
+{"level":"info","message":"::1 - - [11/Jun/2018:09:42:51 +0000] \"DELETE /api/shifts/jkads;fjdsa HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:42:51"}
+{"level":"info","message":"::1 - - [11/Jun/2018:09:43:08 +0000] \"DELETE /api/shifts/3214568977333 HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:43:08"}
+{"level":"info","message":"::1 - - [11/Jun/2018:09:43:41 +0000] \"GET /api/shifts/getAllShifts HTTP/1.1\" 200 1153 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:43:41"}
+{"level":"info","message":"::1 - - [11/Jun/2018:09:44:01 +0000] \"DELETE /api/shifts/5b1a5e2c2cddd30014e296f7 HTTP/1.1\" 200 497 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"14:44:01"}

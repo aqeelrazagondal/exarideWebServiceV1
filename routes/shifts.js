@@ -1,4 +1,5 @@
 const auth = require('../middleware/auth');
+const adminAuth = require('../middleware/adminAuth');
 const config = require('config');
 const _ = require('lodash');
 const Joi = require('joi');
@@ -13,6 +14,14 @@ const express = require('express');
 const logger = require('../startup/logging');
 const moment = require('moment');
 const router = express.Router();
+
+router.delete('/:id', async (req, res) => {
+    const query = req.params.id;
+    const shift = await Shift.findByIdAndRemove({ _id: query });
+    if(!shift)  return res.status(400).jsonp({ status: 'failure', message: 'Shift not found by shift ID.', object: [] });
+  
+    res.jsonp({ status: 'Success', message: 'Shift Deleted!.', object: shift });
+});
 
 router.get('/getAllShifts', async (req, res) => {
     let listOfStops = [];
