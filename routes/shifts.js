@@ -112,6 +112,7 @@ router.get('/allShifts', adminAuth, async (req, res) => {
         if(!endLoc) return res.status(404).jsonp({ status : "failure", message : "Location not found by the given ID.", object : []});
     
         shiftRes = {
+            id: shifts[i]._id,
             title: shifts[i].title,
             startLoc: startLoc.loc,
             endLoc: endLoc.loc,
