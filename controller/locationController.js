@@ -75,16 +75,6 @@ exports.updateDriverLocation = async function(reqData, res){
         var latitude = reqData.latitude;
         var shiftRider = await ShiftRider.find();
         console.log(shiftRider);
-        for(var i = 0; i < shiftRider.length; i++){
-            console.log('shiftRider[i].pickUploc[0] ' +shiftRider[i].pickUploc[0]);
-            console.log('shiftRider[i].pickUploc[1] ' +shiftRider[i].pickUploc[1]);
-
-            var lat1 = shiftRider[i].pickUploc[0];
-            var lat2 = shiftRider[i].pickUploc[1];
-
-            var point1 = new GeoPoint(lat1, long1);
-            var point2 = new GeoPoint(lat2, long2);
-        }
         
         userExists(email, function (user) {
             if (user) {
@@ -98,6 +88,23 @@ exports.updateDriverLocation = async function(reqData, res){
                     else {
                         logger.info('User Location With email ' + user.email);
                         console.log('########### FOUND A USER ##########', user);
+
+                        for(var i = 0; i < shiftRider.length; i++){
+                            console.log('shiftRider[i].pickUploc[0] ' +shiftRider[i].pickUploc[0]);
+                            console.log('shiftRider[i].pickUploc[1] ' +shiftRider[i].pickUploc[1]);
+                
+                            var long1 = shiftRider[i].pickUploc[0];
+                            var lat1 = shiftRider[i].pickUploc[1];
+                            console.log('Pick up point long1 ' + long1 + 'latitude ' + lat1);
+
+                            var long2 = user.loc[0];
+                            var lat2 = user.loc[1];
+                            console.log('Pick up point long1 ' + long2 + 'latitude ' + lat2);
+
+                            var point1 = new GeoPoint(lat1, long1);
+                            var point2 = new GeoPoint(lat2, long2);
+                        }
+                    
                         
                         res.jsonp({
                             status: "success",

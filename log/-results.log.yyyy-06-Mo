@@ -30,3 +30,5 @@
 {"level":"info","message":"::1 - - [11/Jun/2018:10:26:01 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:26:01"}
 {"phoneNo":"04341234321","longitude":"33.6739234","latitude":"72.9994313","level":"info","message":"updateRiderLocation method called","timestamp":"15:32:25"}
 {"level":"info","message":"::1 - - [11/Jun/2018:10:32:35 +0000] \"POST /api/users/updateLocation HTTP/1.1\" 200 896 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"15:32:35"}
+{"level":"info","message":"Image File Received Temp Name :image-1528714230049.jpeg","timestamp":"15:50:30"}
+{"level":"info","message":"Image is Uploaded","timestamp":"15:50:30"}
