@@ -127,3 +127,56 @@
 {"level":"info","message":"User Found with Phone Num. :923315845506","timestamp":"17:18:29"}
 {"level":"info","message":"User updated With Phone Num 923315845506","timestamp":"17:18:29"}
 {"level":"info","message":"::1 - - [11/Jun/2018:12:18:29 +0000] \"POST /api/users/profile HTTP/1.1\" 200 489 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"17:18:29"}
+{"level":"info","message":"IN Riderpickuploaction","timestamp":"23:25:30"}
+{"level":"info","message":"::1 - - [11/Jun/2018:18:25:30 +0000] \"POST /api/riders/pickuplocation HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"23:25:30"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"23:26:19"}
+{"level":"info","message":"An Exception Has occured in updateDriverLocation methodTypeError: Cannot read property 'radius' of null","timestamp":"23:26:20"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"23:26:20"}
+{"level":"info","message":"::1 - - [11/Jun/2018:18:26:20 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" 404 27 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"23:26:20"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"23:29:37"}
+{"level":"info","message":"An Exception Has occured in updateDriverLocation methodTypeError: Cannot read property 'radius' of null","timestamp":"23:29:39"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"23:29:39"}
+{"level":"info","message":"::1 - - [11/Jun/2018:18:29:39 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" 404 27 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"23:29:39"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"23:30:57"}
+{"level":"info","message":"An Exception Has occured in updateDriverLocation methodTypeError: Cannot read property 'radius' of null","timestamp":"23:31:01"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"23:31:01"}
+{"level":"info","message":"::1 - - [11/Jun/2018:18:31:01 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" 404 27 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"23:31:01"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"23:32:10"}
+{"level":"info","message":"An Exception Has occured in updateDriverLocation methodTypeError: Cannot read property 'radius' of null","timestamp":"23:32:12"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"23:32:12"}
+{"level":"info","message":"::1 - - [11/Jun/2018:18:32:12 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" 404 27 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"23:32:12"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"23:34:37"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"23:34:38"}
+{"level":"info","message":"::1 - - [11/Jun/2018:18:34:38 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" 200 546 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"23:34:38"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"23:35:45"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"23:35:47"}
+{"level":"info","message":"::1 - - [11/Jun/2018:18:35:47 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" 200 546 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"23:35:47"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"23:37:36"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"23:37:38"}
+{"level":"info","message":"::1 - - [11/Jun/2018:18:37:38 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" 200 546 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"23:37:38"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"23:38:48"}
+{"level":"info","message":"An Exception Has occured in updateDriverLocation methodTypeError: Cannot read property '0' of undefined","timestamp":"23:38:49"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"23:38:49"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"23:40:49"}
+{"level":"info","message":"An Exception Has occured in updateDriverLocation methodTypeError: Cannot read property '0' of undefined","timestamp":"23:40:51"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"23:40:51"}
+{"level":"info","message":"::1 - - [11/Jun/2018:18:42:39 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"23:42:39"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"23:47:30"}
+{"level":"info","message":"An Exception Has occured in updateDriverLocation methodTypeError: Cannot read property '0' of undefined","timestamp":"23:47:32"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"23:47:32"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"23:49:57"}
+{"level":"info","message":"::1 - - [11/Jun/2018:18:49:59 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" 404 18 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"23:49:59"}
+{"level":"info","message":"An Exception Has occured in updateDriverLocation methodError: Can't set headers after they are sent.","timestamp":"23:50:00"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"23:50:00"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"23:52:46"}
+{"level":"info","message":"::1 - - [11/Jun/2018:18:53:03 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" 404 27 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"23:53:03"}
+{"level":"info","message":"An Exception Has occured in updateDriverLocation methodError: Can't set headers after they are sent.","timestamp":"23:53:16"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"23:53:16"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"23:54:18"}
+{"level":"info","message":"An Exception Has occured in updateDriverLocation methodTypeError: Cannot read property 'radius' of null","timestamp":"23:54:35"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"23:54:35"}
+{"level":"info","message":"::1 - - [11/Jun/2018:18:54:35 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" 404 27 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"23:54:35"}
+{"level":"info","message":"User Location With email aqeel146@gmail.com","timestamp":"23:56:03"}
+{"level":"info","message":"An Exception Has occured in updateDriverLocation methodTypeError: Cannot read property 'radius' of null","timestamp":"23:56:21"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"23:56:21"}
+{"level":"info","message":"::1 - - [11/Jun/2018:18:56:21 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" 404 27 \"-\" \"PostmanRuntime/7.1.1\"\n","timestamp":"23:56:21"}

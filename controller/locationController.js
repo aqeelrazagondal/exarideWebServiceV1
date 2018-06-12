@@ -2,6 +2,7 @@ const auth = require('../middleware/auth');
 const jwt = require('jsonwebtoken');
 const config = require('config');
 var GeoPoint = require('geopoint');
+var GeoLib = require('geolib');
 const _ = require('lodash');
 var multer  = require('multer')
 var upload = multer({ dest: './public/images/profileImages' });
@@ -73,66 +74,99 @@ exports.updateDriverLocation = async function(reqData, res){
         var email = reqData.email;
         var longitude = reqData.longitude;
         var latitude = reqData.latitude;
-        var shiftRider = await ShiftRider.find();
-        console.log(shiftRider);
-        
-        userExists(email, function (user) {
-            if (user) {
+        var distance;
+        var distance1;
+        var i, j, intvalue, intvalue1;
+        var shiftRider;
+        var lisofstops = [];
+
+        let user = await User.findOne({ email: email });
+        if(!user) return res.status(404).send('User not found');
+        if (user) {
                 
-                user.loc = [longitude, latitude];
-                user.last_shared_loc_time = new Date();
-                user.save(function (err, user) {
-                    if (err) {
-                        logger.error('Some Error while updating user' + err);
-                    }
-                    else {
-                        logger.info('User Location With email ' + user.email);
-                        console.log('########### FOUND A USER ##########', user);
+            user.loc = [longitude, latitude];
+            user.last_shared_loc_time = new Date();
+            await user.save();
+            logger.info('User Location With email ' + user.email);
+            console.log('########### FOUND A USER ##########', user);
+       
+            shiftRider = await ShiftRider.find();
+            for(i = 0; i < shiftRider.length; i++){
 
-                        for(var i = 0; i < shiftRider.length; i++){
-
-                            if(shiftRider[i].pickUploc){
-                                var long1 = shiftRider[i].pickUploc[0];
-                                var lat1 = shiftRider[i].pickUploc[1];
-                                console.log('Pick up point long ' + long1 + ' latitude ' + lat1);
+                if(shiftRider[i].pickUploc){
+                    var long1 = shiftRider[i].pickUploc[0];
+                    var lat1 = shiftRider[i].pickUploc[1];
+                    // console.log('Pick up point long ' + long1 + ' latitude ' + lat1);
     
-                                var long2 = user.loc[0];
-                                var lat2 = user.loc[1];
-                                console.log('Driver location long ' + long2 + ' latitude ' +lat2);    
-                            }
+                    var long2 = user.loc[0];
+                    var lat2 = user.loc[1];
+                    // console.log('Driver location long ' + long2 + ' latitude ' +lat2);    
+                }
 
-                            var point1 = new GeoPoint(lat1, long1);
-                            var point2 = new GeoPoint(lat2, long2);
-                            var distance = point1.distanceTo(point2, true)//output in kilometers
-                            console.log('distance ################### ' +distance);
+                var point1 = new GeoPoint(lat1, long1);
+                var point2 = new GeoPoint(lat2, long2);
+                distance = point1.distanceTo(point2, true)//output in kilometers
+                // console.log('distance ################### ' +distance);
                             
-                            var distanceInMeter = distance * 1000;
-                            console.log('Distance in meter '+distanceInMeter);
+                var distanceInMeter = distance * 1000;
                             
-                            var intvalue = Math.floor( distanceInMeter );
-                            if(intvalue < 13000){
-                                console.log('Send ALERT to Rider');
-                            }
+                intvalue = Math.floor( distanceInMeter );
+                console.log('Distance in meter '+intvalue);
 
+                if(intvalue < 3000){
+                    console.log('Found a stop near to driver !');
+                    lisofstops = shiftRider[i];
+                }
+            }
+            
+            console.log('list of stops ' +lisofstops);
+            var rider = await Rider.find();
+            for(j = 0; j < rider.length; j++){
+                if(rider[j]._pickUpLocationId){
+
+                    let query = rider[j]._pickUpLocationId;
+                    let location = await Location.findOne({ _id: query });
+                    if(location){
+                        if(location.radius){
+                                    
+                            let riderRadius = location.radius;
+                            var lng2 = location.loc[0];
+                            var lat2 = location.loc[1];
+                                
+                            
+                            var lng3 = lisofstops.pickUploc[0];
+                            var lat3 = lisofstops.pickUploc[1];
+        
+                            var point3 = new GeoPoint(lat2, lng2);
+                            var point4 = new GeoPoint(lat3, lng3);
+                            distance1 = point3.distanceTo(point4, true)//output in kilometerddd
+        
+                            var distanceInMeter1 = distance1 * 1000;
+                               
+                            intvalue1 = Math.floor( distanceInMeter1 );
+                            console.log('Rider Distance in meter 1 '+intvalue1);
+
+                            if(intvalue1 <= 3604){
+                                console.log('send alert to rider Bus is nearBy...!!! ');
+                            }    
                         }
-                    
-                        
-                        res.jsonp({
-                            status: "success",
-                            message: "Location Updated!",
-                            object: user
-                        });
                     }
-                });
-            }
-            else {
-                res.jsonp({
-                    status: "failure",
-                    message: "Failed To update Location!",
-                    object: []
-                });
-            }
-        });
+                            
+                }              
+            }                                       
+            res.jsonp({
+                status: "success",
+                message: "Location Updated!",
+                object: user
+            });  
+    }
+    else {
+        res.jsonp({
+                status: "failure",
+                message: "Failed To update Location!",
+                object: []
+            });
+        }
 
     } catch (err) {
         logger.info('An Exception Has occured in updateDriverLocation method' + err);
