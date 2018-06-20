@@ -152,4 +152,24 @@ router.post('/panic', async (req, res) => {
 
 });
 
+router.post('/onesignal', async (req, res) => {                           
+		
+	if(req.body === undefined||req.body === null) {
+    res.end("Empty Body");  
+  }
+  logger.verbose('onesignal-POST called ');
+  
+  let driverId = req.body.id;
+  let oneSignalId = req.body.oneSignalId;
+
+  const driver = await Driver.findOne({ _id: driverId });
+  driver.onesignalid = oneSignalId;
+  await driver.save();
+ 
+  if (!driver) return res.status(404).send('Driver not found by the given ID.');
+
+  res.status(200).jsonp({ status: 'success', message: 'One Signal Id Updated!', object: driver });
+
+});
+
 module.exports = router; 
