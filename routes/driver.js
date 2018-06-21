@@ -152,9 +152,12 @@ router.post('/panic', async (req, res) => {
   var MessageObj ={    
     message:"Message From QAU SERVER"	
   }
-  logger.info('Sending Notification of closed Group to player id ' + user.palyer_id );
-  NotificationController.sendNotifcationToPlayerId(driver.onesignalid,MessageObj,"Qau");
+  logger.info('Sending Notification of closed Group to player id ' +driver.onesignalid);
+  if (driver.onesignalid){
+    NotificationController.sendNotifcationToPlayerId(driver.onesignalid,MessageObj,"Qau");
 
+  }
+  
   await driver.save();
  
   if (!driver) return res.status(404).send('Driver not found by the given ID.');
