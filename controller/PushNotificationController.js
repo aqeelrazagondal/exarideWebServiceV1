@@ -29,7 +29,7 @@ exports.sendNotifcationToPlayerId = function (playerId,obj){
 	  contents: {"en": obj},
 	  headings:{"en":"QAU Smart Ride"},
 	  include_player_ids: [playerId],
-	  data:obj,
+	  // data:obj,
 	  priority:10,
   
 	//will need to change for ios
