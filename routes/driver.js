@@ -149,12 +149,11 @@ router.post('/panic', async (req, res) => {
   driver.panic = panicFlag;
   
  
-  var MessageObj ={    
-    message:"Message From QAU SERVER"	
-  }
+  var message ="Message From QAU SERVER";	
+   
   logger.info('Sending Notification of closed Group to player id ' +driver.onesignalid);
   if (driver.onesignalid){
-    NotificationController.sendNotifcationToPlayerId(driver.onesignalid,MessageObj,"Qau");
+    NotificationController.sendNotifcationToPlayerId(driver.onesignalid,message);
 
   }
   

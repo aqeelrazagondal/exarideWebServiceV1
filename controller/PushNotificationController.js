@@ -18,22 +18,22 @@ var https = require('https');
   };
 
 
-exports.sendNotifcationToPlayerId = function (playerId,obj,eventName){
+exports.sendNotifcationToPlayerId = function (playerId,obj){
 	try{
 		
 	//setHeader ("EventName",eventName);
-	headers.EventName=eventName;
+	headers.EventName="QAU Smart Ride";
 	console.log ('playerId : '+playerId);
 	var data = { 
 	  app_id:oneSignalConfig.androidAppiId,
-	  contents: {"en": "QAU Smart Ride"},
-	  headings:{"en":eventName},
+	  contents: {"en": obj},
+	  headings:{"en":"QAU Smart Ride"},
 	  include_player_ids: [playerId],
 	  data:obj,
 	  priority:10,
   
 	//will need to change for ios
-	android_group:eventName,
+	android_group:"QAU Smart Ride",
 	
 	// for IOS
 	content_available:true,
