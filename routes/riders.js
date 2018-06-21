@@ -16,6 +16,7 @@ const chatController = require('../controller/chatController');
 const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
+const NotificationController=require('../controller/PushNotificationController');
 
 router.post('/pickuplocation', function (req, res) {
 
@@ -66,7 +67,8 @@ router.post('/onesignal', async (req, res) => {
   let oneSignalId = req.body.oneSignalId;
 
   const user = await User.findOne({ phone: phone });
-  const rider = await Rider.findOne({ _userId:user._id  });
+
+  const rider = await Rider.findOne({ _userId: user._id  });
   
   rider.onesignalid = oneSignalId;
   await rider.save();

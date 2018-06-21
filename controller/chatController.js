@@ -7,6 +7,7 @@ const Admin = require('../models/admin');
 const mongoose = require('mongoose');
 const express = require('express');
 const logger = require('../startup/logging');
+const NotificationController=require('./PushNotificationController');
 
 exports.sendMessageToDriver = async function(reqData,res){
     
@@ -109,60 +110,67 @@ exports.sendAlertToDriver = async function(reqData,res){
         const driver = await Driver.findOne({ _id: id });
         if(!driver) return res.jsonp({ status: 'failure', message: 'Driver not found', object: [] });
         console.log('Found a driver', driver);
+  
+        // var message ="Message From QAU SERVER";	
+        
+        logger.info('Sending Notification of closed Group to player id ' +driver.onesignalid);
+        if (driver.onesignalid){
+            NotificationController.sendNotifcationToPlayerId(driver.onesignalid,message);
+        }
 
-        const user = await User.findOne({ _id: driver._userId });
-        if(!user) return res.jsonp({ status: 'failure', message: 'User not found by given ID.', object: [] });
-        console.log('Found a User', user);
+        // const user = await User.findOne({ _id: driver._userId });
+        // if(!user) return res.jsonp({ status: 'failure', message: 'User not found by given ID.', object: [] });
+        // console.log('Found a User', user);
 
-        if(user.phone){
+        // if(user.phone){
                     
-            let adminMessage;
-            adminMessage = "Admin message for BMS Application : " + message;
-            console.log('ADMIN MESSAGE!! ', adminMessage);   
+        //     let adminMessage;
+        //     adminMessage = "Admin message for BMS Application : " + message;
+        //     console.log('ADMIN MESSAGE!! ', adminMessage);   
 
-            user.message = message;
-            await user.save();
+        //     user.message = message;
+        //     await user.save();
 
-            console.log('Saved message', user.message);
+        //     console.log('Saved message', user.message);
             
-            var headers = {
+            // var headers = {
 
-                'Authorization':       'Basic ZmFsY29uLmV5ZTowMzM1NDc3OTU0NA==',
-                'Content-Type':     'application/json',
-                'Accept':       'application/json'
-            }
+            //     'Authorization':       'Basic ZmFsY29uLmV5ZTowMzM1NDc3OTU0NA==',
+            //     'Content-Type':     'application/json',
+            //     'Accept':       'application/json'
+            // }
 
             // Configure the request
-            var options = {
-                url: 'http://107.20.199.106/sms/1/text/single',
-                method: 'POST',
-                headers: headers,
+            // var options = {
+            //     url: 'http://107.20.199.106/sms/1/text/single',
+            //     method: 'POST',
+            //     headers: headers,
          
-                json: {
-                    'from': 'BMS',
-                    'to': user.phone,
-                    'text': adminMessage
-                }
-            }
+            //     json: {
+            //         'from': 'BMS',
+            //         'to': user.phone,
+            //         'text': adminMessage
+            //     }
+            // }
 
             // Start the request
-            request(options, function (error, response, body) {
-                if (!error ) {
-                    // Print out the response body
-                    console.log(body)
-                    logger.info('Sucessful Response of SMS API : ' + body );
-                }
-                else{
-                    logger.info('Response/Error of SMS API : ' + error );
-                }
-            });
+            // request(options, function (error, response, body) {
+            //     if (!error ) {
+            //         // Print out the response body
+            //         console.log(body)
+            //         logger.info('Sucessful Response of SMS API : ' + body );
+            //     }
+            //     else{
+            //         logger.info('Response/Error of SMS API : ' + error );
+            //     }
+            // });
             
-            logger.info('User Found with mobile number ' + user.phone );
+           // logger.info('User Found with mobile number ' + user.phone );
 
         res.jsonp({ status:"success", message:"Alert Sent to Driver!", object:[] });	  
         logger.info(' Exit chatController.sendAlertToRider Method');
     
-    }
+    //}
     }catch (err){
 		logger.info('An Exception Has occured in sendAlertToRider method' + err);
 	}
