@@ -55,4 +55,27 @@ router.post('/alertToDriver', function(req, res) {
 
 });
 
+router.post('/onesignal', async (req, res) => {                           
+		
+	if(req.body === undefined||req.body === null) {
+    res.end("Empty Body");  
+  }
+  logger.verbose('onesignal-POST called ');
+  
+  let phone = req.body.phone;
+  let oneSignalId = req.body.oneSignalId;
+
+  const user = await User.findOne({ phone: phone });
+  const rider = await Rider.findOne({ _userId:user._id  });
+  
+  rider.onesignalid = oneSignalId;
+  await rider.save();
+ 
+  if (!rider) return res.status(404).send('rider not found by the given ID.');
+
+  res.status(200).jsonp({ status: 'success', message: 'One Signal Id Updated!', object: rider });
+
+});
+
+
 module.exports = router; 
