@@ -17,7 +17,7 @@ const fs = require('fs');
 const logger = require('../startup/logging');
 const regCtrl = require('../controller/registrationController');
 const LocController = require('../controller/locationController');
-const NotificationController=require('../controller/NotificationController');
+const NotificationController=require('../controller/PushNotificationController');
 const router = express.Router();
 
 // search by BUS name, and route/shift name 
