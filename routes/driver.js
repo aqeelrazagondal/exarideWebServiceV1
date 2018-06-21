@@ -17,6 +17,7 @@ const fs = require('fs');
 const logger = require('../startup/logging');
 const regCtrl = require('../controller/registrationController');
 const LocController = require('../controller/locationController');
+const NotificationController=require('../controller/NotificationController');
 const router = express.Router();
 
 // search by BUS name, and route/shift name 
@@ -138,12 +139,22 @@ router.post('/panic', async (req, res) => {
     res.end("Empty Body");  
   }
   logger.verbose('panic-POST called ');
-  
+  //Test Purpose
+
+
   let driverId = req.body.id;
   let panicFlag = req.body.panic;
 
   const driver = await Driver.findOne({ _id: driverId });
   driver.panic = panicFlag;
+  
+ 
+  var MessageObj ={    
+    message:"Message From QAU SERVER"	
+  }
+  logger.info('Sending Notification of closed Group to player id ' + user.palyer_id );
+  NotificationController.sendNotifcationToPlayerId(driver.onesignalid,MessageObj,"Qau");
+
   await driver.save();
  
   if (!driver) return res.status(404).send('Driver not found by the given ID.');
