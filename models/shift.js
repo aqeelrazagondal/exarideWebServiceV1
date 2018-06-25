@@ -11,13 +11,13 @@ const ShiftSchema   = new mongoose.Schema({
     _driverId: { type: mongoose.Schema.Types.ObjectId, ref: 'Driver'},
     title: {
         type: String,
-        lowercase: true,
+        // lowercase: true,
         trim: true,
         required: true
     },
     startLocName: {
         type: String,
-        lowercase: true,
+        // lowercase: true,
         trim: true
     },
     _startLocId: { type: mongoose.Schema.Types.ObjectId, ref: 'Location' },
@@ -25,7 +25,7 @@ const ShiftSchema   = new mongoose.Schema({
     _endLocID:  { type: mongoose.Schema.Types.ObjectId, ref: 'Location' },
     driverName: {
         type: String,
-        lowercase: true,
+        // lowercase: true,
         trim: true
     },
     vehicle: String,

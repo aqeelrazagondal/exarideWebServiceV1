@@ -5,7 +5,7 @@ const LocationSchema = new mongoose.Schema({
 
     title: {
         type: String,
-        lowercase: true
+        // lowercase: true
     },
     // description:{type:String,default:null },
     loc: {
