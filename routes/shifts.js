@@ -97,10 +97,11 @@ router.get('/allShifts', adminAuth, async (req, res) => {
         
         for(var j = 0; j < shiftRider.length; j++){
             
-            if(shiftRider){
+            if(shiftRider[j]){
+                let stop = await Location.find({_id: shiftRider[j]._stopId});
                 shiftRiderRes = {
                     _id: shiftRider[j]._id,
-                    pickUploc: shiftRider[j].pickUploc
+                    pickUploc:stop.loc
                 }
                 listOfStops.push(shiftRiderRes);
             }
