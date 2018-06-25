@@ -84,7 +84,7 @@ exports.updateDriverLocation = async function(reqData, res){
         if(!user) return res.status(404).send('User not found');
         if (user) {
                 
-            user.loc = [ latitude,longitude];
+            user.loc = [ longitude,latitude];
             user.last_shared_loc_time = new Date();
             await user.save();
             logger.info('User Location With email ' + user.email);
