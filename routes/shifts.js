@@ -56,10 +56,12 @@ router.get('/getAllShifts', async (req, res) => {
         if(!endLoc) return res.status(404).jsonp({ status : "failure", message : "Location not found by the given ID.", object : []});
         
         console.log('shifts[i]._id', shifts[i]._id);
-
+        let driver = await Driver.findOne({ _id: shifts[i]._driverId });
+        let user = await User.findOne({ _id: driver._userId });
         shiftRes = {
             id: shifts[i]._id,
             title: shifts[i].title,
+            busLoc: user.loc,
             startLoc: startLoc.loc,
             endLoc: endLoc.loc,
             listOfStops: listOfStops
