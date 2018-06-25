@@ -58,6 +58,9 @@ router.get('/getAllShifts', async (req, res) => {
         console.log('shifts[i]._id', shifts[i]._id);
         let driver = await Driver.findOne({ _id: shifts[i]._driverId });
         let user = await User.findOne({ _id: driver._userId });
+        
+        console.log('user Id', user._id);
+        console.log('Buss Loc', user.loc);
         shiftRes = {
             id: shifts[i]._id,
             title: shifts[i].title,
