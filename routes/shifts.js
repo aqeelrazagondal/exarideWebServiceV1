@@ -98,7 +98,9 @@ router.get('/allShifts', adminAuth, async (req, res) => {
         for(var j = 0; j < shiftRider.length; j++){
             
             if(shiftRider[j]){
-                let stop = await Location.find({_id: shiftRider[j]._stopId});
+                let stop = await Location.findOne({_id: shiftRider[j]._stopId});
+                console.log('stop.loc lat '+stop.loc[0] );
+                console.log('stop.loc long '+stop.loc[1] );
                 shiftRiderRes = {
                     _id: shiftRider[j]._id,
                     pickUploc:stop.loc
