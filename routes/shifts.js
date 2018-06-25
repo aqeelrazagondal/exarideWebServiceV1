@@ -98,17 +98,21 @@ router.get('/allShifts', adminAuth, async (req, res) => {
         for(var j = 0; j < shiftRider.length; j++){
             
             if(shiftRider[j]){
+                console.log(' shiftRider[j]._stopId : ' +  shiftRider[j]._stopId);
                 let stop = await Location.findOne({_id: shiftRider[j]._stopId});
-                if (stop.loc){
-                    console.log('stop.loc lat '+stop.loc[0] );
-                    console.log('stop.loc long '+stop.loc[1] );
+                if(stop){
+                    if (stop.loc){
+                        console.log('stop.loc lat '+stop.loc[0] );
+                        console.log('stop.loc long '+stop.loc[1] );
+                    }
+                  
+                    shiftRiderRes = {
+                        _id: shiftRider[j]._id,
+                        pickUploc:stop.loc
+                    }
+                    listOfStops.push(shiftRiderRes);
                 }
-              
-                shiftRiderRes = {
-                    _id: shiftRider[j]._id,
-                    pickUploc:stop.loc
-                }
-                listOfStops.push(shiftRiderRes);
+         
             }
         }
         let startLoc = await Location.findOne({ _id: shifts[i]._startLocId });
