@@ -243,15 +243,19 @@ router.get('/:Id', async (req, res) => {
             tempLocObj=await Location.findOne({ _id: shiftRiders[j]._stopid });
             riderTempObj = await Rider.findOne({ _id: shiftRiders[j]._riderId });
             console.log('Rider Temp object ', riderTempObj);
-            riderResObj = {
-                            profile_photo_url: '',
-                            name: '',
-                            pickUploc: tempLocObj.loc,
-                            dropOfLoc: tempLocObj.loc,
-                            pickUpTime: '',
-                            dropOfTime: ''
-                        }
-            listOfRiders.push( riderResObj );
+            if (tempLocObj){
+
+                riderResObj = {
+                    profile_photo_url: '',
+                    name: '',
+                    pickUploc: tempLocObj.loc,
+                    dropOfLoc: tempLocObj.loc,
+                    pickUpTime: '',
+                    dropOfTime: ''
+                }
+                 listOfRiders.push( riderResObj );
+            }
+      
             // if( riderTempObj ){
             //     userTempObj = await User.findOne({ _id: riderTempObj._userId });
 
