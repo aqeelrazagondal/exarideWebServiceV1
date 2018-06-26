@@ -44,7 +44,7 @@ router.get('/getAllShifts', async (req, res) => {
             
             if(shiftRider){
 
-                tempLocObj=await Location.findOne({ _id: shiftRiders[j]._stopId });
+                tempLocObj=await Location.findOne({ _id: shiftRider[j]._stopId });
                 if (tempLocObj)
                 console.log('Stop Id after Getting Stop:  ', tempLocObj._id);
                 else 
