@@ -207,6 +207,7 @@ router.post('/', async (req, res) => {
 
 router.get('/:Id', async (req, res) => {
     logger.info('IN SHFTS ROUTES, shifts are find by Driver ID. ', req.params.id)
+    let tempLocObj;
     let shiftRiders;
     let riderTempObj;
     let userTempObj;
@@ -240,6 +241,8 @@ router.get('/:Id', async (req, res) => {
             console.log('_id:  ', shiftRiders[j]._id);
             console.log('createdAt:  ', shiftRiders[j].createdAt);
 
+
+            tempLocObj=await Location.findOne({ _id: shiftRiders[j]._stopid });
             riderTempObj = await Rider.findOne({ _id: shiftRiders[j]._riderId });
             console.log('Rider Temp object ', riderTempObj);
 
@@ -258,7 +261,7 @@ router.get('/:Id', async (req, res) => {
                     riderResObj = {
                         profile_photo_url: userTempObj.profile_photo_url,
                         name: riderTempObj.name,
-                        pickUploc: shiftRiders[j].pickUploc,
+                        pickUploc: tempLocObj.loc,
                         dropOfLoc: shiftRiders[j].dropOfLoc,
                         pickUpTime: pickUpT,
                         dropOfTime: dropOfT

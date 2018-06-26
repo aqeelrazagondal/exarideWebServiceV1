@@ -120,41 +120,39 @@ exports.updateDriverLocation = async function(reqData, res){
                 }
             }
             
-            // console.log('list of stops ' +lisofstops);
-            // var rider = await Rider.find();
-            // for(j = 0; j < rider.length; j++){
-            //     if(rider[j]._pickUpLocationId){
+            console.log('list of stops ' +lisofstops);
+            var rider = await Rider.find();
+            for(j = 0; j < rider.length; j++){
+                if(rider[j]._pickUpLocationId){
 
-            //         let query = rider[j]._pickUpLocationId;
-            //         let location = await Location.findOne({ _id: query });
-            //         if(location){
-            //             if(location.radius){
+                    let query = rider[j]._pickUpLocationId;
+                    let location = await Location.findOne({ _id: query });
+                    if(location){
+                        if(location.radius){
                                     
-            //                 let riderRadius = location.radius;
-            //                 var lng2 = location.loc[0];
-            //                 var lat2 = location.loc[1];
-                                
-                            
-            //                 var lng3 = lisofstops.pickUploc[0];
-            //                 var lat3 = lisofstops.pickUploc[1];
+                            let riderRadius = location.radius;
+                            var lng2 = location.loc[0];
+                            var lat2 = location.loc[1];                                                           
+                            var lng3 = lisofstops.pickUploc[0];
+                            var lat3 = lisofstops.pickUploc[1];
         
-            //                 var point3 = new GeoPoint(lat2, lng2);
-            //                 var point4 = new GeoPoint(lat3, lng3);
-            //                 distance1 = point3.distanceTo(point4, true)//output in kilometerddd
+                            var point3 = new GeoPoint(lat2, lng2);
+                            var point4 = new GeoPoint(lat3, lng3);
+                            distance1 = point3.distanceTo(point4, true)//output in kilometerddd
         
-            //                 var distanceInMeter1 = distance1 * 1000;
+                            var distanceInMeter1 = distance1 * 1000;
                                
-            //                 intvalue1 = Math.floor( distanceInMeter1 );
-            //                 console.log('Rider Distance in meter 1 '+intvalue1);
+                            intvalue1 = Math.floor( distanceInMeter1 );
+                            console.log('Rider Distance in meter 1 '+intvalue1);
 
-            //                 if(intvalue1 <= 3604){
-            //                     console.log('send alert to rider Bus is nearBy...!!! ');
-            //                 }    
-            //             }
-            //         }
+                            if(intvalue1 <= 3604){
+                                console.log('send alert to rider Bus is nearBy...!!! ');
+                            }    
+                        }
+                    }
                             
-            //     }              
-            // }                                       
+                }              
+            }                                       
             res.jsonp({
                 status: "success",
                 message: "Location Updated!",
