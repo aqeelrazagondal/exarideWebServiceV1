@@ -45,16 +45,17 @@ router.get('/getAllShifts', async (req, res) => {
             if(shiftRider){
 
                 tempLocObj=await Location.findOne({ _id: shiftRider[j]._stopId });
-                if (tempLocObj)
-                console.log('Stop Id after Getting Stop:  ', tempLocObj._id);
-                else 
-                console.log('temp Loc Obj  ', tempLocObj);
-
-                shiftRiderRes = {
-                    _id: shiftRider[j]._id,
-                    pickUploc: tempLocObj.loc
-                }
-                listOfStops.push(shiftRiderRes);
+                if (tempLocObj){
+                    shiftRiderRes = {
+                        _id: shiftRider[j]._id,
+                        pickUploc: tempLocObj.loc
+                    }
+                    listOfStops.push(shiftRiderRes);
+                    console.log('Stop Id after Getting Stop:  ', tempLocObj._id);
+                }  else{
+                    console.log('temp Loc Obj  ', tempLocObj);
+                } 
+                              
             }
         }
         let startLoc = await Location.findOne({ _id: shifts[i]._startLocId });
