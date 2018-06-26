@@ -237,10 +237,14 @@ router.get('/:Id', async (req, res) => {
             // finding rider with given rider ID 
             
             // console.log('pickUpLocName:  ', shiftRiders[j].pickUpLocName);
-             console.log('Stop Id:  ', shiftRiders[j]._stop);
+             console.log('Stop Id before Getting Stop  ', shiftRiders[j]._stopid);
             console.log('_id:  ', shiftRiders[j]._id);
             // console.log('createdAt:  ', shiftRiders[j].createdAt);
             tempLocObj=await Location.findOne({ _id: shiftRiders[j]._stopid });
+            if (tempLocObj)
+            console.log('Stop Id after Getting Stop:  ', tempLocObj._id);
+            else 
+            console.log('temp Loc Obj  ', tempLocObj);
             riderTempObj = await Rider.findOne({ _id: shiftRiders[j]._riderId });
             console.log('Rider Temp object ', riderTempObj);
             if (tempLocObj){
