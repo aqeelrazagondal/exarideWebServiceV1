@@ -29,6 +29,7 @@ router.get('/getAllShifts', async (req, res) => {
     let listOfShiftsArray = [];
     let shiftRiderRes;
     let shiftRes;
+    let tempLocObj;
 
     // finding shift for against given driver ID 
     const shifts = await Shift.find({}).sort('-date');
@@ -42,9 +43,16 @@ router.get('/getAllShifts', async (req, res) => {
         for(var j = 0; j < shiftRider.length; j++){
             
             if(shiftRider){
+
+                tempLocObj=await Location.findOne({ _id: shiftRiders[j]._stopId });
+                if (tempLocObj)
+                console.log('Stop Id after Getting Stop:  ', tempLocObj._id);
+                else 
+                console.log('temp Loc Obj  ', tempLocObj);
+
                 shiftRiderRes = {
                     _id: shiftRider[j]._id,
-                    pickUploc: shiftRider[j].pickUploc
+                    pickUploc: tempLocObj.loc
                 }
                 listOfStops.push(shiftRiderRes);
             }
@@ -61,6 +69,12 @@ router.get('/getAllShifts', async (req, res) => {
         
         console.log('user Id', user._id);
         console.log('Buss Loc', user.loc);
+
+        let shiftRiderResForEndLoc = {
+            _id: '',
+            pickUploc: endLoc.loc
+        }
+        listOfStops.push(shiftRiderResForEndLoc);
         shiftRes = {
             id: shifts[i]._id,
             title: shifts[i].title,
@@ -296,6 +310,20 @@ router.get('/:Id', async (req, res) => {
         
         const endLocation = await Location.findOne({ _id: shifts[i]._endLocID });
         if(!endLocation) return res.status(404).jsonp({ status : "failure", message : "End Location not found with the given ID.", object : []});
+       
+
+        //Adding  
+       
+       let  riderResObjDropOff = {
+            profile_photo_url: '',
+            name: '',
+            pickUploc: endLocation.loc,
+            dropOfLoc: endLocation.loc,
+            pickUpTime: '',
+            dropOfTime: ''
+        }
+        listOfRiders.push( riderResObjDropOff );
+
         shiftResObj = {
             id: shifts[i]._id,
             title: shifts[i].title,
