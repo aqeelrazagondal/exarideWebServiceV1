@@ -220,7 +220,7 @@ router.get('/:Id', async (req, res) => {
     let myDate, myDate1, myDate2, myDate3;
 
     let driver = await Driver.findOne({ _id: req.params.Id });
-    if(!driver) return res.status(404).jsonp({ status : "failure", message : "Something wrong! Driver cannot found.", object : []});
+    if(!driver) return res.status(404).jsonp({ status : "failure", message : " Driver cannot found.", object : []});
 
     // finding shift for against given driver ID 
     const shifts = await Shift.find({ _driverId: req.params.Id }).sort('-date');
@@ -236,39 +236,45 @@ router.get('/:Id', async (req, res) => {
         for(var j = 0; j < shiftRiders.length; j++){
             // finding rider with given rider ID 
             
-            console.log('pickUpLocName:  ', shiftRiders[j].pickUpLocName);
-            console.log('Rider ID:  ', shiftRiders[j]._riderId);
+            // console.log('pickUpLocName:  ', shiftRiders[j].pickUpLocName);
+             console.log('Stop Id:  ', shiftRiders[j]._stop);
             console.log('_id:  ', shiftRiders[j]._id);
-            console.log('createdAt:  ', shiftRiders[j].createdAt);
-
-
+            // console.log('createdAt:  ', shiftRiders[j].createdAt);
             tempLocObj=await Location.findOne({ _id: shiftRiders[j]._stopid });
             riderTempObj = await Rider.findOne({ _id: shiftRiders[j]._riderId });
             console.log('Rider Temp object ', riderTempObj);
+            riderResObj = {
+                            profile_photo_url: '',
+                            name: '',
+                            pickUploc: tempLocObj.loc,
+                            dropOfLoc: tempLocObj.loc,
+                            pickUpTime: '',
+                            dropOfTime: ''
+                        }
+            listOfRiders.push( riderResObj );
+            // if( riderTempObj ){
+            //     userTempObj = await User.findOne({ _id: riderTempObj._userId });
 
-            if( riderTempObj ){
-                userTempObj = await User.findOne({ _id: riderTempObj._userId });
-
-                if(userTempObj){
-                    myDate = shiftRiders[j].pickUpTime
-                    let pickUpT = myDate.getTime();
-                    console.log('PICK UP TIME', pickUpT);
+            //     if(userTempObj){
+            //         myDate = shiftRiders[j].pickUpTime
+            //         let pickUpT = myDate.getTime();
+            //         console.log('PICK UP TIME', pickUpT);
     
-                    myDate1 = new Date(shiftRiders[j].dropOfTime);
-                    let dropOfT = myDate1.getTime();
-                    console.log('PICK UP TIME', dropOfT);
+            //         myDate1 = new Date(shiftRiders[j].dropOfTime);
+            //         let dropOfT = myDate1.getTime();
+            //         console.log('PICK UP TIME', dropOfT);
 
-                    riderResObj = {
-                        profile_photo_url: userTempObj.profile_photo_url,
-                        name: riderTempObj.name,
-                        pickUploc: tempLocObj.loc,
-                        dropOfLoc: shiftRiders[j].dropOfLoc,
-                        pickUpTime: pickUpT,
-                        dropOfTime: dropOfT
-                    }
-                    listOfRiders.push( riderResObj );
-                }
-            }
+            //         riderResObj = {
+            //             profile_photo_url: userTempObj.profile_photo_url,
+            //             name: riderTempObj.name,
+            //             pickUploc: tempLocObj.loc,
+            //             dropOfLoc: shiftRiders[j].dropOfLoc,
+            //             pickUpTime: pickUpT,
+            //             dropOfTime: dropOfT
+            //         }
+            //         listOfRiders.push( riderResObj );
+            //     }
+            // }
 
         }
         myDate2 = new Date(shifts[i].shiftEndTime);
