@@ -124,6 +124,7 @@ exports.updateDriverLocation = async function(reqData, res){
             riders=await Rider.find();
             for(i = 0; i < riders.length; i++){
                 if (riders[i]){
+                    logger.info('Rider Info , user id  ' + riders[i]._userId);
                    if (riders[i]._pickUpLocationId ){
                     riderPickUpLoc = await Location.findOne({ _id: riders[i]._pickUpLocationId });
                     inRadiusNotification( user,riders[i]._id, riderPickUpLoc);
