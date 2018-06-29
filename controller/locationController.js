@@ -73,28 +73,31 @@ var locationExists = function(id,callback){
 async function inRadiusNotification(user, riderId, location){
 
 
-	var distance = geolib.getDistance(
-    user.loc,
-    location.loc
-	);
-	logger.info ('distance between driver and rider pick up loc: ' + distance);
-	
-	//Check if distance is less then defined radius
-	
-	if (distance<location.radius)
-	{
-		//inside Radius, Send Push Notification
-        logger.info ('inside Radius, Send Push Notification');   
-        let rider = await Rider.findOne({ _id: riderId });
-        if(!rider) return res.jsonp  ({ status: 'failure', message: 'Rider not found by userID', object: [] });
-        logger.info('Sending Notification to One signal  id ' + rider.onesignalid );
-        logger.info('Loc Object : long  = ' + location.loc[0] + "** lat =" +  location.loc[1] + "** radius =" + location.radius);
-        //logger.info('Individual Conversation msg  before Push Notification:'  );		
-       var message = "Bus is near your pick up Location";
-        NotificationController.sendNotifcationToPlayerId(rider.onesignalid,message);
-    }else{
-        logger.info ('Distance: '+distance + 'is greater then radius ' + location.radius);  
+    if (location){
+        var distance = geolib.getDistance(
+            user.loc,
+            location.loc
+            );
+            logger.info ('distance between driver and rider pick up loc: ' + distance);
+            
+            //Check if distance is less then defined radius
+            
+            if (distance<location.radius)
+            {
+                //inside Radius, Send Push Notification
+                logger.info ('inside Radius, Send Push Notification');   
+                let rider = await Rider.findOne({ _id: riderId });
+                if(!rider) return res.jsonp  ({ status: 'failure', message: 'Rider not found by userID', object: [] });
+                logger.info('Sending Notification to One signal  id ' + rider.onesignalid );
+                logger.info('Loc Object : long  = ' + location.loc[0] + "** lat =" +  location.loc[1] + "** radius =" + location.radius);
+                //logger.info('Individual Conversation msg  before Push Notification:'  );		
+               var message = "Bus is near your pick up Location";
+                NotificationController.sendNotifcationToPlayerId(rider.onesignalid,message);
+            }else{
+                logger.info ('Distance: '+distance + 'is greater then radius ' + location.radius);  
+            }
     }
+
         		
 }
 
