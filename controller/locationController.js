@@ -68,17 +68,44 @@ var locationExists = function(id,callback){
     logger.info(' Exit MarkerExists Method');
 }
 
+
+
+function inRadiusNotification(user, riderId, location){
+
+
+	var distance = geolib.getDistance(
+    user.loc,
+    location.loc
+	);
+	logger.info ('distance between driver and rider pick up loc: ' + distance);
+	
+	//Check if distance is less then defined radius
+	
+	if (distance<location.radius)
+	{
+		//inside Radius, Send Push Notification
+        logger.info ('inside Radius, Send Push Notification');   
+        let rider = await Rider.findOne({ _id: riderId });
+        if(!rider) return res.jsonp  ({ status: 'failure', message: 'Rider not found by userID', object: [] });
+        logger.info('Sending Notification to One signal  id ' + rider.onesignalid );
+        logger.info('Loc Object : long  = ' + location.loc[0] + "** lat =" +  location.loc[1] + "** radius =" + location.radius);
+        //logger.info('Individual Conversation msg  before Push Notification:'  );		
+       var message = "Bus is near your pick up Location";
+        NotificationController.sendNotifcationToPlayerId(rider.onesignalid,message);
+    }else{
+        logger.info ('Distance: '+distance + 'is greater then radius ' + location.radius);  
+    }
+        		
+}
+
 exports.updateDriverLocation = async function(reqData, res){
 
     try {
         var email = reqData.email;
         var longitude = reqData.longitude;
-        var latitude = reqData.latitude;
-        var distance;
-        var distance1;
-        var i, j, intvalue, intvalue1;
-        var shiftRider;
-        var lisofstops = [];
+        var latitude = reqData.latitude;  
+        var riders;
+        var riderPickUpLoc;
 
         let user = await User.findOne({ email: email });
         if(!user) return res.status(404).send('User not found');
@@ -90,68 +117,19 @@ exports.updateDriverLocation = async function(reqData, res){
             logger.info('User Location after Update ' + user.loc);
             logger.info('User Location With email ' + user.email);
             console.log('########### FOUND A USER ##########', user);
-       
-            shiftRider = await ShiftRider.find();
-            for(i = 0; i < shiftRider.length; i++){
-
-                if(shiftRider[i].pickUploc){
-                    var long1 = shiftRider[i].pickUploc[0];
-                    var lat1 = shiftRider[i].pickUploc[1];
-                    // console.log('Pick up point long ' + long1 + ' latitude ' + lat1);
-                    var long2 = user.loc[0];
-                    var lat2 = user.loc[1];
-                    // console.log('Driver location long ' + long2 + ' latitude ' +lat2);    
-                }
-
-                var point1 = new GeoPoint(lat1, long1);
-                var point2 = new GeoPoint(lat2, long2);
-                distance = point1.distanceTo(point2, true)//output in kilometers
-                // console.log('distance ################### ' +distance);
-                            
-                var distanceInMeter = distance * 1000;
-                            
-                intvalue = Math.floor( distanceInMeter );
-                console.log('Distance in meter '+intvalue);
-
-                if(intvalue < 3000){
-                    console.log('Found a stop near to driver !');
-                    lisofstops = shiftRider[i];
+        
+            riders=await Rider.find();
+            for(i = 0; i < riders.length; i++){
+                if (riders[i]){
+                   if (riders[i]._pickUpLocationId ){
+                    riderPickUpLoc = await Location.findOne({ _id: riders[i]._pickUpLocationId });
+                    inRadiusNotification( user,riders[i]._id, riderPickUpLoc);
+                    } else{
+                        console.log ('Pick up loc not set for rider with id : ' + riders[i]._id);
+                    }
                 }
             }
-            
-            console.log('list of stops ' +lisofstops);
-            // var rider = await Rider.find();
-            // for(j = 0; j < rider.length; j++){
-            //     if(rider[j]._pickUpLocationId){
-
-            //         let query = rider[j]._pickUpLocationId;
-            //         let location = await Location.findOne({ _id: query });
-            //         if(location){
-            //             if(location.radius){
-                                    
-            //                 let riderRadius = location.radius;
-            //                 var lng2 = location.loc[0];
-            //                 var lat2 = location.loc[1];                                                           
-            //                 var lng3 = lisofstops.pickUploc[0];
-            //                 var lat3 = lisofstops.pickUploc[1];
-        
-            //                 var point3 = new GeoPoint(lat2, lng2);
-            //                 var point4 = new GeoPoint(lat3, lng3);
-            //                 distance1 = point3.distanceTo(point4, true)//output in kilometerddd
-        
-            //                 var distanceInMeter1 = distance1 * 1000;
-                               
-            //                 intvalue1 = Math.floor( distanceInMeter1 );
-            //                 console.log('Rider Distance in meter 1 '+intvalue1);
-
-            //                 if(intvalue1 <= 3604){
-            //                     console.log('send alert to rider Bus is nearBy...!!! ');
-            //                 }    
-            //             }
-            //         }
-                            
-            //     }              
-            // }                                       
+                                              
             res.jsonp({
                 status: "success",
                 message: "Location Updated!",

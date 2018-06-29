@@ -113,7 +113,7 @@ exports.sendAlertToDriver = async function(reqData,res){
   
         // var message ="Message From QAU SERVER";	
         
-        logger.info('Sending Notification of closed Group to player id ' +driver.onesignalid);
+        logger.info('Sending Notification of to driver  to onesignal id ' +driver.onesignalid);
         if (driver.onesignalid){
             NotificationController.sendNotifcationToPlayerId(driver.onesignalid,message);
         }
