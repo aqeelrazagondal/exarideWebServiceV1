@@ -74,11 +74,12 @@ async function inRadiusNotification(user, riderId, location){
 
 
     if (location){
+
         var distance = geolib.getDistance(
             user.loc,
             location.loc
             );
-            logger.info ('distance between driver and rider pick up loc: ' + distance);
+            logger.info ('distance between driver and rider pick up loc: '+ location.title +'is :'+ distance);
             
             //Check if distance is less then defined radius
             
