@@ -70,7 +70,7 @@ var locationExists = function(id,callback){
 
 
 
-function inRadiusNotification(user, riderId, location){
+async function inRadiusNotification(user, riderId, location){
 
 
 	var distance = geolib.getDistance(
