@@ -79,14 +79,14 @@ async function inRadiusNotification(user, riderId, location){
             user.loc,
             location.loc
             );
-            logger.info ('distance between driver and rider pick up loc: '+ location.title +' is :'+ distance);
+            logger.info ('*distance between driver and rider pick up loc: '+ location.title +' is :'+ distance);
             
             //Check if distance is less then defined radius
             
             if (distance<location.radius)
             {
                 //inside Radius, Send Push Notification
-                logger.info ('inside Radius, Send Push Notification');   
+                logger.info ('***inside Radius, Send Push Notification');   
                 let rider = await Rider.findOne({ _id: riderId });
                 if(!rider) return res.jsonp  ({ status: 'failure', message: 'Rider not found by userID', object: [] });
                 logger.info('Sending Notification to One signal  id ' + rider.onesignalid );
@@ -95,7 +95,7 @@ async function inRadiusNotification(user, riderId, location){
                var message = "Bus is near your pick up Location";
                 NotificationController.sendNotifcationToPlayerId(rider.onesignalid,message);
             }else{
-                logger.info ('Distance: '+distance + 'is greater then radius ' + location.radius);  
+                logger.info ('**Distance: '+distance + 'is greater then radius ' + location.radius);  
             }
     }
 
@@ -126,8 +126,10 @@ exports.updateDriverLocation = async function(reqData, res){
             for(i = 0; i < riders.length; i++){
                 if (riders[i]){
                     logger.info('Rider Info , user id  ' + riders[i]._userId);
+                  
                    if (riders[i]._pickUpLocationId ){
                     riderPickUpLoc = await Location.findOne({ _id: riders[i]._pickUpLocationId });
+                    logger.info('Rider pick Up Loc  ' + riderPickUpLoc.loc);
                     inRadiusNotification( user,riders[i]._id, riderPickUpLoc);
                     } else{
                         console.log ('Pick up loc not set for rider with id : ' + riders[i]._id);
