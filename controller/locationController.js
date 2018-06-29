@@ -79,7 +79,7 @@ async function inRadiusNotification(user, riderId, location){
             user.loc,
             location.loc
             );
-            logger.info ('distance between driver and rider pick up loc: '+ location.title +'is :'+ distance);
+            logger.info ('distance between driver and rider pick up loc: '+ location.title +' is :'+ distance);
             
             //Check if distance is less then defined radius
             
