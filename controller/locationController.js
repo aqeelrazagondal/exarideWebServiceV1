@@ -20,7 +20,7 @@ const geolib = require('geolib');
 const express = require('express');
 const logger = require('../startup/logging');
 const regController = require('../controller/registrationController');
-
+const NotificationController  = require('../controller/PushNotificationController');
 var userExists = function(email, callback){
     logger.info('UserExists Method Called');
     var query = { email };
