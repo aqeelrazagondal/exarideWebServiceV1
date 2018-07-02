@@ -129,8 +129,10 @@ exports.updateDriverLocation = async function(reqData, res){
                   
                    if (riders[i]._pickUpLocationId ){
                     riderPickUpLoc = await Location.findOne({ _id: riders[i]._pickUpLocationId });
-                    logger.info('Rider pick Up Loc  ' + riderPickUpLoc.loc);
-                    inRadiusNotification( user,riders[i]._id, riderPickUpLoc);
+                    if(riderPickUpLoc){
+                        logger.info('Rider pick Up Loc  ' + riderPickUpLoc.loc);
+                        inRadiusNotification( user,riders[i]._id, riderPickUpLoc);
+                    }
                     } else{
                         console.log ('Pick up loc not set for rider with id : ' + riders[i]._id);
                     }
