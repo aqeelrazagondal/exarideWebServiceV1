@@ -264,7 +264,7 @@ exports.riderPickUPLocation = async function(reqData, res){
         console.log('Found a user', user);
 
         let location = new Location({
-            loc: [longitude, latitude],
+            loc: [latitude, longitude ],
             radius: radius
         });
         await location.save();
