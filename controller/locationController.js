@@ -132,7 +132,9 @@ exports.updateDriverLocation = async function(reqData, res){
                     if(riderPickUpLoc){
                         logger.info('Rider pick Up Loc  ' + riderPickUpLoc.loc);
                         logger.info('Rider pick Up Title  ' + riderPickUpLoc.title);
-                        
+                        if (riderPickUpLoc==='5b30bda1c6e3c0001401a3f4'){
+                            logger.info('*********Shahhheeen Chockk **** Title : ' + riderPickUpLoc.title);
+                        }
                         inRadiusNotification( user,riders[i]._id, riderPickUpLoc);
                     }
                     } else{
@@ -204,9 +206,9 @@ exports.updateRiderLocation = async function (reqData, res) {
             for(let i = 0; i < shiftRider.length; i++){
                 console.log('shiftRider[i]._stopId', shiftRider[i]._stopId);
                 let pickUp = await Location.findOne({ _id: shiftRider[i]._stopId }); 
-                console.log('FIND A PICK UP LOCATION..!!!', pickUp.title);
+                
                 if(pickUp){
-    
+                    console.log('FIND A PICK UP LOCATION..!!!', pickUp.title);
                     let stopRes = {
                         pickUpID: pickUp._id,
                         pickUpLocName: pickUp.title,
