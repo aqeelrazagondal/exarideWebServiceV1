@@ -109,7 +109,7 @@ exports.updateDriverLocation = async function(reqData, res){
         var longitude = reqData.longitude;
         var latitude = reqData.latitude;  
         var riders;
-        var riderPickUpLoc;
+        riderPickUpLoc: Location;
 
         let user = await User.findOne({ email: email });
         if(!user) return res.status(404).send('User not found');
@@ -131,6 +131,8 @@ exports.updateDriverLocation = async function(reqData, res){
                     riderPickUpLoc = await Location.findOne({ _id: riders[i]._pickUpLocationId });
                     if(riderPickUpLoc){
                         logger.info('Rider pick Up Loc  ' + riderPickUpLoc.loc);
+                        logger.info('Rider pick Up Title  ' + riderPickUpLoc.title);
+                        
                         inRadiusNotification( user,riders[i]._id, riderPickUpLoc);
                     }
                     } else{
