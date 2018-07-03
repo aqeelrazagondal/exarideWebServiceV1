@@ -18,13 +18,13 @@ const LocationSchema = new mongoose.Schema({
 
 LocationSchema.index({loc:1});
 
-function validateLocation(user) {
-    const schema = {
-      title: Joi.string().min(5).max(50).required()
-    };
+// function validateLocation(user) {
+//     const schema = {
+//       title: Joi.string().min(5).max(50).required()
+//     };
   
-    return Joi.validate(user, schema);
-}
+//     return Joi.validate(user, schema);
+// }
 
-module.exports.validate = validateLocation; 
+// module.exports.validate = validateLocation; 
 module.exports = mongoose.model('Location', LocationSchema);

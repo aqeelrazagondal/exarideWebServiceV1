@@ -11,7 +11,8 @@ var RiderSchema   = new mongoose.Schema({
     last_shared_loc_time: Date,
     active: { type: Boolean, default: false },
     name: String,
-    onesignalid: { type: String, default: null }
+    onesignalid: { type: String, default: null },
+    last_sent_notification_time: { type: Date, default: null },
 
    
 } , {timestamps: true});
