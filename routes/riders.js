@@ -17,6 +17,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 const NotificationController=require('../controller/PushNotificationController');
+const adminAuth = require('../middleware/adminAuth');
 
 router.get('/', adminAuth, async (req, res) => {
   let listOfRiders = [];
