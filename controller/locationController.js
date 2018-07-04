@@ -151,6 +151,7 @@ exports.updateDriverLocation = async function(reqData, res){
                         if (riderPickUpLoc==='5b30bda1c6e3c0001401a3f4'){
                             logger.info('*********Shahhheeen Chockk **** Title : ' + riderPickUpLoc.title);
                         }
+                        if (user.alert)
                         inRadiusNotification( user,riders[i]._id, riderPickUpLoc);
                     }
                     } else{
