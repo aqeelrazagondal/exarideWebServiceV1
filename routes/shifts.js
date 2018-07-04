@@ -91,7 +91,7 @@ router.get('/getAllShifts', async (req, res) => {
             shiftRes = {
                 id: shifts[i]._id,
                 title: shifts[i].title,
-                busLoc: null,
+                busLoc: {},
                 startLoc: startLoc.loc,
                 endLoc: endLoc.loc,
                 listOfStops: listOfStops
