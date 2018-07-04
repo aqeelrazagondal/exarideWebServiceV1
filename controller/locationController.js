@@ -94,11 +94,16 @@ async function inRadiusNotification(user, riderId, location){
                 //logger.info('Individual Conversation msg  before Push Notification:'  );		
                var message = "Bus is near your pick up Location";
 
-            //    if (rider.last_notification_time){
-            //     var difference_ms = date2_ms - date1_ms;
-            //    }
-                NotificationController.sendNotifcationToPlayerId(rider.onesignalid,message);
-                rider.last_notification_time= new Date();
+               if (rider.last_notification_time){
+                var difference_ms = new Date() - rider.last_notification_time;
+                logger.info('Difference in ms is : ' + difference_ms);
+                if (difference_ms>180000){
+                    
+                    NotificationController.sendNotifcationToPlayerId(rider.onesignalid,message);
+                    rider.last_notification_time= new Date();
+                }
+               }
+               
             }else{
                 logger.info ('**Distance: '+distance + 'is greater then radius ' + location.radius);  
             }

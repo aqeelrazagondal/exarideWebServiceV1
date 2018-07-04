@@ -18,6 +18,40 @@ const express = require('express');
 const router = express.Router();
 const NotificationController=require('../controller/PushNotificationController');
 
+router.get('/', adminAuth, async (req, res) => {
+  let listOfRiders = [];
+  let ridersResponseObject;
+
+  const riders = await Rider.find({});
+  if(!riders) return res.status(400).jsonp({ status: 'failure', messgae: 'riders not found.', object: [] });
+  
+  for(var i = 0; i< riders.length; i++){
+     
+    console.log(riders[i]._userId);
+    const user = await User.findOne({ _id: riders[i]._userId });
+    // if(!user) return res.status(400).jsonp({ status: 'failure', messgae: 'riders not found by given ID.', object: [] });
+    if(user){
+      ridersResponseObject = {
+        _id: riders[i]._id,
+       // panic: riders[i].panic,
+        name: user.name,
+        email: user.email,
+        phone: user.phone,
+        profile_photo_url: user.profile_photo_url,
+        loc: user.loc,
+        last_shared_loc_time: user.last_shared_loc_time
+      }
+      listOfRiders.push(ridersResponseObject);
+    }
+  }
+
+  res.jsonp({
+    status: 'success',
+    messgae: 'List of Riders',
+    object: listOfRiders
+  });
+  
+});
 router.post('/pickuplocation', function (req, res) {
 
     if (req.body === undefined || req.body === null) {

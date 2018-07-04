@@ -66,24 +66,38 @@ router.get('/getAllShifts', async (req, res) => {
         
         console.log('shifts[i]._id', shifts[i]._id);
         let driver = await Driver.findOne({ _id: shifts[i]._driverId });
-        let user = await User.findOne({ _id: driver._userId });
+        let user;
+        if (driver){
+             user = await User.findOne({ _id: driver._userId });
+             console.log('user Id', user._id);
+             console.log('Buss Loc', user.loc);
+        }
         
-        console.log('user Id', user._id);
-        console.log('Buss Loc', user.loc);
-
         let shiftRiderResForEndLoc = {
             _id: '',
             pickUploc: endLoc.loc
         }
         listOfStops.push(shiftRiderResForEndLoc);
-        shiftRes = {
-            id: shifts[i]._id,
-            title: shifts[i].title,
-            busLoc: user.loc,
-            startLoc: startLoc.loc,
-            endLoc: endLoc.loc,
-            listOfStops: listOfStops
+        if (user){
+            shiftRes = {
+                id: shifts[i]._id,
+                title: shifts[i].title,
+                busLoc: user.loc,
+                startLoc: startLoc.loc,
+                endLoc: endLoc.loc,
+                listOfStops: listOfStops
+            };
+        }else {
+            shiftRes = {
+                id: shifts[i]._id,
+                title: shifts[i].title,
+                busLoc: null,
+                startLoc: startLoc.loc,
+                endLoc: endLoc.loc,
+                listOfStops: listOfStops
+            };
         }
+      
         
         listOfShifts.push(shiftRes);
         listOfStops = [];  

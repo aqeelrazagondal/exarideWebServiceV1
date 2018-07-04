@@ -12,7 +12,7 @@ var RiderSchema   = new mongoose.Schema({
     active: { type: Boolean, default: false },
     name: String,
     onesignalid: { type: String, default: null },
-    last_sent_notification_time: { type: Date, default: null },
+    last_notification_time: { type: Date, default: null },
 
    
 } , {timestamps: true});
