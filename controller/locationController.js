@@ -148,9 +148,7 @@ exports.updateDriverLocation = async function(reqData, res){
                     if(riderPickUpLoc){
                         logger.info('Rider pick Up Loc  ' + riderPickUpLoc.loc);
                         logger.info('Rider pick Up Title  ' + riderPickUpLoc.title);
-                        if (riderPickUpLoc==='5b30bda1c6e3c0001401a3f4'){
-                            logger.info('*********Shahhheeen Chockk **** Title : ' + riderPickUpLoc.title);
-                        }
+                       
                         if (user.alert){
                             logger.info('User have Turned Loc On ' + user.name);
                             inRadiusNotification( user,riders[i]._id, riderPickUpLoc);
