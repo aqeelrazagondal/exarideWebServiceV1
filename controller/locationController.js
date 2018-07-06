@@ -15,6 +15,7 @@ const { Driver } = require('../models/driver');
 const Location = require('../models/location');
 const Rider  = require('../models/rider');
 const ShiftRider = require('../models/shiftRider');
+const Shift = require('../models/shift');
 const mongoose = require('mongoose');
 const geolib = require('geolib');
 const express = require('express');
@@ -118,6 +119,54 @@ async function inRadiusNotification(user, riderId, location){
         		
 }
 
+
+async function inEndLocRadiusNotification(user, riderId, location){
+
+
+    if (location){
+
+        var distance = geolib.getDistance(
+            user.loc,
+            location.loc
+            );
+            logger.info ('*distance between driver and rider pick up loc: '+ location.title +' is :'+ distance);
+            
+            //Check if distance is less then defined radius
+            
+            if (distance<location.radius)
+            {
+                //inside Radius, Send Push Notification
+                logger.info ('***inside Radius, Send Push Notification');   
+                let rider = await Rider.findOne({ _id: riderId });
+                if(!rider) return res.jsonp  ({ status: 'failure', message: 'Rider not found by userID', object: [] });
+                logger.info('Sending Notification to One signal  id ' + rider.onesignalid );
+                logger.info('Loc Object : long  = ' + location.loc[0] + "** lat =" +  location.loc[1] + "** radius =" + location.radius);
+                //logger.info('Individual Conversation msg  before Push Notification:'  );		
+               var message = "Bus is near your pick up Location";
+
+               if (rider.last_notification_time){
+                var difference_ms = new Date() - rider.last_notification_time;
+                logger.info('Difference in ms is : ' + difference_ms);
+                if (difference_ms>180000){
+                    logger.info('Notifcation Sent 3 min before');
+                    NotificationController.sendNotifcationToPlayerId(rider.onesignalid,message);
+                    rider.last_notification_time= new Date();
+                }else{
+                    logger.info('Notifcation Sent in less then 3 min');
+                }
+               }else {
+                logger.info ('Sending Location For First Time');   
+                NotificationController.sendNotifcationToPlayerId(rider.onesignalid,message);
+                rider.last_notification_time= new Date();
+               }
+               
+            }else{
+                logger.info ('**Distance: '+distance + 'is greater then radius ' + location.radius);  
+            }
+    }
+
+        		
+}
 exports.updateDriverLocation = async function(reqData, res){
 
     try {
@@ -130,7 +179,18 @@ exports.updateDriverLocation = async function(reqData, res){
         let user = await User.findOne({ email: email });
         if(!user) return res.status(404).send('User not found');
         if (user) {
-                
+            let driver = await Driver.findOne({ _userId: user._id });
+            if(!driver) return res.status(404).jsonp({ status : "failure", message : " Driver cannot found.", object : []});
+        
+            // finding shift for against given driver ID 
+            const shifts = await Shift.find({ _driverId: driver._id }).sort('-date');
+            if ( !shifts ) return res.status(404).jsonp({ status : "failure", message : "Shift cannot fint by the given ID.", object : []});
+            console.log('List of shifts', shifts);
+        
+            for (var i = 0; i < shifts.length; i++) {
+
+            }
+
             user.loc = [ latitude,longitude];
             user.last_shared_loc_time = new Date();
             await user.save();

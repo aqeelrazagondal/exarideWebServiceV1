@@ -45,7 +45,8 @@ const adminSchema = new mongoose.Schema({
   verification_code: String,
   palyer_id: String,
   access_code: String,
-  last_shared_loc_time: { type: Date, default: Date.now }
+  last_shared_loc_time: { type: Date, default: Date.now },
+  speedLimit: { type: Number, default: 0}
   // role: [],
   // operations: []
 }, { timestamps: true });

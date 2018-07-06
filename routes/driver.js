@@ -10,6 +10,7 @@ const mongoose = require('mongoose');
 const { User } = require('../models/user');
 const { Admin } = require('../models/admin');
 const { Driver } = require('../models/driver');
+const { OverSpeedAlert } = require('../models/overSpeedAlert');
 const Shift = require('../models/shift');
 const express = require('express');
 const http = require('http');
@@ -95,7 +96,7 @@ router.get('/:id', adminAuth, async (req, res) => {
   let userQuery = driver._userId; 
   const user = await User.findOne({ _id: userQuery });
   
-  res.jsonp({ status: 'Success', message: 'Uerr Found!.', object: user });
+  res.jsonp({ status: 'Success', message: 'User Found!.', object: user });
 });
   
 router.get('/', adminAuth, async (req, res) => {
@@ -183,5 +184,44 @@ router.post('/onesignal', async (req, res) => {
   res.status(200).jsonp({ status: 'success', message: 'One Signal Id Updated!', object: driver });
 
 });
+
+router.post('/overSpeedingAlert', async (req, res) => {                           
+		
+	if(req.body === undefined||req.body === null) {
+    res.end("Empty Body");  
+  }
+  logger.verbose('overSpeedingAlert-POST called ');
+  
+  let driverId = req.body.id;
+  let speed = req.body.speed;
+
+  
+  let overSpeedAlert = new OverSpeedAlert({ 
+   _driverId: driverId,
+   msg:'',
+   speed: speed    
+  });
+  await overSpeedAlert.save();
+
+  if (!overSpeedAlert) return res.status(404).send('There was some error in sending Alert To Admin');
+
+  res.status(200).jsonp({ status: 'success', message: 'Overspeeding Alert Sent To Admin.', object: overSpeedAlert });
+
+});
+
+router.get('/speedLimit', async (req, res) => {
+
+  
+  const admin = await Admin.find({});
+  if (admin){
+    let obj = {
+      speedLimit:admin[0].speedLimit
+    }
+  }
+ 
+  if (!admin) return res.status(404).send('Can not Find Speed Limit');
+  res.jsonp({ status: 'Success', message: 'Speed Limit.', object: obj });
+});
+  
 
 module.exports = router; 
