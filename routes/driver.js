@@ -198,12 +198,12 @@ router.post('/overSpeedingAlert', async (req, res) => {
 
   const driver = await Driver.findOne({_id:driverId});
   
-  let overSpeedAlert = new OverSpeedAlert({ 
+  let newOverSpeedAlert = new OverSpeedAlert({ 
    _driverId: driverId,
    msg:'',
    speed: speed    
   });
-  await overSpeedAlert.save();
+  await newOverSpeedAlert.save();
 
   //Sending Sms To Admin
   const admin = await Admin.find({});
