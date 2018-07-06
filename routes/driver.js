@@ -195,6 +195,8 @@ router.post('/overSpeedingAlert', async (req, res) => {
   let driverId = req.body.id;
   let speed = req.body.speed;
 
+
+  const driver = await Driver.findOne({_id:driverId});
   
   let overSpeedAlert = new OverSpeedAlert({ 
    _driverId: driverId,
@@ -202,6 +204,50 @@ router.post('/overSpeedingAlert', async (req, res) => {
    speed: speed    
   });
   await overSpeedAlert.save();
+
+  //Sending Sms To Admin
+  const admin = await Admin.find({});
+  if (admin){
+
+    let adminMessage="Attention Please! Driver  ";
+  if (driver){
+    adminMessage = adminMessage+ driver.name +"is driving  buss at Speed :" + speed + "KM/H" ;
+  }
+  console.log('ADMIN MESSAGE!! ', adminMessage);   
+  
+  var headers = {
+
+      'Authorization':       'Basic ZmFsY29uLmV5ZTowMzM1NDc3OTU0NA==',
+      'Content-Type':     'application/json',
+      'Accept':       'application/json'
+  }
+
+  // Configure the request
+  var options = {
+      url: 'http://107.20.199.106/sms/1/text/single',
+      method: 'POST',
+      headers: headers,
+
+      json: {
+          'from': 'BMS',
+          'to': admin.phone,
+          'text': adminMessage
+      }
+  }
+
+  // Start the request
+  request(options, function (error, response, body) {
+      if (!error ) {
+          // Print out the response body
+          console.log(body)
+          logger.info('Sucessful Response of SMS API : ' + body );
+      }
+      else{
+          logger.info('Response/Error of SMS API : ' + error );
+      }
+  });
+  }
+  
 
   if (!overSpeedAlert) return res.status(404).send('There was some error in sending Alert To Admin');
 
