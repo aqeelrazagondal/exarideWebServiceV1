@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var User = require('./user');
-var Driver = require('./drive');
+var Driver = require('./driver');
 
 
 // Define our schema
