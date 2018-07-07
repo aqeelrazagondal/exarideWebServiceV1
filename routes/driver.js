@@ -198,7 +198,7 @@ router.post('/overSpeedingAlert', async (req, res) => {
 
   const driver = await Driver.findOne({_id:driverId});
   
-  let newOverSpeedAlert = new OverSpeedAlert({ 
+   newOverSpeedAlert = new OverSpeedAlert({ 
    _driverId: driverId,
   //  msg:'',
    speed: speed    
@@ -249,9 +249,9 @@ router.post('/overSpeedingAlert', async (req, res) => {
   }
   
 
-  if (!overSpeedAlert) return res.status(404).send('There was some error in sending Alert To Admin');
+  if (!newOverSpeedAlert) return res.status(404).send('There was some error in sending Alert To Admin');
 
-  res.status(200).jsonp({ status: 'success', message: 'Overspeeding Alert Sent To Admin.', object: overSpeedAlert });
+  res.status(200).jsonp({ status: 'success', message: 'Overspeeding Alert Sent To Admin.', object: newOverSpeedAlert });
 
 });
 
