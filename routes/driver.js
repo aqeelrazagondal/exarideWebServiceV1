@@ -200,7 +200,7 @@ router.post('/overSpeedingAlert', async (req, res) => {
   
   let newOverSpeedAlert = new OverSpeedAlert({ 
    _driverId: driverId,
-   msg:'',
+  //  msg:'',
    speed: speed    
   });
   await newOverSpeedAlert.save();
