@@ -176,7 +176,7 @@ exports.updateDriverLocation = async function(reqData, res){
         var riders;
         riderPickUpLoc: Location;
 
-        if(longitude!==0 && latitude!==0){
+        if(longitude!==0.0 && latitude!==0.0){
         logger.info('long/ Lat not Zero');
         logger.info('longitude : ', longitude);
         logger.info('latitude : ', latitude);
