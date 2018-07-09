@@ -8,4 +8,4 @@ const sharedSchema   = new mongoose.Schema({
 
 // Export the Mongoose model
 const Shared = mongoose.model('Shared', sharedSchema);
-module.exports.Shared = Shared; 
+module.exports = Shared; 
