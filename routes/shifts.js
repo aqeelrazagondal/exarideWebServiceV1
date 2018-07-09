@@ -7,6 +7,7 @@ const { User } = require('../models/user');
 const {Driver} = require('../models/driver');
 const Location = require('../models/location');
 const Shift = require('../models/shift');
+const Shared = require('../models/shared');
 const Rider = require('../models/rider');
 const ShiftRider = require('../models/shiftRider');
 const mongoose = require('mongoose');
@@ -34,7 +35,7 @@ router.get('/speedLimit', async (req, res) => {
     }
    
     if (!shared) return res.status(404).send('Can not Find Speed Limit');
-    res.jsonp({ status: 'Success', message: 'Speed Limit.', object: obj });
+    res.jsonp({ status: 'success', message: 'Speed Limit.', object: obj });
   });
   
   
