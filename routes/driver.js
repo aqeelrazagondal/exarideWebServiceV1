@@ -12,6 +12,7 @@ const { Admin } = require('../models/admin');
 const { Driver } = require('../models/driver');
 const { OverSpeedAlert } = require('../models/overSpeedAlert');
 const Shift = require('../models/shift');
+const Shared = require('../models/shared');
 const express = require('express');
 const http = require('http');
 const fs = require('fs');
@@ -257,11 +258,11 @@ router.post('/overSpeedingAlert', async (req, res) => {
 
 router.get('/speedLimit', async (req, res) => {
 
-  
-  const admin = await Admin.find({});
-  if (admin){
+  logger.info('Get Req : /speedLimit' );
+  const shared = await Shared.find({});
+  if (shared){
     let obj = {
-      speedLimit:admin[0].speedLimit
+      speedLimit:shared[0].speedLimit
     }
   }
  
