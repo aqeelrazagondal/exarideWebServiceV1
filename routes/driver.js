@@ -256,7 +256,7 @@ router.post('/overSpeedingAlert', async (req, res) => {
 
 });
 
-router.get('/overSpeedingAlert', adminAuth, async (req, res) => {
+router.get('/overSpeedingAlert', async (req, res) => {
   // const query = req.params.id;
   const overSpeedAlerts = await OverSpeedAlert.find({  });
   if (!overSpeedAlerts) return res.status(404).send('OverSpeedAlerts List is Empty.');
