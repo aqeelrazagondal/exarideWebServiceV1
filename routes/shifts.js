@@ -27,11 +27,12 @@ router.delete('/:id', async (req, res) => {
 router.get('/speedLimit', async (req, res) => {
 
     logger.info('Get Req : /speedLimit' );
+    let obj;
     const shared = await Shared.find({});
     if (shared){
-      let obj = {
+       obj = {
         speedLimit:shared[0].speedLimit
-      }
+      };
     }
    
     if (!shared) return res.status(404).send('Can not Find Speed Limit');
