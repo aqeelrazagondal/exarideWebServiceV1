@@ -192,6 +192,7 @@ router.get('/allShifts', adminAuth, async (req, res) => {
             shiftStartTime: shifts[i].shiftStartTime,
             shiftEndTime: shifts[i].shiftEndTime,
             vehicle: shifts[i].vehicle,
+            shiftStatus:shifts[i].shiftStatus,
             listOfStops: listOfStops
         }
         
