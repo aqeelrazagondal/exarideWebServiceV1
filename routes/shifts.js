@@ -96,14 +96,26 @@ router.get('/getAllShifts', async (req, res) => {
         }
         listOfStops.push(shiftRiderResForEndLoc);
         if (user){
-            shiftRes = {
-                id: shifts[i]._id,
-                title: shifts[i].title,
-                busLoc: user.loc,
-                startLoc: startLoc.loc,
-                endLoc: endLoc.loc,
-                listOfStops: listOfStops
-            };
+            if (shifts[i].shiftStatus){
+                shiftRes = {
+                    id: shifts[i]._id,
+                    title: shifts[i].title,
+                    busLoc: user.loc,
+                    startLoc: startLoc.loc,
+                    endLoc: endLoc.loc,
+                    listOfStops: listOfStops
+                };
+            }else {
+                shiftRes = {
+                    id: shifts[i]._id,
+                    title: shifts[i].title,
+                    busLoc: [],
+                    startLoc: startLoc.loc,
+                    endLoc: endLoc.loc,
+                    listOfStops: listOfStops
+                };
+            }
+           
         }else {
             shiftRes = {
                 id: shifts[i]._id,
