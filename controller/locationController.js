@@ -98,7 +98,7 @@ async function inRadiusNotification(user, riderId, location){
                if (rider.last_notification_time){
                 var difference_ms = new Date() - rider.last_notification_time;
                 logger.info('Difference in ms is : ' + difference_ms);
-                if (difference_ms>180000){
+                if (difference_ms>1800000){
                     logger.info('Notifcation Sent 3 min before');
                     NotificationController.sendNotifcationToPlayerId(rider.onesignalid,message);
                     rider.last_notification_time= new Date();
@@ -147,7 +147,7 @@ async function inEndLocRadiusNotification(user, riderId, location){
                if (rider.last_notification_time){
                 var difference_ms = new Date() - rider.last_notification_time;
                 logger.info('Difference in ms is : ' + difference_ms);
-                if (difference_ms>180000){
+                if (difference_ms>1800000){
                     logger.info('Notifcation Sent 3 min before');
                     NotificationController.sendNotifcationToPlayerId(rider.onesignalid,message);
                     rider.last_notification_time= new Date();
