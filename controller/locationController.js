@@ -177,6 +177,9 @@ exports.updateDriverLocation = async function(reqData, res){
         riderPickUpLoc: Location;
 
         if(longitude!==0 && latitude!==0){
+            console.log('long/ Lat not Zero');
+            console.log('longitude : ', longitude);
+            console.log('latitude : ', latitude);
             let user = await User.findOne({ email: email });
             if(!user) return res.status(404).send('User not found');
             if (user) {
@@ -239,6 +242,9 @@ exports.updateDriverLocation = async function(reqData, res){
             }
     
         }else {
+            console.log('long/ Lat Are Zero');
+            console.log('longitude : ', longitude);
+            console.log('latitude : ', latitude);
             res.jsonp({
                 status: "failure",
                 message: "Failed To update Location!",
