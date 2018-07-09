@@ -256,19 +256,6 @@ router.post('/overSpeedingAlert', async (req, res) => {
 
 });
 
-router.get('/speedLimit', async (req, res) => {
 
-  logger.info('Get Req : /speedLimit' );
-  const shared = await Shared.find({});
-  if (shared){
-    let obj = {
-      speedLimit:shared[0].speedLimit
-    }
-  }
- 
-  if (!admin) return res.status(404).send('Can not Find Speed Limit');
-  res.jsonp({ status: 'Success', message: 'Speed Limit.', object: obj });
-});
-  
 
 module.exports = router; 

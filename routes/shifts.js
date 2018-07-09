@@ -23,6 +23,21 @@ router.delete('/:id', async (req, res) => {
     res.jsonp({ status: 'Success', message: 'Shift Deleted!.', object: shift });
 });
 
+router.get('/speedLimit', async (req, res) => {
+
+    logger.info('Get Req : /speedLimit' );
+    const shared = await Shared.find({});
+    if (shared){
+      let obj = {
+        speedLimit:shared[0].speedLimit
+      }
+    }
+   
+    if (!shared) return res.status(404).send('Can not Find Speed Limit');
+    res.jsonp({ status: 'Success', message: 'Speed Limit.', object: obj });
+  });
+  
+  
 router.get('/getAllShifts', async (req, res) => {
     let listOfStops = [];
     let listOfShifts =  [];
