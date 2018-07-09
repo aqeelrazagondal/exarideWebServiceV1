@@ -176,67 +176,76 @@ exports.updateDriverLocation = async function(reqData, res){
         var riders;
         riderPickUpLoc: Location;
 
-        let user = await User.findOne({ email: email });
-        if(!user) return res.status(404).send('User not found');
-        if (user) {
-            let driver = await Driver.findOne({ _userId: user._id });
-            if(!driver) return res.status(404).jsonp({ status : "failure", message : " Driver cannot found.", object : []});
-        
-            // finding shift for against given driver ID 
-            const shifts = await Shift.find({ _driverId: driver._id }).sort('-date');
-            if ( !shifts ) return res.status(404).jsonp({ status : "failure", message : "Shift cannot fint by the given ID.", object : []});
-            console.log('List of shifts', shifts);
-        
-            for (var i = 0; i < shifts.length; i++) {
-
-            }
-
-            user.loc = [ latitude,longitude];
-            user.last_shared_loc_time = new Date();
-            await user.save();
-            logger.info('User Location after Update ' + user.loc);
-            logger.info('User Location With email ' + user.email);
-            console.log('########### FOUND A USER ##########', user);
-        
-            riders=await Rider.find();
-            for(i = 0; i < riders.length; i++){
-                if (riders[i]){
-                    logger.info('Rider Info , user id  ' + riders[i]._userId);
-                  
-                   if (riders[i]._pickUpLocationId ){
-                    riderPickUpLoc = await Location.findOne({ _id: riders[i]._pickUpLocationId });
-                    if(riderPickUpLoc){
-                        logger.info('Rider pick Up Loc  ' + riderPickUpLoc.loc);
-                        logger.info('Rider pick Up Title  ' + riderPickUpLoc.title);
-                       
-                        if (user.alert){
-                            logger.info('User have Turned Loc On ' + user.name);
-                            inRadiusNotification( user,riders[i]._id, riderPickUpLoc);
-                        }else {
-                            logger.info('User have Turned Loc Off '+ user.name);
+        if(longitude!==0 && latitude!==0){
+            let user = await User.findOne({ email: email });
+            if(!user) return res.status(404).send('User not found');
+            if (user) {
+                let driver = await Driver.findOne({ _userId: user._id });
+                if(!driver) return res.status(404).jsonp({ status : "failure", message : " Driver cannot found.", object : []});
+            
+                // finding shift for against given driver ID 
+                const shifts = await Shift.find({ _driverId: driver._id }).sort('-date');
+                if ( !shifts ) return res.status(404).jsonp({ status : "failure", message : "Shift cannot fint by the given ID.", object : []});
+                console.log('List of shifts', shifts);
+            
+                // for (var i = 0; i < shifts.length; i++) {
+    
+                // }
+    
+                user.loc = [ latitude,longitude];
+                user.last_shared_loc_time = new Date();
+                await user.save();
+                logger.info('User Location after Update ' + user.loc);
+                logger.info('User Location With email ' + user.email);
+                console.log('########### FOUND A USER ##########', user);
+            
+                riders=await Rider.find();
+                for(i = 0; i < riders.length; i++){
+                    if (riders[i]){
+                        logger.info('Rider Info , user id  ' + riders[i]._userId);
+                      
+                       if (riders[i]._pickUpLocationId ){
+                        riderPickUpLoc = await Location.findOne({ _id: riders[i]._pickUpLocationId });
+                        if(riderPickUpLoc){
+                            logger.info('Rider pick Up Loc  ' + riderPickUpLoc.loc);
+                            logger.info('Rider pick Up Title  ' + riderPickUpLoc.title);
+                           
+                            if (user.alert){
+                                logger.info('User have Turned Loc On ' + user.name);
+                                inRadiusNotification( user,riders[i]._id, riderPickUpLoc);
+                            }else {
+                                logger.info('User have Turned Loc Off '+ user.name);
+                            }
+                           
                         }
-                       
-                    }
-                    } else{
-                        console.log ('Pick up loc not set for rider with id : ' + riders[i]._id);
+                        } else{
+                            console.log ('Pick up loc not set for rider with id : ' + riders[i]._id);
+                        }
                     }
                 }
-            }
-                                              
+                                                  
+                res.jsonp({
+                    status: "success",
+                    message: "Location Updated!",
+                    object: user
+                });  
+        }
+        else {
             res.jsonp({
-                status: "success",
-                message: "Location Updated!",
-                object: user
-            });  
-    }
-    else {
-        res.jsonp({
+                    status: "failure",
+                    message: "Failed To update Location!",
+                    object: []
+                });
+            }
+    
+        }else {
+            res.jsonp({
                 status: "failure",
                 message: "Failed To update Location!",
                 object: []
             });
         }
-
+        
     } catch (err) {
         logger.info('An Exception Has occured in updateDriverLocation method' + err);
     }
