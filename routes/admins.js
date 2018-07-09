@@ -22,9 +22,9 @@ router.post('/register', async (req, res) => {
     
     let user_type = 'admin';
     let admin = await Admin.findOne({ email: req.body.email });
-    if (admin) return res.status(400).send('admin already registered.');
+    if (admin) return res.status(400).send('Admin already registered.');
 
-    admin = new Admin(_.pick(req.body, ['name', 'email', 'password', 'phone']));
+    admin = new Admin(_.pick(req.body, ['name', 'email', 'password', 'phone','speedLimit']));
 
     const salt = await bcrypt.genSalt(10);
     admin.password = await bcrypt.hash(admin.password, salt);
