@@ -7,6 +7,7 @@ var Driver = require('./driver');
 var overSpeedAlertSchema  = mongoose.model('OverSpeedAlert', new mongoose.Schema({
     _driverId: { type: mongoose.Schema.Types.ObjectId, ref: 'Driver'},
    msg:String,
+   driverName:String,
    speed: Number    
 } , {timestamps: true}));
 

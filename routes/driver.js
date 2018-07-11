@@ -195,12 +195,15 @@ router.post('/overSpeedingAlert', async (req, res) => {
   
   let driverId = req.body.id;
   let speed = req.body.speed;
-
+ 
 
   const driver = await Driver.findOne({_id:driverId});
-  
+  // if (driver){
+
+  // }
    newOverSpeedAlert = new OverSpeedAlert({ 
    _driverId: driverId,
+   driverName:driver.name,
   //  msg:'',
    speed: speed    
   });
@@ -248,7 +251,7 @@ router.post('/overSpeedingAlert', async (req, res) => {
       }
   });
   }
-  
+
 
   if (!newOverSpeedAlert) return res.status(404).send('There was some error in sending Alert To Admin');
 
@@ -256,13 +259,6 @@ router.post('/overSpeedingAlert', async (req, res) => {
 
 });
 
-router.get('/overSpeedingAlert', adminAuth, async (req, res) => {
-  // const query = req.params.id;
-  const overSpeedAlerts = await OverSpeedAlert.find({  });
-  if (!overSpeedAlerts) return res.status(404).send('OverSpeedAlerts List is Empty.');
-  
-  res.jsonp({ status: 'Success', message: 'Over Speed Alerts List. ', object: overSpeedAlerts });
-});
 
 
 module.exports = router; 
