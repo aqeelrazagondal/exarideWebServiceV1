@@ -121,7 +121,8 @@ router.get('/', adminAuth, async (req, res) => {
         phone: user.phone,
         profile_photo_url: user.profile_photo_url,
         loc: user.loc,
-        last_shared_loc_time: user.last_shared_loc_time
+        last_shared_loc_time: user.last_shared_loc_time,
+        showLoc: driver[i].showLoc
       }
       listofDrivers.push(driverResponseObject);
     }
