@@ -51,7 +51,7 @@ exports.sendMessageToDriver = async function(reqData,res){
                         headers: headers,
                  
                         json: {
-                            'from': 'BMS',
+                            'from': 'SmartRide',
                             'to': user.phone,
                             'text': adminMessage
                         }

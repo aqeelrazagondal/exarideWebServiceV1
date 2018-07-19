@@ -16,6 +16,7 @@ const Location = require('../models/location');
 const Rider  = require('../models/rider');
 const ShiftRider = require('../models/shiftRider');
 const Shift = require('../models/shift');
+const Admin = require('../models/admin');
 const mongoose = require('mongoose');
 const geolib = require('geolib');
 const express = require('express');
@@ -120,49 +121,66 @@ async function inRadiusNotification(user, riderId, location){
 }
 
 
-async function inEndLocRadiusNotification(user, riderId, location){
+async function inStartLocRadiusNotification(userLoc){
 
+    if (userLoc){
+        var distance
+        const shifts = await Shift.find({});
+        var location;
+        for (var i =0 ; i <shifts.length ; i ++){
 
-    if (location){
-
-        var distance = geolib.getDistance(
-            user.loc,
+            location = await Location.find({_id : shifts[i]._startLocId });
+            distance = geolib.getDistance(
+            userLoc,
             location.loc
             );
-            logger.info ('*distance between driver and rider pick up loc: '+ location.title +' is :'+ distance);
-            
-            //Check if distance is less then defined radius
-            
-            if (distance<location.radius)
-            {
-                //inside Radius, Send Push Notification
-                logger.info ('***inside Radius, Send Push Notification');   
-                let rider = await Rider.findOne({ _id: riderId });
-                if(!rider) return res.jsonp  ({ status: 'failure', message: 'Rider not found by userID', object: [] });
-                logger.info('Sending Notification to One signal  id ' + rider.onesignalid );
-                logger.info('Loc Object : long  = ' + location.loc[0] + "** lat =" +  location.loc[1] + "** radius =" + location.radius);
-                //logger.info('Individual Conversation msg  before Push Notification:'  );		
-               var message = "Bus is near your pick up Location";
+             
+            if (distance<500) {
+                //inside Radius, Send Message To admin
+                logger.info ('inside Start Loc Radius, Send Message To admin'); 
+                //Sending Sms To Admin
+                const admin = await Admin.find({});
+                if (admin){
 
-               if (rider.last_notification_time){
-                var difference_ms = new Date() - rider.last_notification_time;
-                logger.info('Difference in ms is : ' + difference_ms);
-                if (difference_ms>1800000){
-                    logger.info('Notifcation Sent 3 min before');
-                    NotificationController.sendNotifcationToPlayerId(rider.onesignalid,message);
-                    rider.last_notification_time= new Date();
-                }else{
-                    logger.info('Notifcation Sent in less then 3 min');
+                let adminMessage="Buss Have Reached In Source Point Radius. ";
+                console.log('ADMIN MESSAGE!! ', adminMessage);   
+                var headers = {
+
+                    'Authorization':       'Basic ZmFsY29uLmV5ZTowMzM1NDc3OTU0NA==',
+                    'Content-Type':     'application/json',
+                    'Accept':       'application/json'
                 }
-               }else {
-                logger.info ('Sending Location For First Time');   
-                NotificationController.sendNotifcationToPlayerId(rider.onesignalid,message);
-                rider.last_notification_time= new Date();
-               }
+                // Configure the request
+                var options = {
+                    url: 'http://107.20.199.106/sms/1/text/single',
+                    method: 'POST',
+                    headers: headers,
+
+                    json: {
+                        'from': 'SmartRide',
+                        'to': admin.phone,
+                        'text': adminMessage
+                    }
+                }
+
+                // Start the request
+                request(options, function (error, response, body) {
+                    if (!error ) {
+                        // Print out the response body
+                        console.log(body)
+                        logger.info('Sucessful Response of SMS API : ' + body );
+                    }
+                    else{
+                        logger.info('Response/Error of SMS API : ' + error );
+                    }
+                });
+                }      
                
             }else{
-                logger.info ('**Distance: '+distance + 'is greater then radius ' + location.radius);  
+                logger.info ('Not inside Start Loc Radius'); 
             }
+        }
+           
     }
 
         		
@@ -190,14 +208,14 @@ exports.updateDriverLocation = async function(reqData, res){
                 const shifts = await Shift.find({ _driverId: driver._id }).sort('-date');
                 if ( !shifts ) return res.status(404).jsonp({ status : "failure", message : "Shift cannot fint by the given ID.", object : []});
                 console.log('List of shifts', shifts);
-            
-                // for (var i = 0; i < shifts.length; i++) {
-    
-                // }
-    
+
                 user.loc = [ latitude,longitude];
                 user.last_shared_loc_time = new Date();
                 await user.save();
+                
+                //Check if In Radius of Start Loc
+                inStartLocRadiusNotification(user.loc);
+
                 logger.info('User Location after Update ' + user.loc);
                 logger.info('User Location With email ' + user.email);
                 console.log('########### FOUND A USER ##########', user);

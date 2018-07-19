@@ -229,7 +229,7 @@ router.post('/overSpeedingAlert', async (req, res) => {
       headers: headers,
 
       json: {
-          'from': 'BMS',
+          'from': 'SmartRide',
           'to': admin.phone,
           'text': adminMessage
       }

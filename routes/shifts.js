@@ -403,6 +403,7 @@ router.post('/status', async (req, res) => {
     shift.shiftStatus = shiftStatus;
     await shift.save();
     if (!shiftStatus){
+        logger.info('Shift status is offline Setting driver loc off : '+ shift._driverId   );
         let driver = await Driver.findOne({ _id: shift._driverId });
         driver.showLoc=false;
         await driver.save();
