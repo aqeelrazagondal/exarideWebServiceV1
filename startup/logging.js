@@ -7,7 +7,7 @@ const fs = require('fs');
 
 const env = process.env.NODE_ENV || 'development';
 process.on('uncaughtException', (ex) => {
-  console.log('WE GOT AND UNCAUGHT EXCEPTION');
+  console.log('WE GOT an UNCAUGHT EXCEPTION' + ex.message);
   winston.error(ex.message, ex);
   process.exit(1);
 });
