@@ -130,6 +130,7 @@ async function inStartLocRadiusNotification(userLoc){
         for (var i =0 ; i <shifts.length ; i ++){
 
             location = await Location.find({_id : shifts[i]._startLocId });
+            if (location.loc){
             distance = geolib.getDistance(
             userLoc,
             location.loc
@@ -180,10 +181,8 @@ async function inStartLocRadiusNotification(userLoc){
                 logger.info ('Not inside Start Loc Radius'); 
             }
         }
-           
-    }
-
-        		
+        }      
+    }        		
 }
 exports.updateDriverLocation = async function(reqData, res){
 
