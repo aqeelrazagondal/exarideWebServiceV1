@@ -402,7 +402,13 @@ router.post('/status', async (req, res) => {
 
     shift.shiftStatus = shiftStatus;
     await shift.save();
+    if (!shiftStatus){
+        let driver = await Driver.findOne({ _id: shift._driverId });
+        driver.showLoc=false;
+        await driver.save();
 
+    }
+ 
     res.jsonp({
         status: 'success',
         message: 'shift status updated!',

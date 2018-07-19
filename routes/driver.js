@@ -148,15 +148,11 @@ router.post('/panic', async (req, res) => {
   let panicFlag = req.body.panic;
 
   const driver = await Driver.findOne({ _id: driverId });
-  driver.panic = panicFlag;
-  
-  // var message ="Message From QAU SERVER";	
-   
-  // logger.info('Sending Notification of closed Group to player id ' +driver.onesignalid);
-  // if (driver.onesignalid){
-  //   NotificationController.sendNotifcationToPlayerId(driver.onesignalid,message);
-
-  // }
+  if ( driver.panic){
+    driver.panic=false;
+  }else {
+    driver.panic = true;
+  }
   
   await driver.save();
  
