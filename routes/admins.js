@@ -41,6 +41,23 @@ router.post('/register', async (req, res) => {
     });
 });
 
+
+router.post('/onesignal', async (req, res) => {                         
+    
+  let user_type = 'admin';
+  let oneSignalId = req.body.oneSignalId;
+  let admin = await Admin.findOne({ email: req.body.email });
+  if (!admin) return res.status(400).send('Admin Does not Exists.');
+
+  admin.onesignalid=oneSignalId;
+  await admin.save();
+
+  res.jsonp({
+    status: 'success',
+    message: 'Onesignal Id Successfully Updated! ',
+    object: []    
+  });
+});
 router.post('/login', async (req, res) => {
     let email = req.body.email;
     let password = req.body.password;
