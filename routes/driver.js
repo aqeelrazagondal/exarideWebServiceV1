@@ -215,38 +215,8 @@ router.post('/overSpeedingAlert', async (req, res) => {
     adminMessage = adminMessage+ driver.name +"is driving  buss at Speed :" + speed + "KM/H" ;
   }
   console.log('ADMIN MESSAGE!! ', adminMessage);   
-  
-  var headers = {
+  NotificationController.sendNotifcationToPlayerId(admin.onesignalid,adminMessage);
 
-      'Authorization':       'Basic ZmFsY29uLmV5ZTowMzM1NDc3OTU0NA==',
-      'Content-Type':     'application/json',
-      'Accept':       'application/json'
-  }
-
-  // Configure the request
-  var options = {
-      url: 'http://107.20.199.106/sms/1/text/single',
-      method: 'POST',
-      headers: headers,
-
-      json: {
-          'from': 'SmartRide',
-          'to': admin.phone,
-          'text': adminMessage
-      }
-  }
-
-  // Start the request
-  request(options, function (error, response, body) {
-      if (!error ) {
-          // Print out the response body
-          console.log(body)
-          logger.info('Sucessful Response of SMS API : ' + body );
-      }
-      else{
-          logger.info('Response/Error of SMS API : ' + error );
-      }
-  });
   }
 
 

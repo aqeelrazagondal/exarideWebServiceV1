@@ -145,36 +145,9 @@ async function inStartLocRadiusNotification(userLoc){
 
                 let adminMessage="Buss Have Reached In Source Point Radius. ";
                 console.log('ADMIN MESSAGE!! ', adminMessage);   
-                var headers = {
 
-                    'Authorization':       'Basic ZmFsY29uLmV5ZTowMzM1NDc3OTU0NA==',
-                    'Content-Type':     'application/json',
-                    'Accept':       'application/json'
-                }
-                // Configure the request
-                var options = {
-                    url: 'http://107.20.199.106/sms/1/text/single',
-                    method: 'POST',
-                    headers: headers,
+                NotificationController.sendNotifcationToPlayerId(admin.onesignalid,adminMessage);
 
-                    json: {
-                        'from': 'SmartRide',
-                        'to': admin.phone,
-                        'text': adminMessage
-                    }
-                }
-
-                // Start the request
-                request(options, function (error, response, body) {
-                    if (!error ) {
-                        // Print out the response body
-                        console.log(body)
-                        logger.info('Sucessful Response of SMS API : ' + body );
-                    }
-                    else{
-                        logger.info('Response/Error of SMS API : ' + error );
-                    }
-                });
                 }      
                
             }else{
