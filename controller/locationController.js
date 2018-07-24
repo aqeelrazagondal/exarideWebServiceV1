@@ -149,7 +149,7 @@ async function inStartLocRadiusNotification(userLoc){
                 let adminMessage="Buss Have Reached In Source Point Radius. ";
                 console.log('ADMIN MESSAGE!! ', adminMessage);   
 
-                NotificationController.sendNotifcationToPlayerId(admin.onesignalid,adminMessage);
+                NotificationController.sendNotifcationToPlayerId(admin[0].onesignalid,adminMessage);
 
                 }      
                

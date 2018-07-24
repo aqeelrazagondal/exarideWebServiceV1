@@ -209,13 +209,12 @@ router.post('/overSpeedingAlert', async (req, res) => {
   //Sending Sms To Admin
   const admin = await Admin.find({});
   if (admin){
-
     let adminMessage="Attention Please! Driver  ";
   if (driver){
     adminMessage = adminMessage+ driver.name +"is driving  buss at Speed :" + speed + "KM/H" ;
   }
   console.log('ADMIN MESSAGE!! ', adminMessage);   
-  NotificationController.sendNotifcationToPlayerId(admin.onesignalid,adminMessage);
+  NotificationController.sendNotifcationToPlayerId(admin[0].onesignalid,adminMessage);
 
   }
 
