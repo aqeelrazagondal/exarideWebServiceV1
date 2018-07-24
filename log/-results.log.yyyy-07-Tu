@@ -1,0 +1,2 @@
+{"level":"verbose","message":"panic-POST called ","timestamp":"12:47:05"}
+{"level":"info","message":"::1 - - [24/Jul/2018:07:47:06 +0000] \"POST /api/driver/panic HTTP/1.1\" 200 353 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36\"\n","timestamp":"12:47:06"}

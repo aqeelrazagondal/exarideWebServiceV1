@@ -103,6 +103,7 @@ async function inRadiusNotification(user, riderId, location){
                     logger.info('Notifcation Sent 3 min before');
                     NotificationController.sendNotifcationToPlayerId(rider.onesignalid,message);
                     rider.last_notification_time= new Date();
+                     await rider.save();
                 }else{
                     logger.info('Notifcation Sent in less then 3 min');
                 }
@@ -110,6 +111,8 @@ async function inRadiusNotification(user, riderId, location){
                 logger.info ('Sending Location For First Time');   
                 NotificationController.sendNotifcationToPlayerId(rider.onesignalid,message);
                 rider.last_notification_time= new Date();
+                await rider.save();
+
                }
                
             }else{
