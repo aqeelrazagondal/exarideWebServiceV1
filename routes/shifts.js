@@ -408,6 +408,11 @@ router.post('/status', async (req, res) => {
         let driver = await Driver.findOne({ _id: shift._driverId });
         driver.showLoc=false;
         await driver.save();
+    }else{
+        logger.info('Shift status is Online Setting driver loc On : '+ shift._driverId   );
+        let driver = await Driver.findOne({ _id: shift._driverId });
+        driver.showLoc=true;
+        await driver.save();
     }
  
     res.jsonp({
