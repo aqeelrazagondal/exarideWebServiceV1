@@ -127,12 +127,15 @@ async function inRadiusNotification(user, riderId, location){
 async function inStartLocRadiusNotification(userLoc){
     logger.info('inStartLocRadiusNotification Method, user Loc : ' + userLoc);
     if (userLoc){
-        var distance
+        logger.info(' user Loc Found');
+        var distance;
         const shifts = await Shift.find({});
         var location;
+        logger.info(' shifts.length : ' + shifts.length);
         for (var i =0 ; i <shifts.length ; i ++){
 
             location = await Location.find({_id : shifts[i]._startLocId });
+            logger.info(' Locarion Id : ' + location._id);
             if (location.loc){
             logger.info('Start Loc of shift found  ');
             distance = geolib.getDistance(
