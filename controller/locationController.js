@@ -125,19 +125,19 @@ async function inRadiusNotification(user, riderId, location){
 
 
 async function inStartLocRadiusNotification(userLoc){
-    logger.info('inStartLocRadiusNotification Method, user Loc : ' + userLoc);
+    logger.info('+ inStartLocRadiusNotification Method, user Loc : ' + userLoc);
     if (userLoc){
-        logger.info(' user Loc Found');
+        logger.info('+  user Loc Found');
         var distance;
         const shifts = await Shift.find({});
         var location;
-        logger.info(' shifts.length : ' + shifts.length);
+        logger.info('+  shifts.length : ' + shifts.length);
         for (var i =0 ; i <shifts.length ; i ++){
 
             location = await Location.find({_id : shifts[i]._startLocId });
-            logger.info(' Locarion Id : ' + location._id);
+            logger.info('+ Locarion Id : ' + location._id);
             if (location.loc){
-            logger.info('Start Loc of shift found  ');
+            logger.info('+ Start Loc of shift found  ');
             distance = geolib.getDistance(
             userLoc,
             location.loc
@@ -145,25 +145,25 @@ async function inStartLocRadiusNotification(userLoc){
              
             if (distance<300) {
                 //inside Radius, Send Message To admin
-                logger.info ('inside Start Loc Radius, Send Message To admin'); 
+                logger.info ('+ inside Start Loc Radius, Send Message To admin'); 
                 //Sending Sms To Admin
                 const admin = await Admin.find({});
                 if (admin){
 
                 let adminMessage="Buss Have Reached In Source Point. ";
-                console.log('ADMIN MESSAGE!! ', adminMessage);   
+                logger.info('+ ADMIN MESSAGE!! ', adminMessage);   
 
                 NotificationController.sendNotifcationToPlayerId(admin[0].onesignalid,adminMessage);
 
                 }      
                
             }else{
-                logger.info ('Not inside Start Loc Radius'); 
+                logger.info ('+ Not inside Start Loc Radius'); 
             }
         }
         }      
     }else{
-        logger.info ('User Loc :'+ userLoc); 
+        logger.info ('+ User Loc :'+ userLoc); 
     }      		
 }
 exports.updateDriverLocation = async function(reqData, res){
