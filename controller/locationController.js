@@ -159,7 +159,9 @@ async function inStartLocRadiusNotification(userLoc){
             }
         }
         }      
-    }        		
+    }else{
+        logger.info ('User Loc :'+ userLoc); 
+    }      		
 }
 exports.updateDriverLocation = async function(reqData, res){
 
@@ -194,7 +196,7 @@ exports.updateDriverLocation = async function(reqData, res){
 
                 logger.info('User Location after Update ' + user.loc);
                 logger.info('User Location With email ' + user.email);
-                console.log('########### FOUND A USER ##########', user);
+                // console.log('########### FOUND A USER ##########', user);
             
                 riders=await Rider.find();
                 for(i = 0; i < riders.length; i++){
