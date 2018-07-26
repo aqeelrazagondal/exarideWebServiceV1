@@ -125,7 +125,7 @@ async function inRadiusNotification(user, riderId, location){
 
 
 async function inStartLocRadiusNotification(userLoc){
-    logger.info('inStartLocRadiusNotification Method ');
+    logger.info('inStartLocRadiusNotification Method, user Loc : ' + userLoc);
     if (userLoc){
         var distance
         const shifts = await Shift.find({});
