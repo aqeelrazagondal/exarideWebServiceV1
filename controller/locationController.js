@@ -125,7 +125,7 @@ async function inRadiusNotification(user, riderId, location){
 
 
 async function inStartLocRadiusNotification(userLoc){
-
+    logger.info('inStartLocRadiusNotification Method ');
     if (userLoc){
         var distance
         const shifts = await Shift.find({});
@@ -134,19 +134,20 @@ async function inStartLocRadiusNotification(userLoc){
 
             location = await Location.find({_id : shifts[i]._startLocId });
             if (location.loc){
+            logger.info('Start Loc of shift found  ');
             distance = geolib.getDistance(
             userLoc,
             location.loc
             );
              
-            if (distance<500) {
+            if (distance<300) {
                 //inside Radius, Send Message To admin
                 logger.info ('inside Start Loc Radius, Send Message To admin'); 
                 //Sending Sms To Admin
                 const admin = await Admin.find({});
                 if (admin){
 
-                let adminMessage="Buss Have Reached In Source Point Radius. ";
+                let adminMessage="Buss Have Reached In Source Point. ";
                 console.log('ADMIN MESSAGE!! ', adminMessage);   
 
                 NotificationController.sendNotifcationToPlayerId(admin[0].onesignalid,adminMessage);
@@ -182,7 +183,7 @@ exports.updateDriverLocation = async function(reqData, res){
                 // finding shift for against given driver ID 
                 const shifts = await Shift.find({ _driverId: driver._id }).sort('-date');
                 if ( !shifts ) return res.status(404).jsonp({ status : "failure", message : "Shift cannot fint by the given ID.", object : []});
-                console.log('List of shifts', shifts);
+                // console.log('List of shifts', shifts);
 
                 user.loc = [ latitude,longitude];
                 user.last_shared_loc_time = new Date();
