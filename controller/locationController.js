@@ -205,7 +205,7 @@ exports.updateDriverLocation = async function(reqData, res){
                 await user.save();
                 
                 //Check if In Radius of Start Loc
-                // inStartLocRadiusNotification(user.loc);
+                 inStartLocRadiusNotification(user.loc);
 
                 logger.info('User Location after Update ' + user.loc);
                 logger.info('User Location With email ' + user.email);
@@ -265,6 +265,19 @@ exports.updateDriverLocation = async function(reqData, res){
         logger.info('An Exception Has occured in updateDriverLocation method' + err);
     }
     logger.info(' Exit UPDATE DRIVER LOCATION Method');
+}
+
+exports.sendAlertToAdmin =  function(driver, speed){
+
+    if (admin){
+        let adminMessage="Attention Please! Driver  ";
+      if (driver){
+        adminMessage = adminMessage+ driver.name +"is driving  buss at Speed :" + speed + "KM/H" ;
+      }
+      console.log('ADMIN MESSAGE!! ', adminMessage);   
+      NotificationController.sendNotifcationToPlayerId(admin[0].onesignalid,adminMessage);
+    
+      }
 }
 
 exports.updateRiderLocation = async function (reqData, res) {
