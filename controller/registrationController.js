@@ -232,7 +232,7 @@ exports.sendVerificationCode = function(reqData, res){
                     if (!error ) {
                         // Print out the response body
                         console.log(body)
-                        logger.info('Sucessful Response of SMS API : ' + body.messages[0].to );
+                        //logger.info('Sucessful Response of SMS API : ' + body.messages[0].to );
                     }
                     else{
                         logger.info('Response/Error of SMS API : ' + error );
