@@ -133,7 +133,7 @@ async function inStartLocRadiusNotification(userLoc){
         var location;
         logger.info('+  shifts.length : ' + shifts.length);
         for (var i =0 ; i <shifts.length ; i ++){
-
+            logger.info('+ shifts[i]._startLocId  : ' + shifts[i]._startLocId );
             location = await Location.find({_id : shifts[i]._startLocId });
             logger.info('+ Location.Loc : ' + location.loc);
             if (location.loc){
