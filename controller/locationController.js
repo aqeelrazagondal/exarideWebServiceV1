@@ -205,7 +205,7 @@ exports.updateDriverLocation = async function(reqData, res){
                 await user.save();
                 
                 //Check if In Radius of Start Loc
-                inStartLocRadiusNotification(user.loc);
+                // inStartLocRadiusNotification(user.loc);
 
                 logger.info('User Location after Update ' + user.loc);
                 logger.info('User Location With email ' + user.email);

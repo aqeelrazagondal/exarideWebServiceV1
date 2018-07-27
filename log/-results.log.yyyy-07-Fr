@@ -6,3 +6,11 @@
 {"level":"info","message":" Exit chatController.sendMessageToDriver Method","timestamp":"10:08:28"}
 {"level":"info","message":"::1 - - [27/Jul/2018:05:08:28 +0000] \"POST /api/admin/sendSmsToAllDrivers HTTP/1.1\" 200 58 \"http://localhost:4200/sms\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36\"\n","timestamp":"10:08:28"}
 {"level":"info","message":"Sucessful Response of SMS API : Your Message is sent.","timestamp":"10:08:32"}
+{"level":"verbose","message":"overSpeedingAlert-POST called ","timestamp":"15:21:04"}
+{"level":"info","message":"::1 - - [27/Jul/2018:10:21:05 +0000] \"POST /api/driver/overSpeedingAlert HTTP/1.1\" 500 61 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36\"\n","timestamp":"15:21:05"}
+{"level":"verbose","message":"overSpeedingAlert-POST called ","timestamp":"15:22:39"}
+{"level":"info","message":"::1 - - [27/Jul/2018:10:22:40 +0000] \"POST /api/driver/overSpeedingAlert HTTP/1.1\" 500 61 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36\"\n","timestamp":"15:22:40"}
+{"level":"verbose","message":"overSpeedingAlert-POST called ","timestamp":"15:31:26"}
+{"level":"info","message":"::1 - - [27/Jul/2018:10:31:26 +0000] \"POST /api/driver/overSpeedingAlert HTTP/1.1\" 500 61 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36\"\n","timestamp":"15:31:26"}
+{"level":"verbose","message":"overSpeedingAlert-POST called ","timestamp":"15:32:05"}
+{"level":"info","message":"::1 - - [27/Jul/2018:10:32:06 +0000] \"POST /api/driver/overSpeedingAlert HTTP/1.1\" 200 265 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36\"\n","timestamp":"15:32:06"}
