@@ -130,17 +130,17 @@ async function inStartLocRadiusNotification(userLoc){
         logger.info('+  user Loc Found');
         var distance;
         const shifts = await Shift.find({});
-        var location;
+        
         logger.info('+  shifts.length : ' + shifts.length);
         for (var i =0 ; i <shifts.length ; i ++){
             logger.info('+ shifts[i]._startLocId  : ' + shifts[i]._startLocId );
-            location = await Location.find({_id : shifts[i]._startLocId });
-            logger.info('+ Location OBJ: ' + location);
-            if (location.loc){
+            const startLoc = await Location.find({_id : shifts[i]._startLocId });
+            logger.info('+ Location OBJ: ' + startLoc);
+            if (startLoc.loc){
             logger.info('+ Start Loc of shift found  ');
             distance = geolib.getDistance(
             userLoc,
-            location.loc
+            startLoc.loc
             );
              
             if (distance<300) {
@@ -160,6 +160,8 @@ async function inStartLocRadiusNotification(userLoc){
             }else{
                 logger.info ('+ Not inside Start Loc Radius'); 
             }
+        }else {
+            logger.info('+ Start Loc of shift Not found  ');
         }
         }      
     }else{
