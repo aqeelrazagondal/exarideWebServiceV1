@@ -267,7 +267,7 @@ exports.updateDriverLocation = async function(reqData, res){
     logger.info(' Exit UPDATE DRIVER LOCATION Method');
 }
 
-exports.sendAlertToAdmin =  function(driver, speed){
+exports.sendAlertToAdmin = async function(driver, speed){
  const admin = await Admin.find({});
     if (admin){
         let adminMessage="Attention Please! Driver  ";
