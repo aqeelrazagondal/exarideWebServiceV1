@@ -6,8 +6,8 @@ const regCtrl = require('../controller/registrationController');
 const LocController = require('../controller/locationController');
 const router = express.Router();
 
-router.post('/sendSmsToAllDrivers', async (req, res) => {  
+// router.post('/sendSmsToAllDrivers', async (req, res) => {  
   
-});
+// });
 
 module.exports = router; 

@@ -147,18 +147,21 @@ exports.sendVerificationCode = function(reqData, res){
                         'Accept':       'application/json'
                     }
 
-                // Configure the request
-                var options = {
-                    url: 'http://107.20.199.106/sms/1/text/single',
-                    method: 'POST',
-                    headers: headers,
-             
-                    json: {
-                        'from': 'SmartRide',
-                         'to': user.phone,
-                         'text':verificationMsg
-                      }
-                }
+            
+                    // Configure the request
+                    var options = {
+                        // url: 'http://107.20.199.106/sms/1/text/single',
+                        url: 'http://sms.brandedsms.net//api/sms-api.php?username=omer&password=omer&phone='
+                                +user.phone+'&sender=Step&message='+verificationMsg,
+                        method: 'GET',
+                        // headers: headers,
+                 
+                        // json: {
+                        //     'from': 'SmartRide',
+                        //     'to': user.phone,
+                        //     'text': adminMessage
+                        // }
+                    }
 
                 // Start the request
                 request(options, function (error, response, body) {
@@ -212,17 +215,18 @@ exports.sendVerificationCode = function(reqData, res){
 
                 // Configure the request
                 var options = {
-                    url: 'http://107.20.199.106/sms/1/text/single',
-                    method: 'POST',
-                    headers: headers,
-
-                    json: {
-                        'from': 'BMS',
-                        'to': user.phone,
-                        'text':verificationMsg
-                    }
+                    // url: 'http://107.20.199.106/sms/1/text/single',
+                    url: 'http://sms.brandedsms.net//api/sms-api.php?username=omer&password=omer&phone='
+                            +user.phone+'&sender=Step&message='+verificationMsg,
+                    method: 'GET',
+                    // headers: headers,
+            
+                    // json: {
+                    //     'from': 'SmartRide',
+                    //     'to': user.phone,
+                    //     'text': adminMessage
+                    // }
                 }
-
                 // Start the request
                 request(options, function (error, response, body) {
                     if (!error ) {

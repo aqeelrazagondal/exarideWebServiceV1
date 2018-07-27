@@ -1,0 +1,8 @@
+{"level":"info","message":"::1 - - [27/Jul/2018:05:07:51 +0000] \"OPTIONS /admin/sendSmsToAllDrivers HTTP/1.1\" 204 0 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36\"\n","timestamp":"10:07:51"}
+{"level":"info","message":"::1 - - [27/Jul/2018:05:07:52 +0000] \"POST /admin/sendSmsToAllDrivers HTTP/1.1\" 404 165 \"http://localhost:4200/sms\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36\"\n","timestamp":"10:07:52"}
+{"level":"info","message":"::1 - - [27/Jul/2018:05:08:27 +0000] \"OPTIONS /api/admin/sendSmsToAllDrivers HTTP/1.1\" 204 0 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36\"\n","timestamp":"10:08:27"}
+{"level":"info","message":"ChatController.sendMessageToDriver called  :","timestamp":"10:08:27"}
+{"level":"info","message":"User Found with mobile number 923124999213","timestamp":"10:08:28"}
+{"level":"info","message":" Exit chatController.sendMessageToDriver Method","timestamp":"10:08:28"}
+{"level":"info","message":"::1 - - [27/Jul/2018:05:08:28 +0000] \"POST /api/admin/sendSmsToAllDrivers HTTP/1.1\" 200 58 \"http://localhost:4200/sms\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36\"\n","timestamp":"10:08:28"}
+{"level":"info","message":"Sucessful Response of SMS API : Your Message is sent.","timestamp":"10:08:32"}

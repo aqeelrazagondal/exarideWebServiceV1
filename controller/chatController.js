@@ -37,24 +37,26 @@ exports.sendMessageToDriver = async function(reqData,res){
         
                     console.log('Saved message', user.message);
                     
-                    var headers = {
+                    // var headers = {
         
-                        'Authorization':       'Basic ZmFsY29uLmV5ZTowMzM1NDc3OTU0NA==',
-                        'Content-Type':     'application/json',
-                        'Accept':       'application/json'
-                    }
+                    //     'Authorization':       'Basic ZmFsY29uLmV5ZTowMzM1NDc3OTU0NA==',
+                    //     'Content-Type':     'application/json',
+                    //     'Accept':       'application/json'
+                    // }
         
                     // Configure the request
                     var options = {
-                        url: 'http://107.20.199.106/sms/1/text/single',
-                        method: 'POST',
-                        headers: headers,
+                        // url: 'http://107.20.199.106/sms/1/text/single',
+                        url: 'http://sms.brandedsms.net//api/sms-api.php?username=omer&password=omer&phone='
+                                +user.phone+'&sender=Step&message='+adminMessage,
+                        method: 'GET',
+                        // headers: headers,
                  
-                        json: {
-                            'from': 'SmartRide',
-                            'to': user.phone,
-                            'text': adminMessage
-                        }
+                        // json: {
+                        //     'from': 'SmartRide',
+                        //     'to': user.phone,
+                        //     'text': adminMessage
+                        // }
                     }
         
                     // Start the request
