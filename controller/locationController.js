@@ -136,6 +136,8 @@ async function inStartLocRadiusNotification(userLoc){
             logger.info('+ shifts[i]._startLocId  : ' + shifts[i]._startLocId );
             const startLoc = await Location.find({_id : shifts[i]._startLocId });
             logger.info('+ Location OBJ: ' + startLoc);
+            logger.info('+ Location title: ' + startLoc.title);
+            
             if (startLoc.loc){
             logger.info('+ Start Loc of shift found  ');
             distance = geolib.getDistance(
