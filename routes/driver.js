@@ -206,7 +206,7 @@ router.post('/overSpeedingAlert', async (req, res) => {
   });
   await newOverSpeedAlert.save();
 
-  //Sending Sms To Admin
+  //Sending Notification To Admin
   const admin = await Admin.find({});
   if (admin){
     let adminMessage="Attention Please! Driver  ";

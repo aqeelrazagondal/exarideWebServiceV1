@@ -125,6 +125,8 @@ async function inRadiusNotification(user, riderId, location){
 
 
 async function inStartLocRadiusNotification(userLoc){
+    try{
+
     logger.info('+ inStartLocRadiusNotification Method, user Loc : ' + userLoc);
     if (userLoc){
         logger.info('+  user Loc Found');
@@ -169,7 +171,10 @@ async function inStartLocRadiusNotification(userLoc){
         }      
     }else{
         logger.info ('+ User Loc :'+ userLoc); 
-    }      		
+    } 
+}catch(err ){
+    logger.info ('Exception Caught:'+ err); 
+}     		
 }
 exports.updateDriverLocation = async function(reqData, res){
 
