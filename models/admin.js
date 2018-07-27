@@ -68,6 +68,6 @@ adminSchema.methods.generateAuthToken = function() {
 //   return Joi.validate(user, schema);
 // }
 
-const Admin = mongoose.model('Admin', adminSchema);
-module.exports.Admin = Admin; 
+// const Admin = mongoose.model('Admin', adminSchema);
+module.exports =mongoose.model('Admin', adminSchema);
 // module.exports.validate = validateUser;
