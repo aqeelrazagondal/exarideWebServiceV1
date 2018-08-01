@@ -115,7 +115,7 @@ exports.sendVerificationCode = function(reqData, res){
     var newRider;
 	//generate a code and set to user.verification_code
 	code=randomize('0', 4);
-	verificationMsg="Verification code for BMS Application : " + code;
+	verificationMsg="Verification code for QAU Smart Ride : " + code;
 	
     //find user by phone no.
     userExists(phoneNo,function(user){

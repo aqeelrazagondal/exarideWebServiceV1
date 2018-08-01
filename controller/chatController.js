@@ -29,7 +29,7 @@ exports.sendMessageToDriver = async function(reqData,res){
                 if(user.phone){
                     
                     let adminMessage;
-                    adminMessage = "Admin message for BMS Application : " + message;
+                    adminMessage = "QAU Smart Ride Admin message : " + message;
                     console.log('ADMIN MESSAGE!! ', adminMessage);   
         
                     user.message = message;
