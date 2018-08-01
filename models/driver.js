@@ -9,7 +9,7 @@ var DriverSchema  = mongoose.model('Driver', new mongoose.Schema({
     email: String,
     panic: { type: Boolean, default: false },
     onesignalid: { type: String, default: null },
-    showLoc: { type: Boolean, default: true }
+    showLoc: { type: Boolean, default: false }
     // phone: { type: String, default: null }
     
 } , {timestamps: true}));
