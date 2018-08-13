@@ -12,6 +12,7 @@ var request=require("request");
 var randomize = require('randomatic');
 const {User, validate} = require('../models/user');
 const { Driver } = require('../models/driver');
+const { DriverRating } = require('../models/driverRating');
 const Rider  = require('../models/rider');
 const mongoose = require('mongoose');
 const express = require('express');
@@ -230,6 +231,64 @@ router.post('/updateLocation', function (req, res) {
   console.log("in routes /updateLocation");
   var reqData = req.body;
   LocController.updateRiderLocation(reqData, res);
+});
+
+
+
+router.post('/ratedriver',async function (req, res) {
+
+  if (req.body === undefined || req.body === null) {
+    res.end("Empty Body");
+  }
+  console.log("in routes /ratedriver");
+  var driverId=req.body.driverId;
+  var riderId= req.body.riderId;
+  var userId= req.body.userId;
+  var behavior=req.body.behavior;
+  var driving= req.body.driving;
+  var delay= req.body.delay;
+  
+
+//   var query={ _ratedByRiderId: riderId, _driverId: driverId };
+//   DriverRating.find(query).limit(1).next(function(err, doc){
+
+//     if (doc){
+
+//       logger.info(doc);
+//     }
+//     // handle data
+//  })
+  const rating = await DriverRating.findOne({ _ratedByRiderId: riderId, _driverId: driverId });
+  if (rating){
+    rating._driverId= driverId;
+    rating._ratedByUserId= userId;
+    rating._ratedByRiderId= riderId ;
+    rating.behavior= behavior ;
+    rating.driving= driving ;
+    rating.delay= delay;
+    const rating = await rating.save();
+
+    res.status(200).jsonp({ status: 'success', message: 'Driver Rating updated!', object: rating });
+  }else {
+
+    let newRating = new DriverRating({ 
+      _driverId: driverId,
+      _ratedByUserId: userId,
+      _ratedByRiderId: riderId ,
+      behavior: behavior ,
+      driving: driving ,
+      delay:delay,
+
+  });
+  const rating = await newRating.save();
+
+  res.jsonp({
+    status: 'success',
+    messgae: 'Driver Rating saved Successfully',
+    object: rating
+  });
+  }
+
 });
 
 module.exports = router; 

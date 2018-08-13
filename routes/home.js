@@ -22,13 +22,16 @@ router.get('/overSpeedingAlert', async (req, res) => {
         }
     }
 ]
-//    const overSpeedAlerts = await OverSpeedAlert.find({  });
+    //    const overSpeedAlerts = await OverSpeedAlert.find({  });
 
-const overSpeedAlerts = await OverSpeedAlert.aggregate(aggregatorOpts).exec();  
-if (!overSpeedAlerts) return res.status(404).send('OverSpeedAlerts List is Empty.');
+    const overSpeedAlerts = await OverSpeedAlert.aggregate(aggregatorOpts).exec();  
+    if (!overSpeedAlerts) return res.status(404).send('OverSpeedAlerts List is Empty.');
     
     res.jsonp({ status: 'Success', message: 'Over Speed Alerts List. ', object: overSpeedAlerts });
   });
+  
+
+
   
 
 module.exports = router; 

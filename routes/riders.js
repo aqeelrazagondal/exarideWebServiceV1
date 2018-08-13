@@ -9,7 +9,10 @@ var upload = multer({ dest: './public/images/profileImages' });
 var request=require("request");
 const {User, validate} = require('../models/user');
 const { Driver } = require('../models/driver');
+const { ShiftRider } = require('../models/shiftRider');
 const Rider  = require('../models/rider');
+const { DriverRating } = require('../models/driverRating');
+const { Location } = require('../models/location');
 const logger = require('../startup/logging');
 const LocController = require('../controller/locationController');
 const chatController = require('../controller/chatController');
@@ -117,6 +120,8 @@ router.post('/onesignal', async (req, res) => {
   res.status(200).jsonp({ status: 'success', message: 'One Signal Id Updated!', object: rider });
 
 });
+
+
 
 
 module.exports = router; 

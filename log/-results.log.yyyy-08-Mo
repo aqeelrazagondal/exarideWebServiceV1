@@ -1,0 +1,19 @@
+{"level":"info","message":"::1 - - [13/Aug/2018:12:53:48 +0000] \"POST /api/rider/ratedriver HTTP/1.1\" 404 160 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"17:53:48"}
+{"level":"info","message":"::1 - - [13/Aug/2018:12:56:59 +0000] \"POST /api/users/ratedriver HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"17:56:59"}
+{"level":"info","message":"::1 - - [13/Aug/2018:12:58:42 +0000] \"POST /api/users/ratedriver HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"17:58:42"}
+{"level":"info","message":"::1 - - [13/Aug/2018:13:08:54 +0000] \"POST /api/users/ratedriver HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"18:08:54"}
+{"level":"info","message":"::1 - - [13/Aug/2018:13:10:09 +0000] \"POST /api/users/ratedriver HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"18:10:09"}
+{"level":"info","message":"::1 - - [13/Aug/2018:13:27:53 +0000] \"GET /api/pickUpPoints?shiftid=5b56284b3150f50014ccaf68 HTTP/1.1\" 404 155 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"18:27:53"}
+{"level":"info","message":"::1 - - [13/Aug/2018:13:29:47 +0000] \"GET /api/pickUpPoints?shiftid=5b56284b3150f50014ccaf68 HTTP/1.1\" 404 155 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"18:29:47"}
+{"level":"info","message":"rider/pickupPoints GET","timestamp":"18:32:53"}
+{"level":"info","message":"::1 - - [13/Aug/2018:13:32:53 +0000] \"GET /api/riders/pickUpPoints?shiftid=5b56284b3150f50014ccaf68 HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"18:32:53"}
+{"level":"info","message":"rider/pickupPoints GET","timestamp":"18:34:05"}
+{"level":"info","message":"::1 - - [13/Aug/2018:13:34:05 +0000] \"GET /api/riders/pickUpPoints?shiftid=5b56284b3150f50014ccaf68 HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"18:34:05"}
+{"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"18:36:56"}
+{"level":"info","message":"::1 - - [13/Aug/2018:13:36:57 +0000] \"GET /api/shifts/pickUpPoints?shiftid=5b56284b3150f50014ccaf68 HTTP/1.1\" 404 66 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"18:36:57"}
+{"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"18:38:36"}
+{"level":"info","message":"::1 - - [13/Aug/2018:13:38:36 +0000] \"GET /api/shifts/pickUpPoints?shiftid=5b56284b3150f50014ccaf68 HTTP/1.1\" 404 66 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"18:38:36"}
+{"level":"info","message":"IN SHFTS ROUTES, shifts are find by Driver ID. ","timestamp":"18:41:48"}
+{"level":"info","message":"::1 - - [13/Aug/2018:13:41:49 +0000] \"GET /api/shifts/pickuppoints?shiftid=5b56284b3150f50014ccaf68 HTTP/1.1\" 404 66 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"18:41:49"}
+{"level":"info","message":"rider/pickupPoints GET","timestamp":"18:43:39"}
+{"level":"info","message":"::1 - - [13/Aug/2018:13:43:44 +0000] \"GET /api/shifts/pickuppoints?shiftid=5b56284b3150f50014ccaf68 HTTP/1.1\" 200 298 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"18:43:44"}

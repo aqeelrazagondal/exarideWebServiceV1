@@ -24,6 +24,41 @@ router.delete('/:id', async (req, res) => {
     res.jsonp({ status: 'Success', message: 'Shift Deleted!.', object: shift });
 });
 
+
+
+router.get('/pickuppoints', async (req, res) => {
+
+    logger.info('rider/pickupPoints GET');
+    var shiftId= req.query.shiftid;
+    let listOfStops = [];
+     // list of stops
+     let shiftRider = await ShiftRider.find({_shiftId:shiftId});
+     if(!shiftRider) return res.jsonp({ status: "failure", message: "Failed To findind stops!", object: [] });
+     if(shiftRider){
+         for(let i = 0; i < shiftRider.length; i++){
+             console.log('shiftRider[i]._stopId', shiftRider[i]._stopId);
+             let pickUp = await Location.findOne({ _id: shiftRider[i]._stopId }); 
+             
+             if(pickUp){
+                 console.log('FIND A PICK UP LOCATION..!!!', pickUp.title);
+                 let stopRes = {
+                     pickUpID: pickUp._id,
+                     pickUpLocName: pickUp.title,
+                     pickUploc: pickUp.loc
+                 }
+                 listOfStops.push(stopRes);
+             }    
+         }
+     }
+     
+     
+     res.jsonp({
+        status: "success",
+        message: "Pick Up Points",
+        object: listOfStops
+    });
+  });
+  
 router.get('/speedLimit', async (req, res) => {
 
     logger.info('Get Req : /speedLimit' );
@@ -422,5 +457,7 @@ router.post('/status', async (req, res) => {
     });
 
 });
+
+
 
 module.exports = router; 
