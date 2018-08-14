@@ -23,4 +23,16 @@ router.post('/', async (req, res) => {
     });
 });
 
+router.get('/fence', async (req, res) => {
+
+    const fences = await Location.find({adminFence: true});
+    if (!fences) return res.status(404).send('Fences Not found.');
+
+
+    res.status(200).jsonp({
+        status: 'success',
+        message: 'List of Fences!',
+        object: fences
+    });
+});
 module.exports = router; 
