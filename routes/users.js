@@ -14,6 +14,7 @@ const {User, validate} = require('../models/user');
 const { Driver } = require('../models/driver');
 const { DriverRating } = require('../models/driverRating');
 const Rider  = require('../models/rider');
+const Shift  = require('../models/shift');
 const mongoose = require('mongoose');
 const express = require('express');
 var path = require('path');
@@ -241,9 +242,9 @@ router.post('/ratedriver',async function (req, res) {
     res.end("Empty Body");
   }
   console.log("in routes /ratedriver");
-  var driverId=req.body.driverId;
-  var riderId= req.body.riderId;
-  var userId= req.body.userId;
+  var routeId=req.body.routeId;
+  var phoneNo= req.body.phoneNo;
+  // var userId= req.body.userId;
   var behavior=req.body.behavior;
   var driving= req.body.driving;
   var delay= req.body.delay;
@@ -258,36 +259,47 @@ router.post('/ratedriver',async function (req, res) {
 //     }
 //     // handle data
 //  })
-  var rating = await DriverRating.findOne({ _ratedByRiderId: riderId, _driverId: driverId });
-  if (rating){
-    rating._driverId= driverId;
-    rating._ratedByUserId= userId;
-    rating._ratedByRiderId= riderId ;
-    rating.behavior= behavior ;
-    rating.driving= driving ;
-    rating.delay= delay;
-    rating = await rating.save();
-
-    res.status(200).jsonp({ status: 'success', message: 'Driver Rating updated!', object: rating });
+  var user = await User.findOne({ phone: phoneNo});
+  var shift = await Shift.findOne({ _id: routeId});
+  if (user && shift){
+    var rating = await DriverRating.findOne({ _ratedByUserId: user._id, _driverId: shift._driverId });
+    if (rating){
+      rating._driverId= shift._driverId;
+      rating._ratedByUserId= user._id;
+      // rating._ratedByRiderId= riderId ;
+      rating.behavior= behavior ;
+      rating.driving= driving ;
+      rating.delay= delay;
+      rating = await rating.save();
+  
+      res.status(200).jsonp({ status: 'success', message: 'Driver Rating updated!', object: rating });
+    }else {
+  
+      let newRating = new DriverRating({ 
+        _driverId:shift._driverId,
+        _ratedByUserId: user._id,
+        behavior: behavior ,
+        driving: driving ,
+        delay:delay,
+  
+    });
+    const rating = await newRating.save();
+  
+    res.jsonp({
+      status: 'success',
+      messgae: 'Driver Rating saved Successfully',
+      object: rating
+    });
+    }
   }else {
-
-    let newRating = new DriverRating({ 
-      _driverId: driverId,
-      _ratedByUserId: userId,
-      _ratedByRiderId: riderId ,
-      behavior: behavior ,
-      driving: driving ,
-      delay:delay,
-
-  });
-  const rating = await newRating.save();
-
-  res.jsonp({
-    status: 'success',
-    messgae: 'Driver Rating saved Successfully',
-    object: rating
-  });
+     
+    res.jsonp({
+      status: 'failure',
+      messgae: 'Unable to save raitings',
+      object: []
+    });
   }
+
 
 });
 
