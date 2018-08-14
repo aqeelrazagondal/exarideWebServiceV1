@@ -102,6 +102,36 @@ router.post('/sendSmsToAllDrivers', adminAuth, function (req, res) {
   chatController.sendMessageToDriver(reqData, res);
 });
 
+// router.post('/fence', adminAuth, function (req, res) {
+
+//   if (req.body === undefined || req.body === null) {
+//     res.end("Empty Body");
+//   }
+//   console.log("in routes /fence");
+//   var radius = req.body.radius;
+//   var name = req.body.name;
+//   var newfence = new Fence({    
+//     fenceName: name,
+//     radius: radius
+//   });
+  
+//   newfence.save(function (err, fence) {
+//     if (err){
+//       res.jsonp({
+//         status : "failure",
+//         message : "Some Error occured while saving Fence",
+//         object : []});
+//     }else {
+//       res.jsonp({
+//         status : "success",
+//         message : "Fence Successfully Saved",
+//         object : fence});
+      
+//     }
+//   });
+
+// });
+
 
 function validate(req) {
     const schema = {
