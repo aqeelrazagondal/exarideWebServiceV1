@@ -5,6 +5,7 @@ const Location = require('../models/location');
 const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
+const logger = require('../startup/logging');
 const asyncMiddleware = require('../middleware/async');
 
 router.post('/', async (req, res) => {
@@ -50,7 +51,6 @@ router.delete('/fence/:id', async (req, res) => {
     const location = await Location.findOne({ _id: query });
     if(!location) return res.status(400).jsonp({ status: 'failure', message: 'location not found by given ID.', object: [] });
     logger.info('In update location info route');
-    location
     location.title = req.body.title;
     location.radius = req.body.radius;
     await location.save();
