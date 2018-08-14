@@ -35,4 +35,26 @@ router.get('/fence', async (req, res) => {
         object: fences
     });
 });
+
+router.delete('/:id', async (req, res) => {
+    const query = req.params.id;
+    const location = await Location.findByIdAndRemove({ _id: query });
+    if(!location)  return res.status(400).jsonp({ status: 'failure', message: 'location not found by given ID.', object: [] });
+
+    res.jsonp({ status: 'Success', message: 'Location Deleted!.', object: [] });
+  });
+
+  router.patch('/:id', async (req, res) => {
+
+    const query = req.params.id;
+    const location = await Location.findOne({ _id: query });
+    if(!location) return res.status(400).jsonp({ status: 'failure', message: 'location not found by given ID.', object: [] });
+    logger.info('In update location info route');
+    location
+    location.title = req.body.title;
+    location.radius = req.body.radius;
+    await location.save();
+  
+    res.status(200).jsonp({ status: 'success', message: 'Location Info Updated.', object: location });
+  });
 module.exports = router; 
