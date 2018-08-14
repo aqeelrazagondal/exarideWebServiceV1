@@ -36,7 +36,7 @@ router.get('/fence', async (req, res) => {
     });
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/fence/:id', async (req, res) => {
     const query = req.params.id;
     const location = await Location.findByIdAndRemove({ _id: query });
     if(!location)  return res.status(400).jsonp({ status: 'failure', message: 'location not found by given ID.', object: [] });
@@ -44,7 +44,7 @@ router.delete('/:id', async (req, res) => {
     res.jsonp({ status: 'Success', message: 'Location Deleted!.', object: [] });
   });
 
-  router.patch('/:id', async (req, res) => {
+  router.patch('/fence/:id', async (req, res) => {
 
     const query = req.params.id;
     const location = await Location.findOne({ _id: query });
