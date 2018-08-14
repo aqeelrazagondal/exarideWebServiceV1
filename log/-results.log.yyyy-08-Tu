@@ -1,0 +1,9 @@
+{"level":"info","message":"::1 - - [14/Aug/2018:05:56:06 +0000] \"POST /api/users/ratedriver HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"10:56:06"}
+{"level":"info","message":"::1 - - [14/Aug/2018:05:58:35 +0000] \"POST /api/users/ratedriver HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"10:58:35"}
+{"level":"info","message":"::1 - - [14/Aug/2018:05:58:45 +0000] \"POST /api/users/ratedriver HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"10:58:45"}
+{"level":"info","message":"::1 - - [14/Aug/2018:05:59:08 +0000] \"POST /api/users/ratedriver HTTP/1.1\" 200 314 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"10:59:08"}
+{"level":"info","message":"::1 - - [14/Aug/2018:06:01:37 +0000] \"POST /api/users/ratedriver HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"11:01:37"}
+{"level":"info","message":"::1 - - [14/Aug/2018:06:03:15 +0000] \"POST /api/users/ratedriver HTTP/1.1\" 200 304 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"11:03:15"}
+{"level":"info","message":"::1 - - [14/Aug/2018:06:04:01 +0000] \"POST /api/users/ratedriver HTTP/1.1\" 200 314 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"11:04:01"}
+{"level":"info","message":"::1 - - [14/Aug/2018:06:04:22 +0000] \"POST /api/users/ratedriver HTTP/1.1\" 200 304 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"11:04:22"}
+{"level":"info","message":"::1 - - [14/Aug/2018:06:04:34 +0000] \"POST /api/users/ratedriver HTTP/1.1\" 200 314 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"11:04:34"}

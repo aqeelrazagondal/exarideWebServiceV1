@@ -16,5 +16,8 @@ const driverRatingSchema   = new mongoose.Schema({
 }, {timestamps: true});
 
 // Export the Mongoose model
-exports.DriverRating = driverRatingSchema; 
-// module.exports = mongoose.model('DriverRating', driverRatingSchema);
+
+const DriverRating = mongoose.model('DriverRating', driverRatingSchema);
+module.exports.DriverRating = DriverRating; 
+
+//  module.exports = mongoose.model('DriverRating', driverRatingSchema);

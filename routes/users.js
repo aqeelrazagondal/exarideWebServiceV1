@@ -258,7 +258,7 @@ router.post('/ratedriver',async function (req, res) {
 //     }
 //     // handle data
 //  })
-  const rating = await DriverRating.findOne({ _ratedByRiderId: riderId, _driverId: driverId });
+  var rating = await DriverRating.findOne({ _ratedByRiderId: riderId, _driverId: driverId });
   if (rating){
     rating._driverId= driverId;
     rating._ratedByUserId= userId;
@@ -266,7 +266,7 @@ router.post('/ratedriver',async function (req, res) {
     rating.behavior= behavior ;
     rating.driving= driving ;
     rating.delay= delay;
-    const rating = await rating.save();
+    rating = await rating.save();
 
     res.status(200).jsonp({ status: 'success', message: 'Driver Rating updated!', object: rating });
   }else {
