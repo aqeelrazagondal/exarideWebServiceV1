@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
     // let location = await Location.findOne({ title: req.body.title });
     // if (location) return res.status(400).send('Location already registered.');
 
-    location = new Location(_.pick(req.body, ['title', 'loc','adminFence']));
+    location = new Location(_.pick(req.body, ['title', 'loc','radius','adminFence']));
     await location.save();
 
     res.status(200).jsonp({
