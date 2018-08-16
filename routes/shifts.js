@@ -218,7 +218,10 @@ router.get('/allShifts', adminAuth, async (req, res) => {
     
         let endLoc = await Location.findOne({ _id: shifts[i]._endLocID });
         if(!endLoc) return res.status(404).jsonp({ status : "failure", message : "Location not found by the given ID.", object : []});
-    
+        
+        let driver = await Driver.findOne({ _id: shifts[i]._driverId });
+        if(!driver) return res.status(404).jsonp({ status : "failure", message : "Driver Not Found.", object : []});
+        
         shiftRes = {
             _id: shifts[i]._id,
             title: shifts[i].title,
@@ -228,6 +231,7 @@ router.get('/allShifts', adminAuth, async (req, res) => {
             shiftEndTime: shifts[i].shiftEndTime,
             vehicle: shifts[i].vehicle,
             shiftStatus:shifts[i].shiftStatus,
+            driverName:driver.name,
             listOfStops: listOfStops
         }
         
