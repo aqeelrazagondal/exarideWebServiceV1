@@ -1,0 +1,4 @@
+{"level":"info","message":"::1 - - [17/Aug/2018:12:14:30 +0000] \"GET /api/users/driverratings HTTP/1.1\" 200 232 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"17:14:30"}
+{"level":"info","message":"::1 - - [17/Aug/2018:12:16:07 +0000] \"GET /api/users/driverratings HTTP/1.1\" 200 182 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"17:16:07"}
+{"level":"info","message":"::1 - - [17/Aug/2018:12:20:10 +0000] \"GET /api/users/driverratings HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"17:20:10"}
+{"level":"info","message":"::1 - - [17/Aug/2018:12:21:18 +0000] \"GET /api/users/driverratings HTTP/1.1\" 200 182 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"17:21:18"}

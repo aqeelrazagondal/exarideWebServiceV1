@@ -303,4 +303,25 @@ router.post('/ratedriver',async function (req, res) {
 
 });
 
+
+router.get('/driverratings',async function (req, res) {
+
+  const aggregatorOpts = [{
+        $group: {
+            _id:"$_driverId",
+            avgbehavior: { $avg: "$behavior" },
+            avgdriving: { $avg: "$driving" },
+            avgdelay: { $avg: "$delay" }
+
+        }
+    }]
+    //    const overSpeedAlerts = await OverSpeedAlert.find({  });
+
+    const driverratings = await DriverRating.aggregate(aggregatorOpts).exec();  
+    if (!driverratings) return res.status(404).send('Driver Ratings List is Empty.');
+    
+    res.jsonp({ status: 'Success', message: 'Driver Ratings List. ', object: driverratings });
+
+});
+
 module.exports = router; 
