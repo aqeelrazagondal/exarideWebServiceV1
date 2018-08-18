@@ -2,3 +2,7 @@
 {"level":"info","message":"::1 - - [17/Aug/2018:12:16:07 +0000] \"GET /api/users/driverratings HTTP/1.1\" 200 182 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"17:16:07"}
 {"level":"info","message":"::1 - - [17/Aug/2018:12:20:10 +0000] \"GET /api/users/driverratings HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"17:20:10"}
 {"level":"info","message":"::1 - - [17/Aug/2018:12:21:18 +0000] \"GET /api/users/driverratings HTTP/1.1\" 200 182 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"17:21:18"}
+{"level":"info","message":"::1 - - [17/Aug/2018:12:45:34 +0000] \"GET /api/users/driverPerformance HTTP/1.1\" 500 61 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"17:45:34"}
+{"level":"info","message":"::1 - - [17/Aug/2018:12:46:52 +0000] \"GET /api/users/driverPerformance HTTP/1.1\" 200 70 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"17:46:52"}
+{"level":"info","message":"::1 - - [17/Aug/2018:12:47:42 +0000] \"GET /api/users/driverPerformance HTTP/1.1\" 200 70 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"17:47:42"}
+{"level":"info","message":"::1 - - [17/Aug/2018:13:23:14 +0000] \"GET /api/users/driverPerformance HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"18:23:14"}

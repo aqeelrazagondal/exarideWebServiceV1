@@ -1,0 +1,501 @@
+{"level":"info","message":"::1 - - [18/Aug/2018:04:58:25 +0000] \"GET /api/users/driverPerformance HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"09:58:25"}
+{"level":"info","message":"::1 - - [18/Aug/2018:04:58:54 +0000] \"GET /api/users/driverPerformance HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"09:58:54"}
+{"level":"info","message":"::1 - - [18/Aug/2018:04:59:04 +0000] \"GET /api/users/driverPerformance HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"09:59:04"}
+{"level":"info","message":"::1 - - [18/Aug/2018:05:00:13 +0000] \"GET /api/users/driverPerformance HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"10:00:13"}
+{"level":"info","message":"Driver Ratings found","timestamp":"10:01:02"}
+{"level":"info","message":"::1 - - [18/Aug/2018:05:01:02 +0000] \"GET /api/users/driverPerformance HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"10:01:02"}
+{"level":"info","message":"Driver Ratings found","timestamp":"10:02:31"}
+{"level":"info","message":"Driver Ratings Length : 2","timestamp":"10:02:31"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:02:31"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:02:31"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:02:31"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:02:31"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:02:31"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:02:31"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:02:31"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:02:31"}
+{"level":"info","message":"Driver Ratings Length : 2","timestamp":"10:02:31"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:02:31"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:02:31"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:02:31"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:02:31"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:02:31"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:02:31"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:02:31"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:02:31"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [18/Aug/2018:05:02:31 +0000] \"GET /api/users/driverPerformance HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"10:02:31"}
+{"level":"info","message":"Driver Ratings found","timestamp":"10:03:53"}
+{"level":"info","message":"Driver Ratings Length : 2","timestamp":"10:03:53"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:03:53"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:03:53"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:03:53"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:03:53"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:03:53"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:03:53"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:03:53"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:03:53"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:03:53"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:03:53"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:03:53"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:03:53"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:03:53"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:03:53"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:03:53"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:03:53"}
+{"level":"info","message":"Driver Ratings Length : 2","timestamp":"10:03:53"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:03:53"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:03:53"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:03:53"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:03:53"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:03:53"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:03:53"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:03:53"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:03:53"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:03:53"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:03:53"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:03:53"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:03:53"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:03:53"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:03:53"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:03:53"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:03:53"}
+{"level":"info","message":"::1 - - [18/Aug/2018:05:03:53 +0000] \"GET /api/users/driverPerformance HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"10:03:53"}
+{"level":"info","message":"Driver Ratings found","timestamp":"10:05:09"}
+{"level":"info","message":"Driver Ratings Length : 3","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"Driver Ratings Length : 3","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"Driver Ratings Length : 3","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:05:09"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:05:09"}
+{"level":"info","message":"::1 - - [18/Aug/2018:05:05:09 +0000] \"GET /api/users/driverPerformance HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"10:05:09"}
+{"level":"info","message":"Driver Ratings found","timestamp":"10:09:26"}
+{"level":"info","message":"Driver Ratings Length : 3","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b4372c06e29fd001483166d","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b600e6b473c5a0014ed6d86","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b4372c06e29fd001483166d","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b63195aab40370014980fd9","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b4372c06e29fd001483166d","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b6153ccd97c3a0014a2da93","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b4372c06e29fd001483166d","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b568bf9ae2022001475ddd6","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b4372c06e29fd001483166d","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b4372c06e29fd001483166d","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b4372c06e29fd001483166d","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b4376c527b0960014b3c0c7","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b4372c06e29fd001483166d","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b4372c06e29fd001483166d","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b4f2000daa8ac001421c823","timestamp":"10:09:32"}
+{"level":"info","message":"Driver Ratings Length : 3","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b63195aab40370014980fd9","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b600e6b473c5a0014ed6d86","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b63195aab40370014980fd9","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b63195aab40370014980fd9","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b63195aab40370014980fd9","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b6153ccd97c3a0014a2da93","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b63195aab40370014980fd9","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b568bf9ae2022001475ddd6","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b63195aab40370014980fd9","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b4372c06e29fd001483166d","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b63195aab40370014980fd9","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b4376c527b0960014b3c0c7","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b63195aab40370014980fd9","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b63195aab40370014980fd9","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b4f2000daa8ac001421c823","timestamp":"10:09:32"}
+{"level":"info","message":"Driver Ratings Length : 3","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b600e6b473c5a0014ed6d86","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b63195aab40370014980fd9","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b6153ccd97c3a0014a2da93","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b568bf9ae2022001475ddd6","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b4372c06e29fd001483166d","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b4376c527b0960014b3c0c7","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:09:32"}
+{"level":"info","message":"driverratings[i]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:09:32"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b4f2000daa8ac001421c823","timestamp":"10:09:32"}
+{"level":"info","message":"::1 - - [18/Aug/2018:05:09:32 +0000] \"GET /api/users/driverPerformance HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"10:09:32"}
+{"level":"info","message":"Driver Ratings found","timestamp":"10:13:14"}
+{"level":"info","message":"Driver Ratings Length : 3","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b4372c06e29fd001483166d","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b600e6b473c5a0014ed6d86","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b4372c06e29fd001483166d","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b63195aab40370014980fd9","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b4372c06e29fd001483166d","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b6153ccd97c3a0014a2da93","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b4372c06e29fd001483166d","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b568bf9ae2022001475ddd6","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b4372c06e29fd001483166d","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b4372c06e29fd001483166d","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b4372c06e29fd001483166d","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b4376c527b0960014b3c0c7","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b4372c06e29fd001483166d","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b4372c06e29fd001483166d","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b4f2000daa8ac001421c823","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"Driver Ratings Length : 3","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b63195aab40370014980fd9","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b600e6b473c5a0014ed6d86","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b63195aab40370014980fd9","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b63195aab40370014980fd9","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b63195aab40370014980fd9","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b6153ccd97c3a0014a2da93","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b63195aab40370014980fd9","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b568bf9ae2022001475ddd6","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b63195aab40370014980fd9","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b4372c06e29fd001483166d","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b63195aab40370014980fd9","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b4376c527b0960014b3c0c7","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b63195aab40370014980fd9","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b63195aab40370014980fd9","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b4f2000daa8ac001421c823","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"Driver Ratings Length : 3","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b600e6b473c5a0014ed6d86","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b63195aab40370014980fd9","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b6153ccd97c3a0014a2da93","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b568bf9ae2022001475ddd6","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b4372c06e29fd001483166d","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b4376c527b0960014b3c0c7","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts Length : 8","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id : 5b433e29b4e6a30014ed80ff","timestamp":"10:13:14"}
+{"level":"info","message":"overSpeedAlerts[j]._id : 5b4f2000daa8ac001421c823","timestamp":"10:13:14"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:13:14"}
+{"level":"info","message":"::1 - - [18/Aug/2018:05:13:14 +0000] \"GET /api/users/driverPerformance HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"10:13:14"}
+{"level":"info","message":"Driver Ratings found","timestamp":"10:16:40"}
+{"level":"info","message":"Driver Ratings Length : 3","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b4372c06e29fd001483166d","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b600e6b473c5a0014ed6d86","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b4372c06e29fd001483166d","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b63195aab40370014980fd9","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b4372c06e29fd001483166d","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b6153ccd97c3a0014a2da93","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b4372c06e29fd001483166d","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b568bf9ae2022001475ddd6","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b4372c06e29fd001483166d","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b4372c06e29fd001483166d","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b4372c06e29fd001483166d","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b4376c527b0960014b3c0c7","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b4372c06e29fd001483166d","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b4372c06e29fd001483166d","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b4f2000daa8ac001421c823","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"Driver Ratings Length : 3","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b63195aab40370014980fd9","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b600e6b473c5a0014ed6d86","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b63195aab40370014980fd9","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b63195aab40370014980fd9","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b63195aab40370014980fd9","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b6153ccd97c3a0014a2da93","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b63195aab40370014980fd9","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b568bf9ae2022001475ddd6","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b63195aab40370014980fd9","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b4372c06e29fd001483166d","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b63195aab40370014980fd9","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b4376c527b0960014b3c0c7","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b63195aab40370014980fd9","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b63195aab40370014980fd9","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b4f2000daa8ac001421c823","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"Driver Ratings Length : 3","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b600e6b473c5a0014ed6d86","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b63195aab40370014980fd9","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b6153ccd97c3a0014a2da93","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b568bf9ae2022001475ddd6","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b4372c06e29fd001483166d","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b4376c527b0960014b3c0c7","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:16:40"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b4f2000daa8ac001421c823","timestamp":"10:16:40"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:16:40"}
+{"level":"info","message":"::1 - - [18/Aug/2018:05:16:40 +0000] \"GET /api/users/driverPerformance HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"10:16:40"}
+{"level":"info","message":"Driver Ratings found","timestamp":"10:20:51"}
+{"level":"info","message":"Driver Ratings Length : 3","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b4372c06e29fd001483166d","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b600e6b473c5a0014ed6d86","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b4372c06e29fd001483166d","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b63195aab40370014980fd9","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b4372c06e29fd001483166d","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b6153ccd97c3a0014a2da93","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b4372c06e29fd001483166d","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b568bf9ae2022001475ddd6","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b4372c06e29fd001483166d","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b4372c06e29fd001483166d","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id===overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"Pushing to promise array","timestamp":"10:20:51"}
+{"level":"info","message":"adding Obj to list","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b4372c06e29fd001483166d","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b4376c527b0960014b3c0c7","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b4372c06e29fd001483166d","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b4372c06e29fd001483166d","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b4f2000daa8ac001421c823","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"Driver Ratings Length : 3","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b63195aab40370014980fd9","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b600e6b473c5a0014ed6d86","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b63195aab40370014980fd9","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b63195aab40370014980fd9","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id===overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"Pushing to promise array","timestamp":"10:20:51"}
+{"level":"info","message":"adding Obj to list","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b63195aab40370014980fd9","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b6153ccd97c3a0014a2da93","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b63195aab40370014980fd9","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b568bf9ae2022001475ddd6","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b63195aab40370014980fd9","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b4372c06e29fd001483166d","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b63195aab40370014980fd9","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b4376c527b0960014b3c0c7","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b63195aab40370014980fd9","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b63195aab40370014980fd9","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b4f2000daa8ac001421c823","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"Driver Ratings Length : 3","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b600e6b473c5a0014ed6d86","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b63195aab40370014980fd9","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b6153ccd97c3a0014a2da93","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b568bf9ae2022001475ddd6","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b4372c06e29fd001483166d","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b4376c527b0960014b3c0c7","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id===overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"Pushing to promise array","timestamp":"10:20:51"}
+{"level":"info","message":"adding Obj to list","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts Length :8","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id :5b433e29b4e6a30014ed80ff","timestamp":"10:20:51"}
+{"level":"info","message":"overSpeedAlerts[j]._id :5b4f2000daa8ac001421c823","timestamp":"10:20:51"}
+{"level":"info","message":"driverratings[i]._id!=overSpeedAlerts[j]._id ","timestamp":"10:20:51"}
+{"level":"info","message":"::1 - - [18/Aug/2018:05:20:51 +0000] \"GET /api/users/driverPerformance HTTP/1.1\" 200 400 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"10:20:51"}

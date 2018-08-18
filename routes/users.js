@@ -13,6 +13,7 @@ var randomize = require('randomatic');
 const {User, validate} = require('../models/user');
 const { Driver } = require('../models/driver');
 const { DriverRating } = require('../models/driverRating');
+const { OverSpeedAlert } = require('../models/overSpeedAlert');
 const Rider  = require('../models/rider');
 const Shift  = require('../models/shift');
 const mongoose = require('mongoose');
@@ -315,13 +316,91 @@ router.get('/driverratings',async function (req, res) {
 
         }
     }]
-    //    const overSpeedAlerts = await OverSpeedAlert.find({  });
 
     const driverratings = await DriverRating.aggregate(aggregatorOpts).exec();  
     if (!driverratings) return res.status(404).send('Driver Ratings List is Empty.');
     
-    res.jsonp({ status: 'Success', message: 'Driver Ratings List. ', object: driverratings });
+    res.jsonp({ status: 'success', message: 'Driver Ratings List. ', object: driverratings });
 
+});
+
+router.get('/driverPerformance',async function (req, res) {
+
+  function addToListPromise(obj){
+    logger.info ('adding Obj to list');
+    return new Promise((resolve,reject) => {
+      resList.push(obj);
+      resolve(1);		
+    });
+   
+  }
+  let promiseArr = [];
+  var resObj;
+  var resList = [];
+  var totalAverage;
+  const aggregatorOpts1 = [{
+        $group: {
+            _id:"$_driverId",
+            avgbehavior: { $avg: "$behavior" },
+            avgdriving: { $avg: "$driving" },
+            avgdelay: { $avg: "$delay" }
+        }
+    }]
+
+    const driverratings = await DriverRating.aggregate(aggregatorOpts1).exec();   
+    const aggregatorOpts = [
+      {
+          $group: {
+              _id:"$_driverId",
+              count: { $sum: 1 },
+              "drivername": { "$first": "$driverName"} 
+          }
+      }]
+
+      const overSpeedAlerts = await OverSpeedAlert.aggregate(aggregatorOpts).exec();  
+      if (!overSpeedAlerts) return res.status(404).send('OverSpeedAlerts List is Empty.');
+
+      if (driverratings){
+        logger.info('Driver Ratings found' );
+      for(var i=0; i <driverratings.length ; i++ ){
+        logger.info('Driver Ratings Length : '+ driverratings.length );
+        for(var j=0; j <overSpeedAlerts.length ; j++ ){
+          logger.info('overSpeedAlerts Length :'+ overSpeedAlerts.length );
+          logger.info('driverratings[i]._id :'+ driverratings[i]._id );
+          logger.info('overSpeedAlerts[j]._id :'+ overSpeedAlerts[j]._id );
+      
+
+          if (driverratings[i]._id.toString() === overSpeedAlerts[j]._id.toString()){
+            logger.info('driverratings[i]._id===overSpeedAlerts[j]._id ' );
+            totalAverage=(driverratings[i].avgbehavior +driverratings[i].avgdriving+driverratings[i].avgdelay ) / 3;
+    
+            resObj={
+              "_driverId":driverratings[i]._id,
+              "avgRating":totalAverage,
+              "overspeedCount":overSpeedAlerts[j].count,
+              "drivername":overSpeedAlerts[j].drivername
+
+            }
+            logger.info('Pushing to promise array' );
+            promiseArr.push(addToListPromise(resObj));
+          }else{
+            logger.info('driverratings[i]._id!=overSpeedAlerts[j]._id ' );
+          }
+        }
+      }
+     }else {
+       logger.info('Driver Ratings not found' );
+     }
+     Promise.all(promiseArr)
+     .then((result)=> {
+      res.jsonp({ status: 'success', message: 'Driver Performance List.', object: resList });
+
+        })
+     .catch(error => {
+       logger.error ('An Error Has Occured : ' + err); 
+       });
+
+   
 });
 
 module.exports = router; 
