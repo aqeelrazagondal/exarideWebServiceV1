@@ -363,29 +363,55 @@ router.get('/driverPerformance',async function (req, res) {
       if (driverratings){
         logger.info('Driver Ratings found' );
       for(var i=0; i <driverratings.length ; i++ ){
+        totalAverage=(driverratings[i].avgbehavior +driverratings[i].avgdriving+driverratings[i].avgdelay ) / 3;
+    
+        let driver = await Driver.findOne({ _id: driverratings[i]._id });
         logger.info('Driver Ratings Length : '+ driverratings.length );
+        if (driver){
+          resObj={
+            "_driverId":driverratings[i]._id,
+            "avgRating":totalAverage,
+            "overspeedCount":0,
+            "drivername":driver.name
+          }
+        }else {
+          resObj={
+            "_driverId":driverratings[i]._id,
+            "avgRating":totalAverage,
+            "overspeedCount":0,
+            "drivername":"not found"
+          }
+        }
+     
+
         for(var j=0; j <overSpeedAlerts.length ; j++ ){
           logger.info('overSpeedAlerts Length :'+ overSpeedAlerts.length );
           logger.info('driverratings[i]._id :'+ driverratings[i]._id );
           logger.info('overSpeedAlerts[j]._id :'+ overSpeedAlerts[j]._id );
-      
-
+    
+          
           if (driverratings[i]._id.toString() === overSpeedAlerts[j]._id.toString()){
             logger.info('driverratings[i]._id===overSpeedAlerts[j]._id ' );
-            totalAverage=(driverratings[i].avgbehavior +driverratings[i].avgdriving+driverratings[i].avgdelay ) / 3;
-    
+           
             resObj={
               "_driverId":driverratings[i]._id,
               "avgRating":totalAverage,
               "overspeedCount":overSpeedAlerts[j].count,
               "drivername":overSpeedAlerts[j].drivername
-
             }
             logger.info('Pushing to promise array' );
             promiseArr.push(addToListPromise(resObj));
+            break;
+           
           }else{
             logger.info('driverratings[i]._id!=overSpeedAlerts[j]._id ' );
+            if (j+1===overSpeedAlerts.length){
+              //push above obj to list
+              promiseArr.push(addToListPromise(resObj));
+            }
+
           }
+          
         }
       }
      }else {
