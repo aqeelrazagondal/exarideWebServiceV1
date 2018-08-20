@@ -17,3 +17,86 @@
 {"level":"info","message":"::1 - - [13/Aug/2018:13:41:49 +0000] \"GET /api/shifts/pickuppoints?shiftid=5b56284b3150f50014ccaf68 HTTP/1.1\" 404 66 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"18:41:49"}
 {"level":"info","message":"rider/pickupPoints GET","timestamp":"18:43:39"}
 {"level":"info","message":"::1 - - [13/Aug/2018:13:43:44 +0000] \"GET /api/shifts/pickuppoints?shiftid=5b56284b3150f50014ccaf68 HTTP/1.1\" 200 298 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"18:43:44"}
+{"level":"info","message":"long/ Lat not Zero","timestamp":"10:38:14"}
+{"level":"info","message":"longitude :  33.55","timestamp":"10:38:15"}
+{"level":"info","message":"latitude :  47.22","timestamp":"10:38:15"}
+{"level":"info","message":"long/ Lat not Zero","timestamp":"10:38:26"}
+{"level":"info","message":"longitude :  33.55","timestamp":"10:38:26"}
+{"level":"info","message":"latitude :  47.22","timestamp":"10:38:26"}
+{"level":"info","message":" inFenceNotification Method, user Loc : 47.22,33.55","timestamp":"10:38:27"}
+{"level":"info","message":"  user Loc Found","timestamp":"10:38:27"}
+{"level":"info","message":"User Location after Update 47.22,33.55","timestamp":"10:38:27"}
+{"level":"info","message":"User Location With email abc@gmail.com","timestamp":"10:38:27"}
+{"level":"info","message":"Rider Info , user id  5b4f2996daa8ac001421e996","timestamp":"10:38:28"}
+{"level":"info","message":"  locations.length : 4","timestamp":"10:38:28"}
+{"level":"info","message":" Fence.loc  : 33.73562711892173,73.06594857128903","timestamp":"10:38:28"}
+{"level":"info","message":" Fence title: KPK1","timestamp":"10:38:28"}
+{"level":"info","message":"Fence Loc of found  : ","timestamp":"10:38:28"}
+{"level":"info","message":" Not inside Fence Loc Radius","timestamp":"10:38:28"}
+{"level":"info","message":" Fence.loc  : 33.799985521791726,73.04019936474606","timestamp":"10:38:28"}
+{"level":"info","message":" Fence title: ssd","timestamp":"10:38:28"}
+{"level":"info","message":"Fence Loc of found  : ","timestamp":"10:38:28"}
+{"level":"info","message":" Not inside Fence Loc Radius","timestamp":"10:38:28"}
+{"level":"info","message":" Fence.loc  : 33.69721739445881,72.98458107861325","timestamp":"10:38:28"}
+{"level":"info","message":" Fence title: E12","timestamp":"10:38:28"}
+{"level":"info","message":"Fence Loc of found  : ","timestamp":"10:38:28"}
+{"level":"info","message":" Not inside Fence Loc Radius","timestamp":"10:38:28"}
+{"level":"info","message":" Fence.loc  : 33.523462387828005,73.09706066001934","timestamp":"10:38:28"}
+{"level":"info","message":" Fence title: Clock Tower","timestamp":"10:38:28"}
+{"level":"info","message":"Fence Loc of found  : ","timestamp":"10:38:28"}
+{"level":"info","message":" Not inside Fence Loc Radius","timestamp":"10:38:28"}
+{"level":"info","message":"Rider pick Up Loc  33.70682489527172,73.10618268774874","timestamp":"10:38:28"}
+{"level":"info","message":"Rider pick Up Title  undefined","timestamp":"10:38:28"}
+{"level":"info","message":"User have Turned Loc On abc","timestamp":"10:38:28"}
+{"level":"info","message":"*distance between driver and rider pick up loc: undefined is :4468832","timestamp":"10:38:28"}
+{"level":"info","message":"**Distance: 4468832is greater then radius null","timestamp":"10:38:28"}
+{"level":"info","message":"Rider Info , user id  5b503245924fa500147dabb0","timestamp":"10:38:28"}
+{"level":"info","message":"Rider Info , user id  5b513f879fc8060014791d69","timestamp":"10:38:28"}
+{"level":"info","message":"Rider Info , user id  5b513fdb9fc8060014791d7d","timestamp":"10:38:28"}
+{"level":"info","message":"Rider Info , user id  5b515f42b1a43a0014e8798d","timestamp":"10:38:28"}
+{"level":"info","message":"Rider Info , user id  5b54b75ae8447100147ea304","timestamp":"10:38:28"}
+{"level":"info","message":"Rider pick Up Loc  33.52151713622845,73.0911431959355","timestamp":"10:38:28"}
+{"level":"info","message":"Rider pick Up Title  undefined","timestamp":"10:38:28"}
+{"level":"info","message":"User have Turned Loc On abc","timestamp":"10:38:28"}
+{"level":"info","message":"*distance between driver and rider pick up loc: undefined is :4469064","timestamp":"10:38:28"}
+{"level":"info","message":"**Distance: 4469064is greater then radius null","timestamp":"10:38:28"}
+{"level":"info","message":"Rider Info , user id  5b56c434530ff70014779319","timestamp":"10:38:28"}
+{"level":"info","message":"Rider pick Up Loc  33.52151713622845,73.0911431959355","timestamp":"10:38:29"}
+{"level":"info","message":"Rider pick Up Title  undefined","timestamp":"10:38:29"}
+{"level":"info","message":"User have Turned Loc On abc","timestamp":"10:38:29"}
+{"level":"info","message":"*distance between driver and rider pick up loc: undefined is :4469064","timestamp":"10:38:29"}
+{"level":"info","message":"**Distance: 4469064is greater then radius 500","timestamp":"10:38:29"}
+{"level":"info","message":"Rider Info , user id  5b56dd9f530ff70014785e6c","timestamp":"10:38:29"}
+{"level":"info","message":"Rider pick Up Loc  33.52151713622845,73.0911431959355","timestamp":"10:38:29"}
+{"level":"info","message":"Rider pick Up Title  undefined","timestamp":"10:38:29"}
+{"level":"info","message":"User have Turned Loc On abc","timestamp":"10:38:29"}
+{"level":"info","message":"*distance between driver and rider pick up loc: undefined is :4469064","timestamp":"10:38:29"}
+{"level":"info","message":"**Distance: 4469064is greater then radius null","timestamp":"10:38:29"}
+{"level":"info","message":"Rider Info , user id  5b5b9a8a5c2daa00145aea28","timestamp":"10:38:29"}
+{"level":"info","message":"Rider Info , user id  5b615ad1d97c3a0014a2e439","timestamp":"10:38:29"}
+{"level":"info","message":"Rider Info , user id  5b62c8ef61ba00001419b9e0","timestamp":"10:38:29"}
+{"level":"info","message":"Rider Info , user id  5b62ff3097b83d00146f3204","timestamp":"10:38:29"}
+{"level":"info","message":"Rider Info , user id  5b68414736f4ec0014692bff","timestamp":"10:38:29"}
+{"level":"info","message":"Rider pick Up Loc  33.679997794144356,73.05422200961482","timestamp":"10:38:29"}
+{"level":"info","message":"Rider pick Up Title  undefined","timestamp":"10:38:29"}
+{"level":"info","message":"User have Turned Loc On abc","timestamp":"10:38:29"}
+{"level":"info","message":"*distance between driver and rider pick up loc: undefined is :4463570","timestamp":"10:38:29"}
+{"level":"info","message":"**Distance: 4463570is greater then radius 400","timestamp":"10:38:29"}
+{"level":"info","message":"Rider Info , user id  5b69a567fd631300145a23fa","timestamp":"10:38:29"}
+{"level":"info","message":"Rider pick Up Loc  33.52121838732755,73.1066107749939","timestamp":"10:38:30"}
+{"level":"info","message":"Rider pick Up Title  undefined","timestamp":"10:38:30"}
+{"level":"info","message":"User have Turned Loc On abc","timestamp":"10:38:30"}
+{"level":"info","message":"*distance between driver and rider pick up loc: undefined is :4470710","timestamp":"10:38:30"}
+{"level":"info","message":"**Distance: 4470710is greater then radius 400","timestamp":"10:38:30"}
+{"level":"info","message":"Rider Info , user id  5b6b37e329b1730014e1cfaf","timestamp":"10:38:30"}
+{"level":"info","message":"Rider Info , user id  5b6b388729b1730014e1cfd3","timestamp":"10:38:30"}
+{"level":"info","message":"Rider Info , user id  5b6d8b0f78e3f40014f6ecf1","timestamp":"10:38:30"}
+{"level":"info","message":"Rider Info , user id  5b6f0945be2f6f00144b8bf1","timestamp":"10:38:30"}
+{"level":"info","message":"Rider Info , user id  5b73b80b919d320014aa2a44","timestamp":"10:38:30"}
+{"level":"info","message":"Rider pick Up Loc  33.704759874700734,73.08165592095156","timestamp":"10:38:30"}
+{"level":"info","message":"Rider pick Up Title  undefined","timestamp":"10:38:30"}
+{"level":"info","message":"User have Turned Loc On abc","timestamp":"10:38:30"}
+{"level":"info","message":"*distance between driver and rider pick up loc: undefined is :4466244","timestamp":"10:38:30"}
+{"level":"info","message":"**Distance: 4466244is greater then radius null","timestamp":"10:38:30"}
+{"level":"info","message":" Exit UPDATE DRIVER LOCATION Method","timestamp":"10:38:30"}
+{"level":"info","message":"::1 - - [20/Aug/2018:05:38:30 +0000] \"POST /api/users/updateDriverLoc HTTP/1.1\" 200 520 \"-\" \"PostmanRuntime/7.2.0\"\n","timestamp":"10:38:30"}

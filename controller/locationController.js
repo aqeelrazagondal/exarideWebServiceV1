@@ -123,6 +123,56 @@ async function inRadiusNotification(user, riderId, location){
         		
 }
 
+async function inFenceNotification(userLoc){
+    try{
+
+    logger.info(' inFenceNotification Method, user Loc : ' + userLoc);
+    if (userLoc){
+        logger.info('  user Loc Found');
+        var distance;
+        const locations = await Location.find({adminFence:true});
+        
+        logger.info('  locations.length : ' + locations.length);
+        for (var i =0 ; i <locations.length ; i ++){
+            logger.info(' Fence.loc  : ' + locations[i].loc );
+            logger.info(' Fence title: ' + locations[i].title);
+            
+            if (locations[i].loc){
+
+            logger.info('Fence Loc of found  : ');
+            distance = geolib.getDistance(
+            userLoc,
+            locations[i].loc
+            );
+             
+            if (distance<locations[i].radius) {
+                //inside Radius, Send Message To admin
+                logger.info (' inside Fence Radius, Send Message To admin'); 
+                //Sending Sms To Admin
+                const admin = await Admin.find({});
+                if (admin){
+
+                let adminMessage="Buss Have Reached In Fence ( " +locations[i].title + " )" ;
+                logger.info(' ADMIN MESSAGE!! ', adminMessage);   
+
+                NotificationController.sendNotifcationToPlayerId(admin[0].onesignalid,adminMessage);
+
+                }      
+               
+            }else{
+                logger.info (' Not inside Fence Loc Radius'); 
+            }
+        }else {
+            logger.info('Loc  of fence Not found  ');
+        }
+        }      
+    }else{
+        logger.info ('+ User Loc :'+ userLoc); 
+    } 
+}catch(err ){
+    logger.info ('Exception Caught:'+ err); 
+}     		
+}
 
 async function inStartLocRadiusNotification(userLoc){
     try{
@@ -204,8 +254,11 @@ exports.updateDriverLocation = async function(reqData, res){
                 user.last_shared_loc_time = new Date();
                 await user.save();
                 
-                //Check if In Radius of Start Loc
-                 inStartLocRadiusNotification(user.loc);
+                // Check if In Radius of Start Loc
+                // inStartLocRadiusNotification(user.loc);
+
+                // Check if In Radius of Fence
+                inFenceNotification(user.loc);
 
                 logger.info('User Location after Update ' + user.loc);
                 logger.info('User Location With email ' + user.email);
