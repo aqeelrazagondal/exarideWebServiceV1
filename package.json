@@ -37,6 +37,7 @@
     "path": "^0.12.7",
     "randomatic": "^3.0.0",
     "request": "^2.85.0",
+    "urlencode": "^1.1.0",
     "validator": "^10.2.0",
     "winston": "^2.4.2",
     "winston-daily-rotate-file": "^3.1.3",

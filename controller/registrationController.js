@@ -17,6 +17,9 @@ const mongoose = require('mongoose');
 const express = require('express');
 const logger = require('../startup/logging');
 
+var http = require('http');
+var urlencode = require('urlencode');
+
 module.exports.userExists = function(phoneNo,callback){
     logger.info('UserExists Method Called');
     if(phoneNo === undefined || phoneNo === null){
@@ -116,7 +119,7 @@ exports.sendVerificationCode = function(reqData, res){
 	//generate a code and set to user.verification_code
 	code=randomize('0', 4);
 	verificationMsg="Verification code for QAU Smart Ride : " + code;
-	
+	// verificationMsg="Codeis";
     //find user by phone no.
     userExists(phoneNo,function(user){
 		logger.info('User Exists Response : ' + user );
@@ -140,41 +143,64 @@ exports.sendVerificationCode = function(reqData, res){
                     }
 					else{
                         console.log('################ SAVED USER IN DB ################', newuser.phone);
-                    var headers = {
+                //     var headers = {
 
-                        'Authorization':       'Basic ZmFsY29uLmV5ZTowMzM1NDc3OTU0NA==',
-                        'Content-Type':     'application/json',
-                        'Accept':       'application/json'
-                    }
+                //         'Authorization':       'Basic ZmFsY29uLmV5ZTowMzM1NDc3OTU0NA==',
+                //         'Content-Type':     'application/json',
+                //         'Accept':       'application/json'
+                //     }
 
             
-                    // Configure the request
-                    var options = {
-                        // url: 'http://107.20.199.106/sms/1/text/single',
-                        url: 'http://sms.brandedsms.net//api/sms-api.php?username=omer&password=omer&phone='
-                                +user.phone+'&sender=Step&message='+verificationMsg,
-                        method: 'GET',
-                        // headers: headers,
+                //     // Configure the request
+                //     var options = {
+                //         // url: 'http://107.20.199.106/sms/1/text/single',
+                //         url: 'http://sms.brandedsms.net//api/sms-api.php?username=omer&password=omer&phone='
+                //                 +user.phone+'&sender=Step&message='+verificationMsg,
+                //         method: 'GET',
+                //         // headers: headers,
                  
-                        // json: {
-                        //     'from': 'SmartRide',
-                        //     'to': user.phone,
-                        //     'text': adminMessage
-                        // }
-                    }
+                //         // json: {
+                //         //     'from': 'SmartRide',
+                //         //     'to': user.phone,
+                //         //     'text': adminMessage
+                //         // }
+                //     }
 
-                // Start the request
-                request(options, function (error, response, body) {
-                    if (!error ) {
-                        // Print out the response body
-                        console.log(body)
-                        logger.info('Sucessful Response of SMS API : ' + body );
-                    }
-                    else{
-                        logger.info('Response/Error of SMS API : ' + error );
-                    }
+                // // Start the request
+                // request(options, function (error, response, body) {
+                //     if (!error ) {
+                //         // Print out the response body
+                //         console.log(body)
+                //         logger.info('Sucessful Response of SMS API : ' + body );
+                //     }
+                //     else{
+                //         logger.info('Response/Error of SMS API : ' + error );
+                //     }
+                // });
+
+                //Text Local Api 
+
+
+                var msg = urlencode(verificationMsg);
+                var toNumber = user.phone;
+                var username = 'khansaifullah1993@gmail.com';
+                var hash = '46091d672420ae34c55d0619af751550d06da52860717b031be7ca12d8c68856'; // The hash key could be found under Help->All Documentation->Your hash key. Alternatively you can use your Textlocal password in plain text.
+                var sender = 'QAURide';
+                var data = 'username=' + username + '&hash=' + hash + '&sender=' + sender + '&numbers=' + toNumber + '&message=' + msg;
+                var options = {
+                host: 'api.txtlocal.com', path: '/send?' + data
+                };
+                callback = function (response) {
+                var str = '';//another chunk of data has been recieved, so append it to `str`
+                response.on('data', function (chunk) {
+                    str += chunk;
+                });//the whole response has been recieved, so we just print it out here
+                response.on('end', function () {
+                    console.log(str);
                 });
-
+                }//console.log('hello js'))
+                http.request(options, callback).end();//url encode instalation need to use $ npm install urlencode
+                
                 
                 let newRider= new Rider({
                     _userId: user._id
@@ -207,37 +233,61 @@ exports.sendVerificationCode = function(reqData, res){
 						 logger.info ('Error While Updating verification_code ');
 					 }
 				 });
-                var headers = {
-                    'Authorization':       'Basic ZmFsY29uLmV5ZTowMzM1NDc3OTU0NA==',
-                    'Content-Type':     'application/json',
-                    'Accept':       'application/json'
-                }
+                // var headers = {
+                //     'Authorization':       'Basic ZmFsY29uLmV5ZTowMzM1NDc3OTU0NA==',
+                //     'Content-Type':     'application/json',
+                //     'Accept':       'application/json'
+                // }
 
-                // Configure the request
-                var options = {
-                    // url: 'http://107.20.199.106/sms/1/text/single',
-                    url: 'http://sms.brandedsms.net//api/sms-api.php?username=omer&password=omer&phone='
-                            +user.phone+'&sender=Step&message='+verificationMsg,
-                    method: 'GET',
-                    // headers: headers,
+                // // Configure the request
+                // var options = {
+                //     // url: 'http://107.20.199.106/sms/1/text/single',
+                //     url: 'http://sms.brandedsms.net//api/sms-api.php?username=omer&password=omer&phone='
+                //             +user.phone+'&sender=Step&message='+verificationMsg,
+                //     method: 'GET',
+                //     // headers: headers,
             
-                    // json: {
-                    //     'from': 'SmartRide',
-                    //     'to': user.phone,
-                    //     'text': adminMessage
-                    // }
-                }
-                // Start the request
-                request(options, function (error, response, body) {
-                    if (!error ) {
-                        // Print out the response body
-                        console.log(body)
-                        //logger.info('Sucessful Response of SMS API : ' + body.messages[0].to );
-                    }
-                    else{
-                        logger.info('Response/Error of SMS API : ' + error );
-                    }
-                })
+                //     // json: {
+                //     //     'from': 'SmartRide',
+                //     //     'to': user.phone,
+                //     //     'text': adminMessage
+                //     // }
+                // }
+                // // Start the request
+                // request(options, function (error, response, body) {
+                //     if (!error ) {
+                //         // Print out the response body
+                //         console.log(body)
+                //         //logger.info('Sucessful Response of SMS API : ' + body.messages[0].to );
+                //     }
+                //     else{
+                //         logger.info('Response/Error of SMS API : ' + error );
+                //     }
+                // })
+
+
+                //Text Local Api 
+
+                
+                var msg = urlencode(verificationMsg);
+                var toNumber = user.phone;
+                var username = 'khansaifullah1993@gmail.com';
+                var hash = '46091d672420ae34c55d0619af751550d06da52860717b031be7ca12d8c68856'; // The hash key could be found under Help->All Documentation->Your hash key. Alternatively you can use your Textlocal password in plain text.
+                var sender = 'QAURide';
+                var data = 'username=' + username + '&hash=' + hash + '&sender=' + sender + '&numbers=' + toNumber + '&message=' + msg;
+                var options = {
+                host: 'api.txtlocal.com', path: '/send?' + data
+                };
+                callback = function (response) {
+                var str = '';//another chunk of data has been recieved, so append it to `str`
+                response.on('data', function (chunk) {
+                    str += chunk;
+                });//the whole response has been recieved, so we just print it out here
+                response.on('end', function () {
+                    console.log(str);
+                });
+                }//console.log('hello js'))
+                http.request(options, callback).end();//url encode instalation need to use $ npm install urlencode
 
                 res.jsonp({status:"success", message:"Verification code Sent Again!", object:[] });        
         }

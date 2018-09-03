@@ -1,0 +1,66 @@
+{"level":"info","message":"::1 - - [03/Sep/2018:07:38:09 +0000] \"POST /verificationcode HTTP/1.1\" 404 156 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36\"\n","timestamp":"12:38:09"}
+{"level":"info","message":"::1 - - [03/Sep/2018:07:38:37 +0000] \"POST /api/verificationcode HTTP/1.1\" 404 160 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36\"\n","timestamp":"12:38:37"}
+{"level":"verbose","message":"verificationcode-POST called ","timestamp":"12:39:33"}
+{"level":"info","message":"RegistrationController.sendVerificationCode called  :923345022570","timestamp":"12:39:33"}
+{"level":"info","message":"UserExists Method Called","timestamp":"12:39:33"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"12:39:33"}
+{"level":"info","message":" Exit RegistrationController.sendVerificationCode Method","timestamp":"12:39:33"}
+{"level":"info","message":"User Found with Phone Num. :{ phone: '923345022570',\n  profile_photo_url: null,\n  alert: false,\n  deactivate_user: false,\n  message: null,\n  _id: 5b56dd9f530ff70014785e6c,\n  verified_user: false,\n  verification_code: '6252',\n  user_type: 'rider',\n  last_shared_loc_time: 2018-07-24T09:29:20.820Z,\n  createdAt: 2018-07-24T08:04:47.883Z,\n  updatedAt: 2018-07-24T09:29:20.821Z,\n  __v: 279,\n  loc: [ 73.0960485, 33.5247329 ] }","timestamp":"12:39:33"}
+{"level":"verbose","message":"verificationcode-POST called ","timestamp":"14:51:26"}
+{"level":"info","message":"RegistrationController.sendVerificationCode called  :923345022570","timestamp":"14:51:26"}
+{"level":"info","message":"UserExists Method Called","timestamp":"14:51:26"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"14:51:26"}
+{"level":"info","message":" Exit RegistrationController.sendVerificationCode Method","timestamp":"14:51:26"}
+{"level":"info","message":"User Found with Phone Num. :{ phone: '923345022570',\n  profile_photo_url: null,\n  alert: false,\n  deactivate_user: false,\n  message: null,\n  _id: 5b56dd9f530ff70014785e6c,\n  verified_user: false,\n  verification_code: '6252',\n  user_type: 'rider',\n  last_shared_loc_time: 2018-07-24T09:29:20.820Z,\n  createdAt: 2018-07-24T08:04:47.883Z,\n  updatedAt: 2018-07-24T09:29:20.821Z,\n  __v: 279,\n  loc: [ 73.0960485, 33.5247329 ] }","timestamp":"14:51:29"}
+{"level":"verbose","message":"verificationcode-POST called ","timestamp":"14:54:04"}
+{"level":"info","message":"RegistrationController.sendVerificationCode called  :923345022570","timestamp":"14:54:04"}
+{"level":"info","message":"UserExists Method Called","timestamp":"14:54:04"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"14:54:04"}
+{"level":"info","message":" Exit RegistrationController.sendVerificationCode Method","timestamp":"14:54:04"}
+{"level":"info","message":"User Found with Phone Num. :{ phone: '923345022570',\n  profile_photo_url: null,\n  alert: false,\n  deactivate_user: false,\n  message: null,\n  _id: 5b56dd9f530ff70014785e6c,\n  verified_user: false,\n  verification_code: '6252',\n  user_type: 'rider',\n  last_shared_loc_time: 2018-07-24T09:29:20.820Z,\n  createdAt: 2018-07-24T08:04:47.883Z,\n  updatedAt: 2018-07-24T09:29:20.821Z,\n  __v: 279,\n  loc: [ 73.0960485, 33.5247329 ] }","timestamp":"14:54:13"}
+{"level":"verbose","message":"verificationcode-POST called ","timestamp":"14:54:41"}
+{"level":"info","message":"RegistrationController.sendVerificationCode called  :923345022570","timestamp":"14:54:41"}
+{"level":"info","message":"UserExists Method Called","timestamp":"14:54:41"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"14:54:41"}
+{"level":"info","message":" Exit RegistrationController.sendVerificationCode Method","timestamp":"14:54:41"}
+{"level":"info","message":"User Found with Phone Num. :{ phone: '923345022570',\n  profile_photo_url: null,\n  alert: false,\n  deactivate_user: false,\n  message: null,\n  _id: 5b56dd9f530ff70014785e6c,\n  verified_user: false,\n  verification_code: '6252',\n  user_type: 'rider',\n  last_shared_loc_time: 2018-07-24T09:29:20.820Z,\n  createdAt: 2018-07-24T08:04:47.883Z,\n  updatedAt: 2018-07-24T09:29:20.821Z,\n  __v: 279,\n  loc: [ 73.0960485, 33.5247329 ] }","timestamp":"14:54:44"}
+{"level":"verbose","message":"verificationcode-POST called ","timestamp":"14:55:28"}
+{"level":"info","message":"RegistrationController.sendVerificationCode called  :923345022570","timestamp":"14:55:28"}
+{"level":"info","message":"UserExists Method Called","timestamp":"14:55:28"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"14:55:28"}
+{"level":"info","message":" Exit RegistrationController.sendVerificationCode Method","timestamp":"14:55:28"}
+{"level":"info","message":"User Found with Phone Num. :{ phone: '923345022570',\n  profile_photo_url: null,\n  alert: false,\n  deactivate_user: false,\n  message: null,\n  _id: 5b56dd9f530ff70014785e6c,\n  verified_user: false,\n  verification_code: '6252',\n  user_type: 'rider',\n  last_shared_loc_time: 2018-07-24T09:29:20.820Z,\n  createdAt: 2018-07-24T08:04:47.883Z,\n  updatedAt: 2018-07-24T09:29:20.821Z,\n  __v: 279,\n  loc: [ 73.0960485, 33.5247329 ] }","timestamp":"14:55:30"}
+{"level":"info","message":"User Exists Response : { phone: '923345022570',\n  profile_photo_url: null,\n  alert: false,\n  deactivate_user: false,\n  message: null,\n  _id: 5b56dd9f530ff70014785e6c,\n  verified_user: false,\n  verification_code: '6252',\n  user_type: 'rider',\n  last_shared_loc_time: 2018-07-24T09:29:20.820Z,\n  createdAt: 2018-07-24T08:04:47.883Z,\n  updatedAt: 2018-07-24T09:29:20.821Z,\n  __v: 279,\n  loc: [ 73.0960485, 33.5247329 ] }","timestamp":"14:55:30"}
+{"level":"info","message":"::1 - - [03/Sep/2018:09:55:30 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 74 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36\"\n","timestamp":"14:55:30"}
+{"level":"verbose","message":"verificationcode-POST called ","timestamp":"14:56:45"}
+{"level":"info","message":"RegistrationController.sendVerificationCode called  :923345022570","timestamp":"14:56:45"}
+{"level":"info","message":"UserExists Method Called","timestamp":"14:56:45"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"14:56:45"}
+{"level":"info","message":" Exit RegistrationController.sendVerificationCode Method","timestamp":"14:56:45"}
+{"level":"info","message":"User Found with Phone Num. :{ phone: '923345022570',\n  profile_photo_url: null,\n  alert: false,\n  deactivate_user: false,\n  message: null,\n  _id: 5b56dd9f530ff70014785e6c,\n  verified_user: false,\n  verification_code: '8342',\n  user_type: 'rider',\n  last_shared_loc_time: 2018-07-24T09:29:20.820Z,\n  createdAt: 2018-07-24T08:04:47.883Z,\n  updatedAt: 2018-09-03T09:55:30.478Z,\n  __v: 279,\n  loc: [ 73.0960485, 33.5247329 ] }","timestamp":"14:56:47"}
+{"level":"info","message":"User Exists Response : { phone: '923345022570',\n  profile_photo_url: null,\n  alert: false,\n  deactivate_user: false,\n  message: null,\n  _id: 5b56dd9f530ff70014785e6c,\n  verified_user: false,\n  verification_code: '8342',\n  user_type: 'rider',\n  last_shared_loc_time: 2018-07-24T09:29:20.820Z,\n  createdAt: 2018-07-24T08:04:47.883Z,\n  updatedAt: 2018-09-03T09:55:30.478Z,\n  __v: 279,\n  loc: [ 73.0960485, 33.5247329 ] }","timestamp":"14:56:47"}
+{"level":"info","message":"::1 - - [03/Sep/2018:09:56:47 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 74 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36\"\n","timestamp":"14:56:47"}
+{"level":"verbose","message":"verificationcode-POST called ","timestamp":"14:58:33"}
+{"level":"info","message":"RegistrationController.sendVerificationCode called  :923345022570","timestamp":"14:58:33"}
+{"level":"info","message":"UserExists Method Called","timestamp":"14:58:33"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"14:58:33"}
+{"level":"info","message":" Exit RegistrationController.sendVerificationCode Method","timestamp":"14:58:33"}
+{"level":"info","message":"User Found with Phone Num. :{ phone: '923345022570',\n  profile_photo_url: null,\n  alert: false,\n  deactivate_user: false,\n  message: null,\n  _id: 5b56dd9f530ff70014785e6c,\n  verified_user: false,\n  verification_code: '7395',\n  user_type: 'rider',\n  last_shared_loc_time: 2018-07-24T09:29:20.820Z,\n  createdAt: 2018-07-24T08:04:47.883Z,\n  updatedAt: 2018-09-03T09:56:47.485Z,\n  __v: 279,\n  loc: [ 73.0960485, 33.5247329 ] }","timestamp":"14:58:34"}
+{"level":"info","message":"User Exists Response : { phone: '923345022570',\n  profile_photo_url: null,\n  alert: false,\n  deactivate_user: false,\n  message: null,\n  _id: 5b56dd9f530ff70014785e6c,\n  verified_user: false,\n  verification_code: '7395',\n  user_type: 'rider',\n  last_shared_loc_time: 2018-07-24T09:29:20.820Z,\n  createdAt: 2018-07-24T08:04:47.883Z,\n  updatedAt: 2018-09-03T09:56:47.485Z,\n  __v: 279,\n  loc: [ 73.0960485, 33.5247329 ] }","timestamp":"14:58:34"}
+{"level":"info","message":"::1 - - [03/Sep/2018:09:58:34 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 74 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36\"\n","timestamp":"14:58:34"}
+{"level":"verbose","message":"verificationcode-POST called ","timestamp":"15:06:04"}
+{"level":"info","message":"RegistrationController.sendVerificationCode called  :923345022570","timestamp":"15:06:04"}
+{"level":"info","message":"UserExists Method Called","timestamp":"15:06:04"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"15:06:04"}
+{"level":"info","message":" Exit RegistrationController.sendVerificationCode Method","timestamp":"15:06:04"}
+{"level":"info","message":"User Found with Phone Num. :{ phone: '923345022570',\n  profile_photo_url: null,\n  alert: false,\n  deactivate_user: false,\n  message: null,\n  _id: 5b56dd9f530ff70014785e6c,\n  verified_user: false,\n  verification_code: '7395',\n  user_type: 'rider',\n  last_shared_loc_time: 2018-07-24T09:29:20.820Z,\n  createdAt: 2018-07-24T08:04:47.883Z,\n  updatedAt: 2018-09-03T09:56:47.485Z,\n  __v: 279,\n  loc: [ 73.0960485, 33.5247329 ] }","timestamp":"15:06:04"}
+{"level":"info","message":"User Exists Response : { phone: '923345022570',\n  profile_photo_url: null,\n  alert: false,\n  deactivate_user: false,\n  message: null,\n  _id: 5b56dd9f530ff70014785e6c,\n  verified_user: false,\n  verification_code: '7395',\n  user_type: 'rider',\n  last_shared_loc_time: 2018-07-24T09:29:20.820Z,\n  createdAt: 2018-07-24T08:04:47.883Z,\n  updatedAt: 2018-09-03T09:56:47.485Z,\n  __v: 279,\n  loc: [ 73.0960485, 33.5247329 ] }","timestamp":"15:06:04"}
+{"level":"info","message":"::1 - - [03/Sep/2018:10:06:04 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 74 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36\"\n","timestamp":"15:06:04"}
+{"level":"verbose","message":"verificationcode-POST called ","timestamp":"15:08:22"}
+{"level":"info","message":"RegistrationController.sendVerificationCode called  :923345022570","timestamp":"15:08:22"}
+{"level":"info","message":"UserExists Method Called","timestamp":"15:08:22"}
+{"level":"info","message":" Exit UserExists Method","timestamp":"15:08:22"}
+{"level":"info","message":" Exit RegistrationController.sendVerificationCode Method","timestamp":"15:08:22"}
+{"level":"info","message":"User Found with Phone Num. :{ phone: '923345022570',\n  profile_photo_url: null,\n  alert: false,\n  deactivate_user: false,\n  message: null,\n  _id: 5b56dd9f530ff70014785e6c,\n  verified_user: false,\n  verification_code: '5117',\n  user_type: 'rider',\n  last_shared_loc_time: 2018-07-24T09:29:20.820Z,\n  createdAt: 2018-07-24T08:04:47.883Z,\n  updatedAt: 2018-09-03T10:06:04.636Z,\n  __v: 279,\n  loc: [ 73.0960485, 33.5247329 ] }","timestamp":"15:08:22"}
+{"level":"info","message":"User Exists Response : { phone: '923345022570',\n  profile_photo_url: null,\n  alert: false,\n  deactivate_user: false,\n  message: null,\n  _id: 5b56dd9f530ff70014785e6c,\n  verified_user: false,\n  verification_code: '5117',\n  user_type: 'rider',\n  last_shared_loc_time: 2018-07-24T09:29:20.820Z,\n  createdAt: 2018-07-24T08:04:47.883Z,\n  updatedAt: 2018-09-03T10:06:04.636Z,\n  __v: 279,\n  loc: [ 73.0960485, 33.5247329 ] }","timestamp":"15:08:22"}
+{"level":"info","message":"::1 - - [03/Sep/2018:10:08:22 +0000] \"POST /api/users/verificationcode HTTP/1.1\" 200 74 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36\"\n","timestamp":"15:08:22"}
