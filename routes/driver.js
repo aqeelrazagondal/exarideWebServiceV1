@@ -153,6 +153,17 @@ router.post('/panic', async (req, res) => {
     driver.panic=false;
   }else {
     driver.panic = true;
+
+     //Sending Sms To Admin
+     const admin = await Admin.find({});
+     if (admin){
+
+     let adminMessage=driver.name +  " is in panic. ";
+     logger.info('+ ADMIN MESSAGE!! ', adminMessage);   
+
+
+     NotificationController.sendNotifcationToPlayerId(admin[0].onesignalid,adminMessage);
+
   }
   
   await driver.save();
@@ -215,6 +226,7 @@ router.post('/overSpeedingAlert', async (req, res) => {
   }
   console.log('ADMIN MESSAGE!! ', adminMessage);   
   NotificationController.sendNotifcationToPlayerId(admin[0].onesignalid,adminMessage);
+  
 
   }
 
