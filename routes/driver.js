@@ -171,7 +171,7 @@ router.post('/panic', async (req, res) => {
   if (!driver) return res.status(404).send('Driver not found by the given ID.');
 
   res.status(200).jsonp({ status: 'success', message: 'Driver Info Updated.', object: driver });
-
+  }
 });
 
 router.post('/onesignal', async (req, res) => {                           
