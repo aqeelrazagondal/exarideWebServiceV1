@@ -157,21 +157,17 @@ router.post('/panic', async (req, res) => {
      //Sending Sms To Admin
      const admin = await Admin.find({});
      if (admin){
-
      let adminMessage=driver.name +  " is in panic. ";
      logger.info('+ ADMIN MESSAGE!! ', adminMessage);   
-
-
      NotificationController.sendNotifcationToPlayerId(admin[0].onesignalid,adminMessage);
-
+    }
   }
-  
   await driver.save();
  
   if (!driver) return res.status(404).send('Driver not found by the given ID.');
 
   res.status(200).jsonp({ status: 'success', message: 'Driver Info Updated.', object: driver });
-  }
+  
 });
 
 router.post('/onesignal', async (req, res) => {                           
