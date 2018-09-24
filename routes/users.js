@@ -361,8 +361,7 @@ router.get('/driverPerformance',async function (req, res) {
     }]
 
     const driverratings = await DriverRating.aggregate(aggregatorOpts1).exec();   
-    const aggregatorOpts = [
-      {
+    const aggregatorOpts = [{
           $group: {
               _id:"$_driverId",
               count: { $sum: 1 },
@@ -370,8 +369,8 @@ router.get('/driverPerformance',async function (req, res) {
           }
       }]
 
-      const overSpeedAlerts = await OverSpeedAlert.aggregate(aggregatorOpts).exec();  
-      if (!overSpeedAlerts) return res.status(404).send('OverSpeedAlerts List is Empty.');
+    const overSpeedAlerts = await OverSpeedAlert.aggregate(aggregatorOpts).exec();  
+    if (!overSpeedAlerts) return res.status(404).send('OverSpeedAlerts List is Empty.');
 
       if (driverratings){
         logger.info('Driver Ratings found' );
@@ -392,9 +391,10 @@ router.get('/driverPerformance',async function (req, res) {
         
 
         for(var j=0; j <overSpeedAlerts.length ; j++ ){
+
           logger.info('overSpeedAlerts Length :'+ overSpeedAlerts.length );
           logger.info('driverratings[i]._id :'+ driverratings[i]._id );
-          logger.info('overSpeedAlerts[j]._id :'+ overSpeedAlerts[j]._id );
+          logger.info('overSpeedAlerts[j].Count :'+ overSpeedAlerts[j].count );
 
           if (driverratings[i]._id.toString() === overSpeedAlerts[j]._id.toString()){
             logger.info('driverratings[i]._id===overSpeedAlerts[j]._id ' );
