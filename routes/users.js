@@ -269,6 +269,8 @@ router.post('/ratedriver',async function (req, res) {
     logger.info('shift id: ' +routeId);
     var rating = await DriverRating.findOne({ _ratedByUserId: user._id, _driverId: shift._driverId });
     if (rating){
+      
+      logger.info('Rating Id : ' + rating._id);
       rating._driverId= shift._driverId;
       rating._ratedByUserId= user._id;
       // rating._ratedByRiderId= riderId ;
@@ -399,6 +401,8 @@ router.get('/driverPerformance',async function (req, res) {
           logger.info('driverratings[i]._id :'+ driverratings[i]._id );
           logger.info('overSpeedAlerts[j]._id :'+ overSpeedAlerts[j]._id );
     
+          let driver = await Driver.findOne({ _id: driverratings[i]._id });
+
           
           if (driverratings[i]._id.toString() === overSpeedAlerts[j]._id.toString()){
             logger.info('driverratings[i]._id===overSpeedAlerts[j]._id ' );
@@ -407,7 +411,7 @@ router.get('/driverPerformance',async function (req, res) {
               "_driverId":driverratings[i]._id,
               "avgRating":totalAverage,
               "overspeedCount":overSpeedAlerts[j].count,
-              "drivername":overSpeedAlerts[j].drivername
+              "drivername":driver.name
             }
             logger.info('Pushing to promise array' );
             promiseArr.push(addToListPromise(resObj));
