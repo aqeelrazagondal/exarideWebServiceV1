@@ -263,6 +263,10 @@ router.post('/ratedriver',async function (req, res) {
   var user = await User.findOne({ phone: phoneNo});
   var shift = await Shift.findOne({ _id: routeId});
   if (user && shift){
+
+    logger.info('Updating old Rating');
+    logger.info('phoneNo: ' +phoneNo);
+    logger.info('shift id: ' +routeId);
     var rating = await DriverRating.findOne({ _ratedByUserId: user._id, _driverId: shift._driverId });
     if (rating){
       rating._driverId= shift._driverId;
@@ -275,7 +279,10 @@ router.post('/ratedriver',async function (req, res) {
   
       res.status(200).jsonp({ status: 'success', message: 'Driver Rating updated!', object: rating });
     }else {
-  
+      logger.info('Saving new  Rating');
+      logger.info('phoneNo: ' +phoneNo);
+      logger.info('shift id: ' +routeId);
+
       let newRating = new DriverRating({ 
         _driverId:shift._driverId,
         _ratedByUserId: user._id,
@@ -293,7 +300,10 @@ router.post('/ratedriver',async function (req, res) {
     });
     }
   }else {
-     
+
+      logger.info('User or shift not found');
+      logger.info('phoneNo: ' +phoneNo);
+      logger.info('shift id: ' +routeId);
     res.jsonp({
       status: 'failure',
       messgae: 'Unable to save raitings',
