@@ -397,6 +397,12 @@ router.get('/driverPerformance',async function (req, res) {
         }
      
 
+        // if (overSpeedAlerts.length===0){
+        //   for(var i=0; i <driverratings.length ; i++ ){
+        //   }
+
+        // }
+
         for(var j=0; j <overSpeedAlerts.length ; j++ ){
           logger.info('overSpeedAlerts Length :'+ overSpeedAlerts.length );
           logger.info('driverratings[i]._id :'+ driverratings[i]._id );
@@ -406,8 +412,6 @@ router.get('/driverPerformance',async function (req, res) {
           if (driver)
           tempDriverName=driver.name;
 
-
-          
           if (driverratings[i]._id.toString() === overSpeedAlerts[j]._id.toString()){
             logger.info('driverratings[i]._id===overSpeedAlerts[j]._id ' );
            
@@ -417,20 +421,19 @@ router.get('/driverPerformance',async function (req, res) {
               "overspeedCount":overSpeedAlerts[j].count,
               "drivername":tempDriverName
             }
-            logger.info('Pushing to promise array' );
-            promiseArr.push(addToListPromise(resObj));
+            // logger.info('Pushing to promise array' );
+            // promiseArr.push(addToListPromise(resObj));
             break;
            
           }else{
             logger.info('driverratings[i]._id!=overSpeedAlerts[j]._id ' );
             if (j+1===overSpeedAlerts.length){
               //push above obj to list
-              promiseArr.push(addToListPromise(resObj));
+             //  promiseArr.push(addToListPromise(resObj));
             }
-
-          }
-          
+          }   
         }
+        promiseArr.push(addToListPromise(resObj));
       }
      }else {
        logger.info('Driver Ratings not found' );
