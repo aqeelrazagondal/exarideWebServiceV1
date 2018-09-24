@@ -379,38 +379,22 @@ router.get('/driverPerformance',async function (req, res) {
         totalAverage=(driverratings[i].avgbehavior +driverratings[i].avgdriving+driverratings[i].avgdelay ) / 3;
     
         let driver = await Driver.findOne({ _id: driverratings[i]._id });
+        if (driver)
+        tempDriverName=driver.name;
         logger.info('Driver Ratings Length : '+ driverratings.length );
-        if (driver){
+
           resObj={
             "_driverId":driverratings[i]._id,
             "avgRating":totalAverage,
             "overspeedCount":0,
-            "drivername":driver.name
+            "drivername":tempDriverName
           }
-        }else {
-          resObj={
-            "_driverId":driverratings[i]._id,
-            "avgRating":totalAverage,
-            "overspeedCount":0,
-            "drivername":"not found"
-          }
-        }
-     
-
-        // if (overSpeedAlerts.length===0){
-        //   for(var i=0; i <driverratings.length ; i++ ){
-        //   }
-
-        // }
+        
 
         for(var j=0; j <overSpeedAlerts.length ; j++ ){
           logger.info('overSpeedAlerts Length :'+ overSpeedAlerts.length );
           logger.info('driverratings[i]._id :'+ driverratings[i]._id );
           logger.info('overSpeedAlerts[j]._id :'+ overSpeedAlerts[j]._id );
-    
-          let driver = await Driver.findOne({ _id: driverratings[i]._id });
-          if (driver)
-          tempDriverName=driver.name;
 
           if (driverratings[i]._id.toString() === overSpeedAlerts[j]._id.toString()){
             logger.info('driverratings[i]._id===overSpeedAlerts[j]._id ' );
