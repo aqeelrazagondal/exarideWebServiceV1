@@ -350,6 +350,7 @@ router.get('/driverPerformance',async function (req, res) {
   var resObj;
   var resList = [];
   var totalAverage;
+  var tempDriverName="";
   const aggregatorOpts1 = [{
         $group: {
             _id:"$_driverId",
@@ -402,6 +403,9 @@ router.get('/driverPerformance',async function (req, res) {
           logger.info('overSpeedAlerts[j]._id :'+ overSpeedAlerts[j]._id );
     
           let driver = await Driver.findOne({ _id: driverratings[i]._id });
+          if (driver)
+          tempDriverName=driver.name;
+
 
           
           if (driverratings[i]._id.toString() === overSpeedAlerts[j]._id.toString()){
@@ -411,7 +415,7 @@ router.get('/driverPerformance',async function (req, res) {
               "_driverId":driverratings[i]._id,
               "avgRating":totalAverage,
               "overspeedCount":overSpeedAlerts[j].count,
-              "drivername":driver.name
+              "drivername":tempDriverName
             }
             logger.info('Pushing to promise array' );
             promiseArr.push(addToListPromise(resObj));
